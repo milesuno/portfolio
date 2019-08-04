@@ -7,8 +7,10 @@ class ThumbNail extends Component {
     }
     render() { 
         return (
-            <p>Title</p>
-            <img src={"#"}/>
+            <div>
+                <p>Title</p>
+                <img src={this.props.img}/>
+            </div>
           );
     }
 }

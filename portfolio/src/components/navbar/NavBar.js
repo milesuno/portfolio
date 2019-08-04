@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import 
 
 class NavBar extends Component {
     constructor(props) {
@@ -7,7 +6,13 @@ class NavBar extends Component {
         this.state = {  }
     }
     render() { 
-        return (  );
+        return (
+        <div>
+            <button>UX/UI Design</button>
+            <button>Project</button>
+            <button>About Us</button>
+        </div> 
+        );
     }
 }
  
