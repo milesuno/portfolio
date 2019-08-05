@@ -6,10 +6,12 @@ class ThumbNail extends Component {
         this.state = {  }
     }
     render() { 
+        const { name, img} = this.props;
         return (
             <div>
-                <p>Title</p>
-                <img src={this.props.img}/>
+
+                <p>{name}</p>
+                <img src={img}/>
             </div>
           );
     }
