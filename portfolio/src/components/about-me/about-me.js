@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import SocialMediaNav from '../social-media-nav/SocialMediaNav'
+import SocialMediaNav from '../social-media-nav/social-media-nav'
 class AboutMe extends Component {
     constructor(props) {
         super(props);

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import ThumbNail from '../thumb-nail/ThumbNail';
+import ThumbNail from '../thumbnail/thumbnail';
+import LgThumbNail from '../lg-thumbnail/lg-thumbnail';
 
 class Projects extends Component {
     constructor(props) {
@@ -7,6 +8,7 @@ class Projects extends Component {
         this.state = { 
             projects:[
                     {
+                    id: 1,
                     name:'BarterAnything.com',
                     img: ["#", "#","#","#","#"],
                     desc: 'BarterAnything is a Cashless Ecommerce Platform'   
@@ -21,7 +23,9 @@ class Projects extends Component {
             <div>
                 <h1>Projects</h1>
                 <p>2019</p>
-                {projects.map(p => <ThumbNail img={p.img} name={p.name} />)}
+                {projects.map(p => <ThumbNail key={projects.id} img={p.img} name={p.name} />)}
+                {/*If the thumbnail is clicked the Lg Thumbnail should render */}
+                {projects.map(p => <LgThumbNail key={projects.id} img={p.img} name={p.name} />)}
             <p>2018</p>
             </div>
          );
