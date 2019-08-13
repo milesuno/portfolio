@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+
 
 class LandingPage extends Component {
     constructor(props) {
@@ -12,7 +14,9 @@ class LandingPage extends Component {
                 <button>About Me</button>
                 <h1>Genchi Genbutsu</h1>
                 <img src={'#'} />
-                <button>Enter</button>
+                <Link to='/uxdesigns'>
+                    <button>Enter</button>
+                </Link>
             </div>
          );
     }
