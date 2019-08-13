@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import ThumbNail from '../thumbnail/thumbnail';
+import NavBar from '../navbar/nav-bar';
+import './ux-designs.css';
+
 
 class UXDesigns extends Component {
     constructor(props) {
@@ -41,20 +44,23 @@ class UXDesigns extends Component {
     render() { 
         const { ux } = this.state;
         return ( 
-            <div>
-                {this.incrementCarousel()}
-                <h1>UX/UI Designs</h1>
-                <p>2019</p>
-                {ux.map(ux => 
-                <ThumbNail 
-                key={ux.id} 
-                img={ux.img} 
-                name={ux.name} 
-                onIncrementCarousel={this.incrementCarousel}
-                onDecrementCarousel={this.decrementCarousel}
-                />
-                )}
-                <p>2018</p>
+            <div className='page-wrapper'>
+                <main className='main-wrapper'>
+                    {/* <NavBar /> */}
+                    {this.incrementCarousel()}
+                    <h1>UX/UI Designs</h1>
+                    <p>2019</p>
+                    {ux.map(ux => 
+                        <ThumbNail 
+                        key={ux.id} 
+                        img={ux.img} 
+                        name={ux.name} 
+                        onIncrementCarousel={this.incrementCarousel}
+                        onDecrementCarousel={this.decrementCarousel}
+                        />
+                    )}
+                    <p>2018</p>
+                </main>
             </div>
          );
     }

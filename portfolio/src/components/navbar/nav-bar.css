@@ -1,0 +1,27 @@
+nav {
+    position: fixed;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: grey;
+    
+    width: 100%
+}
+
+ul {
+    width: 30%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row; 
+}
+
+li {
+    color:white;
+    list-style: none;
+    
+}
+
+a {
+    text-decoration: none;
+}
