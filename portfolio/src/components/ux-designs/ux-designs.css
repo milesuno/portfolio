@@ -1,11 +1,15 @@
-.page-wrapper {
+.ux-page-wrapper {
     display: flex;
     justify-content: center; 
     padding-top: 50px;
 }
-.main-wrapper {
+.ux-main-wrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
     width: 80%;
+}
+
+.ux-element-wrapper{
+    display: flex;
 }

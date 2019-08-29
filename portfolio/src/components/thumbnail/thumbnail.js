@@ -1,47 +1,56 @@
 import React, { Component } from 'react';
+import './thumbnail.css';
+
+//React will apply props object with data passed to from the parent passing it props. This means I do not need to specify or you [square] syntax 
+
 
 class ThumbNail extends Component {
     constructor(props) {
         super(props);
-        this.state = { 
+        this.state = {
+            imgIndex: 0,
+            name: this.props.name,
             img: this.props.img,
-            value: 0
-         }
-    }
-
-    imgIndex = (imgIndex) => {
-        const { onIncrementCarousel, onDecrementCarousel } = this.props;
-        //Loop has no img on 5th loop
-        if(this.state.value <= this.props.img.length - 1){
-            if(onIncrementCarousel){
-                const value = this.state.value + 1; 
-                this.setState({ value });  
-                onIncrementCarousel(imgIndex)  
-                console.log('This is state.value Increment', this.state.value)
-            }
-            if(onDecrementCarousel){
-                const value = this.state.value - 1; 
-                this.setState({ value });  
-                onIncrementCarousel(imgIndex)  
-                console.log('This is state.value Increment', this.state.value)
-            }
-        } else {
-            this.setState({ value: 0 });
+            desc: this.props.desc
         }
-        
-        
-        
     }
-    render() { 
-        const { name } = this.props;
-        const { img } = this.state;
-        return (
-            <div>
-                <p>{name}</p>
-                <img src={img[this.state.value]}/>
-                <button onClick={() => this.imgIndex(img[this.state.value])}>increment</button>
-                <button onClick={() => this.imgIndex(img[this.state.value])}>decrement</button>
+       
+    handleIncrementCarousel = () => {
+        let imgIndex = this.state.imgIndex;
+        imgIndex++; 
+        
+        if(imgIndex >= this.state.img.length){
+            imgIndex = 0;
+            this.setState({ imgIndex }); 
+            console.log(imgIndex)
+        }
+        this.setState({ imgIndex });        
+    }
 
+        
+    handleDecrementCarousel = () => {
+        let imgIndex = this.state.imgIndex;
+        imgIndex--;
+        if(imgIndex < 0) {
+            imgIndex = this.state.img.length - 1;
+            this.setState({ imgIndex });
+        }   
+            this.setState({ imgIndex });  
+    }    
+
+    render() { 
+        const { name, desc, img } = this.props;
+        const { imgIndex } = this.state;
+
+        return (
+            <div className='thumbnail-page-wrapper'>
+                <h1>{name}</h1>
+                <main className='thumbnail-wrapper'>
+                    <img src={img[imgIndex]}/>
+                    <p>{desc}</p>
+                    <button onClick={this.handleIncrementCarousel}>increment</button>
+                    <button onClick={this.handleDecrementCarousel}>decrement</button>
+                </main>
             </div>
           );
     }

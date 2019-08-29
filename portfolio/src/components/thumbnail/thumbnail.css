@@ -1,0 +1,20 @@
+.thumbnail-page-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+}
+
+.thumbnail-wrapper {
+    width: 90%;
+
+}
+
+img {
+    object-fit: contain;
+    width: 100%;
+}
+
+button {
+    display: flex; 
+    flex-direction: column;
+}

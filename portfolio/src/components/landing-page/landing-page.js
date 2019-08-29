@@ -13,7 +13,7 @@ class LandingPage extends Component {
                 {/* Quotes can change every few seconds */}
                 <button>About Me</button>
                 <h1>Genchi Genbutsu</h1>
-                <img src={'#'} />
+                <img src={'https://warnerwave.com/image/137487-full_you-re-gonna-carry-that-weight-wallpaper-cowboybebop.png'} />
                 <Link to='/uxdesigns'>
                     <button>Enter</button>
                 </Link>
