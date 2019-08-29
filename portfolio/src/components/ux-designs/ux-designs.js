@@ -46,11 +46,8 @@ class UXDesigns extends Component {
                         "https://images.unsplash.com/photo-1562569633-622303bafef5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
                         ],
                     desc: 'See Your Present is a Platform inexperience can use to find out about jobs and opportunities'      
-               }
-                
-            ]
-            
-
+               } 
+            ]   
          }
     };
 
