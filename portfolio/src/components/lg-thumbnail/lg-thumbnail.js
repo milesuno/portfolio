@@ -10,7 +10,7 @@ class LgThumbNail extends Component {
         return ( 
             <div>
                 <p>{name}</p>
-                <img src={img}/>
+                <img src={img} className={'thumbnail-img'}/>
             </div>
          );
     }

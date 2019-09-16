@@ -1,20 +1,28 @@
 .thumbnail-page-wrapper {
     display: flex;
     flex-direction: column;
-    justify-content: center; 
+    justify-content: center;
+    align-items: center; 
+
+    border: 2px solid grey;
+
+    margin-left: 1%;
+    margin-right: 1%;
 }
 
 .thumbnail-wrapper {
     width: 90%;
-
 }
 
-img {
-    object-fit: contain;
+.thumbnail-img {
+    object-fit: none;
+    height: 300px;
     width: 100%;
 }
 
-button {
-    display: flex; 
-    flex-direction: column;
+.button-container{
+    display: flex;
+    justify-content: space-between;
 }
+
+

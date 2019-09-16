@@ -46,10 +46,12 @@ class ThumbNail extends Component {
             <div className='thumbnail-page-wrapper'>
                 <h1>{name}</h1>
                 <main className='thumbnail-wrapper'>
-                    <img src={img[imgIndex]}/>
+                    <img src={img[imgIndex]} className={'thumbnail-img'}/>
                     <p>{desc}</p>
-                    <button onClick={this.handleIncrementCarousel}>increment</button>
-                    <button onClick={this.handleDecrementCarousel}>decrement</button>
+                    <div className={'button-container'}>
+                        <button onClick={this.handleDecrementCarousel}>{'<'}</button>
+                        <button onClick={this.handleIncrementCarousel}>{'>'}</button>
+                    </div>
                 </main>
             </div>
           );
