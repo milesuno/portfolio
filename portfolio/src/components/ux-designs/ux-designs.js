@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import ThumbNail from '../thumbnail/thumbnail';
-import NavBar from '../navbar/nav-bar';
 import './ux-designs.css';
 
 
@@ -8,8 +7,7 @@ class UXDesigns extends Component {
     constructor(props) {
         super(props);
         this.state = { 
-            //State holds all UX the data for the <ThumbNail /> component. This is passed as a Prop.
-            imgIndex: 0,
+            //State holds all UX the data for the <ThumbNail /> component. This is passed as a Prop.    
             ux:[
                 {
                     id: 1,
@@ -53,12 +51,12 @@ class UXDesigns extends Component {
 
 
     render() { 
-        const { ux , imgIndex } = this.state;
+        const { ux } = this.state;
         return ( 
             <div className='ux-page-wrapper'>
                 <main className='ux-main-wrapper'>
                     <h1>UX/UI Designs</h1>
-                        <p>2019</p>
+                    <p>2019</p>
                     <div className='ux-element-wrapper'>
                         {ux.map(ux => 
                             <ThumbNail 
@@ -67,9 +65,6 @@ class UXDesigns extends Component {
                             img={ux.img}
                             name={ux.name}
                             desc={ux.desc}
-                            imgIndex={imgIndex} 
-                            IncrementCarousel={this.handleIncrementCarousel}
-                            DecrementCarousel={this.handledecrementCarousel}
                             />
                         )}
                     </div>

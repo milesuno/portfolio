@@ -1,10 +1,11 @@
+/*Desktop*/
 
-.page-wrapper {
+.project-page-wrapper {
     display: flex;
     justify-content: center; 
     padding-top: 50px;
 }
-.main-wrapper {
+.project-main-wrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -16,3 +17,6 @@
     /* justify-content: space-between; */
 }
 
+/*Tablet*/
+
+/*Mobile*/

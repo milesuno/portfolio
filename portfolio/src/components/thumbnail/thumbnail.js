@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
 import './thumbnail.css';
 
-//React will apply props object with data passed to from the parent passing it props. This means I do not need to specify or you [square] syntax 
+/*
+React will apply props object with data passed to from the parent passing it props. 
+In this instance ThumbNail as data passed to it from 2 different parents, 
+but I do not need to specify or use [square] syntax to access the data passed  
+*/
 
 
 class ThumbNail extends Component {
