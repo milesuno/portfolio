@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ThumbNail from '../thumbnail/thumbnail';
+import LgThumbNail from '../lg-thumbnail/lg-thumbnail';
 import './ux-designs.css';
 
 
@@ -7,7 +8,9 @@ class UXDesigns extends Component {
     constructor(props) {
         super(props);
         this.state = { 
-            //State holds all UX the data for the <ThumbNail /> component. This is passed as a Prop.    
+            //State holds all UX the data for the <ThumbNail /> component. This is passed as a Prop.
+            selected: 0,  
+            dataFromThumbnail: 0,  
             ux:[
                 {
                     id: 1,
@@ -49,11 +52,30 @@ class UXDesigns extends Component {
          }
     };
 
+    getData = (data) => {
+        //Gets data on specified Thumbnail and sends data to be rendered as Lg-Thumbnail
+        this.setState({ selected: 1, dataFromThumbnail: data })
 
+    }
+
+    handleCloseLgThumbnail = (update) => {
+        console.log('from lg-thumbnail', update)
+        this.setState({ selected: update })
+    }
+    // Fix <lg-thumbnail /> element rendering issue
     render() { 
-        const { ux } = this.state;
+        const { ux, selected, dataFromThumbnail } = this.state;
         return ( 
             <div className='ux-page-wrapper'>
+            {
+                selected ?
+                     <LgThumbNail 
+                     name={dataFromThumbnail.name}
+                     desc={dataFromThumbnail.desc}
+                     img={dataFromThumbnail.img}
+                     closeLgThumbnail={this.handleCloseLgThumbnail}
+                     />
+                    :
                 <main className='ux-main-wrapper'>
                     <h1>UX/UI Designs</h1>
                     <p>2019</p>
@@ -65,10 +87,12 @@ class UXDesigns extends Component {
                             img={ux.img}
                             name={ux.name}
                             desc={ux.desc}
+                            getData={this.getData}
                             />
                         )}
                     </div>
                 </main>
+            }
             </div>
          );
     }

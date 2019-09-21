@@ -7,7 +7,9 @@ class Projects extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            //State holds all UX the data for the <ThumbNail /> component. This is passed as a Prop.    
+            //State holds all UX the data for the <ThumbNail /> component. This is passed as a Prop.
+            selected: 0,
+            dataFromThumbnail: 0,    
             projects:[
                         {
                             id: 1,
@@ -49,28 +51,50 @@ class Projects extends Component {
          }
     }
 
+    getData = (data) => {
+        //Gets data on specified Thumbnail and sends data to be rendered as Lg-Thumbnail
+        this.setState({ selected: 1, dataFromThumbnail: data })
+
+    }
+    
+    handleCloseLgThumbnail = (update) => {
+        console.log('from lg-thumbnail', update)
+        this.setState({ selected: update })
+    }
+    
     render() { 
-        const { projects } = this.state;
+        const { projects, selected, dataFromThumbnail } = this.state;
         return ( 
             <div className={'project-page-wrapper'}>
-                <main className={'project-main-wrapper'}>
-                    <h1>Projects</h1>
-                    <p>2019</p>
-                    <div className={'project-element-wrapper'}>
-                        {projects.map(project => 
-                            <ThumbNail 
-                            key={project.id} 
-                            projects={project}
-                            img={project.img}
-                            name={project.name}
-                            desc={project.desc}
-                            />
-                        )}
-                    </div>
-                    {/*If the thumbnail is clicked the Lg Thumbnail should render */}
-                    {/* {projects.map(p => <LgThumbNail key={p.id} img={p.img} name={p.name} />)} */}
-                    <p>2018</p>    
-                </main>
+                {
+                    selected ?
+                     <LgThumbNail 
+                     name={dataFromThumbnail.name}
+                     desc={dataFromThumbnail.desc}
+                     img={dataFromThumbnail.img}
+                     closeLgThumbnail={this.handleCloseLgThumbnail}
+                     />
+                    :
+                    <main className={'project-main-wrapper'}>
+                        <h1>Projects</h1>
+                        <p>2019</p>
+                        <div className={'project-element-wrapper'}>
+                            {projects.map(project => 
+                                <ThumbNail 
+                                key={project.id} 
+                                projects={project}
+                                img={project.img}
+                                name={project.name}
+                                desc={project.desc}
+                                getData={this.getData}
+                                />
+                            )}
+                        </div>
+                        {/*If the thumbnail is clicked the Lg Thumbnail should render */}
+                        {/* {projects.map(p => <LgThumbNail key={p.id} img={p.img} name={p.name} />)} */}
+                        <p>2018</p>    
+                    </main>
+                }
                 
             </div>
          );

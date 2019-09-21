@@ -1,0 +1,44 @@
+.lg-thumbnail-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    border: 2px solid rgb(240, 236, 236);
+
+    width: 40%;
+}
+
+
+
+.lg-thumbnail-img {
+    object-fit: none;
+    height: 400px;
+    width: 100%;
+}
+
+
+.lg-thumbnail-button-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.lg-thumbnail-title{
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+
+.lg-thumbnail-button{
+    display: flex;
+    justify-content: center;
+    width: 4%;
+    align-self: flex-end;
+}
+
+
+.lg-thumbnail-desc{
+    align-self: center;
+    width: 80%;
+}
