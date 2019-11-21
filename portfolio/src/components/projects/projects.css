@@ -3,9 +3,10 @@
 .project-page-wrapper {
     display: flex;
     justify-content: center; 
-    padding-top: 50px;
 }
 .project-main-wrapper {
+    padding-top: 50px;
+    
     display: flex;
     flex-direction: column;
     justify-content: center;

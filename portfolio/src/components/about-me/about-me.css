@@ -1,11 +1,16 @@
-.page-wrapper {
+.about-me-page-wrapper {
     display: flex;
     justify-content: center; 
-    padding-top: 50px;
 }
-.main-wrapper {
+.about-me-wrapper {
+    padding-top: 50px;
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
     width: 80%;
+}
+
+.about-me-img {
+    width: 20%;
 }

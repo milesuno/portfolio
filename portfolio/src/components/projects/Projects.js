@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ThumbNail from '../thumbnail/thumbnail';
 import LgThumbNail from '../lg-thumbnail/lg-thumbnail';
+import NavBar from '../navbar/nav-bar';
 import './projects.css';
 
 class Projects extends Component {
@@ -61,11 +62,12 @@ class Projects extends Component {
         console.log('from lg-thumbnail', update)
         this.setState({ selected: update })
     }
-    
+
     render() { 
         const { projects, selected, dataFromThumbnail } = this.state;
         return ( 
-            <div className={'project-page-wrapper'}>
+            <div className={'project-page-wrapper'} >
+                <NavBar />
                 {
                     selected ?
                      <LgThumbNail 

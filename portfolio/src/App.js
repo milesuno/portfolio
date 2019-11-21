@@ -10,7 +10,6 @@ import AboutMe from './components/about-me/about-me';
 function App() {
   return (
     <Router>
-      <NavBar />
       <Switch>
         <Route path='/' exact component={LandingPage}/>
         <Route path='/uxdesigns'exact component={UXDesigns}/>

@@ -60,6 +60,9 @@ class ThumbNail extends Component {
         console.log('Selected', this.state.selected) 
     };
 
+    descCharLimit = () => {
+        console.log('desc in limit', this.state.desc)
+    };
     render() { 
         const { name, desc, img } = this.props;
         const { imgIndex, selected } = this.state;

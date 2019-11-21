@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ThumbNail from '../thumbnail/thumbnail';
 import LgThumbNail from '../lg-thumbnail/lg-thumbnail';
+import NavBar from '../navbar/nav-bar';
 import './ux-designs.css';
 
 
@@ -67,7 +68,8 @@ class UXDesigns extends Component {
         const { ux, selected, dataFromThumbnail } = this.state;
         return ( 
             <div className='ux-page-wrapper'>
-            {
+                <NavBar />  
+            {   
                 selected ?
                      <LgThumbNail 
                      name={dataFromThumbnail.name}
