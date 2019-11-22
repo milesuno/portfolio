@@ -1,4 +1,8 @@
 .lg-thumbnail-wrapper {
+    position: absolute;
+    top: 10%;
+    left: 30%;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -7,8 +11,6 @@
 
     width: 40%;
 }
-
-
 
 .lg-thumbnail-img {
     object-fit: none;

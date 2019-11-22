@@ -12,11 +12,11 @@ class LandingPage extends Component {
             <div className='landing-page-page-wrapper'>
                 {/* Quotes can change every few seconds */}
                 <main className='landing-page-wrapper'>
-                    <button>About Me</button>
-                    <h1>Genchi Genbutsu</h1>
+                    <button className='landing-page-about-me'>About Me</button>
+                    <h1 className='landing-page-h1'>Genchi Genbutsu</h1>
                     <img className ='landing-page-img' src={'https://warnerwave.com/image/137487-full_you-re-gonna-carry-that-weight-wallpaper-cowboybebop.png'} />
                     <Link to='/uxdesigns'>
-                        <button>Enter</button>
+                        <button className='landing-page-a'>Enter</button>
                     </Link>
                 </main>
             </div>

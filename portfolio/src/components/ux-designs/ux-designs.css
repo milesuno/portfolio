@@ -2,6 +2,7 @@
 .ux-page-wrapper {
     display: flex;
     justify-content: center; 
+    background: black;
 }
 .ux-main-wrapper {
     padding-top: 50px;
@@ -14,9 +15,13 @@
 
 .ux-element-wrapper{
     display: flex;
-    /* justify-content: space-between; */
 }
 
+.page-border{
+    width: 97%;
+    bottom: 97%;
+    background: white;
+}
 /*Tablet*/
 
 /*Mobile*/

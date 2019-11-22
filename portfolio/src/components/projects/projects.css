@@ -3,6 +3,7 @@
 .project-page-wrapper {
     display: flex;
     justify-content: center; 
+    background: black;
 }
 .project-main-wrapper {
     padding-top: 50px;
@@ -16,6 +17,12 @@
 .project-element-wrapper {
     display: flex;
     /* justify-content: space-between; */
+}
+
+.page-border{
+    width: 97%;
+    bottom: 97%;
+    background: white;
 }
 
 /*Tablet*/

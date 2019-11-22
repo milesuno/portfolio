@@ -68,33 +68,35 @@ class UXDesigns extends Component {
         const { ux, selected, dataFromThumbnail } = this.state;
         return ( 
             <div className='ux-page-wrapper'>
-                <NavBar />  
-            {   
-                selected ?
-                     <LgThumbNail 
-                     name={dataFromThumbnail.name}
-                     desc={dataFromThumbnail.desc}
-                     img={dataFromThumbnail.img}
-                     closeLgThumbnail={this.handleCloseLgThumbnail}
-                     />
-                    :
-                <main className='ux-main-wrapper'>
-                    <h1>UX/UI Designs</h1>
-                    <p>2019</p>
-                    <div className='ux-element-wrapper'>
-                        {ux.map(ux => 
-                            <ThumbNail 
-                            key={ux.id}
-                            ux={ux}
-                            img={ux.img}
-                            name={ux.name}
-                            desc={ux.desc}
-                            getData={this.getData}
-                            />
-                        )}
-                    </div>
-                </main>
-            }
+                <NavBar />
+                <div className='page-border'>  
+                {   
+                    selected ?
+                        <LgThumbNail 
+                        name={dataFromThumbnail.name}
+                        desc={dataFromThumbnail.desc}
+                        img={dataFromThumbnail.img}
+                        closeLgThumbnail={this.handleCloseLgThumbnail}
+                        />
+                        :
+                    <main className='ux-main-wrapper'>
+                        <h1>UX/UI Designs</h1>
+                        <p>2019</p>
+                        <div className='ux-element-wrapper'>
+                            {ux.map(ux => 
+                                <ThumbNail 
+                                key={ux.id}
+                                ux={ux}
+                                img={ux.img}
+                                name={ux.name}
+                                desc={ux.desc}
+                                getData={this.getData}
+                                />
+                            )}
+                        </div>
+                    </main>
+                }
+                </div>  
             </div>
          );
     }

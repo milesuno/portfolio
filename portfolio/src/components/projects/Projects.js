@@ -68,6 +68,7 @@ class Projects extends Component {
         return ( 
             <div className={'project-page-wrapper'} >
                 <NavBar />
+                <div className='page-border'>  
                 {
                     selected ?
                      <LgThumbNail 
@@ -97,7 +98,7 @@ class Projects extends Component {
                         <p>2018</p>    
                     </main>
                 }
-                
+                </div>
             </div>
          );
     }

@@ -1,14 +1,43 @@
 .landing-page-page-wrapper {
     display: flex;
     justify-content: center; 
-    padding-top: 50px;
-}
+    }
+    
 .landing-page-wrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 80%;
+    width: 100%;
 }
 
 .landing-page-img {
+    width: 100%;
+}
+
+.landing-page-h1{
+    position: absolute;
+    left: 37%;
+    color: white;
+
+}
+
+.landing-page-about-me{
+    position: absolute;
+    bottom: 95%;
+    left: 90%;
+}
+
+.landing-page-a {
+    position: absolute;
+    left: 50%;
+    top: 50%
+    
+}
+
+@media (max-width: 900px){
+
+}
+
+@media (max-width: 350px){
+    
 }
