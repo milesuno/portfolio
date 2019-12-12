@@ -1,26 +1,46 @@
 /*Desktop*/
 .ux-page-wrapper {
-    display: flex;
-    justify-content: center; 
-    background: black;
+	display: flex;
+	flex-direction: column;
+
+	align-items: center;
+	background: black;
 }
 .ux-main-wrapper {
-    padding-top: 50px;
-    
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 80%;
+	padding-top: 50px;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 80%;
 }
 
-.ux-element-wrapper{
-    display: flex;
+.ux-elements-wrapper {
+	display: flex;
 }
 
-.page-border{
-    width: 97%;
-    bottom: 97%;
-    background: white;
+.page-width {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	width: 97%;
+	bottom: 97%;
+	background: white;
+}
+
+header {
+	width: 100%;
+}
+
+label {
+	color: white;
+}
+
+footer {
+	background: black;
+
+	width: 100%;
 }
 /*Tablet*/
 

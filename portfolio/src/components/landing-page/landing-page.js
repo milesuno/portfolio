@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import data from '../../data/fake-data.json';
 import './landing-page.css';
 
 class LandingPage extends Component {
     constructor(props) {
         super(props);
-        this.state = {  }
     }
     render() { 
         return ( 

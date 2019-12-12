@@ -1,29 +1,29 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 class SocialMediaNav extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {  }
-    }
-    render() { 
-        return (  
-            <div>
-                <p>Social Media</p>
-                <label>
-                    FaceBook
-                    <img src={'#'} />
-                </label>
-                <label>
-                    LinkedIn
-                    <img src={'#'} />
-                </label>
-                <label>
-                    YouTube
-                    <img src={'#'} />
-                </label>
-            </div>
-        );
-    }
+	constructor(props) {
+		super(props);
+		this.state = {};
+	}
+	render() {
+		return (
+			<nav>
+				<p>Social Media</p>
+				<label>
+					FaceBook
+					<img src={"#"} />
+				</label>
+				<label>
+					LinkedIn
+					<img src={"#"} />
+				</label>
+				<label>
+					YouTube
+					<img src={"#"} />
+				</label>
+			</nav>
+		);
+	}
 }
- 
+
 export default SocialMediaNav;

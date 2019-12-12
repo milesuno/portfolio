@@ -1,7 +1,6 @@
 .about-me-page-wrapper {
     display: flex;
-    justify-content: center; 
-    background: black;
+    align-items: center;    background: black;
 }
 .about-me-wrapper {
     padding-top: 50px;
@@ -16,8 +15,7 @@
     width: 20%;
 }
 
-.page-border{
+.page-width{
     width: 97%;
-    bottom: 97%;
     background: white;
 }
