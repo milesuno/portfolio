@@ -1,21 +1,30 @@
 .about-me-page-wrapper {
-    display: flex;
-    align-items: center;    background: black;
+	display: flex;
+	align-items: center;
+	background: black;
 }
 .about-me-wrapper {
-    padding-top: 50px;
-    
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 80%;
+	padding-top: 50px;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 80%;
 }
 
 .about-me-img {
-    width: 20%;
+    align-self: center;
+    border-radius: 100%;
+	width: 300px;
 }
 
-.page-width{
-    width: 97%;
-    background: white;
+.page-width {
+	width: 97%;
+	background: white;
+}
+
+@media (max-width: 450px) {
+	.about-me-img {
+		width: 100%;
+	}
 }

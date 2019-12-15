@@ -6,6 +6,7 @@ class NavBar extends Component {
 	constructor(props) {
 		super(props);
 	}
+	//Dropdown list should be render below 450px
 
 	render() {
 		return (
@@ -13,10 +14,13 @@ class NavBar extends Component {
 				<img src={"#"} />
 				<ul className={"ul"}>
 					<Link to="/uxdesigns">
-						<li>UX/UI Design</li>
+						<li>UX/UI Designs</li>
 					</Link>
 					<Link to="/projects">
-						<li>Project</li>
+						<li>Projects</li>
+					</Link>
+					<Link to="/courses">
+						<li>Courses</li>
 					</Link>
 					<Link to="/aboutme">
 						<li>About Me</li>

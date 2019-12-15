@@ -17,6 +17,7 @@
 
 .ux-elements-wrapper {
 	display: flex;
+	flex-wrap: wrap;
 }
 
 .page-width {
@@ -24,8 +25,6 @@
 	flex-direction: column;
 	align-items: center;
 
-	width: 97%;
-	bottom: 97%;
 	background: white;
 }
 
@@ -43,5 +42,11 @@ footer {
 	width: 100%;
 }
 /*Tablet*/
+
+@media (max-width: 1200px) {
+	.ux-elements-wrapper {
+		justify-content: center;
+	}
+}
 
 /*Mobile*/

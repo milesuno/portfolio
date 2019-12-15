@@ -10,10 +10,13 @@
 }
 
 .ul {
-	width: 30%;
 	display: flex;
-	justify-content: space-around;
 	flex-direction: row;
+	justify-content: space-around;
+	
+	width: 450px;
+	
+	margin-right: 30px;
 }
 
 li {
