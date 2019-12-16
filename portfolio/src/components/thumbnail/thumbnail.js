@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./thumbnail.css";
+import CarouselControls from "../carousel-controls/CarouselControls";
 /*
 React will apply props object with data passed to from the parent passing it props. 
 In this instance ThumbNail as data passed to it from 2 different parents, 
@@ -11,7 +12,7 @@ class ThumbNail extends Component {
 		this.state = {
 			imgIndex: 0,
 			selected: 0,
-			autoPlay:'',
+			autoPlay: "",
 			name: this.props.name,
 			img: this.props.img,
 			desc: this.props.desc,
@@ -22,59 +23,10 @@ class ThumbNail extends Component {
 		};
 	}
 
-	handleIncrementCarousel = () => {
-		let imgIndex = this.state.imgIndex;
-		imgIndex++;
-
-		if (imgIndex >= this.state.img.length) {
-			imgIndex = 0;
-			this.setState({ imgIndex });
-			console.log(imgIndex);
-		}
-		this.setState({ imgIndex });
-	};
-
-	handleDecrementCarousel = () => {
-		let imgIndex = this.state.imgIndex;
-		imgIndex--;
-		if (imgIndex < 0) {
-			imgIndex = this.state.img.length - 1;
-			this.setState({ imgIndex });
-		}
-		this.setState({ imgIndex });
-	};
-
-	handleStopImageChange = () => {
-		console.log('Stop Image');
-		clearInterval(this.state.autoPlay);
-
-	};
-
-	handleAutoForward = () => {
-		console.log('Auto Forward Image');
-		clearInterval(this.state.autoPlay);
-
-		let autoPlay = setInterval(() => {
-			console.log('Next Pic');
-			this.handleIncrementCarousel()
-		}, 1500)
-		this.setState({ autoPlay })
-	};
-
-	handleAutoBackward = () => {
-		console.log('Auto Backward Image');
-		clearInterval(this.state.autoPlay);
-
-		let autoPlay = setInterval(() => {
-			console.log('Last Pic');
-			this.handleDecrementCarousel()
-		}, 1500)
-		this.setState({ autoPlay })
-	};
-
-
-	descCharLimit = () => {
-		console.log("desc in limit", this.state.desc);
+	getData = data => {
+		//Gets data on specified Thumbnail and sends data to be rendered as Lg-Thumbnail
+		const { imgIndex, autoPlay } = data;
+		this.setState({ imgIndex, autoPlay });
 	};
 
 	thumbNailSwitch = () => {
@@ -93,11 +45,10 @@ class ThumbNail extends Component {
 		console.log("Selected", this.state.selected);
 	};
 
-
 	render() {
-		const { name, desc, img } = this.props;
+		const { name, img } = this.props;
 		const { imgIndex } = this.state;
-		console.log('props in thumbnail', this.props)
+		console.log("props in thumbnail", this.props);
 		return (
 			<template className="thumbnail-page-wrapper">
 				<div
@@ -106,25 +57,15 @@ class ThumbNail extends Component {
 				>
 					<img src={img[imgIndex]} className={"thumbnail-img"} />
 					<h2 className="thumbnail-title">{name}</h2>
-					{/* <p>{desc}</p> */}
 				</div>
-				<div className={"button-container"}>
-					<button onClick={this.handleAutoBackward}>
-						{"<<"}
-					</button>
-					<button onClick={this.handleDecrementCarousel}>
-						{"<"}
-					</button>
-					<button onClick={this.handleStopImageChange}>
-						{"."}
-					</button>
-					<button onClick={this.handleIncrementCarousel}>
-						{">"}
-					</button>
-					<button onClick={this.handleAutoForward}>
-						{">>"}
-					</button>
-				</div>
+				{img.length > 1 ? (
+					<CarouselControls
+						getData={this.getData}
+						img={this.props.img}
+					/>
+				) : (
+					null
+				)}
 			</template>
 		);
 	}

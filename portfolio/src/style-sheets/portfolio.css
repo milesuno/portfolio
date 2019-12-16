@@ -1,13 +1,12 @@
 /*Desktop*/
-
-.project-page-wrapper {
+.page-wrapper {
 	display: flex;
 	flex-direction: column;
 
 	align-items: center;
 	background: black;
 }
-.project-main-wrapper {
+.main-wrapper {
 	padding-top: 50px;
 
 	display: flex;
@@ -16,17 +15,19 @@
 	width: 80%;
 }
 
-.project-elements-wrapper {
+.elements-wrapper {
 	display: flex;
 	flex-wrap: wrap;
 }
 
 .page-width {
-	width: 97%;
-	bottom: 97%;
+	display: flex;
+	flex-direction: column;
 	align-items: center;
 
 	background: white;
+
+	width: 97%;
 }
 
 header {
@@ -42,7 +43,12 @@ footer {
 
 	width: 100%;
 }
-
 /*Tablet*/
+
+@media (max-width: 1235px) {
+	.elements-wrapper {
+		justify-content: center;
+	}
+}
 
 /*Mobile*/

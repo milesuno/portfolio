@@ -2,9 +2,10 @@ import React, { Component } from "react";
 import ThumbNail from "../thumbnail/thumbnail";
 import LgThumbNail from "../lg-thumbnail/lg-thumbnail";
 import NavBar from "../navbar/nav-bar";
-import data from "../../data/fake-data.json";
 
-import "./projects.css";
+import "../../style-sheets/portfolio.css";
+
+import data from "../../data/fake-data.json";
 
 class Projects extends Component {
 	constructor(props) {
@@ -30,7 +31,7 @@ class Projects extends Component {
 	render() {
 		const { projects, selected, dataFromThumbnail } = this.state;
 		return (
-			<div className={"project-page-wrapper"}>
+			<div className={"page-wrapper"}>
 				<div className="page-width">
 					<header>
 						<NavBar />
@@ -43,10 +44,10 @@ class Projects extends Component {
 							closeLgThumbnail={this.handleCloseLgThumbnail}
 						/>
 					) : (
-						<main className={"project-main-wrapper"}>
+						<main className={"main-wrapper"}>
 							<h1>Projects</h1>
 							<h3>2019</h3>
-							<section className={"project-elements-wrapper"}>
+							<section className={"elements-wrapper"}>
 								{projects.map(project => (
 									//data is exported before reaching ThumbNail as ThumbNail will accept data from multiple sources - therefore must be generic.
 									<ThumbNail
@@ -59,6 +60,18 @@ class Projects extends Component {
 								))}
 							</section>
 							<h3>2018</h3>
+								<section className={"elements-wrapper"}>
+									{projects.map(project => (
+										//data is exported before reaching ThumbNail as ThumbNail will accept data from multiple sources - therefore must be generic.
+										<ThumbNail
+											key={project.id}
+											img={project.img}
+											name={project.name}
+											desc={project.desc}
+											getData={this.getData}
+										/>
+									))}
+								</section>
 						</main>
 					)}
 					<footer>

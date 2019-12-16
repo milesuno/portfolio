@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import SocialMediaNav from "../social-media-nav/social-media-nav";
 import NavBar from "../navbar/nav-bar";
+
+import "../../style-sheets/portfolio.css";
 import "./about-me.css";
 
 class AboutMe extends Component {

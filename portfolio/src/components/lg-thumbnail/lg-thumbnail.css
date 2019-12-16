@@ -23,10 +23,6 @@
 	height: 400px;
 }
 
-.lg-thumbnail-button-container {
-	display: flex;
-	justify-content: space-between;
-}
 
 .lg-thumbnail-title {
 	display: flex;

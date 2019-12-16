@@ -1,19 +1,87 @@
 import React, { Component } from "react";
 import NavBar from "../navbar/nav-bar";
+import ThumbNail from "../thumbnail/thumbnail";
+import LgThumbNail from "../lg-thumbnail/lg-thumbnail";
+
+import "../../style-sheets/portfolio.css";
+
+import data from "../../data/fake-data2.json";
+
 
 class Courses extends Component {
 	constructor(props) {
 		super(props);
-		this.state = {};
+		this.state = {
+			imgIndex: 0,
+			selected: 0,
+			courses: data,
+			dataFromThumbnail: ""
+		};
 	}
 	//FIX: Add Courses completed Page: JS 30, FreeCodeCamp, SoloLearn, CYF Challenges
+	getData = data => {
+		//Gets data on specified Thumbnail and sends data to be rendered as Lg-Thumbnail
+		this.setState({ selected: 1, dataFromThumbnail: data });
+	};
+
+	handleCloseLgThumbnail = update => {
+		console.log("from lg-thumbnail", update);
+		this.setState({ selected: update });
+	};
 
 	render() {
+		const { selected, courses, dataFromThumbnail } = this.state;
 		return (
-			<>
-				<NavBar />
-				<h1>Courses</h1>
-			</>
+			<div className="page-wrapper">
+				<div className="page-width">
+					{selected ? (
+						<LgThumbNail
+							name={dataFromThumbnail.name}
+							desc={dataFromThumbnail.desc}
+							img={dataFromThumbnail.img}
+							closeLgThumbnail={this.handleCloseLgThumbnail}
+						/>
+					) : (
+						<>
+							<header>
+								<NavBar />
+							</header>
+							<main className="main-wrapper">
+								<h1>Courses</h1>
+								<h3>2019</h3>
+								<section className={"elements-wrapper"}>
+									{courses.map(course => (
+										//data is exported before reaching ThumbNail as ThumbNail will accept data from multiple sources - therefore must be generic.
+										<ThumbNail
+											key={course.id}
+											img={course.img}
+											name={course.name}
+											desc={course.desc}
+											getData={this.getData}
+										/>
+									))}
+								</section>
+								<h3>2018</h3>
+									<section className={"elements-wrapper"}>
+										{courses.map(course => (
+											//data is exported before reaching ThumbNail as ThumbNail will accept data from multiple sources - therefore must be generic.
+											<ThumbNail
+												key={course.id}
+												img={course.img}
+												name={course.name}
+												desc={course.desc}
+												getData={this.getData}
+											/>
+										))}
+									</section>
+							</main>
+							<footer>
+								<label>Soon Footer</label>
+							</footer>
+						</>
+					)}
+				</div>
+			</div>
 		);
 	}
 }

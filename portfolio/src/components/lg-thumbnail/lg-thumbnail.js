@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./lg-thumbnail.css";
+import CarouselControls from "../carousel-controls/CarouselControls";
 
 class LgThumbNail extends Component {
 	constructor(props) {
@@ -11,52 +12,30 @@ class LgThumbNail extends Component {
 		};
 	}
 	// <LgThumbnail /> should increment through img array passed from <Thumbnail />
-	handleIncrementCarousel = () => {
-		let imgIndex = this.state.imgIndex;
-		imgIndex++;
+	getData = data => {
+		//Gets data on specified Thumbnail and sends data to be rendered as Lg-Thumbnail
+		const { imgIndex, autoPlay } = data;
+		this.setState({ imgIndex, autoPlay });
+	};
 
-		if (imgIndex >= this.state.img.length) {
-			imgIndex = 0;
-			this.setState({ imgIndex });
+	descCharLimit = () => {
+		console.log("desc in limit", this.state.desc);
+	};
+
+	thumbNailSwitch = () => {
+		console.log("onClick");
+		let selected = this.state.selected;
+
+		if (selected === 0) {
+			selected++;
+			this.props.getData(this.state);
+			this.setState({ selected });
+		} else if (selected === 1) {
+			selected--;
+			this.setState({ selected });
 		}
-		this.setState({ imgIndex });
-	};
 
-	handleDecrementCarousel = () => {
-		let imgIndex = this.state.imgIndex;
-		imgIndex--;
-		if (imgIndex < 0) {
-			imgIndex = this.state.img.length - 1;
-			this.setState({ imgIndex });
-		}
-		this.setState({ imgIndex });
-	};
-
-	handleStopImageChange = () => {
-		console.log("Stop Image");
-		clearInterval(this.state.autoPlay);
-	};
-
-	handleAutoForward = () => {
-		console.log("Auto Forward Image");
-		clearInterval(this.state.autoPlay);
-
-		let autoPlay = setInterval(() => {
-			console.log("Next Pic");
-			this.handleIncrementCarousel();
-		}, 1500);
-		this.setState({ autoPlay });
-	};
-
-	handleAutoBackward = () => {
-		console.log("Auto Backward Image");
-		clearInterval(this.state.autoPlay);
-
-		let autoPlay = setInterval(() => {
-			console.log("Last Pic");
-			this.handleDecrementCarousel();
-		}, 1500);
-		this.setState({ autoPlay });
+		console.log("Selected", this.state.selected);
 	};
 
 	//Closing window should change selected in parent to 0. This will change the view from <LgThumbnail /> to <Thumbnail />.
@@ -84,21 +63,14 @@ class LgThumbNail extends Component {
 				<div className="lg-thumbnail-wrapper">
 					<h1 className={"lg-thumbnail-title"}>{name}</h1>
 					<img src={img[imgIndex]} className={"lg-thumbnail-img"} />
-					<div className={"lg-thumbnail-button-container"}>
-						<button onClick={this.handleAutoBackward}>
-							{"<<"}
-						</button>
-						<button onClick={this.handleDecrementCarousel}>
-							{"<"}
-						</button>
-						<button onClick={this.handleStopImageChange}>
-							{"."}
-						</button>
-						<button onClick={this.handleIncrementCarousel}>
-							{">"}
-						</button>
-						<button onClick={this.handleAutoForward}>{">>"}</button>
-					</div>
+					{img.length > 1 ? (
+						<CarouselControls
+							getData={this.getData}
+							img={this.props.img}
+						/>
+					) : (
+						null
+					)}
 					<p>Description: {desc}</p>
 					<p>Role: {role}</p>
 					<p>Challenge: {challenge}</p>

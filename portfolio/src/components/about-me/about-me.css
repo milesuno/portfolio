@@ -3,6 +3,7 @@
 	align-items: center;
 	background: black;
 }
+
 .about-me-wrapper {
 	padding-top: 50px;
 
@@ -18,10 +19,6 @@
 	width: 300px;
 }
 
-.page-width {
-	width: 97%;
-	background: white;
-}
 
 @media (max-width: 450px) {
 	.about-me-img {
