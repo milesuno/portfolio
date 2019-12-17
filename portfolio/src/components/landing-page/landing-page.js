@@ -7,6 +7,7 @@ class LandingPage extends Component {
     constructor(props) {
         super(props);
     }
+    // fetch('https://miles-express1-v2.glitch.me/quotes').then(r => r.json()).then(r => console.log(r));
     render() { 
         return ( 
             <div className='landing-page-page-wrapper'>

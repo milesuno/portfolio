@@ -1,6 +1,6 @@
 .about-me-page-wrapper {
 	display: flex;
-	align-items: center;
+	justify-content: center;
 	background: black;
 }
 
@@ -14,11 +14,10 @@
 }
 
 .about-me-img {
-    align-self: center;
-    border-radius: 100%;
+	align-self: center;
+	border-radius: 100%;
 	width: 300px;
 }
-
 
 @media (max-width: 450px) {
 	.about-me-img {
