@@ -38,7 +38,6 @@ class LgThumbNail extends Component {
 		console.log("Selected", this.state.selected);
 	};
 
-	//Closing window should change selected in parent to 0. This will change the view from <LgThumbnail /> to <Thumbnail />.
 
 	render() {
 		const { imgIndex } = this.state;
@@ -50,7 +49,7 @@ class LgThumbNail extends Component {
 			challenge,
 			solution,
 			source
-		} = this.props;
+		} = this.props.dataFromThumbnail;
 
 		return (
 			<div className={"lg-thumbnail-page-wrapper"}>
@@ -71,11 +70,12 @@ class LgThumbNail extends Component {
 					) : (
 						null
 					)}
-					<p>Description: {desc}</p>
-					<p>Role: {role}</p>
-					<p>Challenge: {challenge}</p>
-					<p>Solution: {solution}</p>
-					<a href={source}>Source: {source}</a>
+					{console.log('lg thumbnail', this.props)}
+					{desc ? <p>Description: {desc}</p> : null}
+					{role ? <p>Role: {role}</p> : null}
+					{challenge ? <p>Challenge: {challenge}</p> : null}
+					{solution ? <p>Solution: {solution}</p> : null}
+					{source ? <a href={source}>Source: {source}</a> : null}
 				</div>
 			</div>
 		);

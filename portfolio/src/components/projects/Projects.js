@@ -38,9 +38,7 @@ class Projects extends Component {
 					</header>
 					{selected ? (
 						<LgThumbNail
-							name={dataFromThumbnail.name}
-							desc={dataFromThumbnail.desc}
-							img={dataFromThumbnail.img}
+							dataFromThumbnail={dataFromThumbnail}
 							closeLgThumbnail={this.handleCloseLgThumbnail}
 						/>
 					) : (
@@ -55,23 +53,32 @@ class Projects extends Component {
 										img={project.img}
 										name={project.name}
 										desc={project.desc}
+										role={project.role}
+										challenge={project.challenge}
+										solution={project.solution}
+										source={project.source}
+										getData={this.getData}
 										getData={this.getData}
 									/>
 								))}
 							</section>
 							<h3>2018</h3>
-								<section className={"elements-wrapper"}>
-									{projects.map(project => (
-										//data is exported before reaching ThumbNail as ThumbNail will accept data from multiple sources - therefore must be generic.
-										<ThumbNail
-											key={project.id}
-											img={project.img}
-											name={project.name}
-											desc={project.desc}
-											getData={this.getData}
-										/>
-									))}
-								</section>
+							<section className={"elements-wrapper"}>
+								{projects.map(project => (
+									//data is exported before reaching ThumbNail as ThumbNail will accept data from multiple sources - therefore must be generic.
+									<ThumbNail
+										key={project.id}
+										img={project.img}
+										name={project.name}
+										desc={project.desc}
+										role={project.role}
+										challenge={project.challenge}
+										solution={project.solution}
+										source={project.source}
+										getData={this.getData}
+									/>
+								))}
+							</section>
 						</main>
 					)}
 					<footer>

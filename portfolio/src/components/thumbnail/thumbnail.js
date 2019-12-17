@@ -9,6 +9,7 @@ but I do not need to specify or use [square] syntax to access the data passed
 class ThumbNail extends Component {
 	constructor(props) {
 		super(props);
+		//state is used to populate data in lg-thumbnail on thumbnail click
 		this.state = {
 			imgIndex: 0,
 			selected: 0,

@@ -36,9 +36,7 @@ class Courses extends Component {
 				<div className="page-width">
 					{selected ? (
 						<LgThumbNail
-							name={dataFromThumbnail.name}
-							desc={dataFromThumbnail.desc}
-							img={dataFromThumbnail.img}
+							dataFromThumbnail={dataFromThumbnail}
 							closeLgThumbnail={this.handleCloseLgThumbnail}
 						/>
 					) : (
@@ -57,23 +55,27 @@ class Courses extends Component {
 											img={course.img}
 											name={course.name}
 											desc={course.desc}
+											role={course.role}
+											challenge={course.challenge}
+											solution={course.solution}
+											source={course.source}
 											getData={this.getData}
 										/>
 									))}
 								</section>
 								<h3>2018</h3>
-									<section className={"elements-wrapper"}>
-										{courses.map(course => (
-											//data is exported before reaching ThumbNail as ThumbNail will accept data from multiple sources - therefore must be generic.
-											<ThumbNail
-												key={course.id}
-												img={course.img}
-												name={course.name}
-												desc={course.desc}
-												getData={this.getData}
-											/>
-										))}
-									</section>
+								<section className={"elements-wrapper"}>
+									{courses.map(course => (
+										//data is exported before reaching ThumbNail as ThumbNail will accept data from multiple sources - therefore must be generic.
+										<ThumbNail
+											key={course.id}
+											img={course.img}
+											name={course.name}
+											desc={course.desc}
+											getData={this.getData}
+										/>
+									))}
+								</section>
 							</main>
 							<footer>
 								<label>Soon Footer</label>

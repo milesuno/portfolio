@@ -35,13 +35,7 @@ class UXDesigns extends Component {
 				<div className="page-width">
 					{selected ? (
 						<LgThumbNail
-							name={dataFromThumbnail.name}
-							desc={dataFromThumbnail.desc}
-							img={dataFromThumbnail.img}
-							role={dataFromThumbnail.role}
-							challenge={dataFromThumbnail.challenge}
-							solution={dataFromThumbnail.solution}
-							source={dataFromThumbnail.source}
+							dataFromThumbnail={dataFromThumbnail}
 							closeLgThumbnail={this.handleCloseLgThumbnail}
 						/>
 					) : (
@@ -66,26 +60,26 @@ class UXDesigns extends Component {
 											solution={ux.solution}
 											source={ux.source}
 											getData={this.getData}
-											/>
-											))}
+										/>
+									))}
 								</section>
 								<h3>2018</h3>
-									<section className="elements-wrapper">
-										{ux.map(ux => (
-											//data is exported before reaching ThumbNail as ThumbNail will accept data from multiple sources - therefore must be generic.
-											<ThumbNail
-												key={ux.id}
-												img={ux.img}
-												name={ux.name}
-												desc={ux.desc}
-												role={ux.role}
-												challenge={ux.challenge}
-												solution={ux.solution}
-												source={ux.source}
-												getData={this.getData}
-											/>
-										))}
-									</section>
+								<section className="elements-wrapper">
+									{ux.map(ux => (
+										//data is exported before reaching ThumbNail as ThumbNail will accept data from multiple sources - therefore must be generic.
+										<ThumbNail
+											key={ux.id}
+											img={ux.img}
+											name={ux.name}
+											desc={ux.desc}
+											role={ux.role}
+											challenge={ux.challenge}
+											solution={ux.solution}
+											source={ux.source}
+											getData={this.getData}
+										/>
+									))}
+								</section>
 							</main>
 							<footer>
 								<label>Soon Footer</label>
