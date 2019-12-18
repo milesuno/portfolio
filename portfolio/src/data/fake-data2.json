@@ -1,42 +1,79 @@
 [
-    {
-        "id": 1,
-        "name": "BarterAnything.com",
-        "img": ["https://images.unsplash.com/photo-1561196643-35c381cb6a6d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"],
-        "desc": "BarterAnything is a Cashless Ecommerce Platform",
-        "role": "FrontEnd Dev",
-        "challenge": "Development",
-        "solution": "Grind",
-        "source": "www.url.com"
-    },
-    {
-        "id": 2,
-        "name": "AnythingBarter.com",
-        "img": ["https://images.unsplash.com/photo-1563923683738-4ad77b43411c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80"],
-        "desc": "BarterAnything is a Cashless Ecommerce Platform",
-        "role": "FrontEnd Dev",
-        "challenge": "Development",
-        "solution": "Grind",
-        "source": "www.url.com"
-    },
-    {
-        "id": 3,
-        "name": "AnythingBarter.com 2",
-        "img":  ["https://images.unsplash.com/photo-1563734956808-602dab25525f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"],
-        "desc": "BarterAnything is a Cashless Ecommerce Platform",
-        "role": "FrontEnd Dev",
-        "challenge": "Development",
-        "solution": "Grind",
-        "source": "www.url.com"
-    },
-    {
-        "id": 4,
-        "name": "AnythingBarter.com 23",
-        "img":  ["https://images.unsplash.com/photo-1558237316-d4762d4b8ce7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"],
-        "desc": "BarterAnything is a Cashless Ecommerce Platform",
-        "role": "FrontEnd Dev",
-        "challenge": "Development",
-        "solution": "Grind",
-        "source": "www.url.com"
-    }
+	{
+		"id": 1,
+		"name": "FreeCodeCamp",
+		"img": [
+			"https://s3.amazonaws.com/freecodecamp/curriculum-diagram-full.jpg"
+		],
+		"desc": "FreeCodeCamp is a online resource for learning and practicing various programming languages and concepts. I completed the courses: HTML, CSS, JavaScript and React. My account is linked below.",
+		"role": "",
+		"tech":"HTML, CSS, JavaScript, React",
+		"challenge": "I found some algorhythms difficult to conceptualise intially, particularly within nested loops",
+		"solution": "I looked at various resource (such as MDN) to further understand underlying concepts",
+		"source": "https://www.freecodecamp.org/fcce86321e6-d662-498d-a726-3f2e53d58f36"
+	},
+	{
+		"id": 2,
+		"name": "JavaScript 30",
+		"img": [
+			"https://tfrommen.de/wp-content/uploads/javascript30-hero-1920x720.jpg"
+		],
+		"desc": "JavaScript 30 is a course to learn and practice Vanilla JavaScript building 30 different projects. I completed the JavaScript 30 challenges and linked them below",
+		"role": "",
+		"tech": "JavaScript",
+		"challenge": "Learning some JavaScript Objects and Methods that are not utilised often in development",
+		"solution": "Reading the documentation on MDN and watching video tutorials to deepen my understanding",
+		"source": "https://github.com/milesuno/javascript-30"
+	},
+	{
+		"id": 3,
+		"name": "SoloLearn",
+		"img": ["https://pbs.twimg.com/media/EAmfMkvUcAAXiHK.jpg"],
+		"desc": "SoloLearn is a online resource for learning and practicing various programming languages and concepts. I completed the courses: HTML, CSS, JavaScript. My account is linked below",
+		"role": "",
+		"tech": "HTML, CSS, JavaScript",
+		"challenge": "Development",
+		"solution": "Grind",
+		"source": "https://www.sololearn.com/Profile/7421850#"
+	},
+	{
+		"id": 4,
+		"name": "CodeYourFuture: React Challenges",
+		"img": [
+			"https://theturingtrust.files.wordpress.com/2018/03/code-your-future1.jpg"
+		],
+		"desc": "BarterAnything is a Cashless Ecommerce Platform",
+		"role": "FrontEnd Dev",
+		"tech": "HTML, CSS, JSX, JavaScript, React",
+		"challenge": "Development",
+		"solution": "Grind",
+		"source": "www.url.com"
+	},
+	{
+		"id": 5,
+		"name": "CodeYourFuture: JS Challenges",
+		"img": [
+			"https://theturingtrust.files.wordpress.com/2018/03/code-your-future1.jpg"
+		],
+		"desc": "BarterAnything is a Cashless Ecommerce Platform",
+		"role": "FrontEnd Dev",
+		"tech": "HTML, CSS, JavaScript, React",
+		"challenge": "Development",
+		"solution": "Grind",
+		"source": "www.url.com"
+	},
+		{
+		"id": 6,
+		"name": "NodeJS ",
+		"img": [
+			"https://miro.medium.com/max/3150/1*m5RYM_Wkj4LsZewpigV5tg.jpeg"
+		],
+		"desc": "BarterAnything is a Cashless Ecommerce Platform",
+		"role": "FrontEnd Dev",
+		"tech": "HTML, CSS, JavaScript, React",
+		"challenge": "Development",
+		"solution": "Grind",
+		"source": "www.url.com"
+	}
+	
 ]

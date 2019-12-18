@@ -6,17 +6,17 @@
 
     background: white;
 	border: 5px solid rgb(240, 236, 236);
-	box-shadow: 5px 5px 5px lightgrey;
+	box-shadow: 5px 5px 5px #949494;
 
 	margin: 0.5%;
     width: 300px;
     
-    transition: all .1s ease-in-out;
+    /* transition: all .1s ease-in-out; */
 }
 
-.thumbnail-page-wrapper:hover {
+/* .thumbnail-page-wrapper:hover {
     transform: scale(1.05);
-}
+} */
 
 .thumbnail-wrapper {
 	width: 90%;

@@ -18,6 +18,7 @@ class ThumbNail extends Component {
 			img: this.props.img,
 			desc: this.props.desc,
 			role: this.props.role,
+			tech: this.props.tech,
 			challenge: this.props.challenge,
 			solution: this.props.solution,
 			source: this.props.source

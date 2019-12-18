@@ -33,15 +33,16 @@ class Projects extends Component {
 		return (
 			<div className={"page-wrapper"}>
 				<div className="page-width">
-					<header>
-						<NavBar />
-					</header>
 					{selected ? (
 						<LgThumbNail
-							dataFromThumbnail={dataFromThumbnail}
-							closeLgThumbnail={this.handleCloseLgThumbnail}
+						dataFromThumbnail={dataFromThumbnail}
+						closeLgThumbnail={this.handleCloseLgThumbnail}
 						/>
 					) : (
+						<>
+						<header>
+							<NavBar />
+						</header>
 						<main className={"main-wrapper"}>
 							<h1>Projects</h1>
 							<h3>2019</h3>
@@ -54,36 +55,21 @@ class Projects extends Component {
 										name={project.name}
 										desc={project.desc}
 										role={project.role}
+										tech={project.te}
 										challenge={project.challenge}
 										solution={project.solution}
 										source={project.source}
 										getData={this.getData}
-										getData={this.getData}
-									/>
-								))}
-							</section>
-							<h3>2018</h3>
-							<section className={"elements-wrapper"}>
-								{projects.map(project => (
-									//data is exported before reaching ThumbNail as ThumbNail will accept data from multiple sources - therefore must be generic.
-									<ThumbNail
-										key={project.id}
-										img={project.img}
-										name={project.name}
-										desc={project.desc}
-										role={project.role}
-										challenge={project.challenge}
-										solution={project.solution}
-										source={project.source}
 										getData={this.getData}
 									/>
 								))}
 							</section>
 						</main>
-					)}
 					<footer>
 						<label>Soon Footer</label>
 					</footer>
+					</>
+					)}
 				</div>
 			</div>
 		);

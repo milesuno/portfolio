@@ -38,7 +38,6 @@ class LgThumbNail extends Component {
 		console.log("Selected", this.state.selected);
 	};
 
-
 	render() {
 		const { imgIndex } = this.state;
 		const {
@@ -46,6 +45,7 @@ class LgThumbNail extends Component {
 			img,
 			desc,
 			role,
+			tech,
 			challenge,
 			solution,
 			source
@@ -65,17 +65,40 @@ class LgThumbNail extends Component {
 					{img.length > 1 ? (
 						<CarouselControls
 							getData={this.getData}
-							img={this.props.img}
+							img={this.props.dataFromThumbnail.img}
 						/>
-					) : (
-						null
-					)}
-					{console.log('lg thumbnail', this.props)}
-					{desc ? <p>Description: {desc}</p> : null}
-					{role ? <p>Role: {role}</p> : null}
-					{challenge ? <p>Challenge: {challenge}</p> : null}
-					{solution ? <p>Solution: {solution}</p> : null}
-					{source ? <a href={source}>Source: {source}</a> : null}
+					) : null}
+					{desc ? (
+						<p>
+							<strong>Description:</strong> {desc}
+						</p>
+					) : null}
+					{role ? (
+						<p>
+							<strong>Role:</strong> {role}
+						</p>
+					) : null}
+					{tech ? (
+						<p>
+							<strong>Technologies:</strong> {tech}
+						</p>
+					) : null}
+					{challenge ? (
+						<p>
+							<strong>Challenge:</strong> {challenge}
+						</p>
+					) : null}
+					{solution ? (
+						<p>
+							<strong>Solution:</strong> {solution}
+						</p>
+					) : null}
+					{source ? (
+						<>
+							<strong>Source:</strong>
+							<a href={source}>{source}</a>
+						</>
+					) : null}
 				</div>
 			</div>
 		);

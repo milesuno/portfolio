@@ -13,7 +13,7 @@ class UXDesigns extends Component {
 		this.state = {
 			//State holds all UX the data for the <ThumbNail /> component. This is passed as a Prop.
 			selected: 0,
-			dataFromThumbnail: '',
+			dataFromThumbnail: "",
 			ux: data
 		};
 	}
@@ -56,23 +56,7 @@ class UXDesigns extends Component {
 											name={ux.name}
 											desc={ux.desc}
 											role={ux.role}
-											challenge={ux.challenge}
-											solution={ux.solution}
-											source={ux.source}
-											getData={this.getData}
-										/>
-									))}
-								</section>
-								<h3>2018</h3>
-								<section className="elements-wrapper">
-									{ux.map(ux => (
-										//data is exported before reaching ThumbNail as ThumbNail will accept data from multiple sources - therefore must be generic.
-										<ThumbNail
-											key={ux.id}
-											img={ux.img}
-											name={ux.name}
-											desc={ux.desc}
-											role={ux.role}
+											tech={ux.tech}
 											challenge={ux.challenge}
 											solution={ux.solution}
 											source={ux.source}

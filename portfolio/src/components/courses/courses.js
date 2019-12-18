@@ -46,7 +46,6 @@ class Courses extends Component {
 							</header>
 							<main className="main-wrapper">
 								<h1>Courses</h1>
-								<h3>2019</h3>
 								<section className={"elements-wrapper"}>
 									{courses.map(course => (
 										//data is exported before reaching ThumbNail as ThumbNail will accept data from multiple sources - therefore must be generic.
@@ -56,22 +55,10 @@ class Courses extends Component {
 											name={course.name}
 											desc={course.desc}
 											role={course.role}
+											tech={course.tech}
 											challenge={course.challenge}
 											solution={course.solution}
 											source={course.source}
-											getData={this.getData}
-										/>
-									))}
-								</section>
-								<h3>2018</h3>
-								<section className={"elements-wrapper"}>
-									{courses.map(course => (
-										//data is exported before reaching ThumbNail as ThumbNail will accept data from multiple sources - therefore must be generic.
-										<ThumbNail
-											key={course.id}
-											img={course.img}
-											name={course.name}
-											desc={course.desc}
 											getData={this.getData}
 										/>
 									))}

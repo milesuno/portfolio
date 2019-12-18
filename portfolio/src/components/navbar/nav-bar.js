@@ -11,7 +11,9 @@ class NavBar extends Component {
 	render() {
 		return (
 			<nav className={"nav"}>
-				<img src={"#"} />
+				<Link to="/">
+					<img src={"#"} />
+				</Link>
 				<ul className={"ul"}>
 					<Link to="/uxdesigns">
 						<li>UX/UI Designs</li>
