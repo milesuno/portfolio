@@ -15,11 +15,11 @@ class NavBar extends Component {
 					<img src={"#"} />
 				</Link>
 				<ul className={"ul"}>
-					<Link to="/uxdesigns">
-						<li>UX/UI Designs</li>
-					</Link>
 					<Link to="/projects">
 						<li>Projects</li>
+					</Link>
+					<Link to="/uxdesigns">
+						<li>UX/UI Designs</li>
 					</Link>
 					<Link to="/courses">
 						<li>Courses</li>

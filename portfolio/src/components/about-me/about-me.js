@@ -26,6 +26,8 @@ class AboutMe extends Component {
 								"https://media.licdn.com/dms/image/C5603AQGIp06YBvaYaQ/profile-displayphoto-shrink_200_200/0?e=1577923200&v=beta&t=e_m9Y5UXjZr9h0NZ1YVOEPcgaX1wWuWfUZveoRbhpRA"
 							}
 						/>
+						//Wire button to download CV onClick 
+						<button>Download Resume</button>
 						<p>
 							"At vero eos et accusamus et iusto odio dignissimos
 							ducimus qui blanditiis praesentium voluptatum

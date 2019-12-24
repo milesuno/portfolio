@@ -24,7 +24,7 @@ class LandingPage extends Component {
 							"https://images.unsplash.com/photo-1544847558-3ccacb31ee7f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"
 						}
 					/>
-					<Link to="/uxdesigns">
+					<Link to="/projects">
 						<button className="landing-page-a">Enter</button>
 					</Link>
 				</main>

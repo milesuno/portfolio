@@ -5,7 +5,7 @@ import NavBar from "../navbar/nav-bar";
 
 import "../../style-sheets/portfolio.css";
 
-import data from "../../data/fake-data.json";
+import data from "../../data/ux-data.json";
 
 class UXDesigns extends Component {
 	constructor(props) {

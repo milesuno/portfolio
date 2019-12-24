@@ -50,7 +50,7 @@ class LgThumbNail extends Component {
 			solution,
 			source
 		} = this.props.dataFromThumbnail;
-
+console.log('LG Thumbnail tech', tech)
 		return (
 			<div className={"lg-thumbnail-page-wrapper"}>
 				<button
@@ -95,8 +95,18 @@ class LgThumbNail extends Component {
 					) : null}
 					{source ? (
 						<>
-							<strong>Source:</strong>
-							<a href={source}>{source}</a>
+							<strong>Sources:</strong>
+							{source.url ? (
+								<p>
+									URL: <a href={source.url}>{source.url}</a>
+								</p>
+							) : null}
+							{source.github ? (
+								<p>
+									Github:{" "}
+									<a href={source.github}>{source.github}</a>
+								</p>
+							) : null}
 						</>
 					) : null}
 				</div>

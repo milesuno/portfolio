@@ -12,8 +12,8 @@ function App() {
 		<Router className={'app'}>
 			<Switch>
 				<Route path="/" exact component={LandingPage} />
-				<Route path="/uxdesigns" exact component={UXDesigns} />
 				<Route path="/projects" exact component={Projects} />
+				<Route path="/uxdesigns" exact component={UXDesigns} />
 				<Route path="/courses" exact component={Courses} />
 				<Route path="/aboutme" exact component={AboutMe} />
 			</Switch>

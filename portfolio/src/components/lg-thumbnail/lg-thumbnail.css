@@ -19,7 +19,7 @@
 }
 
 .lg-thumbnail-img {
-	object-fit: cover;
+	object-fit: scale-down;
 	height: 400px;
 }
 

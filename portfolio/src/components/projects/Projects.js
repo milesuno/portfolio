@@ -2,10 +2,9 @@ import React, { Component } from "react";
 import ThumbNail from "../thumbnail/thumbnail";
 import LgThumbNail from "../lg-thumbnail/lg-thumbnail";
 import NavBar from "../navbar/nav-bar";
-
 import "../../style-sheets/portfolio.css";
 
-import data from "../../data/fake-data.json";
+import data from "../../data/project-data.json";
 
 class Projects extends Component {
 	constructor(props) {
@@ -35,40 +34,40 @@ class Projects extends Component {
 				<div className="page-width">
 					{selected ? (
 						<LgThumbNail
-						dataFromThumbnail={dataFromThumbnail}
-						closeLgThumbnail={this.handleCloseLgThumbnail}
+							dataFromThumbnail={dataFromThumbnail}
+							closeLgThumbnail={this.handleCloseLgThumbnail}
 						/>
 					) : (
 						<>
-						<header>
-							<NavBar />
-						</header>
-						<main className={"main-wrapper"}>
-							<h1>Projects</h1>
-							<h3>2019</h3>
-							<section className={"elements-wrapper"}>
-								{projects.map(project => (
-									//data is exported before reaching ThumbNail as ThumbNail will accept data from multiple sources - therefore must be generic.
-									<ThumbNail
-										key={project.id}
-										img={project.img}
-										name={project.name}
-										desc={project.desc}
-										role={project.role}
-										tech={project.te}
-										challenge={project.challenge}
-										solution={project.solution}
-										source={project.source}
-										getData={this.getData}
-										getData={this.getData}
-									/>
-								))}
-							</section>
-						</main>
-					<footer>
-						<label>Soon Footer</label>
-					</footer>
-					</>
+							<header>
+								<NavBar />
+							</header>
+							<main className={"main-wrapper"}>
+								<h1>Projects</h1>
+								<h3>2019</h3>
+								<section className={"elements-wrapper"}>
+									{projects.map(project => (
+										//data is exported before reaching ThumbNail as ThumbNail will accept data from multiple sources - therefore must be generic.
+										<ThumbNail
+											key={project.id}
+											img={project.img}
+											name={project.name}
+											desc={project.desc}
+											role={project.role}
+											tech={project.tech}
+											challenge={project.challenge}
+											solution={project.solution}
+											source={project.source}
+											getData={this.getData}
+											getData={this.getData}
+										/>
+									))}
+								</section>
+							</main>
+							<footer>
+								<label>Soon Footer</label>
+							</footer>
+						</>
 					)}
 				</div>
 			</div>

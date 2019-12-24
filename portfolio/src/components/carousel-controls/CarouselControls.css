@@ -6,4 +6,12 @@
 
 .button-container button {
 	width: 100%;
+	background: white;
+	font-size: x-large;
+
+	border-style: solid;
+	border-color: rgb(240, 236, 236);
+	border-radius: 15%;
+	margin: 1px;
+	box-shadow: 3px 3px 3px #949494;
 }
