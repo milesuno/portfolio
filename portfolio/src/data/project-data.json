@@ -3,7 +3,17 @@
 		"id": 1,
 		"name": "BarterAnything",
 		"img": [
-			"https://gmo-portfolio.s3.eu-west-2.amazonaws.com/images/projects/barteranything.jpg"
+			"https://gmo-portfolio.s3.eu-west-2.amazonaws.com/images/projects/barteranything/BarterAnything_rev201.png",
+			"https://gmo-portfolio.s3.eu-west-2.amazonaws.com/images/projects/barteranything/barteranything.jpg",
+			"https://gmo-portfolio.s3.eu-west-2.amazonaws.com/images/projects/barteranything/barteranything-login.jpg",
+			"https://gmo-portfolio.s3.eu-west-2.amazonaws.com/images/projects/barteranything/barteranything-local-ads.jpg",
+			"https://gmo-portfolio.s3.eu-west-2.amazonaws.com/images/projects/barteranything/barteranything-search.jpg",
+			"https://gmo-portfolio.s3.eu-west-2.amazonaws.com/images/projects/barteranything/barteranything-profile-edit.jpg",
+			"https://gmo-portfolio.s3.eu-west-2.amazonaws.com/images/projects/barteranything/barteranything-dashboard-overview.jpg",
+			"https://gmo-portfolio.s3.eu-west-2.amazonaws.com/images/projects/barteranything/barteranything-dashboard-barterstore.jpg",
+			"https://gmo-portfolio.s3.eu-west-2.amazonaws.com/images/projects/barteranything/barteranything-dashboard-currentdeals.jpg",
+			"https://gmo-portfolio.s3.eu-west-2.amazonaws.com/images/projects/barteranything/barteranything-dashboard-reviews.jpg",
+			"https://gmo-portfolio.s3.eu-west-2.amazonaws.com/images/projects/barteranything/barteranything-mail.jpg"
 		],
 		"desc": "BarterAnything is a Cashless Ecommerce Platform. User's create profiles and negotiate terms for a value trade of any skill, service or Item they are offering.",
 		"role": "Creative Director, UX Designer, Project Management.",
@@ -11,7 +21,7 @@
 		"challenge": "Syncing up schedules with remote team mates.",
 		"solution": "Practiced agile principles to maximise the effectiveness of collabrative work.",
 		"source": {
-			"url": "www.barteranything.com",
+			"url": "https://barteranything.com/",
 			"github": ""
 		}
 	},
@@ -19,9 +29,16 @@
 		"id": 2,
 		"name": "CYF Glossary",
 		"img": [
-			"https://gmo-portfolio.s3.eu-west-2.amazonaws.com/images/projects/cyf-glossary.jpg"
+			"https://gmo-portfolio.s3.eu-west-2.amazonaws.com/images/projects/cyf-glossary/cyf-glossary-landingpage.jpg",
+			"https://gmo-portfolio.s3.eu-west-2.amazonaws.com/images/projects/cyf-glossary/cyf-glossary-login.jpg",
+			"https://gmo-portfolio.s3.eu-west-2.amazonaws.com/images/projects/cyf-glossary/cyf-glossary-signup.jpg",
+			"https://gmo-portfolio.s3.eu-west-2.amazonaws.com/images/projects/cyf-glossary/cyf-glossary-search.jpg",
+			"https://gmo-portfolio.s3.eu-west-2.amazonaws.com/images/projects/cyf-glossary/cyf-glossary-term.jpg",
+			"https://gmo-portfolio.s3.eu-west-2.amazonaws.com/images/projects/cyf-glossary/cyf-glossary-add-term.jpg",
+			"https://gmo-portfolio.s3.eu-west-2.amazonaws.com/images/projects/cyf-glossary/cyf-glossary-saved-term.jpg",
+			"https://gmo-portfolio.s3.eu-west-2.amazonaws.com/images/projects/cyf-glossary/cyf-glossary-logo.jpg"
 		],
-		"desc": ": My team and I, we responsible for delivering a glossary for technology-based technical terms.We were a team of 4 with a deadline of 24 days. I was the Project Manager and Front-End developer for the project. We successfully completed a working product on time and demonstrated its functionality to stakeholders.",
+		"desc": "My team and I, we responsible for delivering a glossary for technology-based technical terms.We were a team of 4 with a deadline of 24 days. I was the Project Manager and Front-End developer for the project. We successfully completed a working product on time and demonstrated its functionality to stakeholders.",
 		"role": "UX/UI designer, Prototyping, Front-end Development, Project Management.",
 		"tech": "HTML, CSS, JavaScript, React, NodeJS, Express, MongoDB.",
 		"challenge": "Getting team to collaborate for product demoing.",
@@ -35,7 +52,10 @@
 		"id": 3,
 		"name": "See Your Future",
 		"img": [
-			"https://gmo-portfolio.s3.eu-west-2.amazonaws.com/images/projects/see-your-future.jpg"
+			"https://gmo-portfolio.s3.eu-west-2.amazonaws.com/images/projects/see-your-future/see-your-future.jpg",
+			"https://gmo-portfolio.s3.eu-west-2.amazonaws.com/images/projects/see-your-future/see-your-future-companies.jpg",
+			"https://gmo-portfolio.s3.eu-west-2.amazonaws.com/images/projects/see-your-future/see-your-future-opportunites.jpg",
+			"https://gmo-portfolio.s3.eu-west-2.amazonaws.com/images/projects/see-your-future/see-your-future-faq.jpg"
 		],
 		"desc": "My team and I entered a competition hosted by Capgemini. Our object was to deliver a platform to connect inexperienced developers with companies, helping them to find out more about the industry and job roles. I was the Project Manager and Front-End developer for the project. We were a team of 8 and had a 30-day deadline. We successfully delivered a working product meeting the deadline and won ‘Best Engineered’ and ‘Most Innovative’ awards - 2 of 3 awards available. I was voted by my peers to receive the ‘Hero Helper’ award, due to my contributions.",
 		"role": "UX/UI Designer, Front-end Developer, Project Management.",
@@ -55,12 +75,44 @@
 		],
 		"desc": "Hotel React is a product landing page that allows users to: Link off to tourist locations, search for bookings based on name or room ID, Add orders a basket and submit their order.",
 		"role": "UX Designer, FrontEnd Developer.",
-		"tech": "HTML, CSS, JavaScript, React",
+		"tech": "HTML, CSS, JavaScript, React, Express, NodeJS",
 		"challenge": "",
 		"solution": "",
 		"source": {
 			"url": "https://miles-hotel-react.netlify.com/",
 			"github": "https://github.com/milesuno/cyf-hotel-react"
+		}
+	},
+	{
+		"id": 5,
+		"name": "TV Show Info",
+		"img": [
+			"https://gmo-portfolio.s3.eu-west-2.amazonaws.com/images/projects/tv-show-info.jpg"
+		],
+		"desc": "TV Show Info is a page that allows users to: Filter shows (Fetchs from Maze API), Jump to Episode in list.",
+		"role": "UX Designer, FrontEnd Developer.",
+		"tech": "HTML, CSS, JavaScript, React",
+		"challenge": "",
+		"solution": "",
+		"source": {
+			"url": "https://cyf-miles-tv-info.netlify.com/",
+			"github": "https://github.com/milesuno/cyf-react-challenges/tree/master/challenge-tv-show-info"
+		}
+	},
+	{
+		"id": 6,
+		"name": "JS Drumkit",
+		"img": [
+			"https://gmo-portfolio.s3.eu-west-2.amazonaws.com/images/projects/tv-show-info.jpg"
+		],
+		"desc": "TV Show Info is a page that allows users to: Filter shows (Fetchs from Maze API), Jump to Episode in list.",
+		"role": "UX Designer, FrontEnd Developer.",
+		"tech": "HTML, CSS, JavaScript, React",
+		"challenge": "",
+		"solution": "",
+		"source": {
+			"url": "https://cyf-miles-tv-info.netlify.com/",
+			"github": "https://github.com/milesuno/cyf-react-challenges/tree/master/challenge-tv-show-info"
 		}
 	}
 ]

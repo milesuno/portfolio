@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Helmet from "react-helmet";
 import ThumbNail from "../thumbnail/thumbnail";
 import LgThumbNail from "../lg-thumbnail/lg-thumbnail";
 import NavBar from "../navbar/nav-bar";
@@ -31,47 +32,56 @@ class UXDesigns extends Component {
 	render() {
 		const { ux, selected, dataFromThumbnail } = this.state;
 		return (
-			<div className="page-wrapper">
-				<div className="page-width">
-					{selected ? (
-						<LgThumbNail
-							dataFromThumbnail={dataFromThumbnail}
-							closeLgThumbnail={this.handleCloseLgThumbnail}
-						/>
-					) : (
-						<>
-							<header>
-								<NavBar />
-							</header>
-							<main className="main-wrapper">
-								{/* onClick={() => {this.setState({ selected: selected })}//FIX IT} */}
-								<h1>UX/UI Designs</h1>
-								<h3>2019</h3>
-								<section className="elements-wrapper">
-									{ux.map(ux => (
-										//data is exported before reaching ThumbNail as ThumbNail will accept data from multiple sources - therefore must be generic.
-										<ThumbNail
-											key={ux.id}
-											img={ux.img}
-											name={ux.name}
-											desc={ux.desc}
-											role={ux.role}
-											tech={ux.tech}
-											challenge={ux.challenge}
-											solution={ux.solution}
-											source={ux.source}
-											getData={this.getData}
-										/>
-									))}
-								</section>
-							</main>
-							<footer>
-								<label>Soon Footer</label>
-							</footer>
-						</>
-					)}
+			<>
+				<Helmet>
+					<title>Portfolio - UX Designs</title>
+					<meta
+						name="description"
+						content="UX designers produced for projects"
+					/>
+				</Helmet>
+				<div className="page-wrapper">
+					<div className="page-width">
+						{selected ? (
+							<LgThumbNail
+								dataFromThumbnail={dataFromThumbnail}
+								closeLgThumbnail={this.handleCloseLgThumbnail}
+							/>
+						) : (
+							<>
+								<header>
+									<NavBar />
+								</header>
+								<main className="main-wrapper">
+									{/* onClick={() => {this.setState({ selected: selected })}//FIX IT} */}
+									<h1>UX/UI Designs</h1>
+									<h3>2019</h3>
+									<section className="elements-wrapper">
+										{ux.map(ux => (
+											//data is exported before reaching ThumbNail as ThumbNail will accept data from multiple sources - therefore must be generic.
+											<ThumbNail
+												key={ux.id}
+												img={ux.img}
+												name={ux.name}
+												desc={ux.desc}
+												role={ux.role}
+												tech={ux.tech}
+												challenge={ux.challenge}
+												solution={ux.solution}
+												source={ux.source}
+												getData={this.getData}
+											/>
+										))}
+									</section>
+								</main>
+								<footer>
+									<label>Soon Footer</label>
+								</footer>
+							</>
+						)}
+					</div>
 				</div>
-			</div>
+			</>
 		);
 	}
 }

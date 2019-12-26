@@ -2,7 +2,9 @@ import React, { Component } from "react";
 import ThumbNail from "../thumbnail/thumbnail";
 import LgThumbNail from "../lg-thumbnail/lg-thumbnail";
 import NavBar from "../navbar/nav-bar";
+// import img from '../../images/hotel-react.jpg';
 import "../../style-sheets/portfolio.css";
+import Helmet from 'react-helmet';
 
 import data from "../../data/project-data.json";
 
@@ -30,6 +32,12 @@ class Projects extends Component {
 	render() {
 		const { projects, selected, dataFromThumbnail } = this.state;
 		return (
+			<>
+			<Helmet>
+				<title>Portfolio - Projects</title>
+				<meta name='description' content='Portfolio Projects'/>
+			</Helmet>
+			<>
 			<div className={"page-wrapper"}>
 				<div className="page-width">
 					{selected ? (
@@ -71,6 +79,8 @@ class Projects extends Component {
 					)}
 				</div>
 			</div>
+			</>
+			</>
 		);
 	}
 }
