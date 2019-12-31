@@ -22,7 +22,8 @@
 		"solution": "Practiced agile principles to maximise the effectiveness of collabrative work.",
 		"source": {
 			"url": "https://barteranything.com/",
-			"github": ""
+			"github": "",
+			"trello": ""
 		}
 	},
 	{
@@ -45,7 +46,8 @@
 		"solution": "Encouraging inexperienced developers with practice, feedback and advice.",
 		"source": {
 			"url": "https://cyf-glossary-app.netlify.com/",
-			"github": "https://github.com/ahmedahashim/CYF-Glossary"
+			"github": "https://github.com/ahmedahashim/CYF-Glossary",
+			"trello": "https://trello.com/b/9OxYYRjg"
 		}
 	},
 	{
@@ -64,11 +66,29 @@
 		"solution": "Applying Agile practices for product delivery and utilising unit testing and acceptance testing.",
 		"source": {
 			"url": "https://stoic-euclid-1582e1.netlify.com/",
-			"github": "https://github.com/eddientim/CYF-CAPGEMINI"
+			"github": "https://github.com/eddientim/CYF-CAPGEMINI",
+			"trello": ""
 		}
 	},
 	{
 		"id": 4,
+		"name": "Weather App",
+		"img": [
+			"https://gmo-portfolio.s3.eu-west-2.amazonaws.com/images/projects/weather-app.jpg"
+		],
+		"desc": "The Weather App fetchs live data from the Openweathermap api. It displays the current weather as well as the weather over a 24 hour window.",
+		"role": "UX Designer, FrontEnd Developer.",
+		"tech": "HTML, CSS, JavaScript, React",
+		"challenge": "",
+		"solution": "",
+		"source": {
+			"url": "https://miles-weather-app.netlify.com",
+			"github": "https://github.com/milesuno/cyf-weather",
+			"trello": ""
+		}
+	},
+	{
+		"id": 5,
 		"name": "Hotel React",
 		"img": [
 			"https://gmo-portfolio.s3.eu-west-2.amazonaws.com/images/projects/hotel-react.jpg"
@@ -80,11 +100,12 @@
 		"solution": "",
 		"source": {
 			"url": "https://miles-hotel-react.netlify.com/",
-			"github": "https://github.com/milesuno/cyf-hotel-react"
+			"github": "https://github.com/milesuno/cyf-hotel-react",
+			"trello": ""
 		}
 	},
 	{
-		"id": 5,
+		"id": 6,
 		"name": "TV Show Info",
 		"img": [
 			"https://gmo-portfolio.s3.eu-west-2.amazonaws.com/images/projects/tv-show-info.jpg"
@@ -96,23 +117,8 @@
 		"solution": "",
 		"source": {
 			"url": "https://cyf-miles-tv-info.netlify.com/",
-			"github": "https://github.com/milesuno/cyf-react-challenges/tree/master/challenge-tv-show-info"
-		}
-	},
-	{
-		"id": 6,
-		"name": "JS Drumkit",
-		"img": [
-			"https://gmo-portfolio.s3.eu-west-2.amazonaws.com/images/projects/tv-show-info.jpg"
-		],
-		"desc": "TV Show Info is a page that allows users to: Filter shows (Fetchs from Maze API), Jump to Episode in list.",
-		"role": "UX Designer, FrontEnd Developer.",
-		"tech": "HTML, CSS, JavaScript, React",
-		"challenge": "",
-		"solution": "",
-		"source": {
-			"url": "https://cyf-miles-tv-info.netlify.com/",
-			"github": "https://github.com/milesuno/cyf-react-challenges/tree/master/challenge-tv-show-info"
+			"github": "https://github.com/milesuno/cyf-react-challenges/tree/master/challenge-tv-show-info",
+			"trello": ""
 		}
 	}
 ]

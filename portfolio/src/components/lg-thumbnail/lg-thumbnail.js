@@ -50,7 +50,7 @@ class LgThumbNail extends Component {
 			solution,
 			source
 		} = this.props.dataFromThumbnail;
-console.log('LG Thumbnail tech', tech)
+		console.log("LG Thumbnail tech", tech);
 		return (
 			<div className={"lg-thumbnail-page-wrapper"}>
 				<button
@@ -105,6 +105,12 @@ console.log('LG Thumbnail tech', tech)
 								<p>
 									Github:{" "}
 									<a href={source.github}>{source.github}</a>
+								</p>
+							) : null}
+							{source.trello ? (
+								<p>
+									Trello:{" "}
+									<a href={source.github}>{source.trello}</a>
 								</p>
 							) : null}
 						</>

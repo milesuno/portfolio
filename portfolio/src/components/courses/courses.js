@@ -6,7 +6,7 @@ import Helmet from "react-helmet";
 
 import "../../style-sheets/portfolio.css";
 
-import data from "../../data/fake-data2.json";
+import data from "../../data/course-data.json";
 
 class Courses extends Component {
 	constructor(props) {

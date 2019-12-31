@@ -10,7 +10,7 @@ class SocialMediaNav extends Component {
 			<nav>
 				<p>Social Media</p>
 				<label>
-					FaceBook
+					Email
 					<img src={"#"} />
 				</label>
 				<label>

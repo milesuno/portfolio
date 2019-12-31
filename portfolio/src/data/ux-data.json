@@ -13,7 +13,11 @@
 		"tech": "Balsamiq",
 		"challenge": "Development",
 		"solution": "Grind",
-		"source": { "url": "", "github": "" }
+		"source": {
+			"url": "",
+			"github": "",
+			"trello": ""
+		}
 	},
 	{
 		"id": 2,
@@ -40,62 +44,70 @@
 		"tech": "Balsamiq",
 		"challenge": "Development",
 		"solution": "Grind",
-		"source": { "url": "", "github": "" }
+		"source": {
+			"url": "",
+			"github": "",
+			"trello": ""
+		}
 	},
 	{
 		"id": 3,
 		"name": "CYF Glossary: Mobile",
 		"img": [
-            "https://gmo-portfolio.s3.eu-west-2.amazonaws.com/images/ux-designs/cyf-glossary-ux/mobile/cyf-glossary-landing-page.jpg",
-            "https://gmo-portfolio.s3.eu-west-2.amazonaws.com/images/ux-designs/cyf-glossary-ux/mobile/cyf-glossary-login.jpg",
-            "https://gmo-portfolio.s3.eu-west-2.amazonaws.com/images/ux-designs/cyf-glossary-ux/mobile/cyf-glossary-signup.jpg",
-            "https://gmo-portfolio.s3.eu-west-2.amazonaws.com/images/ux-designs/cyf-glossary-ux/mobile/cyf-glossary-search.jpg",
-            "https://gmo-portfolio.s3.eu-west-2.amazonaws.com/images/ux-designs/cyf-glossary-ux/mobile/cyf-glossary-search-term.jpg",
-            "https://gmo-portfolio.s3.eu-west-2.amazonaws.com/images/ux-designs/cyf-glossary-ux/mobile/cyf-glossary-term-add.jpg",
-            "https://gmo-portfolio.s3.eu-west-2.amazonaws.com/images/ux-designs/cyf-glossary-ux/mobile/cyf-glossary-term-edit.jpg",
-            "https://gmo-portfolio.s3.eu-west-2.amazonaws.com/images/ux-designs/cyf-glossary-ux/mobile/cyf-glossary-term-flag.jpg",
-            "https://gmo-portfolio.s3.eu-west-2.amazonaws.com/images/ux-designs/cyf-glossary-ux/mobile/cyf-glossary-profile-edit.jpg",
-            "https://gmo-portfolio.s3.eu-west-2.amazonaws.com/images/ux-designs/cyf-glossary-ux/mobile/cyf-glossary-mentor-profile-edit.jpg"
+			"https://gmo-portfolio.s3.eu-west-2.amazonaws.com/images/ux-designs/cyf-glossary-ux/mobile/cyf-glossary-landing-page.jpg",
+			"https://gmo-portfolio.s3.eu-west-2.amazonaws.com/images/ux-designs/cyf-glossary-ux/mobile/cyf-glossary-login.jpg",
+			"https://gmo-portfolio.s3.eu-west-2.amazonaws.com/images/ux-designs/cyf-glossary-ux/mobile/cyf-glossary-signup.jpg",
+			"https://gmo-portfolio.s3.eu-west-2.amazonaws.com/images/ux-designs/cyf-glossary-ux/mobile/cyf-glossary-search.jpg",
+			"https://gmo-portfolio.s3.eu-west-2.amazonaws.com/images/ux-designs/cyf-glossary-ux/mobile/cyf-glossary-search-term.jpg",
+			"https://gmo-portfolio.s3.eu-west-2.amazonaws.com/images/ux-designs/cyf-glossary-ux/mobile/cyf-glossary-term-add.jpg",
+			"https://gmo-portfolio.s3.eu-west-2.amazonaws.com/images/ux-designs/cyf-glossary-ux/mobile/cyf-glossary-term-edit.jpg",
+			"https://gmo-portfolio.s3.eu-west-2.amazonaws.com/images/ux-designs/cyf-glossary-ux/mobile/cyf-glossary-term-flag.jpg",
+			"https://gmo-portfolio.s3.eu-west-2.amazonaws.com/images/ux-designs/cyf-glossary-ux/mobile/cyf-glossary-profile-edit.jpg",
+			"https://gmo-portfolio.s3.eu-west-2.amazonaws.com/images/ux-designs/cyf-glossary-ux/mobile/cyf-glossary-mentor-profile-edit.jpg"
 		],
 		"desc": "CYF Glossary was inspired by platforms like Google and Wikipedia to display search result in a clear and concise manner.",
 		"role": "UX Designer",
 		"tech": "Balsamiq",
 		"challenge": "Development",
 		"solution": "Grind",
-		"source": { "url": "", "github": "" }
+		"source": {
+			"url": "",
+			"github": "",
+			"trello": ""
+		}
 	},
 	{
 		"id": 4,
-		"name": "AnythingBarter.com 2",
+		"name": "Placeholder",
 		"img": [
-			"https://images.unsplash.com/photo-1561196643-35c381cb6a6d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-			"https://images.unsplash.com/photo-1563923683738-4ad77b43411c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80",
-			"https://images.unsplash.com/photo-1563734956808-602dab25525f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
-			"https://images.unsplash.com/photo-1558237316-d4762d4b8ce7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
-			"https://images.unsplash.com/photo-1562569633-622303bafef5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+			"#"
 		],
-		"desc": "BarterAnything is a Cashless Ecommerce Platform",
-		"role": "FrontEnd Dev",
-		"tech": "HTML, CSS, JavaScript, React",
-		"challenge": "Development",
-		"solution": "Grind",
-		"source": { "url": "", "github": "" }
+		"desc": "Placeholder",
+		"role": "Placeholder",
+		"tech": "Placeholder",
+		"challenge": "",
+		"solution": "",
+		"source": {
+			"url": "",
+			"github": "",
+			"trello": ""
+		}
 	},
 	{
-		"id": 5,
-		"name": "AnythingBarter.com 23",
+		"id": 5	,
+		"name": "Placeholder",
 		"img": [
-			"https://images.unsplash.com/photo-1561196643-35c381cb6a6d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-			"https://images.unsplash.com/photo-1563923683738-4ad77b43411c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80",
-			"https://images.unsplash.com/photo-1563734956808-602dab25525f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
-			"https://images.unsplash.com/photo-1558237316-d4762d4b8ce7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
-			"https://images.unsplash.com/photo-1562569633-622303bafef5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+			"#"
 		],
-		"desc": "BarterAnything is a Cashless Ecommerce Platform",
-		"role": "FrontEnd Dev",
-		"tech": "HTML, CSS, JavaScript, React",
-		"challenge": "Development",
-		"solution": "Grind",
-		"source": { "url": "", "github": "" }
+		"desc": "Placeholder",
+		"role": "Placeholder",
+		"tech": "Placeholder",
+		"challenge": "",
+		"solution": "",
+		"source": {
+			"url": "",
+			"github": "",
+			"trello": ""
+		}
 	}
 ]

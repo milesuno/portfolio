@@ -12,20 +12,20 @@ class NavBar extends Component {
 		return (
 			<nav className={"nav"}>
 				<Link to="/">
-					<img src={"#"} />
+					<img src={""} />
 				</Link>
 				<ul className={"ul"}>
 					<Link to="/projects">
-						<li>Projects</li>
+						<li>PROJECTS</li>
 					</Link>
 					<Link to="/uxdesigns">
-						<li>UX/UI Designs</li>
+						<li>UX/UI DESIGNS</li>
 					</Link>
 					<Link to="/courses">
-						<li>Courses</li>
+						<li>COURSES</li>
 					</Link>
 					<Link to="/aboutme">
-						<li>About Me</li>
+						<li>ABOUT ME</li>
 					</Link>
 				</ul>
 			</nav>
