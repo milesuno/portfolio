@@ -89,7 +89,7 @@ class AboutMe extends Component {
 									versatile developer. Who can work within
 									development teams as well as lead.
 								</p>
-								{/* <SocialMediaNav /> */}
+								<SocialMediaNav />
 							</div>
 						</main>
 						<footer>soon footer</footer>

@@ -47,7 +47,7 @@ class Courses extends Component {
 						) : (
 							<>
 								<header>
-									<NavBar />
+									<NavBar courses={courses}/>
 								</header>
 								<main className="main-wrapper">
 									<h1>Courses</h1>

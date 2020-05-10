@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import data from "../../data/social-media-data.json";
 
 class SocialMediaNav extends Component {
 	constructor(props) {
@@ -6,6 +7,7 @@ class SocialMediaNav extends Component {
 		this.state = {};
 	}
 	render() {
+		console.log({data})
 		return (
 			<nav>
 				<p>Social Media</p>

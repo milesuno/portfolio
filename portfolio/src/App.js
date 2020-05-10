@@ -6,6 +6,7 @@ import Projects from "./components/projects/Projects";
 import Courses from "./components/courses/courses";
 import AboutMe from "./components/about-me/about-me";
 import "./App.css";
+import SinglePageItem from "./components/single-page-item/SinglePageItem";
 
 function App() {
 	return (
@@ -16,6 +17,8 @@ function App() {
 				<Route path="/uxdesigns" exact component={UXDesigns} />
 				<Route path="/courses" exact component={Courses} />
 				<Route path="/aboutme" exact component={AboutMe} />
+				{/* <Route path="/singlepageitem" exact component={SinglePageItem} /> */}
+
 			</Switch>
 		</Router>
 	);
