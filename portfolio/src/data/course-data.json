@@ -1,6 +1,6 @@
 [
 	{
-		"id": 1,
+		"id": "c1",
 		"name": "FreeCodeCamp",
 		"img": [
 			"https://s3.amazonaws.com/freecodecamp/curriculum-diagram-full.jpg"
@@ -16,7 +16,7 @@
 		}
 	},
 	{
-		"id": 2,
+		"id": "c2",
 		"name": "JavaScript 30",
 		"img": [
 			"https://tfrommen.de/wp-content/uploads/javascript30-hero-1920x720.jpg"
@@ -32,7 +32,7 @@
 		}
 	},
 	{
-		"id": 3,
+		"id": "c3",
 		"name": "SoloLearn",
 		"img": ["https://pbs.twimg.com/media/EAmfMkvUcAAXiHK.jpg"],
 		"desc": "SoloLearn is a online resource for learning and practicing various programming languages and concepts. I completed the courses: HTML, CSS, JavaScript. My account is linked below",
@@ -46,7 +46,7 @@
 		}
 	},
 	{
-		"id": 4,
+		"id": "c4",
 		"name": "CodeYourFuture: React Challenges",
 		"img": [
 			"https://theturingtrust.files.wordpress.com/2018/03/code-your-future1.jpg"
@@ -62,7 +62,7 @@
 		}
 	},
 	{
-		"id": 5,
+		"id": "c5",
 		"name": "CodeYourFuture: JS Challenges",
 		"img": [
 			"https://theturingtrust.files.wordpress.com/2018/03/code-your-future1.jpg"
@@ -78,7 +78,7 @@
 		}
 	},
 	{
-		"id": 6,
+		"id": "c6",
 		"name": "NodeJS ",
 		"img": [
 			"https://miro.medium.com/max/3150/1*m5RYM_Wkj4LsZewpigV5tg.jpeg"

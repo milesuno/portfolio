@@ -1,6 +1,6 @@
 [
 	{
-		"id": 1,
+		"id": "p1",
 		"name": "BarterAnything",
 		"img": [
 			"https://gmo-portfolio.s3.eu-west-2.amazonaws.com/images/projects/barteranything/BarterAnything_rev201.png",
@@ -27,7 +27,7 @@
 		}
 	},
 	{
-		"id": 2,
+		"id": "p2",
 		"name": "CYF Glossary",
 		"img": [
 			"https://gmo-portfolio.s3.eu-west-2.amazonaws.com/images/projects/cyf-glossary/cyf-glossary-landingpage.jpg",
@@ -51,7 +51,7 @@
 		}
 	},
 	{
-		"id": 3,
+		"id": "p3",
 		"name": "See Your Future",
 		"img": [
 			"https://gmo-portfolio.s3.eu-west-2.amazonaws.com/images/projects/see-your-future/see-your-future.jpg",
@@ -71,7 +71,7 @@
 		}
 	},
 	{
-		"id": 4,
+		"id": "p4",
 		"name": "Weather App",
 		"img": [
 			"https://gmo-portfolio.s3.eu-west-2.amazonaws.com/images/projects/weather-app.jpg"
@@ -88,7 +88,7 @@
 		}
 	},
 	{
-		"id": 5,
+		"id": "p5",
 		"name": "Hotel React",
 		"img": [
 			"https://gmo-portfolio.s3.eu-west-2.amazonaws.com/images/projects/hotel-react.jpg"
@@ -105,7 +105,7 @@
 		}
 	},
 	{
-		"id": 6,
+		"id": "p6",
 		"name": "TV Show Info",
 		"img": [
 			"https://gmo-portfolio.s3.eu-west-2.amazonaws.com/images/projects/tv-show-info.jpg"

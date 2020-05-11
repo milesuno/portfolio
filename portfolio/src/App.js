@@ -17,7 +17,7 @@ function App() {
 				<Route path="/uxdesigns" exact component={UXDesigns} />
 				<Route path="/courses" exact component={Courses} />
 				<Route path="/aboutme" exact component={AboutMe} />
-				{/* <Route path="/singlepageitem" exact component={SinglePageItem} /> */}
+				<Route path="/projects/:id" exact component={SinglePageItem} />
 
 			</Switch>
 		</Router>

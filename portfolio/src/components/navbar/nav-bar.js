@@ -95,6 +95,7 @@ class NavBar extends Component {
 		// dropdownList.style.flexDirection = "column";
 	};
 
+	refreshPage = () => {};
 	render() {
 		return (
 			<nav className="nav">
@@ -118,7 +119,11 @@ class NavBar extends Component {
 										// console.log(project);
 										return (
 											<li className="dropdown-item">
-												<a>{project.name}</a>
+												<Link
+													to={`/projects/${project.id}`}
+												>
+													{project.name}
+												</Link>
 											</li>
 										);
 									})

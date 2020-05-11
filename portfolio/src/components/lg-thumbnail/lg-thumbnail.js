@@ -103,7 +103,7 @@ class LgThumbNail extends Component {
 											<strong>Role:</strong> {role}
 										</p>
 									) : null}
-									<b>
+									<b>	
 										<i onClick={this.thumbNailSwitch}>
 											More ...
 										</i>
