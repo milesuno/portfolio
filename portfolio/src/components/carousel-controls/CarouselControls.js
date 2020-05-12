@@ -8,7 +8,7 @@ class CarouselControls extends Component {
 			imgIndex: 0,
 			selected: 0,
 			autoPlay: "",
-			img: this.props.img
+			img: this.props.img,
 		};
 	}
 
@@ -18,10 +18,10 @@ class CarouselControls extends Component {
 		if (imgIndex >= this.state.img.length) {
 			imgIndex = 0;
 			this.setState({ imgIndex });
-			console.log(imgIndex);
 		}
+
 		this.setState({ imgIndex });
-		this.props.getData(this.state);
+		this.props.getData({ imgIndex });
 	};
 
 	handleDecrementCarousel = () => {
@@ -32,13 +32,13 @@ class CarouselControls extends Component {
 			this.setState({ imgIndex });
 		}
 		this.setState({ imgIndex });
-		this.props.getData(this.state);
+		console.log("decrement img", imgIndex);
+		this.props.getData({ imgIndex });
 	};
 
 	handleStopImageChange = () => {
 		console.log("Stop Image");
 		clearInterval(this.state.autoPlay);
-		this.props.getData(this.state);
 	};
 
 	handleAutoForward = () => {
@@ -46,11 +46,9 @@ class CarouselControls extends Component {
 		clearInterval(this.state.autoPlay);
 
 		let autoPlay = setInterval(() => {
-			console.log("Next Pic");
 			this.handleIncrementCarousel();
 		}, 1500);
 		this.setState({ autoPlay });
-		this.props.getData(this.state);
 	};
 
 	handleAutoBackward = () => {
@@ -62,7 +60,6 @@ class CarouselControls extends Component {
 			this.handleDecrementCarousel();
 		}, 1500);
 		this.setState({ autoPlay });
-		this.props.getData(this.state);
 	};
 
 	render() {

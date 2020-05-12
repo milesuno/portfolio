@@ -28,10 +28,15 @@ class ThumbNail extends Component {
 		};
 	}
 
+	componentWillUpdate() {
+
+	};
+
 	getData = (data) => {
 		//Gets data on specified Thumbnail and sends data to be rendered as Lg-Thumbnail
-		const { imgIndex, autoPlay } = data;
-		this.setState({ imgIndex, autoPlay });
+		console.log("Data from Carousel", data)
+		const { imgIndex } = data;
+		this.setState({ imgIndex });
 	};
 
 	handleCloseLgThumbnail = (update) => {
