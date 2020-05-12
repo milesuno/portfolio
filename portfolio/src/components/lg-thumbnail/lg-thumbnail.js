@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
+
 import "./lg-thumbnail.css";
 import CarouselControls from "../carousel-controls/CarouselControls";
 import SinglePageItem from "../single-page-item/SinglePageItem";
@@ -7,6 +9,9 @@ import SinglePageItem from "../single-page-item/SinglePageItem";
 //Image carosel, controls, desc, my role.
 //Stand alone page component will display all the available information on a item.
 //Stand alone page will be linked too from dropdown list or via "More..." button in Lg Thumbnail
+
+//FIX: clicking more should link to  SPI without setting the ovreflow to hidden (or unsetting the overflow) 
+
 class LgThumbNail extends Component {
 	constructor(props) {
 		super(props);
@@ -40,6 +45,7 @@ class LgThumbNail extends Component {
 			selected++;
 			// this.props.getData(this.state); //Send data to SinglePage
 			this.setState({ selected });
+			
 		} else if (selected === 1) {
 			selected--;
 			this.setState({ selected });
@@ -52,6 +58,7 @@ class LgThumbNail extends Component {
 		const { imgIndex, selected } = this.state;
 		const {
 			id,
+			type,
 			name,
 			img,
 			desc,
@@ -103,9 +110,11 @@ class LgThumbNail extends Component {
 											<strong>Role:</strong> {role}
 										</p>
 									) : null}
-									<b>	
+									<b>
 										<i onClick={this.thumbNailSwitch}>
-											More ...
+											<Link to={`/${type}/${id}`}>
+												More ...
+											</Link>
 										</i>
 									</b>
 								</div>

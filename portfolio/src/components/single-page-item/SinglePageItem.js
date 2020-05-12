@@ -99,7 +99,7 @@ class SinglePageItem extends Component {
 												{img.length > 1 ? (
 													<CarouselControls
 														getData={this.getData}
-														img={this.props.img}
+														img={img}
 													/>
 												) : null}
 												{desc ? (

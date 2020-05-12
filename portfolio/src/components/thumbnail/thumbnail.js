@@ -15,6 +15,8 @@ class ThumbNail extends Component {
 			imgIndex: 0,
 			selected: 0,
 			autoPlay: "",
+			id: this.props.id,
+			type: this.props.type,
 			name: this.props.name,
 			img: this.props.img,
 			desc: this.props.desc,

@@ -1,6 +1,7 @@
 [
 	{
 		"id": "u1",
+		"type": "uxdesigns",
 		"name": "Portfolio",
 		"img": [
 			"https://gmo-portfolio.s3.eu-west-2.amazonaws.com/images/ux-designs/portfolio-ux/ux-portfolio-landing-page.jpg",
@@ -21,6 +22,7 @@
 	},
 	{
 		"id": "u2",
+		"type": "uxdesigns",
 		"name": "CYF Glossary: Desktop",
 		"img": [
 			"https://gmo-portfolio.s3.eu-west-2.amazonaws.com/images/ux-designs/cyf-glossary-ux/desktop/cyf-glossary-landing-page.jpg",
@@ -52,6 +54,7 @@
 	},
 	{
 		"id": "u3",
+		"type": "uxdesigns",
 		"name": "CYF Glossary: Mobile",
 		"img": [
 			"https://gmo-portfolio.s3.eu-west-2.amazonaws.com/images/ux-designs/cyf-glossary-ux/mobile/cyf-glossary-landing-page.jpg",
@@ -78,6 +81,7 @@
 	},
 	{
 		"id": "u4",
+		"type": "uxdesigns",
 		"name": "Placeholder",
 		"img": ["#"],
 		"desc": "Placeholder",
@@ -93,6 +97,7 @@
 	},
 	{
 		"id": "u5",
+		"type": "uxdesigns",
 		"name": "Placeholder",
 		"img": ["#"],
 		"desc": "Placeholder",

@@ -49,15 +49,14 @@ class Projects extends Component {
 									</header>
 									<main className={"main-wrapper"}>
 										<h1>Projects</h1>
-												<LgThumbNail
-													dataFromThumbnail={
-														dataFromThumbnail
-													}
-													closeLgThumbnail={
-														this
-															.handleCloseLgThumbnail
-													}
-												/>
+										<LgThumbNail
+											dataFromThumbnail={
+												dataFromThumbnail
+											}
+											closeLgThumbnail={
+												this.handleCloseLgThumbnail
+											}
+										/>
 										<section
 											className={"elements-wrapper"}
 										></section>
@@ -65,7 +64,9 @@ class Projects extends Component {
 											{projects.map((project) => (
 												//data is exported before reaching ThumbNail as ThumbNail will accept data from multiple sources - therefore must be generic.
 												<ThumbNail
-													key={project.id}
+													key={project.key}
+													id={project.id}
+													type={project.type}
 													img={project.img}
 													name={project.name}
 													desc={project.desc}
@@ -100,7 +101,9 @@ class Projects extends Component {
 											{projects.map((project) => (
 												//data is exported before reaching ThumbNail as ThumbNail will accept data from multiple sources - therefore must be generic.
 												<ThumbNail
-													key={project.id}
+													key={project.key}
+													id={project.id}
+													type={project.type}
 													img={project.img}
 													name={project.name}
 													desc={project.desc}

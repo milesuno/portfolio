@@ -1,6 +1,8 @@
 [
 	{
+		"key": 1,
 		"id": "p1",
+		"type": "projects",
 		"name": "BarterAnything",
 		"img": [
 			"https://gmo-portfolio.s3.eu-west-2.amazonaws.com/images/projects/barteranything/BarterAnything_rev201.png",
@@ -27,7 +29,9 @@
 		}
 	},
 	{
+		"key": 2,
 		"id": "p2",
+		"type": "projects",
 		"name": "CYF Glossary",
 		"img": [
 			"https://gmo-portfolio.s3.eu-west-2.amazonaws.com/images/projects/cyf-glossary/cyf-glossary-landingpage.jpg",
@@ -51,7 +55,9 @@
 		}
 	},
 	{
+		"key": 3,
 		"id": "p3",
+		"type": "projects",
 		"name": "See Your Future",
 		"img": [
 			"https://gmo-portfolio.s3.eu-west-2.amazonaws.com/images/projects/see-your-future/see-your-future.jpg",
@@ -71,7 +77,9 @@
 		}
 	},
 	{
+		"key": 4,
 		"id": "p4",
+		"type": "projects",
 		"name": "Weather App",
 		"img": [
 			"https://gmo-portfolio.s3.eu-west-2.amazonaws.com/images/projects/weather-app.jpg"
@@ -88,7 +96,9 @@
 		}
 	},
 	{
+		"key": 5,
 		"id": "p5",
+		"type": "projects",
 		"name": "Hotel React",
 		"img": [
 			"https://gmo-portfolio.s3.eu-west-2.amazonaws.com/images/projects/hotel-react.jpg"
@@ -105,7 +115,9 @@
 		}
 	},
 	{
+		"key": 6,
 		"id": "p6",
+		"type": "projects",
 		"name": "TV Show Info",
 		"img": [
 			"https://gmo-portfolio.s3.eu-west-2.amazonaws.com/images/projects/tv-show-info.jpg"
