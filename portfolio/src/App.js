@@ -10,7 +10,7 @@ import SinglePageItem from "./components/single-page-item/SinglePageItem";
 
 function App() {
 	return (
-		<Router className={'app'}>
+		<Router className={"app"}>
 			<Switch>
 				<Route path="/" exact component={LandingPage} />
 				<Route path="/projects" exact component={Projects} />
@@ -18,7 +18,8 @@ function App() {
 				<Route path="/courses" exact component={Courses} />
 				<Route path="/aboutme" exact component={AboutMe} />
 				<Route path="/projects/:id" exact component={SinglePageItem} />
-
+				<Route path="/uxdesigns/:id" exact component={SinglePageItem} />
+				<Route path="/courses/:id" exact component={SinglePageItem} />
 			</Switch>
 		</Router>
 	);

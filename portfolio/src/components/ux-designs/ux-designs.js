@@ -43,30 +43,40 @@ class UXDesigns extends Component {
 				<div className="page-wrapper">
 					<div className="page-width">
 						{selected ? (
-							<LgThumbNail
-								dataFromThumbnail={dataFromThumbnail}
-								closeLgThumbnail={this.handleCloseLgThumbnail}
-							/>
-						) : (
 							<>
+								{/* This is used to render single page items on Pop up or nav dropdown selections*/}
 								<header>
 									<NavBar />
 								</header>
-								<main className="main-wrapper">
-									{/* onClick={() => {this.setState({ selected: selected })}//FIX IT} */}
-									<h1>UX/UI Designs</h1>
+								<main className={"main-wrapper"}>
+									<h1>UX Designs</h1>
 									<h3>2019</h3>
-									<section className="elements-wrapper">
-										{ux.map(ux => (
+									<LgThumbNail
+										dataFromThumbnail={
+											dataFromThumbnail
+										}
+										closeLgThumbnail={
+											this.handleCloseLgThumbnail
+										}
+									/>
+									<section
+										className={"elements-wrapper"}
+									></section>
+									<section className={"elements-wrapper"}>
+										{ux.map((ux) => (
 											//data is exported before reaching ThumbNail as ThumbNail will accept data from multiple sources - therefore must be generic.
 											<ThumbNail
-												key={ux.id}
+												key={ux.key}
+												id={ux.id}
+												type={ux.type}
 												img={ux.img}
 												name={ux.name}
 												desc={ux.desc}
 												role={ux.role}
 												tech={ux.tech}
-												challenge={ux.challenge}
+												challenge={
+													ux.challenge
+												}
 												solution={ux.solution}
 												source={ux.source}
 												getData={this.getData}
@@ -78,6 +88,42 @@ class UXDesigns extends Component {
 									<label>Soon Footer</label>
 								</footer>
 							</>
+						) : (
+								<>
+									{/* This is used to render large pop modal items on click*/}
+
+									<header>
+										<NavBar />
+									</header>
+									<main className={"main-wrapper"}>
+										<h1>UX Designs</h1>
+										<h3>2019</h3>
+										<section className={"elements-wrapper"}>
+											{ux.map((ux) => (
+												//data is exported before reaching ThumbNail as ThumbNail will accept data from multiple sources - therefore must be generic.
+												<ThumbNail
+													key={ux.key}
+													id={ux.id}
+													type={ux.type}
+													img={ux.img}
+													name={ux.name}
+													desc={ux.desc}
+													role={ux.role}
+													tech={ux.tech}
+													challenge={
+														ux.challenge
+													}
+													solution={ux.solution}
+													source={ux.source}
+													getData={this.getData}
+												/>
+											))}
+										</section>
+									</main>
+									<footer>
+										<label>Soon Footer</label>
+									</footer>
+								</>
 						)}
 					</div>
 				</div>

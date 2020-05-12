@@ -49,6 +49,7 @@ class Projects extends Component {
 									</header>
 									<main className={"main-wrapper"}>
 										<h1>Projects</h1>
+										<h3>2019</h3>
 										<LgThumbNail
 											dataFromThumbnail={
 												dataFromThumbnail
@@ -67,6 +68,7 @@ class Projects extends Component {
 													key={project.key}
 													id={project.id}
 													type={project.type}
+
 													img={project.img}
 													name={project.name}
 													desc={project.desc}

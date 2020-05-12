@@ -143,7 +143,11 @@ class NavBar extends Component {
 										// console.log(ux);
 										return (
 											<li className="dropdown-item">
-												<a>{ux.name}</a>
+												<Link
+													to={`/uxdesigns/${ux.id}`}
+												>
+													{ux.name}
+												</Link>
 											</li>
 										);
 									})
@@ -163,7 +167,7 @@ class NavBar extends Component {
 										// console.log(course);
 										return (
 											<li className="dropdown-item">
-												<a>{course.name}</a>
+												<Link to={`/courses/${course.id}`}>{course.name}</Link>
 											</li>
 										);
 									})

@@ -40,28 +40,40 @@ class Courses extends Component {
 				<div className="page-wrapper">
 					<div className="page-width">
 						{selected ? (
-							<LgThumbNail
-								dataFromThumbnail={dataFromThumbnail}
-								closeLgThumbnail={this.handleCloseLgThumbnail}
-							/>
-						) : (
 							<>
+								{/* This is used to render single page items on Pop up or nav dropdown selections*/}
 								<header>
-									<NavBar courses={courses}/>
+									<NavBar />
 								</header>
-								<main className="main-wrapper">
+								<main className={"main-wrapper"}>
 									<h1>Courses</h1>
+									<LgThumbNail
+										dataFromThumbnail={
+											dataFromThumbnail
+										}
+										closeLgThumbnail={
+											this.handleCloseLgThumbnail
+										}
+									/>
+									<section
+										className={"elements-wrapper"}
+									></section>
 									<section className={"elements-wrapper"}>
-										{courses.map(course => (
+										{courses.map((course) => (
 											//data is exported before reaching ThumbNail as ThumbNail will accept data from multiple sources - therefore must be generic.
 											<ThumbNail
-												key={course.id}
+												key={course.key}
+												id={course.id}
+												type={course.type}
+
 												img={course.img}
 												name={course.name}
 												desc={course.desc}
 												role={course.role}
 												tech={course.tech}
-												challenge={course.challenge}
+												challenge={
+													course.challenge
+												}
 												solution={course.solution}
 												source={course.source}
 												getData={this.getData}
@@ -73,10 +85,47 @@ class Courses extends Component {
 									<label>Soon Footer</label>
 								</footer>
 							</>
+						) : (
+								<>
+									{/* This is used to render large pop modal items on click*/}
+
+									<header>
+										<NavBar />
+									</header>
+									<main className={"main-wrapper"}>
+										<h1>Courses</h1>
+										<section className={"elements-wrapper"}>
+											{courses.map((course) => (
+												//data is exported before reaching ThumbNail as ThumbNail will accept data from multiple sources - therefore must be generic.
+												<ThumbNail
+													key={course.key}
+													id={course.id}
+													type={course.type}
+													img={course.img}
+													name={course.name}
+													desc={course.desc}
+													role={course.role}
+													tech={course.tech}
+													challenge={
+														course.challenge
+													}
+													solution={course.solution}
+													source={course.source}
+													getData={this.getData}
+													getData={this.getData}
+												/>
+											))}
+										</section>
+									</main>
+									<footer>
+										<label>Soon Footer</label>
+									</footer>
+						</>
 						)}
 					</div>
 				</div>
-			</>
+				</>
+				
 		);
 	}
 }
