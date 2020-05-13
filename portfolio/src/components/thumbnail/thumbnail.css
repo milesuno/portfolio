@@ -1,5 +1,7 @@
 .thumbnail-page-wrapper {
 	display: flex;
+	/* position: relative;
+	z-index: 0; */
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
@@ -32,4 +34,11 @@
 .thumbnail-title {
 	margin: 0px 0px 10px 0px;
 }
+
+.fade {
+	/* opacity: 0; */
+	transition: all 0.5s;
+}
+
+
 

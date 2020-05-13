@@ -31,6 +31,8 @@ class Projects extends Component {
 
 	render() {
 		const { projects, selected, dataFromThumbnail } = this.state;
+
+
 		return (
 			<>
 				<Helmet>
@@ -44,7 +46,7 @@ class Projects extends Component {
 							{selected ? (
 								<>
 									{/* This is used to render single page items on Pop up or nav dropdown selections*/}
-									<header>
+									<header>	
 										<NavBar />
 									</header>
 									<main className={"main-wrapper"}>
@@ -64,24 +66,27 @@ class Projects extends Component {
 										<section className={"elements-wrapper"}>
 											{projects.map((project) => (
 												//data is exported before reaching ThumbNail as ThumbNail will accept data from multiple sources - therefore must be generic.
-												<ThumbNail
-													key={project.key}
-													id={project.id}
-													type={project.type}
-
-													img={project.img}
-													name={project.name}
-													desc={project.desc}
-													role={project.role}
-													tech={project.tech}
-													challenge={
-														project.challenge
-													}
-													solution={project.solution}
-													source={project.source}
-													getData={this.getData}
-													getData={this.getData}
-												/>
+												<div className="thumbnail-element-wrapper">
+													<ThumbNail
+														key={project.key}
+														id={project.id}
+														type={project.type}
+														img={project.img}
+														name={project.name}
+														desc={project.desc}
+														role={project.role}
+														tech={project.tech}
+														challenge={
+															project.challenge
+														}
+														solution={
+															project.solution
+														}
+														source={project.source}
+														getData={this.getData}
+														getData={this.getData}
+													/>
+												</div>
 											))}
 										</section>
 									</main>

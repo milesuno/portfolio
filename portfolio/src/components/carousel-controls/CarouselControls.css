@@ -5,6 +5,9 @@
 }
 
 .button-container button {
+	display: flex;
+	justify-content: center;
+
 	width: 100%;
 	background: white;
 	font-size: x-large;

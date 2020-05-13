@@ -9,8 +9,8 @@ class CarouselControls extends Component {
 			selected: 0,
 			autoPlay: "",
 			img: this.props.img,
-		};
-	}
+		}
+	};
 
 	handleIncrementCarousel = () => {
 		let imgIndex = this.state.imgIndex;
@@ -65,11 +65,21 @@ class CarouselControls extends Component {
 	render() {
 		return (
 			<div className={"button-container"}>
-				<button onClick={this.handleAutoBackward}>{"<<"}</button>
-				<button onClick={this.handleDecrementCarousel}>{"<"}</button>
-				<button onClick={this.handleStopImageChange}>{"."}</button>
-				<button onClick={this.handleIncrementCarousel}>{">"}</button>
-				<button onClick={this.handleAutoForward}>{">>"}</button>
+				<button onClick={this.handleAutoBackward}>
+					<img src="https://img.icons8.com/metro/26/000000/rewind.png" />
+				</button>
+				<button onClick={this.handleDecrementCarousel}>
+					<img src="https://img.icons8.com/metro/26/000000/sort-left.png" />
+				</button>
+				<button onClick={this.handleStopImageChange}>
+					<img src="https://img.icons8.com/metro/26/000000/stop.png" />
+				</button>
+				<button onClick={this.handleIncrementCarousel}>
+					<img src="https://img.icons8.com/metro/26/000000/sort-right.png" />
+				</button>
+				<button onClick={this.handleAutoForward}>
+					<img src="https://img.icons8.com/metro/26/000000/fast-forward.png" />
+				</button>
 			</div>
 		);
 	}

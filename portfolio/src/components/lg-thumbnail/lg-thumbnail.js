@@ -10,7 +10,7 @@ import SinglePageItem from "../single-page-item/SinglePageItem";
 //Stand alone page component will display all the available information on a item.
 //Stand alone page will be linked too from dropdown list or via "More..." button in Lg Thumbnail
 
-//FIX: clicking more should link to  SPI without setting the ovreflow to hidden (or unsetting the overflow) 
+//FIX: clicking more should link to  SPI without setting the ovreflow to hidden (or unsetting the overflow)
 
 class LgThumbNail extends Component {
 	constructor(props) {
@@ -45,7 +45,6 @@ class LgThumbNail extends Component {
 			selected++;
 			// this.props.getData(this.state); //Send data to SinglePage
 			this.setState({ selected });
-			
 		} else if (selected === 1) {
 			selected--;
 			this.setState({ selected });
