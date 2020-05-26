@@ -53,6 +53,7 @@ class NavBar extends Component {
 		//coords can't be access till it is displayed
 		let dropdownCoords = dropdownList.getBoundingClientRect();
 		let navCoords = nav.getBoundingClientRect();
+		
 
 		//Adjust dropdown BG to match dropdown list measurements
 		dropdownBackground.style.setProperty(
