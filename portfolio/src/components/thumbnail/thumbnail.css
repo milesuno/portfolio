@@ -7,12 +7,12 @@
 	align-items: center;
 
 	background: white;
-	border: 5px solid rgb(240, 236, 236);
-	box-shadow: 5px 5px 5px #949494;
-
-	margin: 0.5%;
+	border: 1px solid rgb(240, 236, 236);
+	box-shadow: 0 50px 100px rgba(50, 50, 93, 0.1),
+		0 15px 35px rgba(50, 50, 93, 0.3), 0 5px 15px rgba(0, 0, 0, 0.1);
+	margin: 15px;
 	width: 245px;
-	height: 345px;
+	height: 330px;
 
 	/* transition: all .1s ease-in-out; */
 }
@@ -30,7 +30,7 @@
 	height: 250px;
 	width: 100%;
 	margin: 0;
-	border: 1px solid black;
+	border: 1px solid grey;
 }
 
 .thumbnail-title {
