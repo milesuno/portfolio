@@ -3,6 +3,21 @@ header {
 	justify-content: center;
 }
 
+div.logo-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #fff;
+	border: 3px solid black;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+}
+	
+div.logo-container a p {
+	color: black;
+}
+
 .nav {
 	position: fixed;
 
@@ -25,12 +40,14 @@ ul.nav-content {
 	/* width: 60%; */
 
 	padding: 0;
+	margin: 0;
 }
 
 li.nav-item {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	margin: 0;
 }
 
 /* li.nav-item,
@@ -97,14 +114,11 @@ a.button {
 	align-items: center;
 }
 
-@media (max-width: 900px) {
-	ul {
-		width: 50%;
-	}
+@media (max-width: 1024px) {
 }
 
-@media (max-width: 500px) {
-	ul {
-		flex-wrap: wrap;
-	}
+@media (max-width: 768px) {
+}
+
+@media (max-width: 425px) {
 }

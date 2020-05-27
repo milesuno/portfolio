@@ -53,7 +53,6 @@ class NavBar extends Component {
 		//coords can't be access till it is displayed
 		let dropdownCoords = dropdownList.getBoundingClientRect();
 		let navCoords = nav.getBoundingClientRect();
-		
 
 		//Adjust dropdown BG to match dropdown list measurements
 		dropdownBackground.style.setProperty(
@@ -104,9 +103,12 @@ class NavBar extends Component {
 				<div className="dropdownBackground">
 					<div className="arrow"></div>
 				</div>
-				<Link to="/">
-					<img src="#" />
-				</Link>
+				<div className="logo-container">
+					<Link to="/">
+						<img src="#" />
+					</Link>
+					<p>Gideon Miles Oluku</p>
+				</div>
 				<ul className="nav-content">
 					<Link to="/projects">
 						<li className="nav-item">
@@ -168,7 +170,11 @@ class NavBar extends Component {
 										// console.log(course);
 										return (
 											<li className="dropdown-item">
-												<Link to={`/courses/${course.id}`}>{course.name}</Link>
+												<Link
+													to={`/courses/${course.id}`}
+												>
+													{course.name}
+												</Link>
 											</li>
 										);
 									})

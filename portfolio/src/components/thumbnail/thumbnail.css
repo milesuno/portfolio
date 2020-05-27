@@ -6,19 +6,20 @@
 	justify-content: center;
 	align-items: center;
 
-    background: white;
+	background: white;
 	border: 5px solid rgb(240, 236, 236);
 	box-shadow: 5px 5px 5px #949494;
 
 	margin: 0.5%;
-    width: 300px;
-    
-    /* transition: all .1s ease-in-out; */
+	width: 245px;
+	height: 345px;
+
+	/* transition: all .1s ease-in-out; */
 }
 
-/* .thumbnail-page-wrapper:hover {
-    transform: scale(1.05);
-} */
+.thumbnail-page-wrapper:hover {
+	transform: scale(1.05);
+}
 
 .thumbnail-wrapper {
 	width: 90%;
@@ -26,19 +27,17 @@
 
 .thumbnail-img {
 	object-fit: cover;
-	height: 300px;
+	height: 250px;
 	width: 100%;
-	margin: 15px 0px 0px 0px;
+	margin: 0;
+	border: 1px solid black;
 }
 
 .thumbnail-title {
-	margin: 0px 0px 10px 0px;
+	margin: 0px;
 }
 
 .fade {
 	/* opacity: 0; */
 	transition: all 0.5s;
 }
-
-
-
