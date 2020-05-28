@@ -25,7 +25,7 @@ class ThumbNail extends Component {
 			challenge: this.props.challenge,
 			solution: this.props.solution,
 			source: this.props.source,
-			checkScroll: ""
+			checkScroll: "",
 		};
 	}
 
@@ -35,56 +35,64 @@ class ThumbNail extends Component {
 			"div.thumbnail-page-wrapper"
 		);
 
-		
 		checkScroll = (e) => {
-
 			this.debounce(
-			thumbnails.forEach((thumbnail) => {
-				const thumbnailCoords = thumbnail.getBoundingClientRect();
-				const nav = document.querySelector("nav");
-				const navCoords = nav.getBoundingClientRect();
-				
-				//the value of the whole viewport + half of the thumbnail hieght
-				//This is used to calculate if this number is more of less than the top off the viewport
-				let slideIn =
-					window.scrollY +
-					window.innerHeight /*Page Bottom*/ 
-					- 
-					thumbnailCoords.height / 2; /*Half of image height*/
+				thumbnails.forEach((thumbnail) => {
+					const thumbnailCoords = thumbnail.getBoundingClientRect();
+					const nav = document.querySelector("nav");
+					const navCoords = nav.getBoundingClientRect();
+
+					//the value of the whole viewport + half of the thumbnail hieght
+					//This is used to calculate if this number is more of less than the top off the viewport
+					let slideIn =
+						window.scrollY +
+						window.innerHeight /*Page Bottom*/ -
+						thumbnailCoords.height / 2; /*Half of image height*/
 
 					// px where image top starts + image height = px for image bottom
-				let thumbnailBottom = thumbnail.offsetTop + thumbnailCoords.height;
-				let thumbnailHalfway = thumbnail.offsetTop + (thumbnailCoords.height / 2)
-				
-				//***Flag Var - return true or false. This will be used to trigger other functions
-	
-				// If slideIn px is greater than image top then return true
-				const isHalfway = slideIn > thumbnail.offsetTop;
+					let thumbnailBottom =
+						thumbnail.offsetTop + thumbnailCoords.height;
+					let thumbnailHalfway =
+						thumbnail.offsetTop + thumbnailCoords.height / 2;
 
-				const isPassedThumbnailHalfway = window.scrollY + navCoords.bottom > thumbnailHalfway ;
-				
-				//if top of browser is less than image bottom return true
-				const isNotscrolledPassed = window.scrollY < thumbnailBottom;
-				
-				console.log({slideIn, thumbnailBottom, isHalfway, isNotscrolledPassed, thumbnailHalfway})
-				
-				if (!isHalfway) thumbnail.style.setProperty("opacity", 0);
-				
-				if (isHalfway && isNotscrolledPassed) thumbnail.style.setProperty("opacity", 1);
+					//***Flag Var - return true or false. This will be used to trigger other functions
 
-				if (isPassedThumbnailHalfway) thumbnail.style.setProperty("opacity", 0);
+					// If slideIn px is greater than image top then return true
+					const isHalfway = slideIn > thumbnail.offsetTop;
 
-			})
+					const isPassedThumbnailHalfway =
+						window.scrollY + navCoords.bottom > thumbnailHalfway;
+
+					//if top of browser is less than image bottom return true
+					const isNotscrolledPassed =
+						window.scrollY < thumbnailBottom;
+
+					console.log({
+						slideIn,
+						thumbnailBottom,
+						isHalfway,
+						isNotscrolledPassed,
+						thumbnailHalfway,
+					});
+
+					if (!isHalfway) thumbnail.style.setProperty("opacity", 0);
+
+					if (isHalfway && isNotscrolledPassed)
+						thumbnail.style.setProperty("opacity", 1);
+
+					if (isPassedThumbnailHalfway)
+						thumbnail.style.setProperty("opacity", 0);
+				})
 			);
-		}
+		};
 
-		this.setState({checkScroll});
-			document.addEventListener("scroll", checkScroll);
+		this.setState({ checkScroll });
+		document.addEventListener("scroll", checkScroll);
 	}
 
-	componentWillUnmount(){
+	componentWillUnmount() {
 		document.removeEventListener("scroll", this.state.checkScroll);
-	};
+	}
 
 	debounce = (func, wait = 20, immediate = true) => {
 		var timeout;
