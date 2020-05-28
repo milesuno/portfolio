@@ -129,18 +129,15 @@ class ThumbNail extends Component {
 	thumbNailSwitch = () => {
 		console.log("onClick");
 		let selected = this.state.selected;
-		const body = document.querySelector("body");
-
+		
 		if (selected === 0) {
 			selected++;
 			this.setState({ selected });
 			this.props.getData(this.state);
-			body.style.setProperty("overflow", "hidden");
 		} else if (selected === 1) {
 			selected--;
 			this.setState({ selected });
 			this.props.getData(this.state);
-			body.style.setProperty("overflow", "");
 		}
 
 		console.log("Selected", this.state.selected);

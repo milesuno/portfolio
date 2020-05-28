@@ -23,7 +23,15 @@ class LgThumbNail extends Component {
 		};
 	}
 
-	componentDidMount() {}
+	componentDidMount() {
+		const body = document.querySelector("body");
+			body.style.setProperty("overflow", "hidden");
+	}
+
+	componentWillUnmount(){
+		const body = document.querySelector("body");
+		body.style.setProperty("overflow", "");
+	}
 
 	getData = (data) => {
 		//Gets data on specified Thumbnail and sends data to be rendered as Lg-Thumbnail
