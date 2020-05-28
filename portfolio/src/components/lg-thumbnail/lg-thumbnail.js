@@ -99,23 +99,26 @@ class LgThumbNail extends Component {
 											}
 										/>
 									) : null}
-									{desc ? (
-										<p>
-											<strong>Description:</strong> {desc}
-										</p>
-									) : null}
-									{role ? (
-										<p>
-											<strong>Role:</strong> {role}
-										</p>
-									) : null}
-									<b>
-										<i onClick={this.thumbNailSwitch}>
-											<Link to={`/${type}/${id}`}>
-												More ...
-											</Link>
-										</i>
-									</b>
+									<div className="lg-thumbnail-info">
+										{desc ? (
+											<p>
+												<strong>Description:</strong>{" "}
+												{desc}
+											</p>
+										) : null}
+										{role ? (
+											<p>
+												<strong>Role:</strong> {role}
+											</p>
+										) : null}
+										<b>
+											<i onClick={this.thumbNailSwitch}>
+												<Link to={`/${type}/${id}`}>
+													More ...
+												</Link>
+											</i>
+										</b>
+									</div>
 								</div>
 							</div>
 						</div>

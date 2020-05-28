@@ -7,7 +7,7 @@
 	background: black;
 }
 .main-wrapper {
-	padding-top: 60px;
+	margin-top: 60px;
 
 	display: flex;
 	flex-direction: column;
@@ -38,6 +38,11 @@
 
 header {
 	width: 100%;
+}
+
+h1 {
+	background: black;
+	color: white;
 }
 
 label {
@@ -71,10 +76,11 @@ footer {
 	flex-direction: column;
 	background-color: #fefefe;
 	margin: 0 auto;
-	padding: 20px;
-	border: 1px solid #888;
-    width: fit-content;
-    height: fit-content;}
+	/* padding: 20px; */
+	/* border: 1px solid #888; */
+	width: fit-content;
+	height: fit-content;
+}
 
 /* The Close Button */
 .close {

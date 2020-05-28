@@ -3,29 +3,42 @@
 	flex-direction: column;
 	align-items: center;
 
-	border: 5px solid rgb(240, 236, 236);
-	box-shadow: 5px 5px 5px lightgrey;
+	/* border: 5px solid rgb(240, 236, 236);
+	box-shadow: 5px 5px 5px lightgrey; */
 	width: 600px;
+	height: fit-content;
+	border: 1px solid grey;
 }
 
 .lg-thumbnail-wrapper {
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: space-around;
 
 	background: white;
 
 	width: 90%;
+	height: 100%;
 }
 
 .lg-thumbnail-img {
 	object-fit: scale-down;
-	height: 400px;
+	height: 325px;
+	border: 1px solid grey;
 }
-
 
 .lg-thumbnail-title {
 	display: flex;
+	margin: 0;
+	background: black;
+	color: white;
+}
+
+.lg-thumbnail-info {
+	margin-top: 10px;
+}
+
+.lg-thumbnail-info p {
 	margin: 0;
 }
 
