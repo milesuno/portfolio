@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import ThumbNail from "../thumbnail/thumbnail";
 import LgThumbNail from "../lg-thumbnail/lg-thumbnail";
 import NavBar from "../navbar/nav-bar";
-// import img from '../../images/hotel-react.jpg';
 import "../../style-sheets/portfolio.css";
 import Helmet from "react-helmet";
 

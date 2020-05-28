@@ -1,14 +1,36 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import Helmet from "react-helmet";
+import vid from "../../landing-video/Pexels Videos 2699.mp4";
 import "./landing-page.css";
 
 class LandingPage extends Component {
 	constructor(props) {
 		super(props);
 	}
+
+	componentDidMount() {
+		this.setScroll(0, 10000);
+		const video = document.querySelector(".landing-page-img");
+		const hideScroll = document.querySelector("body");
+		video.play();
+		video.loop = true;
+		hideScroll.style.overflow = "hidden";
+	}
+
+	componentWillUnmount() {
+		const hideScroll = document.querySelector("body");
+		hideScroll.style.overflow = "unset";
+	}
+
+	setScroll = (x, y) => {
+		console.log("SCROLL")
+		window.scrollBy(x, y);
+	};
+
 	//FIX: Tab Icon
 	render() {
+		console.log(vid);
 		return (
 			<>
 				<Helmet>
@@ -24,12 +46,7 @@ class LandingPage extends Component {
 							</button>
 						</Link>
 						<h1 className="landing-page-h1">Genchi Genbutsu</h1>
-						<img
-							className="landing-page-img"
-							src={
-								"https://images.unsplash.com/photo-1544847558-3ccacb31ee7f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"
-							}
-						/>
+						<video className="landing-page-img" src={vid} />
 						<Link to="/projects">
 							<button className="landing-page-a">Enter</button>
 						</Link>
