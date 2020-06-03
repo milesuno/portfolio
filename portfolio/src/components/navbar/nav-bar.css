@@ -28,7 +28,24 @@ div.logo-container a p {
 	/* background-color: black; */
 	z-index: 1000;
 
-	width: 80%;
+	width: 1024px;
+}
+
+.short-nav {
+	display: flex;
+	width: 100%;
+}
+
+div.collasped-menu-btn {
+	display: none;
+	justify-content: center;
+	align-items: center;
+	background: black;
+	height: 60px;
+}
+
+div.collasped-menu-btn img {
+	width: 55px;
 }
 
 ul.nav-content {
@@ -42,6 +59,8 @@ ul.nav-content {
 
 	padding: 0;
 	margin: 0;
+
+	transition: all 0.6s ease-in-out;
 }
 
 li.nav-item {
@@ -120,13 +139,29 @@ a.button {
 }
 
 @media (max-width: 1024px) {
-}
-
-@media (max-width: 768px) {
-	div.logo-container p {
-		display: none;
+	.nav {
+		width: 97%;
 	}
 }
 
+@media (max-width: 768px) {
+	div.collasped-menu-btn {
+		display: flex;
+	}
+
+	ul.nav-content {
+		/* display: none; */
+		position: absolute;
+		opacity: 0;
+	}
+
+	/* div.logo-container p {
+		display: none;
+	} */
+}
+
 @media (max-width: 425px) {
+	/* .nav {
+		flex-wrap: wrap;
+	} */
 }

@@ -5,6 +5,9 @@ import courseData from "../../data/course-data.json";
 import projectData from "../../data/project-data.json";
 import uxData from "../../data/ux-data.json";
 import socialMediaData from "../../data/social-media-data.json";
+import menu from "../../landing-video/icons8-menu-squared-96.png";
+import closeMenu from "../../landing-video/icons8-close-window-96.png";
+import NavbarMenu from "../navbar-menu/navbar-menu";
 
 class NavBar extends Component {
 	constructor(props) {
@@ -14,6 +17,7 @@ class NavBar extends Component {
 			project: projectData,
 			ux: uxData,
 			socialMedia: socialMediaData,
+			menuToggle: true,
 		};
 	}
 	//Dropdown list should be render below 450px
@@ -30,25 +34,28 @@ class NavBar extends Component {
 		console.log({ navBtns });
 
 		navBtns.forEach((navBtn) => {
-			navBtn.addEventListener("mouseenter", this.handleMouseEnter);
-			navBtn.addEventListener("mouseleave", this.handleMouseLeave);
+			navBtn.addEventListener("mouseenter", this.handleMouseEnter, true);
+			navBtn.addEventListener("mouseleave", this.handleMouseLeave, true);
 		});
 	}
 
-	handleMouseEnter = (e) => {
-		console.log("Enter");
-		if (!e.target.children[0].name) return;
+	handleMouseEnter = (e, clickEvent = false) => {
+		console.log("Enter", e.target);
+		if (!e.target.name) return;
 		const nav = document.querySelector(".nav");
+		const navBtns = document.querySelectorAll("li.nav-item");
+		const allDropdownList = document.querySelectorAll(`.dropdown-list`);
 		const dropdownList = document.querySelector(
-			`.dropdown-list.${e.target.children[0].name}`
+			`.dropdown-list.${e.target.name}`
 		);
 		const dropdownBackground = document.querySelector(
 			".dropdownBackground"
 		);
 
+
 		//Make dropdown visible on enter
-		dropdownList.style.display = "flex";
-		dropdownList.style.flexDirection = "column";
+		dropdownList.style.setProperty("display", "flex");
+		dropdownList.style.setProperty("flex-direction", "column");
 
 		//coords can't be access till it is displayed
 		let dropdownCoords = dropdownList.getBoundingClientRect();
@@ -75,27 +82,140 @@ class NavBar extends Component {
 
 		// Move dropdown BG to match dropdown list
 
-		console.log({ dropdownList, dropdownCoords, dropdownBackground });
-		console.log(dropdownBackground.style.left);
+		if (clickEvent) {
+			//identify nav-item in array with classname and event target name 
+			dropdownBackground.style.setProperty("display", "none");
+
+			let btnFilter = [...navBtns].filter(
+				(navBtn) => navBtn.className === `nav-item ${e.target.name}`
+			);
+			let correctBtn = btnFilter[0];
+			correctBtn.removeEventListener("click", this.handleMouseEnter);
+			correctBtn.addEventListener("click", (e) =>
+				this.handleMouseLeave(e, true)
+			);
+		}
+
+		console.log({
+			dropdownList,
+			allDropdownList,
+			dropdownCoords,
+			dropdownBackground,
+		});
 	};
 
-	handleMouseLeave = (e) => {
-		console.log("Leave");
-		if (!e.target.children[0].name) return;
+	handleMouseLeave = (e, clickEvent = false) => {
+		if (!e.target.name) return;
+		console.log("Leave", e.target);
+		const navBtns = document.querySelectorAll("li.nav-item");
 
 		const dropdownList = document.querySelector(
-			`.dropdown-list.${e.target.children[0].name}`
+			`.dropdown-list.${e.target.name}`
 		);
 		const dropdownBackground = document.querySelector(
 			".dropdownBackground"
 		);
-		dropdownList.style.display = "none";
+
+		dropdownList.style.setProperty("display", "none");
 		dropdownBackground.style.setProperty("opacity", 0);
 
+		if (clickEvent) {
+			let btnFilter = [...navBtns].filter(
+				(navBtn) => navBtn.className === `nav-item ${e.target.name}`
+			);
+			let correctBtn = btnFilter[0];
+			correctBtn.removeEventListener("click", this.handleMouseLeave);
+			correctBtn.addEventListener("click", (e) =>
+				this.handleMouseEnter(e, true)
+			);
+		}
 		// dropdownList.style.flexDirection = "column";
 	};
 
-	refreshPage = () => {};
+	showMenuButtons = () => {
+		//FIX: changing the navBtns to a dropdown list should also change the mouseOver events to onClick event
+		//SOLUTION: Work out which element is triggering the event so make e.target the same OR use element through quertselector
+		const navBar = document.querySelector(".nav");
+		const collaspedMenuBtn = document.querySelector(".collasped-menu-btn");
+		const navContent = document.querySelector(".nav-content");
+		const navBtns = document.querySelectorAll(".button");
+		const navBtns2 = document.querySelectorAll("li.nav-item");
+		const dropdownLists = document.querySelectorAll(".dropdown-list");
+		const shortMenuCoords = document
+			.querySelector(".short-nav")
+			.getBoundingClientRect();
+		const menuBtnLinks = document.querySelectorAll("a.link.lg-display");
+		menuBtnLinks.forEach((menuBtn) => (menuBtn.href = ""));
+
+		// console.log({ shortMenuCoords, menuBtnLinks });
+
+		// console.log({
+		// 	collaspedMenuBtn,
+		// 	navBtns,
+		// 	navContent,
+		// 	navBar,
+		// 	dropdownLists,
+		// });
+
+		if (this.state.menuToggle) {
+			navContent.style.setProperty("display", "flex");
+			navContent.style.setProperty("transform", "translate(0, 0%)");
+			navContent.style.setProperty("opacity", "1");
+
+			// navContent.style.setProperty("position", "absolute");
+			navContent.style.setProperty("flex-direction", "column");
+			navContent.style.setProperty("width", "100%");
+			navContent.style.setProperty("top", `${shortMenuCoords.bottom}px`);
+
+			navBtns.forEach((navBtn) => {
+				navBtn.style.setProperty("width", "100%");
+				navBtn.style.setProperty("padding", "10px 0px");
+			});
+
+			dropdownLists.forEach((dropdownList) => {
+				dropdownList.style.setProperty("background", "white");
+				dropdownList.style.setProperty("width", "100%");
+				dropdownList.style.setProperty("margin", "0px");
+			});
+
+			navBtns2.forEach((navBtn) => {
+				console.log("Remove Event Listeners");
+				navBtn.removeEventListener(
+					"mouseenter",
+					this.handleMouseEnter,
+					true
+				);
+				navBtn.removeEventListener(
+					"mouseleave",
+					this.handleMouseLeave,
+					true
+				);
+
+				navBtn.addEventListener("click", (e) =>
+					this.handleMouseEnter(e, true)
+				);
+			});
+			this.setState({ menuToggle: false });
+		} else {
+			navContent.style.setProperty("transform", "translate(0, -300%)");
+			navContent.style.setProperty("opacity", "0");
+			navContent.style.setProperty("width", "inherit");
+			navContent.style.setProperty("top", "");
+
+			navBtns.forEach((navBtn) => {
+				navBtn.style.setProperty("width", "100%");
+				navBtn.style.setProperty("padding", "10px");
+			});
+
+			dropdownLists.forEach((dropdownList) => {
+				dropdownList.style.setProperty("background", "");
+				dropdownList.style.setProperty("width", "125px");
+				dropdownList.style.setProperty("margin", "10px");
+			});
+			this.setState({ menuToggle: true });
+		}
+	};
+
 	render() {
 		return (
 			<nav className="nav">
@@ -103,103 +223,31 @@ class NavBar extends Component {
 				<div className="dropdownBackground">
 					<div className="arrow"></div>
 				</div>
-				<div className="logo-container">
-					<Link to="/">
-						<img src="#" />
-					</Link>
-					<p>Gideon Miles Oluku</p>
+				<div className="short-nav">
+					<div className="logo-container">
+						<Link to="/">
+							<img src="#" />
+						</Link>
+						<p>Gideon Miles Oluku</p>
+					</div>
+					<div
+						className="collasped-menu-btn"
+						onClick={this.showMenuButtons}
+					>
+						{this.state.menuToggle ? (
+							<img src={menu} />
+						) : (
+							<img src={closeMenu} />
+						)}
+					</div>
+					<NavbarMenu
+						projectData={this.state.project}
+						uxData={this.state.ux}
+						courseData={this.state.course}
+						socialMediaData={this.state.socialMedia}
+						menuToggle={this.state.menuToggle}
+					/>
 				</div>
-				<ul className="nav-content">
-					<Link to="/projects">
-						<li className="nav-item">
-							<a className="button" name="project">
-								PROJECTS
-							</a>
-							<ul className="dropdown-list project">
-								{
-									/*Loop through all projects and render a list of these items as <li>*/
-									projectData.map((project) => {
-										// console.log(project);
-										return (
-											<li className="dropdown-item">
-												<Link
-													to={`/projects/${project.id}`}
-												>
-													{project.name}
-												</Link>
-											</li>
-										);
-									})
-								}
-							</ul>
-						</li>
-					</Link>
-					<Link to="/uxdesigns">
-						<li className="nav-item">
-							<a className="button" name="ux">
-								UX/UI DESIGNS
-							</a>
-							<ul className="dropdown-list ux">
-								{
-									/*Loop through all projects and render a list of these items as <li>*/
-									uxData.map((ux) => {
-										// console.log(ux);
-										return (
-											<li className="dropdown-item">
-												<Link
-													to={`/uxdesigns/${ux.id}`}
-												>
-													{ux.name}
-												</Link>
-											</li>
-										);
-									})
-								}
-							</ul>
-						</li>
-					</Link>
-					<Link to="/courses">
-						<li className="nav-item">
-							<a className="button" name="courses">
-								COURSES
-							</a>
-							<ul className="dropdown-list courses">
-								{
-									/*Loop through all projects and render a list of these items as <li>*/
-									courseData.map((course) => {
-										// console.log(course);
-										return (
-											<li className="dropdown-item">
-												<Link
-													to={`/courses/${course.id}`}
-												>
-													{course.name}
-												</Link>
-											</li>
-										);
-									})
-								}
-							</ul>
-						</li>
-					</Link>
-					<Link to="/aboutme">
-						<li className="nav-item">
-							<a className="button" name="about-me">
-								ABOUT ME
-							</a>
-							<ul className="dropdown-list about-me">
-								{socialMediaData.map((media) => {
-									// console.log(course);
-									return (
-										<li className="dropdown-item">
-											<a>{media.medium}</a>
-										</li>
-									);
-								})}
-							</ul>
-						</li>
-					</Link>
-				</ul>
 			</nav>
 		);
 	}

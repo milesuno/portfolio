@@ -13,14 +13,14 @@ class LandingPage extends Component {
 		this.setScroll(0, 10000);
 		const video = document.querySelector(".landing-page-img");
 		const hideScroll = document.querySelector("body");
-		video.play();
 		video.loop = true;
-		hideScroll.style.overflow = "hidden";
+		video.play();
+		hideScroll.style.setProperty("overflow", "hidden");	
 	}
 
 	componentWillUnmount() {
 		const hideScroll = document.querySelector("body");
-		hideScroll.style.overflow = "unset";
+		hideScroll.style.setProperty("overflow", "");
 	}
 
 	setScroll = (x, y) => {
@@ -30,7 +30,6 @@ class LandingPage extends Component {
 
 	//FIX: Tab Icon
 	render() {
-		console.log(vid);
 		return (
 			<>
 				<Helmet>

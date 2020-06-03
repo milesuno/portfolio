@@ -9,6 +9,7 @@ import courseData from "../../data/course-data.json";
 import projectData from "../../data/project-data.json";
 import uxData from "../../data/ux-data.json";
 import socialMediaData from "../../data/social-media-data.json";
+import "../single-page-item/single-page-item.css";
 import "../../style-sheets/portfolio.css";
 
 //Single page need to be run on main page type and then display the data as a single page from the data sent from lg thumbnail.
@@ -33,6 +34,9 @@ class SinglePageItem extends Component {
 		};
 	}
 
+	componentDidMount() {
+		//set the style of the button relating to the rendering page
+	}
 
 	getData = (data) => {
 		//Gets data on specified Thumbnail and sends data to be rendered as Lg-Thumbnail
@@ -86,10 +90,8 @@ class SinglePageItem extends Component {
 											<NavBar />
 										</header>
 										<main className={"main-wrapper"}>
-											<h1>Projects</h1>
+											<h1>{name}</h1>
 											<div className="single-page-content-wrapper">
-												<br />
-												<h2>{name}</h2>
 												<img
 													src={img[imgIndex]}
 													className={

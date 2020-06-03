@@ -25,10 +25,10 @@ class LgThumbNail extends Component {
 
 	componentDidMount() {
 		const body = document.querySelector("body");
-			body.style.setProperty("overflow", "hidden");
+		body.style.setProperty("overflow", "hidden");
 	}
 
-	componentWillUnmount(){
+	componentWillUnmount() {
 		const body = document.querySelector("body");
 		body.style.setProperty("overflow", "");
 	}
