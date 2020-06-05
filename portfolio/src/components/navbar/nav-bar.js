@@ -26,14 +26,13 @@ class NavBar extends Component {
 	//Width of ul wrapping all li should be used to set dropdown bg
 	//offSet postioning should be used to set the x axis for dropdownBackground
 
-	//FIX: why does nav buttons change when dropdown is revealed?
+	//FIX: display menu above 736px -> display: flex; flex-direction: row;
 	componentDidMount() {
 		const navBtns = document.querySelectorAll("li.nav-item");
-		console.log({ navBtns });
-
-		console.log({ navBtns });
+		// const correctLeave = document.querySelectorAll("li.nav-item");
 
 		navBtns.forEach((navBtn) => {
+			console.dir(navBtn)
 			navBtn.addEventListener("mouseenter", this.handleMouseEnter, true);
 			navBtn.addEventListener("mouseleave", this.handleMouseLeave, true);
 		});
@@ -51,7 +50,6 @@ class NavBar extends Component {
 		const dropdownBackground = document.querySelector(
 			".dropdownBackground"
 		);
-
 
 		//Make dropdown visible on enter
 		dropdownList.style.setProperty("display", "flex");
@@ -83,7 +81,7 @@ class NavBar extends Component {
 		// Move dropdown BG to match dropdown list
 
 		if (clickEvent) {
-			//identify nav-item in array with classname and event target name 
+			//identify nav-item in array with classname and event target name
 			dropdownBackground.style.setProperty("display", "none");
 
 			let btnFilter = [...navBtns].filter(
@@ -129,48 +127,34 @@ class NavBar extends Component {
 				this.handleMouseEnter(e, true)
 			);
 		}
+		console.log({dropdownList})
 		// dropdownList.style.flexDirection = "column";
 	};
 
 	showMenuButtons = () => {
 		//FIX: changing the navBtns to a dropdown list should also change the mouseOver events to onClick event
 		//SOLUTION: Work out which element is triggering the event so make e.target the same OR use element through quertselector
-		const navBar = document.querySelector(".nav");
-		const collaspedMenuBtn = document.querySelector(".collasped-menu-btn");
 		const navContent = document.querySelector(".nav-content");
-		const navBtns = document.querySelectorAll(".button");
-		const navBtns2 = document.querySelectorAll("li.nav-item");
+		const navBtns = document.querySelectorAll("li.nav-item");
 		const dropdownLists = document.querySelectorAll(".dropdown-list");
 		const shortMenuCoords = document
 			.querySelector(".short-nav")
 			.getBoundingClientRect();
-		const menuBtnLinks = document.querySelectorAll("a.link.lg-display");
-		menuBtnLinks.forEach((menuBtn) => (menuBtn.href = ""));
+		// const menuBtnLinks = document.querySelectorAll("a.link.lg-display");
+		// menuBtnLinks.forEach((menuBtn) => (menuBtn.href = ""));
 
 		// console.log({ shortMenuCoords, menuBtnLinks });
 
-		// console.log({
-		// 	collaspedMenuBtn,
-		// 	navBtns,
-		// 	navContent,
-		// 	navBar,
-		// 	dropdownLists,
-		// });
+		console.log({
+			// collaspedMenuBtn,
+			navBtns,
+			navContent,
+			// navBar,
+			dropdownLists,
+		});
 
 		if (this.state.menuToggle) {
-			navContent.style.setProperty("display", "flex");
-			navContent.style.setProperty("transform", "translate(0, 0%)");
-			navContent.style.setProperty("opacity", "1");
-
-			// navContent.style.setProperty("position", "absolute");
-			navContent.style.setProperty("flex-direction", "column");
-			navContent.style.setProperty("width", "100%");
-			navContent.style.setProperty("top", `${shortMenuCoords.bottom}px`);
-
-			navBtns.forEach((navBtn) => {
-				navBtn.style.setProperty("width", "100%");
-				navBtn.style.setProperty("padding", "10px 0px");
-			});
+			// navContent.style.setProperty("top", `${shortMenuCoords.bottom}px`);
 
 			dropdownLists.forEach((dropdownList) => {
 				dropdownList.style.setProperty("background", "white");
@@ -178,8 +162,13 @@ class NavBar extends Component {
 				dropdownList.style.setProperty("margin", "0px");
 			});
 
-			navBtns2.forEach((navBtn) => {
-				console.log("Remove Event Listeners");
+			navBtns.forEach((navBtn) => {
+				console.log("NAVBTN");
+				console.dir(navBtn);
+
+				// let button = navBtn.firstChild;
+				// button.style.setProperty("width", "100%");
+				// button.style.setProperty("padding", "10px");
 				navBtn.removeEventListener(
 					"mouseenter",
 					this.handleMouseEnter,
@@ -197,28 +186,44 @@ class NavBar extends Component {
 			});
 			this.setState({ menuToggle: false });
 		} else {
-			navContent.style.setProperty("transform", "translate(0, -300%)");
-			navContent.style.setProperty("opacity", "0");
-			navContent.style.setProperty("width", "inherit");
-			navContent.style.setProperty("top", "");
-
-			navBtns.forEach((navBtn) => {
-				navBtn.style.setProperty("width", "100%");
-				navBtn.style.setProperty("padding", "10px");
-			});
-
 			dropdownLists.forEach((dropdownList) => {
 				dropdownList.style.setProperty("background", "");
 				dropdownList.style.setProperty("width", "125px");
 				dropdownList.style.setProperty("margin", "10px");
 			});
+
+			navBtns.forEach((navBtn) => {
+				console.log("Re add mouseenter", navBtn)
+				navBtn.removeEventListener("click", (e) =>
+					this.handleMouseEnter(e)
+				);
+				navBtn.removeEventListener("click", (e) =>
+					this.handleMouseEnter(e)
+				);
+
+				navBtn.addEventListener(
+					"mouseenter",
+					this.handleMouseEnter,
+					true
+				);
+				navBtn.addEventListener(
+					"mouseleave",
+					this.handleMouseEnter,
+					true
+				);
+			});
 			this.setState({ menuToggle: true });
 		}
+
+		// if (this.state.menuToggle) navContent.style.setProperty("opacity", "1");
 	};
 
 	render() {
+		const { menuToggle } = this.state;
 		return (
 			<nav className="nav">
+				{console.log({ menuToggle })}
+
 				{/* {console.log("NAV Props", courseData, projectData, uxData)} */}
 				<div className="dropdownBackground">
 					<div className="arrow"></div>

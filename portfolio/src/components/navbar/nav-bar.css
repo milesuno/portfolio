@@ -13,6 +13,7 @@ div.logo-container {
 	padding: 7px;
 	height: 40px;
 	margin: 0;
+	z-index: 1001;
 }
 
 div.logo-container a p {
@@ -42,6 +43,7 @@ div.collasped-menu-btn {
 	align-items: center;
 	background: black;
 	height: 60px;
+	z-index: 1002;
 }
 
 div.collasped-menu-btn img {
@@ -63,6 +65,34 @@ ul.nav-content {
 	transition: all 0.6s ease-in-out;
 }
 
+ul.nav-content.short-menu {
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	transform: translate(0, 0%);
+	width: 100%;
+	top: 60px;
+	opacity: 1;
+}
+
+ul.nav-content short-menu :active {
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	transform: translate(0, 0%);
+	opacity: 1;
+}
+
+ul.nav-content.full-menu {
+	/* display: flex; */
+	flex-direction: row;
+	position: relative;
+	transform: translate(0, 0%);
+	/* opacity: 0; */
+	/* width: inherit; */
+	top: 0;
+}
+
 li.nav-item {
 	display: flex;
 	flex-direction: column;
@@ -70,7 +100,8 @@ li.nav-item {
 	margin: 0;
 }
 
-a.button:hover {
+a.button:hover,
+div.collasped-menu-btn:hover {
 	background-color: #3a3a3a;
 }
 
@@ -142,6 +173,23 @@ a.button {
 	.nav {
 		width: 97%;
 	}
+
+	ul.nav-content {
+		display: flex;
+		flex-direction: row;
+		position: relative;
+		justify-content: space-around;
+		transform: translate(0px, 0%);
+
+		/* FIX: width to be adjusted with various display sizes with media queiries or implement a new location implementation*/
+		/* width: 60%; */
+
+		padding: 0;
+		margin: 0;
+
+		transition: all 0.6s ease-in-out;
+		opacity: 1;
+	}
 }
 
 @media (max-width: 768px) {
@@ -150,14 +198,26 @@ a.button {
 	}
 
 	ul.nav-content {
-		/* display: none; */
-		position: absolute;
-		opacity: 0;
+		display: none;
+		transform: translate(0, -300%);
+
+		/* display: flex; */
+		/* flex-direction: column;
+			position: absolute;
+			justify-content: space-around;
+
+			transform: translate(0, -300%);
+			position: absolute;
+			opacity: 0; */
 	}
 
 	/* div.logo-container p {
 		display: none;
 	} */
+
+	a.button {
+		width: 100%;
+	}
 }
 
 @media (max-width: 425px) {
