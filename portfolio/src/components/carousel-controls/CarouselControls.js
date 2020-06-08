@@ -9,6 +9,7 @@ class CarouselControls extends Component {
 			selected: 0,
 			autoPlay: "",
 			img: this.props.img,
+			isPlay: false
 		}
 	};
 

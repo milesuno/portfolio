@@ -49,7 +49,7 @@ class Projects extends Component {
 										<NavBar />
 									</header>
 									<main className={"main-wrapper"}>
-										<h1>Projects</h1>
+										<h1 className="h1">Projects</h1>
 										<h3>2019</h3>
 										<LgThumbNail
 											dataFromThumbnail={

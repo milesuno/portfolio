@@ -41,9 +41,16 @@ header {
 }
 
 h1 {
+	width: 95%;
 	background: black;
 	color: white;
 	padding: 7.5px;
+	align-self: center;
+}
+
+h3 {
+	width: 95%;
+    align-self: center;
 }
 
 label {
@@ -79,7 +86,6 @@ footer {
 	margin: 0 auto;
 	/* padding: 20px; */
 	/* border: 1px solid #888; */
-	width: fit-content;
 	height: fit-content;
 }
 
@@ -100,12 +106,21 @@ footer {
 
 /*Tablet*/
 
-@media (max-width: 1235px) {
-	.elements-wrapper {
-		justify-content: center;
+@media (max-width: 1024px) {
+	.nav {
+		width: 97%;
+	}
+
+	.main-wrapper {
+		width: 100%;
+	}
+
+
+	.h1 {
+		width: 90%;
+		align-self: center;
 	}
 }
-
 /*Mobile*/
 
 @media (max-width: 421px) {
