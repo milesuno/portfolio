@@ -1,0 +1,114 @@
+[
+	{
+		"id": "u1",
+		"type": "uxdesigns",
+		"name": "Portfolio",
+		"img": [
+			"https://gmo-portfolio.s3.eu-west-2.amazonaws.com/images/ux-designs/portfolio-ux/ux-portfolio-landing-page.jpg",
+			"https://gmo-portfolio.s3.eu-west-2.amazonaws.com/images/ux-designs/portfolio-ux/ux-portfolio-projects.jpg",
+			"https://gmo-portfolio.s3.eu-west-2.amazonaws.com/images/ux-designs/portfolio-ux/ux-portfolio-uxdesigns.jpg",
+			"https://gmo-portfolio.s3.eu-west-2.amazonaws.com/images/ux-designs/portfolio-ux/ux-portfolio-aboutme.jpg"
+		],
+		"desc": "Portfolio was design to be simple, based on a letterbox frame",
+		"role": "UX Designer",
+		"tech": "Balsamiq",
+		"challenge": "Development",
+		"solution": "Grind",
+		"source": {
+			"url": "",
+			"github": "",
+			"trello": ""
+		}
+	},
+	{
+		"id": "u2",
+		"type": "uxdesigns",
+		"name": "CYF Glossary: Desktop",
+		"img": [
+			"https://gmo-portfolio.s3.eu-west-2.amazonaws.com/images/ux-designs/cyf-glossary-ux/desktop/cyf-glossary-landing-page.jpg",
+			"https://gmo-portfolio.s3.eu-west-2.amazonaws.com/images/ux-designs/cyf-glossary-ux/desktop/cyf-glossary-login.jpg",
+			"https://gmo-portfolio.s3.eu-west-2.amazonaws.com/images/ux-designs/cyf-glossary-ux/desktop/cyf-glossary-user-signup.jpg",
+			"https://gmo-portfolio.s3.eu-west-2.amazonaws.com/images/ux-designs/cyf-glossary-ux/desktop/cyf-glossary-search.jpg",
+			"https://gmo-portfolio.s3.eu-west-2.amazonaws.com/images/ux-designs/cyf-glossary-ux/desktop/cyf-glossary-search-term.jpg",
+			"https://gmo-portfolio.s3.eu-west-2.amazonaws.com/images/ux-designs/cyf-glossary-ux/desktop/cyf-glossary-add-term.jpg",
+			"https://gmo-portfolio.s3.eu-west-2.amazonaws.com/images/ux-designs/cyf-glossary-ux/desktop/cyf-glossary-update-term.jpg",
+			"https://gmo-portfolio.s3.eu-west-2.amazonaws.com/images/ux-designs/cyf-glossary-ux/desktop/cyf-glossary-flag-term.jpg",
+			"https://gmo-portfolio.s3.eu-west-2.amazonaws.com/images/ux-designs/desktop/cyf-glossary-ux/cyf-glossary-user-profile-edit.jpg",
+			"https://gmo-portfolio.s3.eu-west-2.amazonaws.com/images/ux-designs/cyf-glossary-ux/desktop/cyf-glossary-mail.jpg",
+			"https://gmo-portfolio.s3.eu-west-2.amazonaws.com/images/ux-designs/cyf-glossary-ux/desktop/cyf-glossary-mail-convo.jpg",
+			"https://gmo-portfolio.s3.eu-west-2.amazonaws.com/images/ux-designs/cyf-glossary-ux/desktop/cyf-glossary-mentor-profile-edit.jpg",
+			"https://gmo-portfolio.s3.eu-west-2.amazonaws.com/images/ux-designs/cyf-glossary-ux/desktop/cyf-glossary-mentor-user-profile-review.jpg",
+			"https://gmo-portfolio.s3.eu-west-2.amazonaws.com/images/ux-designs/cyf-glossary-ux/desktop/cyf-glossary-mentor-user-term-edit-review.jpg",
+			"https://gmo-portfolio.s3.eu-west-2.amazonaws.com/images/ux-designs/cyf-glossary-ux/desktop/cyf-glossary-mentor-user-flag-review.jpg"
+		],
+		"desc": "CYF Glossary was inspired by platforms like Google and Wikipedia to display search result in a clear and concise manner.",
+		"role": "UX Designer",
+		"tech": "Balsamiq",
+		"challenge": "Development",
+		"solution": "Grind",
+		"source": {
+			"url": "",
+			"github": "",
+			"trello": ""
+		}
+	},
+	{
+		"id": "u3",
+		"type": "uxdesigns",
+		"name": "CYF Glossary: Mobile",
+		"img": [
+			"https://gmo-portfolio.s3.eu-west-2.amazonaws.com/images/ux-designs/cyf-glossary-ux/mobile/cyf-glossary-landing-page.jpg",
+			"https://gmo-portfolio.s3.eu-west-2.amazonaws.com/images/ux-designs/cyf-glossary-ux/mobile/cyf-glossary-login.jpg",
+			"https://gmo-portfolio.s3.eu-west-2.amazonaws.com/images/ux-designs/cyf-glossary-ux/mobile/cyf-glossary-signup.jpg",
+			"https://gmo-portfolio.s3.eu-west-2.amazonaws.com/images/ux-designs/cyf-glossary-ux/mobile/cyf-glossary-search.jpg",
+			"https://gmo-portfolio.s3.eu-west-2.amazonaws.com/images/ux-designs/cyf-glossary-ux/mobile/cyf-glossary-search-term.jpg",
+			"https://gmo-portfolio.s3.eu-west-2.amazonaws.com/images/ux-designs/cyf-glossary-ux/mobile/cyf-glossary-term-add.jpg",
+			"https://gmo-portfolio.s3.eu-west-2.amazonaws.com/images/ux-designs/cyf-glossary-ux/mobile/cyf-glossary-term-edit.jpg",
+			"https://gmo-portfolio.s3.eu-west-2.amazonaws.com/images/ux-designs/cyf-glossary-ux/mobile/cyf-glossary-term-flag.jpg",
+			"https://gmo-portfolio.s3.eu-west-2.amazonaws.com/images/ux-designs/cyf-glossary-ux/mobile/cyf-glossary-profile-edit.jpg",
+			"https://gmo-portfolio.s3.eu-west-2.amazonaws.com/images/ux-designs/cyf-glossary-ux/mobile/cyf-glossary-mentor-profile-edit.jpg"
+		],
+		"desc": "CYF Glossary was inspired by platforms like Google and Wikipedia to display search result in a clear and concise manner.",
+		"role": "UX Designer",
+		"tech": "Balsamiq",
+		"challenge": "Development",
+		"solution": "Grind",
+		"source": {
+			"url": "",
+			"github": "",
+			"trello": ""
+		}
+	},
+	{
+		"id": "u4",
+		"type": "uxdesigns",
+		"name": "Placeholder",
+		"img": ["#"],
+		"desc": "Placeholder",
+		"role": "Placeholder",
+		"tech": "Placeholder",
+		"challenge": "",
+		"solution": "",
+		"source": {
+			"url": "",
+			"github": "",
+			"trello": ""
+		}
+	},
+	{
+		"id": "u5",
+		"type": "uxdesigns",
+		"name": "Placeholder",
+		"img": ["#"],
+		"desc": "Placeholder",
+		"role": "Placeholder",
+		"tech": "Placeholder",
+		"challenge": "",
+		"solution": "",
+		"source": {
+			"url": "",
+			"github": "",
+			"trello": ""
+		}
+	}
+]

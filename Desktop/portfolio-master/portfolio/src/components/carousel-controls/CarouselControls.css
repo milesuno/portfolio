@@ -1,0 +1,34 @@
+.button-container {
+	display: flex;
+	justify-content: space-between;
+	align-self: center;
+	width: 90%;
+	height: 25px;
+	margin-bottom: -15px;
+}
+
+.button-container button {
+	display: flex;
+	justify-content: center;
+
+	width: 100%;
+	background: white;
+	font-size: x-large;
+
+	border: 1px solid grey;
+	border-radius: 15%;
+	margin: 1px;
+	/* box-shadow: 3px 3px 3px #949494; */
+}
+
+.button-container button:hover {
+	background-color: lightgray;
+}
+
+.button-container button img:hover {
+	color: white;
+}
+
+.button-container button img {
+	height: 100%;
+}

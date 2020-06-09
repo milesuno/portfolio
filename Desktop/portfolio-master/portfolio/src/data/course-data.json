@@ -1,0 +1,102 @@
+[
+	{
+		"id": "c1",
+		"type": "courses",
+		"name": "FreeCodeCamp",
+		"img": [
+			"https://s3.amazonaws.com/freecodecamp/curriculum-diagram-full.jpg"
+		],
+		"desc": "FreeCodeCamp is a online resource for learning and practicing various programming languages and concepts. I completed the courses: HTML, CSS, JavaScript and React. My account is linked below.",
+		"role": "",
+		"tech": "HTML, CSS, JavaScript, React",
+		"challenge": "I found some algorhythms difficult to conceptualise intially, particularly within nested loops",
+		"solution": "I looked at various resource (such as MDN) to further understand underlying concepts",
+		"source": {
+			"url": "https://www.freecodecamp.org/fcce86321e6-d662-498d-a726-3f2e53d58f36",
+			"github": ""
+		}
+	},
+	{
+		"id": "c2",
+		"type": "courses",
+		"name": "JavaScript 30",
+		"img": [
+			"https://tfrommen.de/wp-content/uploads/javascript30-hero-1920x720.jpg"
+		],
+		"desc": "JavaScript 30 is a course to learn and practice Vanilla JavaScript building 30 different projects. I completed the JavaScript 30 challenges and linked them below",
+		"role": "",
+		"tech": "JavaScript",
+		"challenge": "Learning some JavaScript Objects and Methods that are not utilised often in development",
+		"solution": "Reading the documentation on MDN and watching video tutorials to deepen my understanding",
+		"source": {
+			"url": "https://github.com/milesuno/javascript-30",
+			"github": ""
+		}
+	},
+	{
+		"id": "c3",
+		"type": "courses",
+		"name": "SoloLearn",
+		"img": ["https://pbs.twimg.com/media/EAmfMkvUcAAXiHK.jpg"],
+		"desc": "SoloLearn is a online resource for learning and practicing various programming languages and concepts. I completed the courses: HTML, CSS, JavaScript. My account is linked below",
+		"role": "",
+		"tech": "HTML, CSS, JavaScript",
+		"challenge": "Development",
+		"solution": "Grind",
+		"source": {
+			"url": "https://www.sololearn.com/Profile/7421850#",
+			"github": ""
+		}
+	},
+	{
+		"id": "c4",
+		"type": "courses",
+		"name": "CodeYourFuture: React Challenges",
+		"img": [
+			"https://theturingtrust.files.wordpress.com/2018/03/code-your-future1.jpg"
+		],
+		"desc": "BarterAnything is a Cashless Ecommerce Platform",
+		"role": "FrontEnd Dev",
+		"tech": "HTML, CSS, JSX, JavaScript, React",
+		"challenge": "Development",
+		"solution": "Grind",
+		"source": {
+			"url": "",
+			"github": "https://github.com/milesuno/cyf-react-challenges"
+		}
+	},
+	{
+		"id": "c5",
+		"type": "courses",
+		"name": "CodeYourFuture: JS Challenges",
+		"img": [
+			"https://theturingtrust.files.wordpress.com/2018/03/code-your-future1.jpg"
+		],
+		"desc": "BarterAnything is a Cashless Ecommerce Platform",
+		"role": "FrontEnd Dev",
+		"tech": "HTML, CSS, JavaScript, React",
+		"challenge": "Development",
+		"solution": "Grind",
+		"source": {
+			"url": "",
+			"github": "https://github.com/milesuno/js-exercises"
+		}
+	},
+	{
+		"id": "c6",
+		"type": "courses",
+		"name": "NodeJS ",
+		"img": [
+			"https://miro.medium.com/max/3150/1*m5RYM_Wkj4LsZewpigV5tg.jpeg"
+		],
+		"desc": "BarterAnything is a Cashless Ecommerce Platform",
+		"role": "FrontEnd Dev",
+		"tech": "HTML, CSS, JavaScript, React",
+		"challenge": "Development",
+		"solution": "Grind",
+		"source": {
+			"url": "",
+			"github": ""
+		}
+	}
+]

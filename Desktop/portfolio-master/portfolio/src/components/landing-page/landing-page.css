@@ -1,0 +1,79 @@
+.landing-page-wrapper {
+	display: flex;
+	justify-content: center;
+}
+
+.landing-main-wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	width: 100%;
+}
+
+.landing-page-img {
+	object-fit: cover;
+	object-position: left;
+}
+
+.landing-page-h1 {
+	position: fixed;
+	left: 10%;
+	bottom: 88%;
+	color: white;
+}
+
+.landing-page-about-me {
+	position: fixed;
+	bottom: 90%;
+	left: 85%;
+
+	width: 100px;
+
+	background: #00000099;
+	color: white;
+
+	border: 3px solid white;
+	border-radius: 5%;
+}
+
+.landing-page-a {
+	position: fixed;
+	top: 50%;
+
+	width: 100px;
+	height: 50px;
+
+	background: #00000099;
+	color: white;
+
+	border: 3px solid white;
+	border-radius: 5%;
+}
+
+@media (max-width: 800px) {
+	.landing-page-about-me {
+		position: fixed;
+		bottom: 90%;
+		left: 77.5%;
+	}
+}
+
+@media (max-width: 450px) {
+	.landing-page-about-me {
+		position: fixed;
+		bottom: 90%;
+		left: 70%;
+	}
+
+	.landing-page-h1 {
+		left: 23%;
+		bottom: 75%;
+	}
+
+	.landing-page-a {
+		top: 50%;
+		left: 41%;
+
+	}
+}

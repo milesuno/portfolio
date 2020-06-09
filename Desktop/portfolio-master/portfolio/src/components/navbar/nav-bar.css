@@ -1,0 +1,238 @@
+header {
+	display: flex;
+	justify-content: center;
+}
+
+div.logo-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #fff;
+	border: 3px solid black;
+	width: 100%;
+	padding: 7px;
+	height: 40px;
+	margin: 0;
+	z-index: 1001;
+}
+
+div.logo-container a p {
+	color: black;
+}
+
+.nav {
+	position: fixed;
+
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	/* background-color: black; */
+	z-index: 1000;
+
+	width: 1024px;
+}
+
+.short-nav {
+	display: flex;
+	width: 100%;
+}
+
+div.collasped-menu-btn {
+	display: none;
+	justify-content: center;
+	align-items: center;
+	background: black;
+	height: 60px;
+	z-index: 1002;
+}
+
+div.collasped-menu-btn img {
+	width: 55px;
+}
+
+ul.nav-content {
+	display: flex;
+	flex-direction: row;
+	position: relative;
+	justify-content: space-around;
+
+	/* FIX: width to be adjusted with various display sizes with media queiries or implement a new location implementation*/
+	/* width: 60%; */
+
+	padding: 0;
+	margin: 0;
+
+	/* transition: all 0.6s ease-in-out; */
+}
+
+ul.nav-content.short-menu {
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	transform: translate(0, 0%);
+	width: 100%;
+	top: 60px;
+	opacity: 1;
+}
+
+ul.nav-content short-menu :active {
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	transform: translate(0, 0%);
+	opacity: 1;
+}
+
+ul.nav-content.full-menu {
+	/* display: flex; */
+	flex-direction: row;
+	position: relative;
+	transform: translate(0, 0%);
+	/* opacity: 0; */
+	/* width: inherit; */
+	top: 0;
+}
+
+li.nav-item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 0;
+}
+
+a.button:hover,
+div.collasped-menu-btn:hover {
+	background-color: #3a3a3a;
+}
+
+/* li.nav-item,
+a.button {
+	margin-left: 20px;
+	margin-right: 20px;
+} */
+
+.arrow {
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	display: block;
+	background: white;
+	transform: translateY(-50%) rotate(45deg);
+}
+
+.dropdown-list {
+	display: none;
+	width: 125px;
+	margin-top: 20px;
+	padding: 0;
+	text-align: center;
+	transition: all 0.8s;
+}
+
+.dropdownBackground {
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	background: #fff;
+	border-radius: 4px;
+	box-shadow: 0 50px 100px rgba(50, 50, 93, 0.1),
+		0 15px 35px rgba(50, 50, 93, 0.3), 0 5px 15px rgba(0, 0, 0, 0.1);
+	transition: all 0.3s, opacity 0.1s, transform 0.2s;
+	transform-origin: 50% 0;
+	display: flex;
+	justify-content: center;
+	opacity: 0;
+}
+
+li {
+	color: white;
+	list-style: none;
+	margin: 5px;
+}
+
+.dropdown-item {
+	color: black;
+}
+
+a {
+	text-decoration: none;
+}
+
+a.button {
+	background-color: black;
+	width: 125px;
+	height: 40px;
+	text-align: center;
+	padding: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@media (max-width: 1024px) {
+	.nav {
+		width: 97%;
+	}
+
+	.main-wrapper {
+		width: 100%;
+	}
+
+	ul.nav-content {
+		display: flex;
+		flex-direction: row;
+		position: relative;
+		justify-content: space-around;
+		transform: translate(0px, 0%);
+
+		/* FIX: width to be adjusted with various display sizes with media queiries or implement a new location implementation*/
+		/* width: 60%; */
+
+		padding: 0;
+		margin: 0;
+
+		opacity: 1;
+	}
+
+	.h1 {
+		width: 90%;
+		align-self: center;
+	}
+}
+
+@media (max-width: 768px) {
+	div.collasped-menu-btn {
+		display: flex;
+	}
+
+	ul.nav-content {
+		/* display: none; */
+		opacity: 0;
+		transform: translate(0, -300%);
+		position: absolute;
+
+		transition: all 0.6s ease-in-out;
+		/* display: flex; */
+		/* flex-direction: column;
+			position: absolute;
+			justify-content: space-around;
+
+			transform: translate(0, -300%);
+			position: absolute;
+			opacity: 0; */
+	}
+
+	/* div.logo-container p {
+		display: none;
+	} */
+
+	a.button {
+		width: 100%;
+	}
+}
+
+@media (max-width: 425px) {
+	/* .nav {
+		flex-wrap: wrap;
+	} */
+}
