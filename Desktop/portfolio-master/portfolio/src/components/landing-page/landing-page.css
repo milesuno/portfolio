@@ -16,11 +16,14 @@
 	object-position: left;
 }
 
+
 .landing-page-h1 {
-	position: fixed;
-	left: 10%;
-	bottom: 88%;
-	color: white;
+position: absolute;
+    bottom: 10px;
+    color: white;
+    width: auto;
+    display: flex;
+    text-align: center;
 }
 
 .landing-page-about-me {

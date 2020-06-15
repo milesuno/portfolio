@@ -19,6 +19,7 @@
 
 	width: 90%;
 	height: 100%;
+	margin-bottom: 20px;
 }
 
 .lg-thumbnail-img {
@@ -32,6 +33,7 @@
 	margin: 0;
 	background: black;
 	color: white;
+	width: -webkit-fill-available;
 }
 
 .lg-thumbnail-info {

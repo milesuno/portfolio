@@ -5,6 +5,7 @@ import NavBar from "../navbar/nav-bar";
 import "../../style-sheets/portfolio.css";
 import Helmet from "react-helmet";
 
+import FooterNav from "../footer-nav/footer-nav";
 import data from "../../data/project-data.json";
 
 class Projects extends Component {
@@ -126,9 +127,7 @@ class Projects extends Component {
 											))}
 										</section>
 									</main>
-									<footer>
-										<label>Soon Footer</label>
-									</footer>
+									{/* <FooterNav /> */}
 								</>
 							)}
 						</div>

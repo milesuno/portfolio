@@ -1,0 +1,11 @@
+.social-nav-btns {
+    display: flex;
+    justify-content: space-evenly;
+
+}
+label {
+	display: flex;
+	flex-direction: column-reverse;
+    align-items: center;
+    color: black;
+}

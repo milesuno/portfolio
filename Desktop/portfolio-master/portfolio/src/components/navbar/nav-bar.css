@@ -33,6 +33,7 @@ div.logo-container a p {
 }
 
 .short-nav {
+	position: relative;
 	display: flex;
 	width: 100%;
 }
@@ -44,6 +45,21 @@ div.collasped-menu-btn {
 	background: black;
 	height: 60px;
 	z-index: 1002;
+}
+
+div.scroll-top-btn {
+	align-items: center;
+	background: black;
+	width: 60px;
+	height: 60px;
+	position: absolute;
+	color: white;
+	font-size: xxx-large;
+	text-align: center;
+
+	/* display: flex; */
+	opacity: 0.6;
+	transition: all 0.3s ease-in-out;
 }
 
 div.collasped-menu-btn img {
@@ -204,6 +220,15 @@ a.button {
 	div.collasped-menu-btn {
 		display: flex;
 	}
+
+	/* div.scroll-top-btn {
+		display: flex;
+		position: absolute;
+		color: white;
+		justify-content: center;
+		font-size: xxx-large;
+		align-items: end;
+	} */
 
 	ul.nav-content {
 		/* display: none; */

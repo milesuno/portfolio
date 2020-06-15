@@ -104,6 +104,7 @@ class SinglePageItem extends Component {
 														img={img}
 													/>
 												) : null}
+												<br/>
 												{desc ? (
 													<p>
 														<strong>

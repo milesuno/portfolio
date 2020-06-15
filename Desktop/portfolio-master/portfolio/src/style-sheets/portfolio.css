@@ -50,16 +50,14 @@ h1 {
 
 h3 {
 	width: 95%;
-    align-self: center;
+	align-self: center;
 }
 
-label {
-	color: white;
-}
 
 footer {
+	/* position: fixed; */
 	background: black;
-
+	height: 100px;
 	width: 100%;
 }
 
@@ -67,8 +65,10 @@ footer {
 .modal {
 	display: flex; /*Hidden by default*/
 	position: fixed; /* Stay in place */
-	z-index: 1; /* Sit on top */
-	padding-top: 100px; /* Location of the box */
+	z-index: 1001; /* Sit on top */
+	/* padding-top: 100px; Location of the box */
+	align-items: center;
+
 	left: 0;
 	top: 0;
 	width: 100%; /* Full width */
@@ -114,7 +114,6 @@ footer {
 	.main-wrapper {
 		width: 100%;
 	}
-
 
 	.h1 {
 		width: 90%;

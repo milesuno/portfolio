@@ -17,18 +17,17 @@ class NavBar extends Component {
 			ux: uxData,
 			socialMedia: socialMediaData,
 			menuToggle: true,
-			droplistToggle: false
 		};
 	}
-	//Dropdown list should be render below 450px
-	//List items should be renders but set to display: none
-	//Onhover the display should be set to display block
-	//Width of ul wrapping all li should be used to set dropdown bg
-	//offSet postioning should be used to set the x axis for dropdownBackground
+	//FIX: set the position of the scroll-top-btn to the lower right corner of the client portal
+	//SOLUTIONS: Hard coding various positions using media quiers || Find an event handler that would be approperate to trigger a JS function to set the poition of the btn
 
 	//FIX: display menu above 736px -> display: flex; flex-direction: row;
 	componentDidMount() {
 		const navBtns = document.querySelectorAll("li.nav-item");
+		const scrollTopBtn = document.querySelector("div.scroll-top-btn");
+		const collaspedMenuBtn = document.querySelector(".collasped-menu-btn");
+		window.onscroll = this.toggleScrollTopBtn;
 
 		navBtns.forEach((navBtn) => {
 			console.dir(navBtn);
@@ -36,6 +35,10 @@ class NavBar extends Component {
 			navBtn.addEventListener("mouseleave", this.handleMouseLeave);
 		});
 	}
+
+	componentWillUnmount() {
+		window.onscroll = "";
+	};
 
 	handleMouseEnter = (e) => {
 		console.log("Enter", e.target);
@@ -107,7 +110,6 @@ class NavBar extends Component {
 		// dropdownList.style.flexDirection = "column";
 	};
 
-
 	handleMouseClick = (e) => {
 		//Set dataset on element and only display the element with the active property
 		//use target to set display of li.items
@@ -124,17 +126,17 @@ class NavBar extends Component {
 		].filter((list) => list.className !== dropdownList.className);
 
 		const allDropdownList = document.querySelectorAll(`.dropdown-list`);
-		
+
 		if (dropdownList.active) {
 			dropdownList.style.setProperty("display", "none");
 			dropdownList.active = false;
 		} else {
 			dropdownList.active = true;
 			otherDropdownLists.forEach((odl) => (odl.active = false));
-						
+
 			allDropdownList.forEach((list) => {
 				if (list.active) {
-					console.log("Display: flex") ;
+					console.log("Display: flex");
 					list.style.setProperty("display", "flex");
 					list.style.setProperty("flex-direction", "column");
 				} else {
@@ -144,7 +146,7 @@ class NavBar extends Component {
 			});
 		}
 	};
-	
+
 	showMenuButtons = () => {
 		//FIX: changing the navBtns to a dropdown list should also change the mouseOver events to onClick event
 		//SOLUTION: Work out which element is triggering the event so make e.target the same OR use element through quertselector
@@ -219,6 +221,31 @@ class NavBar extends Component {
 		}
 	};
 
+	toggleScrollTopBtn = (e) => {
+		console.dir(window.scrollY);
+		const scrollTopBtn = document.querySelector("div.scroll-top-btn");
+		if (window.scrollY > window.innerHeight * 0.66) {
+			scrollTopBtn.style.setProperty("opacity", 0.6);
+			scrollTopBtn.style.setProperty("visibility", "visible");
+			scrollTopBtn.style.setProperty(
+				"top",
+				`${window.innerHeight - 75}px`
+			);
+			scrollTopBtn.style.setProperty("right", "30px");
+		} else {
+			scrollTopBtn.style.setProperty("opacity", 0);
+			scrollTopBtn.style.setProperty("visibility", "hidden");
+		}
+	};
+
+	// scrollToTop = () => {
+	// 	window.scrollTo({
+	// 		top: 0,
+	// 		left: 0,
+	// 		behavior: "smooth",
+	// 	});
+	// };
+
 	render() {
 		const { menuToggle } = this.state;
 		return (
@@ -253,11 +280,14 @@ class NavBar extends Component {
 									PROJECTS
 								</a>
 								<ul className="dropdown-list project">
-									<li className="short-nav-all-items">
-										<Link to={`/projects`}>
-											All Projects
-										</Link>
-									</li>
+									{!this.state.menuToggle ? (
+										<li className="short-nav-all-items">
+											<Link to={`/projects`}>
+												All Projects
+											</Link>
+										</li>
+									) : null}
+
 									{
 										/*Loop through all projects and render a list of these items as <li>*/
 										projectData.map((project) => {
@@ -282,11 +312,13 @@ class NavBar extends Component {
 									UX/UI DESIGNS
 								</a>
 								<ul className="dropdown-list ux">
-									<li className="short-nav-all-items">
-										<Link to={`/uxdesigns`}>
-											All UX designs
-										</Link>
-									</li>
+									{!this.state.menuToggle ? (
+										<li className="short-nav-all-items">
+											<Link to={`/uxdesigns`}>
+												All UX designs
+											</Link>
+										</li>
+									) : null}
 									{
 										/*Loop through all projects and render a list of these items as <li>*/
 										uxData.map((ux) => {
@@ -311,9 +343,13 @@ class NavBar extends Component {
 									COURSES
 								</a>
 								<ul className="dropdown-list courses">
-									<li className="dropdown-item">
-										<Link to={`/courses`}>All Courses</Link>
-									</li>
+									{!this.state.menuToggle ? (
+										<li className="dropdown-item">
+											<Link to={`/courses`}>
+												All Courses
+											</Link>
+										</li>
+									) : null}
 									{
 										/*Loop through all projects and render a list of these items as <li>*/
 										courseData.map((course) => {
@@ -350,6 +386,18 @@ class NavBar extends Component {
 							</li>
 						</Link>
 					</ul>
+					<div
+						className="scroll-top-btn"
+						onClick={() =>
+							window.scrollTo({
+								top: 0,
+								left: 0,
+								behavior: "smooth",
+							})
+						}
+					>
+						^
+					</div>
 				</div>
 			</nav>
 		);

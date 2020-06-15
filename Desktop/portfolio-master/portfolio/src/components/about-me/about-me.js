@@ -34,8 +34,7 @@ class AboutMe extends Component {
 								<img
 									className="about-me-img"
 									src={
-										"https://media.licdn.com/dms/image/C5603AQGIp06YBvaYaQ/profile-displayphoto-shrink_200_200/0?e=1577923200&v=beta&t=e_m9Y5UXjZr9h0NZ1YVOEPcgaX1wWuWfUZveoRbhpRA"
-									}
+										"https://avatars2.githubusercontent.com/u/45498063?s=460&u=ccf1d781a20680c9787cdae4bdaba9a1f540b02f&v="									}
 								/>
 								<a className="download" href={CV} download>
 									<button>Download CV</button>

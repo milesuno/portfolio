@@ -39,7 +39,7 @@ class ThumbNail extends Component {
 			this.debounce(
 				thumbnails.forEach((thumbnail) => {
 					const thumbnailCoords = thumbnail.getBoundingClientRect();
-					const nav = document.querySelector("nav");
+					const nav = document.querySelector(".nav");
 					const navCoords = nav.getBoundingClientRect();
 
 					//the value of the whole viewport + half of the thumbnail hieght
@@ -67,13 +67,13 @@ class ThumbNail extends Component {
 					const isNotscrolledPassed =
 						window.scrollY < thumbnailBottom;
 
-					console.log({
-						slideIn,
-						thumbnailBottom,
-						isHalfway,
-						isNotscrolledPassed,
-						thumbnailHalfway,
-					});
+					// console.log({
+					// 	slideIn,
+					// 	thumbnailBottom,
+					// 	isHalfway,
+					// 	isNotscrolledPassed,
+					// 	thumbnailHalfway,
+					// });
 
 					if (!isHalfway) thumbnail.style.setProperty("opacity", 0);
 
