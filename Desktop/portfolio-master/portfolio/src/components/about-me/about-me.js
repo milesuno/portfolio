@@ -6,6 +6,7 @@ import CV from "../../data/GideonMilesOluku-cv.pdf";
 
 import "../../style-sheets/portfolio.css";
 import "./about-me.css";
+import FooterNav from "../footer-nav/footer-nav";
 
 class AboutMe extends Component {
 	constructor(props) {
@@ -34,11 +35,13 @@ class AboutMe extends Component {
 								<img
 									className="about-me-img"
 									src={
-										"https://avatars2.githubusercontent.com/u/45498063?s=460&u=ccf1d781a20680c9787cdae4bdaba9a1f540b02f&v="									}
+										"https://avatars2.githubusercontent.com/u/45498063?s=460&u=ccf1d781a20680c9787cdae4bdaba9a1f540b02f&v="
+									}
 								/>
 								<a className="download" href={CV} download>
 									<button>Download CV</button>
 								</a>
+									<SocialMediaNav />
 								<p>
 									I am a Web Developer and Business Graduate,
 									with a background in agile web development,
@@ -88,10 +91,9 @@ class AboutMe extends Component {
 									versatile developer. Who can work within
 									development teams as well as lead.
 								</p>
-								<SocialMediaNav />
 							</div>
 						</main>
-						<footer>soon footer</footer>
+						<FooterNav isFooter={true} />
 					</div>
 				</div>
 			</>

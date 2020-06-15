@@ -11,6 +11,7 @@ import uxData from "../../data/ux-data.json";
 import socialMediaData from "../../data/social-media-data.json";
 import "../single-page-item/single-page-item.css";
 import "../../style-sheets/portfolio.css";
+import FooterNav from "../footer-nav/footer-nav";
 
 //Single page need to be run on main page type and then display the data as a single page from the data sent from lg thumbnail.
 //Check if all the data copied from Projects need for sinlge page to render
@@ -104,7 +105,7 @@ class SinglePageItem extends Component {
 														img={img}
 													/>
 												) : null}
-												<br/>
+												<br />
 												{desc ? (
 													<p>
 														<strong>
@@ -192,9 +193,7 @@ class SinglePageItem extends Component {
 												) : null}
 											</div>
 										</main>
-										<footer>
-											<label>Soon Footer</label>
-										</footer>
+										<FooterNav isFooter={true} />
 									</div>
 								</div>
 							</>

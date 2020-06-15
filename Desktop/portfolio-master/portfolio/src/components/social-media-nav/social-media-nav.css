@@ -1,8 +1,12 @@
+nav {
+    width: 100%;
+}
 .social-nav-btns {
     display: flex;
     justify-content: space-evenly;
-
+    width: 100%;
 }
+
 label {
 	display: flex;
 	flex-direction: column-reverse;

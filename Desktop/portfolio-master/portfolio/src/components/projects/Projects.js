@@ -90,9 +90,7 @@ class Projects extends Component {
 											))}
 										</section>
 									</main>
-									<footer>
-										<label>Soon Footer</label>
-									</footer>
+									<FooterNav />
 								</>
 							) : (
 								<>
@@ -127,7 +125,7 @@ class Projects extends Component {
 											))}
 										</section>
 									</main>
-									{/* <FooterNav /> */}
+									<FooterNav isFooter={true}/>
 								</>
 							)}
 						</div>
