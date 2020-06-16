@@ -12,20 +12,12 @@ class LandingPage extends Component {
 	}
 
 	componentDidMount() {
-		// window.scroll(10000, 0);
-		this.setScroll(10000, 0);
 		const video = document.querySelector(".landing-page-img");
 		const hideScroll = document.querySelector("body");
 
-		const aboutMeBtn = document.querySelector(".landing-page-about-me")
-		const profileCard = document.querySelector(".profile-card");
-		const profileCardCoords = profileCard.getBoundingClientRect();
-		aboutMeBtn.style.setProperty("left",`${profileCardCoords.left}px`);
-		aboutMeBtn.style.setProperty("top", `${profileCardCoords.top}px`)
-
 		video.loop = true;
 		video.play();
-		// hideScroll.style.setProperty("overflow", "hidden");	
+		hideScroll.style.setProperty("overflow", "hidden");
 	}
 
 	componentWillUnmount() {
@@ -34,7 +26,7 @@ class LandingPage extends Component {
 	}
 
 	setScroll = (x, y) => {
-		console.log("SCROLL")
+		console.log("SCROLL");
 		window.scroll(x, y);
 	};
 
@@ -49,14 +41,20 @@ class LandingPage extends Component {
 				<div className="landing-page-wrapper">
 					{/* Quotes can change every few seconds */}
 					<main className="landing-main-wrapper">
+						<video
+							className="landing-page-img"
+							src={vid}
+							muted
+							autoPlay
+							loop
+						/>
 						<ProfileCard />
 						<Link to="/aboutme">
 							<button className="landing-page-about-me">
 								About Me
 							</button>
 						</Link>
-						<h1 className="landing-page-h1">Genchi Genbutsu</h1>
-						<video className="landing-page-img" src={vid} muted autoPlay loop/>
+						{/* <p className="landing-page-h1">Genchi Genbutsu</p> */}
 						<Link to="/projects">
 							<button className="landing-page-a">Enter</button>
 						</Link>
