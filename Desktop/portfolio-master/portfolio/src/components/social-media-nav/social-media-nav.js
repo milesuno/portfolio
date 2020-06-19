@@ -1,5 +1,12 @@
 import React, { Component } from "react";
-import data from "../../data/social-media-data.json";
+import data from "../../data/social-media-data";
+import gmail from "../../data/icons/gmail.png";
+import linkedIn from "../../data/icons/icons8-linkedin-50.png";
+import youtube from "../../data/icons/icons8-play-button-50.png";
+import github from "../../data/icons/icons8-github-50.png";
+
+
+
 import "./social-media-nav.css";
 
 class SocialMediaNav extends Component {
@@ -24,25 +31,25 @@ class SocialMediaNav extends Component {
 							<a href="mailto:milesoluku@gmail.com?subject=Portfolio Enquires">
 								<label>
 									Email
-									<img src="https://img.icons8.com/ios-glyphs/30/000000/gmail.png" />
+									<img src={gmail} />
 								</label>
 							</a>
 							<a href="">
 								<label>
 									LinkedIn
-									<img src="https://img.icons8.com/ios-glyphs/30/000000/linkedin.png" />
+									<img src={linkedIn} />
 								</label>
 							</a>
 							<a href="">
 								<label>
 									YouTube
-									<img src="https://img.icons8.com/ios-glyphs/30/000000/youtube-play.png" />
+									<img src={youtube} />
 								</label>
 							</a>
 							<a href="https://github.com/milesuno">
 								<label>
 									Github
-									<img src="https://img.icons8.com/ios-glyphs/30/000000/github.png" />
+									<img src={github} />
 								</label>
 							</a>
 						</div>
@@ -56,7 +63,7 @@ class SocialMediaNav extends Component {
 									<img
 										alt="svgImg"
 										src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4Igp3aWR0aD0iMzAiIGhlaWdodD0iMzAiCnZpZXdCb3g9IjAgMCAyMjYgMjI2IgpzdHlsZT0iIGZpbGw6IzAwMDAwMDsiPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0ibm9uemVybyIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIHN0cm9rZS1saW5lY2FwPSJidXR0IiBzdHJva2UtbGluZWpvaW49Im1pdGVyIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHN0cm9rZS1kYXNoYXJyYXk9IiIgc3Ryb2tlLWRhc2hvZmZzZXQ9IjAiIGZvbnQtZmFtaWx5PSJub25lIiBmb250LXdlaWdodD0ibm9uZSIgZm9udC1zaXplPSJub25lIiB0ZXh0LWFuY2hvcj0ibm9uZSIgc3R5bGU9Im1peC1ibGVuZC1tb2RlOiBub3JtYWwiPjxwYXRoIGQ9Ik0wLDIyNnYtMjI2aDIyNnYyMjZ6IiBmaWxsPSJub25lIj48L3BhdGg+PGcgZmlsbD0iIzY2NjY2NiI+PHBhdGggZD0iTTExMywyMi42Yy00OS45MjM0LDAgLTkwLjQsNDAuNDc2NiAtOTAuNCw5MC40YzAsNDkuOTIzNCA0MC40NzY2LDkwLjQgOTAuNCw5MC40YzQ5LjkyMzQsMCA5MC40LC00MC40NzY2IDkwLjQsLTkwLjRjMCwtNDkuOTIzNCAtNDAuNDc2NiwtOTAuNCAtOTAuNCwtOTAuNHpNOTAuNCwxNTguMmMtMjQuOTY1NDcsMCAtNDUuMiwtMjAuMjM0NTMgLTQ1LjIsLTQ1LjJjMCwtMjQuOTY1NDcgMjAuMjM0NTMsLTQ1LjIgNDUuMiwtNDUuMmMxMS43NTIsMCAyMi40NTY4Nyw0LjQ4OTg3IDMwLjQ4NzQsMTEuODQ5OTNsLTEwLjgwMjgsMTAuNTc2OGMtNS4yODA4NywtNC41ODAyNyAtMTIuMTUxMjcsLTcuMzYwMDcgLTE5LjY4NDYsLTcuMzYwMDdjLTE2LjY0MTEzLDAgLTMwLjEzMzMzLDEzLjQ5MjIgLTMwLjEzMzMzLDMwLjEzMzMzYzAsMTYuNjQxMTMgMTMuNDkyMiwzMC4xMzMzMyAzMC4xMzMzMywzMC4xMzMzM2MxNC45MjM1MywwIDI3LjI4NTczLC0xMC44NjMwNyAyOS42ODEzMywtMjUuMTA4NmgtMjkuNjgxMzN2LTE1LjA2NjY3aDQ0LjAxNzI3bDAuMjQ4NiwxLjAwMTkzYzAuNjAyNjcsMi45MjI5MyAwLjkzNDEzLDUuOTQzOCAwLjkzNDEzLDkuMDRjMCwyNC45NjU0NyAtMjAuMjM0NTMsNDUuMiAtNDUuMiw0NS4yek0xNzMuMjY2NjcsMTIwLjUzMzMzdjE1LjA2NjY3aC0xNS4wNjY2N3YtMTUuMDY2NjdoLTE1LjA2NjY3di0xNS4wNjY2N2gxNS4wNjY2N3YtMTUuMDY2NjdoMTUuMDY2Njd2MTUuMDY2NjdoMTUuMDY2Njd2MTUuMDY2Njd6Ij48L3BhdGg+PC9nPjwvZz48L3N2Zz4="
-									/>{" "}
+									/>
 								</label>
 							</a>
 							<a href="">

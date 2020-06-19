@@ -1,3 +1,4 @@
+/* Create a skeleton on the empty of these elements to be displayed when element is empty. This is on each page load. */
 .thumbnail-page-wrapper {
 	display: flex;
 	/* position: relative;
@@ -17,6 +18,16 @@
 	/* transition: all .1s ease-in-out; */
 }
 
+.thumbnail-page-wrapper:empty {
+	height: 330px;
+	width: 245px;
+	background-image: radial-gradient(circle at right top, white -100%, black),
+		linear-gradient(grey, grey), linear-gradient(white, white);
+	background-size: 225px 250px, 225px 30px, 100% 100%;
+	background-position: 10px 20px, 10px 280px, 0 0;
+	background-repeat: no-repeat;
+}
+
 .thumbnail-page-wrapper:hover {
 	transform: scale(1.05);
 }
@@ -26,7 +37,7 @@
 }
 
 .thumbnail-img {
-	object-fit: cover;
+	object-fit: contain;
 	height: 250px;
 	width: 100%;
 	margin: 0;

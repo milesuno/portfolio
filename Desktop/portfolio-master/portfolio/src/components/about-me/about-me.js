@@ -3,6 +3,7 @@ import Helmet from "react-helmet";
 import SocialMediaNav from "../social-media-nav/social-media-nav";
 import NavBar from "../navbar/nav-bar";
 import CV from "../../data/GideonMilesOluku-cv.pdf";
+import img from "../../data/git-profile-img.png";
 
 import "../../style-sheets/portfolio.css";
 import "./about-me.css";
@@ -32,16 +33,11 @@ class AboutMe extends Component {
 						<main className="main-wrapper">
 							<h1>About Me</h1>
 							<div className="about-me-wrapper">
-								<img
-									className="about-me-img"
-									src={
-										"https://avatars2.githubusercontent.com/u/45498063?s=460&u=ccf1d781a20680c9787cdae4bdaba9a1f540b02f&v="
-									}
-								/>
+								<img className="about-me-img" src={img} />
 								<a className="download" href={CV} download>
 									<button>Download CV</button>
 								</a>
-									<SocialMediaNav />
+								<SocialMediaNav />
 								<p>
 									I am a Web Developer and Business Graduate,
 									with a background in agile web development,

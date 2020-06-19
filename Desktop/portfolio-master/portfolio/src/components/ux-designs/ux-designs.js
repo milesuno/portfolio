@@ -6,7 +6,7 @@ import NavBar from "../navbar/nav-bar";
 
 import "../../style-sheets/portfolio.css";
 
-import data from "../../data/ux-data.json";
+import data from "../../data/ux-data";
 import FooterNav from "../footer-nav/footer-nav";
 
 class UXDesigns extends Component {

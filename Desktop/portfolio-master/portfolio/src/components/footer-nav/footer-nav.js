@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import projectData from "../../data/project-data.json";
-import uxData from "../../data/ux-data.json";
+import projectData from "../../data/project-data";
+import uxData from "../../data/ux-data";
 import CourseData from "../../data/course-data.json";
 // import aboutMeData from "../../data/about-me-data.json";
 import "./footer-nav.css";

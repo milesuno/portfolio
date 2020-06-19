@@ -1,4 +1,11 @@
 import React, { Component } from "react";
+import rewindBtn from "../../data/carousel-btns/rewind.png";
+import leftBtn from "../../data/carousel-btns/sort-left.png";
+import stopBtn from "../../data/carousel-btns/stop.png";
+import rightBtn from "../../data/carousel-btns/sort-right.png";
+import fastForwardBtn from "../../data/carousel-btns/fast-forward.png";
+
+
 import "./CarouselControls.css";
 
 class CarouselControls extends Component {
@@ -9,9 +16,9 @@ class CarouselControls extends Component {
 			selected: 0,
 			autoPlay: "",
 			img: this.props.img,
-			isPlay: false
-		}
-	};
+			isPlay: false,
+		};
+	}
 
 	handleIncrementCarousel = () => {
 		let imgIndex = this.state.imgIndex;
@@ -65,23 +72,23 @@ class CarouselControls extends Component {
 
 	render() {
 		return (
-			<div className={"button-container"}>
-				<button onClick={this.handleAutoBackward}>
-					<img src="https://img.icons8.com/metro/26/000000/rewind.png" />
-				</button>
-				<button onClick={this.handleDecrementCarousel}>
-					<img src="https://img.icons8.com/metro/26/000000/sort-left.png" />
-				</button>
-				<button onClick={this.handleStopImageChange}>
-					<img src="https://img.icons8.com/metro/26/000000/stop.png" />
-				</button>
-				<button onClick={this.handleIncrementCarousel}>
-					<img src="https://img.icons8.com/metro/26/000000/sort-right.png" />
-				</button>
-				<button onClick={this.handleAutoForward}>
-					<img src="https://img.icons8.com/metro/26/000000/fast-forward.png" />
-				</button>
-			</div>
+				<div className={"button-container"}>
+					<button onClick={this.handleAutoBackward}>
+						<img src={rewindBtn} />
+					</button>
+					<button onClick={this.handleDecrementCarousel}>
+						<img src={leftBtn} />
+					</button>
+					<button onClick={this.handleStopImageChange}>
+						<img src={stopBtn} />
+					</button>
+					<button onClick={this.handleIncrementCarousel}>
+						<img src={rightBtn} />
+					</button>
+					<button onClick={this.handleAutoForward}>
+						<img src={fastForwardBtn} />
+					</button>
+				</div>
 		);
 	}
 }

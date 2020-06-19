@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+	import { Link } from "react-router-dom";
 import "./nav-bar.css";
 import courseData from "../../data/course-data.json";
-import projectData from "../../data/project-data.json";
-import uxData from "../../data/ux-data.json";
-import socialMediaData from "../../data/social-media-data.json";
+import projectData from "../../data/project-data";
+import uxData from "../../data/ux-data";
+import socialMediaData from "../../data/social-media-data";
 import menu from "../../landing-video/icons8-menu-squared-96.png";
 import closeMenu from "../../landing-video/icons8-close-window-96.png";
 

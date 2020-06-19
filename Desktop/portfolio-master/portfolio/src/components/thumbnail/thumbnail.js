@@ -1,7 +1,10 @@
-import React, { Component } from "react";
+import React, { Component, Suspense, lazy } from "react";
 import "./thumbnail.css";
 import LgThumbNail from "../lg-thumbnail/lg-thumbnail";
-import CarouselControls from "../carousel-controls/CarouselControls";
+// import CarouselControls from "../carousel-controls/CarouselControls";
+const CarouselControls = lazy(() =>
+	import("../carousel-controls/CarouselControls")
+);
 /*
 React will apply props object with data passed to from the parent passing it props. 
 In this instance ThumbNail as data passed to it from 2 different parents, 
@@ -26,6 +29,7 @@ class ThumbNail extends Component {
 			solution: this.props.solution,
 			source: this.props.source,
 			checkScroll: "",
+			isLoaded: false,
 		};
 	}
 
@@ -34,7 +38,7 @@ class ThumbNail extends Component {
 		const thumbnails = document.querySelectorAll(
 			"div.thumbnail-page-wrapper"
 		);
-
+		this.setState({ isLoaded: true });
 		checkScroll = (e) => {
 			this.debounce(
 				thumbnails.forEach((thumbnail) => {
@@ -129,7 +133,7 @@ class ThumbNail extends Component {
 	thumbNailSwitch = () => {
 		console.log("onClick");
 		let selected = this.state.selected;
-		
+
 		if (selected === 0) {
 			selected++;
 			this.setState({ selected });
@@ -150,21 +154,27 @@ class ThumbNail extends Component {
 		console.log("state selected in thumbnail", this.state);
 
 		return (
-			<div className="thumbnail-page-wrapper fade">
-				<div
-					className="thumbnail-wrapper"
-					onClick={this.thumbNailSwitch}
-				>
-					<img src={img[imgIndex]} className={"thumbnail-img"} />
-					<h2 className="thumbnail-title">{name}</h2>
+			<>
+				<div className="thumbnail-page-wrapper fade">
+					<div
+						className="thumbnail-wrapper"
+						onClick={this.thumbNailSwitch}
+					>
+						{/* {this.props.img ? ( */}
+						<img src={img[imgIndex]} className={"thumbnail-img"} />
+						 {/* ) : <div>"NOPE"</div>} */}
+						<h2 className="thumbnail-title">{name}</h2>
+					</div>
+					<Suspense fallback={<div>POOP...</div>}>
+						{img.length > 1 ? (
+							<CarouselControls
+								getData={this.getData}
+								img={this.props.img}
+							/>
+						) : null}
+					</Suspense>
 				</div>
-				{img.length > 1 ? (
-					<CarouselControls
-						getData={this.getData}
-						img={this.props.img}
-					/>
-				) : null}
-			</div>
+			</>
 		);
 	}
 }
