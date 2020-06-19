@@ -27,4 +27,4 @@ const socialMediaData = [
 	}
 ]
 
-export default socialMediaData
+export default socialMediaData;

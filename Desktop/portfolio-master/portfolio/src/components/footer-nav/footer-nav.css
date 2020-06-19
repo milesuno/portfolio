@@ -15,11 +15,21 @@ footer {
 
 .footer-ul {
 	color: white;
-    font-size: small;
+	font-size: small;
+}
+
+.footer-ul a {
+	color: white;
+	font-weight: 600;
+}
+
+.footer-ul a li {
+	margin: 5px 0;
+	font-weight: 300;
 }
 
 .footer-contact-info {
-    color: white;
+	color: white;
 }
 
 @media (max-width: 768px) {
@@ -34,7 +44,6 @@ footer {
 		/* flex-direction: column; */
 	}
 }
-
 
 @media (max-width: 670px) {
 	.footer-nav-menu {

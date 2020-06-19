@@ -8,7 +8,7 @@ import Helmet from "react-helmet";
 import courseData from "../../data/course-data.json";
 import projectData from "../../data/project-data";
 import uxData from "../../data/ux-data";
-import socialMediaData from "../../data/social-media-data";
+// import socialMediaData from "../../data/social-media-data.js";
 import "../single-page-item/single-page-item.css";
 import "../../style-sheets/portfolio.css";
 import FooterNav from "../footer-nav/footer-nav";

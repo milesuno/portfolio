@@ -44,7 +44,7 @@ class FooterNav extends Component {
 							))}
 						</ul>
 						<ul className="footer-ul">
-							<Link to="courses">Courses:</Link>
+							<Link to="/courses">Courses:</Link>
 							{CourseData.map((data) => (
 								<Link to={`/courses/${data.id}`}>
 									<li>{data.name}</li>

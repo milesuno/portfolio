@@ -166,8 +166,20 @@ li {
 	margin: 5px;
 }
 
-.dropdown-item {
+li.dropdown-item {
 	color: black;
+}
+
+
+li.dropdown-item a {
+	font-weight: 600;
+	color: black;
+}
+
+li.dropdown-item a:visited {
+	color: gray;
+	font-weight: 300;
+	font-style: italic;
 }
 
 a {

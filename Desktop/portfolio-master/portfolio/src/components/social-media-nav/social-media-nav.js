@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import data from "../../data/social-media-data";
+// import data from "../../data/social-media-data.js";
 import gmail from "../../data/icons/gmail.png";
 import linkedIn from "../../data/icons/icons8-linkedin-50.png";
 import youtube from "../../data/icons/icons8-play-button-50.png";
@@ -22,12 +22,11 @@ class SocialMediaNav extends Component {
 			this.setState({ isFooter: this.props.isFooter });
 	}
 	render() {
-		console.log({ data });
+		// console.log({ data });
 		return (
 			<>
 				{!this.state.isFooter ? (
-					<nav>
-						<div className="social-nav-btns">
+						<nav className="social-nav-btns">
 							<a href="mailto:milesoluku@gmail.com?subject=Portfolio Enquires">
 								<label>
 									Email
@@ -52,11 +51,9 @@ class SocialMediaNav extends Component {
 									<img src={github} />
 								</label>
 							</a>
-						</div>
-					</nav>
+						</nav>
 				) : (
-					<nav>
-						<div className="social-nav-btns">
+						<nav className="social-nav-btns">
 							<a href="mailto:milesoluku@gmail.com?subject=Portfolio Enquires">
 								<label>
 									Email
@@ -93,7 +90,6 @@ class SocialMediaNav extends Component {
 									/>{" "}
 								</label>
 							</a>
-						</div>
 					</nav>
 				)}
 			</>

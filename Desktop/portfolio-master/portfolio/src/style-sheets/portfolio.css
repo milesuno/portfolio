@@ -1,4 +1,7 @@
 /*Desktop*/
+body {
+	overflow-x: hidden;
+}
 .page-wrapper {
 	display: flex;
 	flex-direction: column;
@@ -8,7 +11,7 @@
 }
 
 .main-wrapper {
-	margin-top: 60px;
+	margin: 60px 0px;
 
 	display: flex;
 	flex-direction: column;
@@ -53,7 +56,6 @@ h3 {
 	width: 95%;
 	align-self: center;
 }
-
 
 footer {
 	/* position: fixed; */
