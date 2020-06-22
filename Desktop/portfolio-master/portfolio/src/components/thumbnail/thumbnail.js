@@ -165,14 +165,14 @@ class ThumbNail extends Component {
 						 {/* ) : <div>"NOPE"</div>} */}
 						<h2 className="thumbnail-title">{name}</h2>
 					</div>
-					<Suspense fallback={<div>POOP...</div>}>
+					{/* <Suspense fallback={<div>POOP...</div>}> */}
 						{img.length > 1 ? (
 							<CarouselControls
 								getData={this.getData}
 								img={this.props.img}
 							/>
 						) : null}
-					</Suspense>
+					{/* </Suspense> */}
 				</div>
 			</>
 		);

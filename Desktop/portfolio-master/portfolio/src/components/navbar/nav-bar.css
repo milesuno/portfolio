@@ -32,6 +32,18 @@ div.logo-container a p {
 	width: 1024px;
 }
 
+.nav:empty {
+	height: 60px;
+	/* width: 1024px; */
+	background-image: linear-gradient(gray, gray), linear-gradient(white, white),
+		linear-gradient(gray, gray), linear-gradient(gray, gray),
+		linear-gradient(gray, gray), linear-gradient(gray, gray),
+		linear-gradient(black, black);
+    background-size: 200px 30px, 425px 54px, 100px 30px, 100px 30px, 100px 30px, 100px 30px, 100% 100%;
+	background-position: 130px 15px, 3px 3px, 450px, 600px, 750px, 900px, 0 0;
+	background-repeat: no-repeat;
+}
+
 .short-nav {
 	position: relative;
 	display: flex;
@@ -169,7 +181,6 @@ li {
 li.dropdown-item {
 	color: black;
 }
-
 
 li.dropdown-item a {
 	font-weight: 600;

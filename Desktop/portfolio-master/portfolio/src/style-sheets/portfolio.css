@@ -45,16 +45,36 @@ header {
 }
 
 h1 {
+	height: 60px;
 	width: 95%;
 	background: black;
 	color: white;
-	padding: 7.5px;
 	align-self: center;
+	padding-left: 7.5px;
+	line-height: 60px;
+}
+
+h1:empty {
+	height: 60px;
+	width: 95%;
+	/* background: black; */
+    background-image: linear-gradient(grey, grey), linear-gradient(black, black);
+    background-size: 150px 35px, 100% 100%;
+    background-position: 10px, 0 0;
+    background-repeat: no-repeat;
 }
 
 h3 {
 	width: 95%;
 	align-self: center;
+}
+
+h3:empty {
+	height: 30px;
+	background-image: linear-gradient(gray, gray);
+	background-size: 10% 100%;
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
 }
 
 footer {
