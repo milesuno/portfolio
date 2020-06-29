@@ -1,5 +1,5 @@
 import React, { Component, lazy, Suspense } from "react";
-import ThumbNail from "../thumbnail/thumbnail";	
+import ThumbNail from "../thumbnail/thumbnail";
 
 import LgThumbNail from "../lg-thumbnail/lg-thumbnail";
 // import NavBar from "../navbar/nav-bar";

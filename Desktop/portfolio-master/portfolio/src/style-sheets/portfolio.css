@@ -1,3 +1,12 @@
+@keyframes loadingGradient {
+	0% {
+		background-position: 0% 50%;
+	}
+
+	100% {
+		background-position: -200% 0%;
+	}
+}
 /*Desktop*/
 body {
 	overflow-x: hidden;
@@ -9,10 +18,21 @@ body {
 	align-items: center;
 	background: black;
 }
-
+ul a li {
+	text-decoration: none;
+}
 .main-wrapper {
-	margin: 60px 0px;
+	margin: 80px 0px;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 1024px;
+}
 
+.main-wrapper-loader {
+	margin: 100px 0px;
+	position: relative;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -55,13 +75,61 @@ h1 {
 }
 
 h1:empty {
+	height: inherit;
+	width: inherit;
+	background: #ccc;
+	margin: 0;
+	padding: 0;
+	/* background-image: linear-gradient(grey, grey);
+	background-size: 150px 35px;
+	background-position: 10px;
+	background-repeat: no-repeat; */
+}
+
+.loader {
+	content: "";
+	background-image: linear-gradient(to left, #ccc 0, #eee);
+	position: absolute;
+	height: inherit;
+	width: inherit;
+	left: 0;
+	top: 0;
+	background-position: 0 0;
+	background-size: 200% 200%;
+	background-repeat: no-repeat;
+	animation: loadingGradient 0.5s linear infinite;
+}
+
+.loader-size-wrapper {
+	width: 100px;
+	height: 30px;
+	position: absolute;
+	top: 15px;
+	left: 10px;
+}
+
+.loader-bg {
+	background: black;
+	height: 60px;
+	width: 100%;
+	position: relative;
+	align-self: center;
+}
+
+.loader-bg-95 {
+	background: black;
 	height: 60px;
 	width: 95%;
-	/* background: black; */
-    background-image: linear-gradient(grey, grey), linear-gradient(black, black);
-    background-size: 150px 35px, 100% 100%;
-    background-position: 10px, 0 0;
-    background-repeat: no-repeat;
+	position: relative;
+	align-self: center;
+}
+
+.loader-bg-none {
+	height: 60px;
+	width: 95%;
+	position: relative;
+	align-self: center;
+	margin-top: 15px;
 }
 
 h3 {
@@ -70,11 +138,14 @@ h3 {
 }
 
 h3:empty {
-	height: 30px;
-	background-image: linear-gradient(gray, gray);
+	height: inherit;
+	width: inherit;
+	background: #ccc;
 	background-size: 10% 100%;
 	background-position: 0px 0px;
 	background-repeat: no-repeat;
+	margin: 0;
+	padding: 0;
 }
 
 footer {
@@ -138,6 +209,9 @@ footer {
 		width: 100%;
 	}
 
+	.main-wrapper-loader {
+		width: 100%;
+	}
 	.h1 {
 		width: 90%;
 		align-self: center;
@@ -148,5 +222,9 @@ footer {
 @media (max-width: 421px) {
 	.main-wrapper {
 		margin-top: 80px;
+	}
+
+	.main-wrapper-loader {
+		margin-top: 100px;
 	}
 }

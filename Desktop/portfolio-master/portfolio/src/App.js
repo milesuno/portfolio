@@ -33,7 +33,7 @@ class App extends Component {
 			<Router className={"app"}>
 				<Switch>
 					{/* <Suspense fallback={<div>Loading...</div>}> */}
-						<Route path="/" exact component={LandingPage} />
+					<Route path="/" exact component={LandingPage} />
 					{/* </Suspense> */}
 					<Suspense
 						fallback={
@@ -41,11 +41,77 @@ class App extends Component {
 								<div className={"page-wrapper"}>
 									<div className="page-width">
 										<header>
-											<nav className="nav"></nav>
+											<nav className="nav">
+												<div className="short-nav">
+													<div className="logo-container"></div>
+													<div className="collasped-menu-btn"></div>
+													<ul className="nav-content">
+														<a className="link lg-display">
+															<li className="nav-item project">
+																<div className="loader-bg">
+																	<div className="loader-size-wrapper">
+																		<a className="button"></a>
+																		<div className="loader"></div>
+																	</div>
+																</div>
+															</li>
+														</a>
+														<a className="link lg-display">
+															<li className="nav-item ux">
+																<div className="loader-bg">
+																	<div className="loader-size-wrapper">
+																		<a
+																			className="button"
+																			name="project"
+																		></a>
+																		<div className="loader"></div>
+																	</div>
+																</div>
+															</li>
+														</a>
+														<a className="link lg-display">
+															<li className="nav-item courses">
+																<div className="loader-bg">
+																	<div className="loader-size-wrapper">
+																		<a
+																			className="button"
+																			name="project"
+																		></a>
+																		<div className="loader"></div>
+																	</div>
+																</div>
+															</li>
+														</a>
+														<a className="link lg-display">
+															<li className="nav-item about-me">
+																<div className="loader-bg">
+																	<div className="loader-size-wrapper">
+																		<a
+																			className="button"
+																			name="project"
+																		></a>
+																		<div className="loader"></div>
+																	</div>
+																</div>
+															</li>
+														</a>
+													</ul>
+												</div>
+											</nav>
 										</header>
-										<main className={"main-wrapper"}>
-											<h1 className="h1"></h1>
-											<h3></h3>
+										<main className={"main-wrapper-loader"}>
+											<div className="loader-bg-95">
+												<div className="loader-size-wrapper">
+													<h1 className="h1"></h1>
+													<div className="loader"></div>
+												</div>
+											</div>
+											<div className="loader-bg-none">
+												<div className="loader-size-wrapper">
+													<h3></h3>
+													<div className="loader"></div>
+												</div>
+											</div>
 											<section
 												className={"elements-wrapper"}
 											>
