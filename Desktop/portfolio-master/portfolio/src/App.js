@@ -49,7 +49,7 @@ class App extends Component {
 														<a className="link lg-display">
 															<li className="nav-item project">
 																<div className="loader-bg">
-																	<div className="loader-size-wrapper">
+																	<div className="loader-size-wrapper indent">
 																		<a className="button"></a>
 																		<div className="loader"></div>
 																	</div>
@@ -59,7 +59,7 @@ class App extends Component {
 														<a className="link lg-display">
 															<li className="nav-item ux">
 																<div className="loader-bg">
-																	<div className="loader-size-wrapper">
+																	<div className="loader-size-wrapper indent">
 																		<a
 																			className="button"
 																			name="project"
@@ -72,7 +72,7 @@ class App extends Component {
 														<a className="link lg-display">
 															<li className="nav-item courses">
 																<div className="loader-bg">
-																	<div className="loader-size-wrapper">
+																	<div className="loader-size-wrapper indent">
 																		<a
 																			className="button"
 																			name="project"
@@ -85,7 +85,7 @@ class App extends Component {
 														<a className="link lg-display">
 															<li className="nav-item about-me">
 																<div className="loader-bg">
-																	<div className="loader-size-wrapper">
+																	<div className="loader-size-wrapper indent">
 																		<a
 																			className="button"
 																			name="project"
@@ -101,12 +101,12 @@ class App extends Component {
 										</header>
 										<main className={"main-wrapper-loader"}>
 											<div className="loader-bg-95">
-												<div className="loader-size-wrapper">
+												<div className="loader-size-wrapper indent">
 													<h1 className="h1"></h1>
 													<div className="loader"></div>
 												</div>
 											</div>
-											<div className="loader-bg-none">
+											<div className="loader-bg-none margin-top-15">
 												<div className="loader-size-wrapper">
 													<h3></h3>
 													<div className="loader"></div>
@@ -116,7 +116,21 @@ class App extends Component {
 												className={"elements-wrapper"}
 											>
 												{projects.map((project) => (
-													<div className="thumbnail-page-wrapper"></div>
+														<div className="thumbnail-page-wrapper fade">
+															<div className="thumbnail-wrapper">
+																<div
+																	className={
+																		"thumbnail-img"
+																	}
+																></div>
+																<div className="loader-bg-none">
+																	<div className="loader-size-wrapper large">
+																		<h2 className="thumbnail-title"></h2>
+																		<div className="loader"></div>
+																	</div>
+																</div>
+															</div>
+														</div>
 												))}
 											</section>
 										</main>

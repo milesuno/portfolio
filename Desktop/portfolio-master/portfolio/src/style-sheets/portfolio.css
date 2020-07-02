@@ -100,13 +100,22 @@ h1:empty {
 	animation: loadingGradient 0.5s linear infinite;
 }
 
+
 .loader-size-wrapper {
 	width: 100px;
 	height: 30px;
 	position: absolute;
-	top: 15px;
+	margin: 15px 0;
+}
+
+.indent {
+	/* top: 15px; */
 	left: 10px;
 }
+.large {
+	width: 225px;
+}
+
 
 .loader-bg {
 	background: black;
@@ -129,7 +138,18 @@ h1:empty {
 	width: 95%;
 	position: relative;
 	align-self: center;
+}
+
+.margin-top-15 {
 	margin-top: 15px;
+}
+
+h2:empty {
+	height: inherit;
+	width: inherit;
+	background: #ccc;
+	margin: 0;
+	padding: 0;
 }
 
 h3 {
