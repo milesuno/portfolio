@@ -25,7 +25,8 @@
 .lg-thumbnail-img {
 	object-fit: scale-down;
 	height: 325px;
-	border: 1px solid grey;
+	border: 2px solid grey;
+	/* border-bottom: 0; */
 }
 
 .lg-thumbnail-title {

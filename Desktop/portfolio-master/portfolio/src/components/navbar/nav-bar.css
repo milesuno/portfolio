@@ -62,15 +62,20 @@ div.collasped-menu-btn {
 
 div.scroll-top-btn {
 	background: white;
-    border-radius: 100%;
-    height: 95px;
-    width: 95px;
-    display: flex;
-    justify-content: center;
+	border-radius: 100%;
+	height: 80px;
+	width: 80px;
+	display: flex;
+	justify-content: center;
 	align-items: center;
 	position: absolute;
 	opacity: 0;
 	transition: all 0.3s ease-in-out;
+}
+
+div.scroll-top-btn img {
+	height: 80px;
+	width: 80px;
 }
 
 div.collasped-menu-btn img {
@@ -126,6 +131,7 @@ li.nav-item {
 	align-items: center;
 	justify-content: center;
 	margin: 0;
+	width: 100%;
 }
 
 a.button:hover,
@@ -195,11 +201,19 @@ li.dropdown-item a {
 	color: black;
 }
 
-li.dropdown-item a:visited {
+.short-nav-all-items {
+	font-weight: 600;
+	color: black;
+}
+
+.short-nav-all-items a {
+	color: black;
+}
+/* li.dropdown-item a:visited {
 	color: gray;
 	font-weight: 300;
 	font-style: italic;
-}
+} */
 
 a {
 	text-decoration: none;

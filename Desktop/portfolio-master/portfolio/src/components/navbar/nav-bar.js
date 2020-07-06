@@ -20,8 +20,7 @@ class NavBar extends Component {
 			menuToggle: true,
 		};
 	}
-	//FIX: set the position of the scroll-top-btn to the lower right corner of the client portal
-	//SOLUTIONS: Hard coding various positions using media quiers || Find an event handler that would be approperate to trigger a JS function to set the poition of the btn
+//ADD: Create eventlistener on nav for mouseleave, this should create a mouseclick event that will close the navbtns
 
 	//FIX: display menu above 736px -> display: flex; flex-direction: row;
 	componentDidMount() {
@@ -230,9 +229,9 @@ class NavBar extends Component {
 			scrollTopBtn.style.setProperty("visibility", "visible");
 			scrollTopBtn.style.setProperty(
 				"top",
-				`${window.innerHeight - 125}px`
+				`${window.innerHeight - 110}px`
 			);
-			scrollTopBtn.style.setProperty("right", "30px");
+			scrollTopBtn.style.setProperty("right", "20px");
 		} else {
 			scrollTopBtn.style.setProperty("opacity", 0);
 			scrollTopBtn.style.setProperty("visibility", "hidden");
