@@ -8,9 +8,7 @@
 	}
 }
 /*Desktop*/
-body {
-	overflow-x: hidden;
-}
+
 .page-wrapper {
 	display: flex;
 	flex-direction: column;
@@ -100,7 +98,6 @@ h1:empty {
 	animation: loadingGradient 1s linear infinite;
 }
 
-
 .loader-size-wrapper {
 	width: 100px;
 	height: 30px;
@@ -115,7 +112,6 @@ h1:empty {
 .large {
 	width: 225px;
 }
-
 
 .loader-bg {
 	background: black;
@@ -232,6 +228,7 @@ footer {
 	.main-wrapper-loader {
 		width: 100%;
 	}
+
 	.h1 {
 		width: 90%;
 		align-self: center;
@@ -242,9 +239,11 @@ footer {
 @media (max-width: 421px) {
 	.main-wrapper {
 		margin-top: 80px;
+		width: 100%;
 	}
 
 	.main-wrapper-loader {
 		margin-top: 100px;
+		width: 100%;
 	}
 }
