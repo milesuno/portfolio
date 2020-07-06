@@ -61,16 +61,14 @@ div.collasped-menu-btn {
 }
 
 div.scroll-top-btn {
+	background: white;
+    border-radius: 100%;
+    height: 95px;
+    width: 95px;
+    display: flex;
+    justify-content: center;
 	align-items: center;
-	background: black;
-	width: 60px;
-	height: 60px;
 	position: absolute;
-	color: white;
-	font-size: xxx-large;
-	text-align: center;
-	line-height: 60px;
-	/* display: flex; */
 	opacity: 0.6;
 	transition: all 0.3s ease-in-out;
 }

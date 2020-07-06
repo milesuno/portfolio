@@ -7,6 +7,7 @@ import uxData from "../../data/ux-data";
 import socialMediaData from "../../data/social-media-data.js";
 import menu from "../../landing-video/icons8-menu-squared-96.png";
 import closeMenu from "../../landing-video/icons8-close-window-96.png";
+import scrollTopBtnIcon from "../../data/page-btns/icons8-slide-up-100.png";
 
 class NavBar extends Component {
 	constructor(props) {
@@ -229,7 +230,7 @@ class NavBar extends Component {
 			scrollTopBtn.style.setProperty("visibility", "visible");
 			scrollTopBtn.style.setProperty(
 				"top",
-				`${window.innerHeight - 75}px`
+				`${window.innerHeight - 125}px`
 			);
 			scrollTopBtn.style.setProperty("right", "30px");
 		} else {
@@ -396,7 +397,7 @@ class NavBar extends Component {
 							})
 						}
 					>
-						^
+						<img src={scrollTopBtnIcon} />
 					</div>
 				</div>
 			</nav>
