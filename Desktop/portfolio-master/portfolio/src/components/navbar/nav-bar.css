@@ -69,7 +69,7 @@ div.scroll-top-btn {
     justify-content: center;
 	align-items: center;
 	position: absolute;
-	opacity: 0.6;
+	opacity: 0;
 	transition: all 0.3s ease-in-out;
 }
 

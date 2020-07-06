@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-	import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./nav-bar.css";
 import courseData from "../../data/course-data.json";
 import projectData from "../../data/project-data";
@@ -39,7 +39,7 @@ class NavBar extends Component {
 
 	componentWillUnmount() {
 		window.onscroll = "";
-	};
+	}
 
 	handleMouseEnter = (e) => {
 		console.log("Enter", e.target);
