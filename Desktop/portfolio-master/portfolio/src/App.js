@@ -32,90 +32,97 @@ class App extends Component {
 		return (
 			<Router className={"app"}>
 				<Switch>
-					{/* <Suspense fallback={<div>Loading...</div>}> */}
-					<Route path="/" exact component={LandingPage} />
-					{/* </Suspense> */}
-					<Suspense
-						fallback={
-							<div>
-								<div className={"page-wrapper"}>
-									<div className="page-width">
-										<header>
-											<nav className="nav">
-												<div className="short-nav">
-													<div className="logo-container"></div>
-													<div className="collasped-menu-btn"></div>
-													<ul className="nav-content">
-														<a className="link lg-display">
-															<li className="nav-item project">
-																<div className="loader-bg">
-																	<div className="loader-size-wrapper indent">
-																		<a className="button"></a>
-																		<div className="loader"></div>
+					<>
+						<Suspense fallback={<div>Loading...</div>}>
+							<Route path="/" exact component={LandingPage} />
+						</Suspense>
+						<Suspense
+							fallback={
+								<div>
+									<div className={"page-wrapper"}>
+										<div className="page-width">
+											<header>
+												<nav className="nav">
+													<div className="short-nav">
+														<div className="logo-container"></div>
+														<div className="collasped-menu-btn"></div>
+														<ul className="nav-content">
+															<a className="link lg-display">
+																<li className="nav-item project">
+																	<div className="loader-bg">
+																		<div className="loader-size-wrapper indent">
+																			<a className="button"></a>
+																			<div className="loader"></div>
+																		</div>
 																	</div>
-																</div>
-															</li>
-														</a>
-														<a className="link lg-display">
-															<li className="nav-item ux">
-																<div className="loader-bg">
-																	<div className="loader-size-wrapper indent">
-																		<a
-																			className="button"
-																			name="project"
-																		></a>
-																		<div className="loader"></div>
+																</li>
+															</a>
+															<a className="link lg-display">
+																<li className="nav-item ux">
+																	<div className="loader-bg">
+																		<div className="loader-size-wrapper indent">
+																			<a
+																				className="button"
+																				name="project"
+																			></a>
+																			<div className="loader"></div>
+																		</div>
 																	</div>
-																</div>
-															</li>
-														</a>
-														<a className="link lg-display">
-															<li className="nav-item courses">
-																<div className="loader-bg">
-																	<div className="loader-size-wrapper indent">
-																		<a
-																			className="button"
-																			name="project"
-																		></a>
-																		<div className="loader"></div>
+																</li>
+															</a>
+															<a className="link lg-display">
+																<li className="nav-item courses">
+																	<div className="loader-bg">
+																		<div className="loader-size-wrapper indent">
+																			<a
+																				className="button"
+																				name="project"
+																			></a>
+																			<div className="loader"></div>
+																		</div>
 																	</div>
-																</div>
-															</li>
-														</a>
-														<a className="link lg-display">
-															<li className="nav-item about-me">
-																<div className="loader-bg">
-																	<div className="loader-size-wrapper indent">
-																		<a
-																			className="button"
-																			name="project"
-																		></a>
-																		<div className="loader"></div>
+																</li>
+															</a>
+															<a className="link lg-display">
+																<li className="nav-item about-me">
+																	<div className="loader-bg">
+																		<div className="loader-size-wrapper indent">
+																			<a
+																				className="button"
+																				name="project"
+																			></a>
+																			<div className="loader"></div>
+																		</div>
 																	</div>
-																</div>
-															</li>
-														</a>
-													</ul>
-												</div>
-											</nav>
-										</header>
-										<main className={"main-wrapper-loader"}>
-											<div className="loader-bg-95">
-												<div className="loader-size-wrapper indent">
-													<h1 className="h1"></h1>
-													<div className="loader"></div>
-												</div>
-											</div>
-											<div className="loader-bg-none margin-top-15">
-												<div className="loader-size-wrapper">
-													<h3></h3>
-													<div className="loader"></div>
-												</div>
-											</div>
-											<section
-												className={"elements-wrapper"}
+																</li>
+															</a>
+														</ul>
+													</div>
+												</nav>
+											</header>
+											<main
+												className={
+													"main-wrapper-loader"
+												}
 											>
-												{projects.map((project) => (
+												<div className="loader-bg-95">
+													<div className="loader-size-wrapper indent">
+														<h1 className="h1"></h1>
+														<div className="loader"></div>
+													</div>
+												</div>
+												<div className="loader-bg-none margin-top-15">
+													<div className="loader-size-wrapper">
+														<h3></h3>
+														<div className="loader"></div>
+													</div>
+												</div>
+												<section
+													className={
+														"elements-wrapper"
+													}
+												>
+													{projects.map((project) => (
 														<div className="thumbnail-page-wrapper fade">
 															<div className="thumbnail-wrapper">
 																<div
@@ -131,37 +138,137 @@ class App extends Component {
 																</div>
 															</div>
 														</div>
-												))}
-											</section>
-										</main>
-										<div className="footer-wrapper">
-											footer
+													))}
+												</section>
+											</main>
+											<div className="footer-wrapper">
+												footer
+											</div>
 										</div>
 									</div>
 								</div>
-							</div>
-						}
-					>
-						<Route path="/projects" exact component={Projects} />
-						<Route path="/uxdesigns" exact component={UXDesigns} />
-						<Route path="/courses" exact component={Courses} />
-						<Route path="/aboutme" exact component={AboutMe} />
-						<Route
-							path="/projects/:id"
-							exact
-							component={SinglePageItem}
-						/>
-						<Route
-							path="/uxdesigns/:id"
-							exact
-							component={SinglePageItem}
-						/>
-						<Route
-							path="/courses/:id"
-							exact
-							component={SinglePageItem}
-						/>
-					</Suspense>
+							}
+						>
+							<Route
+								path="/projects"
+								exact
+								component={Projects}
+							/>
+							<Route
+								path="/uxdesigns"
+								exact
+								component={UXDesigns}
+							/>
+							<Route path="/courses" exact component={Courses} />
+						</Suspense>
+						<Suspense
+							fallback={
+								<>
+									<div className="page-wrapper">
+										<div className="page-width">
+											<header>
+												<nav className="nav">
+													<div className="short-nav">
+														<div className="logo-container"></div>
+														<div className="collasped-menu-btn"></div>
+														<ul className="nav-content">
+															<a className="link lg-display">
+																<li className="nav-item project">
+																	<div className="loader-bg">
+																		<div className="loader-size-wrapper indent">
+																			<a className="button"></a>
+																			<div className="loader"></div>
+																		</div>
+																	</div>
+																</li>
+															</a>
+															<a className="link lg-display">
+																<li className="nav-item ux">
+																	<div className="loader-bg">
+																		<div className="loader-size-wrapper indent">
+																			<a
+																				className="button"
+																				name="project"
+																			></a>
+																			<div className="loader"></div>
+																		</div>
+																	</div>
+																</li>
+															</a>
+															<a className="link lg-display">
+																<li className="nav-item courses">
+																	<div className="loader-bg">
+																		<div className="loader-size-wrapper indent">
+																			<a
+																				className="button"
+																				name="project"
+																			></a>
+																			<div className="loader"></div>
+																		</div>
+																	</div>
+																</li>
+															</a>
+															<a className="link lg-display">
+																<li className="nav-item about-me">
+																	<div className="loader-bg">
+																		<div className="loader-size-wrapper indent">
+																			<a
+																				className="button"
+																				name="project"
+																			></a>
+																			<div className="loader"></div>
+																		</div>
+																	</div>
+																</li>
+															</a>
+														</ul>
+													</div>
+												</nav>
+											</header>
+											<main className="main-wrapper">
+												<h1>About Me</h1>
+												<div className="about-me-wrapper">
+													<img className="about-me-img" />
+													<a className="download">
+														<button>
+															Download CV
+														</button>
+													</a>
+													<nav className="social-nav-btns"></nav>
+													<p></p>
+													<p></p>
+													<p></p>
+													<p></p>
+												</div>
+											</main>
+											<div className="footer-wrapper">
+												footer
+											</div>
+										</div>
+									</div>
+								</>
+							}
+						>
+							<Route path="/aboutme" exact component={AboutMe} />
+						</Suspense>
+						<Suspense fallback={<div>Loading...</div>}>
+							<Route
+								path="/projects/:id"
+								exact
+								component={SinglePageItem}
+							/>
+							<Route
+								path="/uxdesigns/:id"
+								exact
+								component={SinglePageItem}
+							/>
+							<Route
+								path="/courses/:id"
+								exact
+								component={SinglePageItem}
+							/>
+						</Suspense>
+					</>
 				</Switch>
 			</Router>
 		);

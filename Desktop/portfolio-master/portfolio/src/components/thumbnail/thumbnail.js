@@ -33,7 +33,10 @@ class ThumbNail extends Component {
 		};
 	}
 
+
 	componentDidMount() {
+		// fetch("https://avatars2.githubusercontent.com/u/45498063?s=460&u=ccf1d781a20680c9787cdae4bdaba9a1f540b02f&v=4").then(res => res.blob()).then(img => console.log(img))
+		console.log("DID: img Lag:", this.state.img)
 		let checkScroll;
 		const thumbnails = document.querySelectorAll(
 			"div.thumbnail-page-wrapper"

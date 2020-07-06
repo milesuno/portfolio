@@ -22,7 +22,15 @@ class Projects extends Component {
 			projects: data,
 		};
 	}
+	
+	// componentWillMount(){
+	// 	console.log("img Lag:", this.state.projects[0].img)
+	// }
 
+	// componentDidMount() {
+	// 	console.log("img Lag:", this.state.projects[0].img)
+
+	// }
 	getData = (data) => {
 		//Gets data on specified Thumbnail and sends data to be rendered as Lg-Thumbnail
 		this.setState({ selected: 1, dataFromThumbnail: data });
@@ -32,7 +40,7 @@ class Projects extends Component {
 		console.log("from lg-thumbnail", update);
 		this.setState({ selected: update });
 	};
-
+	
 	render() {
 		const { projects, selected, dataFromThumbnail } = this.state;
 
