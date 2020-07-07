@@ -6,15 +6,22 @@ import "./landing-page.css";
 import ProfileCard from "../profile-card/profile-card";
 import "../profile-card/profile-card.css";
 
+
+// ADD: track page width and if the width changes recalculate the middle
 class LandingPage extends Component {
 	constructor(props) {
 		super(props);
+		this.state = {
+			windowWidth: window.innerWidth
+		}
 	}
 
 	componentDidMount() {
 		const video = document.querySelector(".landing-page-img");
 		const hideScroll = document.querySelector("body");
-
+		const enterBtn = document.querySelector(".landing-page-a")
+		console.log({enterBtn});
+		enterBtn.style.setProperty("left", `${(window.innerWidth / 2) - 50}px`)
 		video.loop = true;
 		video.play();
 		hideScroll.style.setProperty("overflow", "hidden");

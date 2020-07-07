@@ -5,6 +5,18 @@
 	margin: 10px;
 }
 
+.about-me-img:empty {
+	/* background: grey; */
+	align-self: center;
+	border-radius: 100%;
+	background-image: linear-gradient(grey, grey);
+	background-size: 100% 100%;
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	width: 300px;
+	margin: 10px;
+}
+	
 /* main button {
 	width: 100%;
 	background: white;

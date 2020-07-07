@@ -11,7 +11,7 @@ class ProfileCard extends Component {
 	render() {
 		return (
 			<div className="profile-card">
-				<img className="about-me-img" src={img} />
+				<img className="profile-card-img" src={img} />
 				<h1>Gideon Miles Oluku</h1>
 				<SocialMediaNav />
 			</div>

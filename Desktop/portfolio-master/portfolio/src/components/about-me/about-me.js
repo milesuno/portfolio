@@ -37,7 +37,9 @@ class AboutMe extends Component {
 								<a className="download" href={CV} download>
 									<button>Download CV</button>
 								</a>
-								<SocialMediaNav />
+								<div className="social-nav-btns about-me">
+									<SocialMediaNav />
+								</div>
 								<p>
 									I am a Web Developer and Business Graduate,
 									with a background in agile web development,

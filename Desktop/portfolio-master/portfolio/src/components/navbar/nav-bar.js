@@ -190,6 +190,7 @@ class NavBar extends Component {
 				console.log("NAVBTN");
 				let button = navBtn.firstChild;
 				let droplist = navBtn.lastChild;
+				navBtn.style.setProperty("width", "100%");
 				button.style.setProperty("width", "100%");
 				button.style.setProperty("padding", "10px");
 				droplist.style.setProperty("display", "none");

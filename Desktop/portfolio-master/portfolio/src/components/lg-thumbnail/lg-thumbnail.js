@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import "./lg-thumbnail.css";
 import CarouselControls from "../carousel-controls/CarouselControls";
 import SinglePageItem from "../single-page-item/SinglePageItem";
+import closeBtn from "../../data/page-btns/icons8-close-window-48.png";
+
 
 //LG THUMBNAIL to become pop up modal with the following details:
 //Image carosel, controls, desc, my role.
@@ -89,7 +91,7 @@ class LgThumbNail extends Component {
 										this.props.closeLgThumbnail(0)
 									}
 								>
-									{"x"}
+									<img src={closeBtn} />
 								</button>
 								<div className="lg-thumbnail-wrapper">
 									<h1 className={"lg-thumbnail-title"}>
@@ -110,7 +112,7 @@ class LgThumbNail extends Component {
 									<div className="lg-thumbnail-info">
 										{desc ? (
 											<p>
-												<strong>Description:</strong>{" "}
+												<strong>Description:</strong>
 												{desc}
 											</p>
 										) : null}

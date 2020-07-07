@@ -17,7 +17,7 @@
 
 	background: white;
 
-	width: 90%;
+	width: 84%;
 	height: 100%;
 	margin-bottom: 20px;
 }
@@ -38,7 +38,7 @@
 }
 
 .lg-thumbnail-info {
-	margin-top: 10px;
+	margin-top: 20px;
 }
 
 .lg-thumbnail-info p {
@@ -46,10 +46,14 @@
 }
 
 .lg-thumbnail-button {
-	display: flex;
-	justify-content: center;
-	width: 4%;
-	align-self: flex-end;
+display: flex;
+    justify-content: center;
+    /* width: 4%; */
+    background: white;
+    align-self: flex-end;
+    border: none;
+    padding: 0;
+    margin: 0;
 }
 
 .lg-thumbnail-desc {
@@ -58,6 +62,9 @@
 }
 
 @media (max-width: 650px) {
+	.modal-content {
+		width: 100%;
+	}
 	.lg-thumbnail-page-wrapper {
 		width: 100%;
 		border: none;
