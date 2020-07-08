@@ -33,10 +33,9 @@ class ThumbNail extends Component {
 		};
 	}
 
-
 	componentDidMount() {
 		// fetch("https://avatars2.githubusercontent.com/u/45498063?s=460&u=ccf1d781a20680c9787cdae4bdaba9a1f540b02f&v=4").then(res => res.blob()).then(img => console.log(img))
-		console.log("DID: img Lag:", this.state.img)
+		console.log("DID: img Lag:", this.state.img);
 		let checkScroll;
 		const thumbnails = document.querySelectorAll(
 			"div.thumbnail-page-wrapper"
@@ -165,16 +164,16 @@ class ThumbNail extends Component {
 					>
 						{/* {this.props.img ? ( */}
 						<img src={img[imgIndex]} className={"thumbnail-img"} />
-						 {/* ) : <div>"NOPE"</div>} */}
+						{/* ) : <div>"NOPE"</div>} */}
 						<h2 className="thumbnail-title">{name}</h2>
 					</div>
 					{/* <Suspense fallback={<div>POOP...</div>}> */}
-						{img.length > 1 ? (
+					{/* {img.length > 1 ? (
 							<CarouselControls
 								getData={this.getData}
 								img={this.props.img}
 							/>
-						) : null}
+						) : null} */}
 					{/* </Suspense> */}
 				</div>
 			</>

@@ -13,7 +13,7 @@
 
 .landing-page-img {
 	object-fit: cover;
-	object-position: 0px 0px;
+	object-position: 0px -300px;
 }
 
 /* .landing-page-h1 {
@@ -27,7 +27,7 @@ position: absolute;
 
 .landing-page-about-me {
 	position: fixed;
-	top: 10px;
+	top: 30px;
 	right: 30px;
 
 	height: 50px;
@@ -72,7 +72,7 @@ position: absolute;
 	}
 }
 
-@media (max-width: 768px) {
+@media (max-width: 696px) {
 	.landing-page-a {
 		/* top: 70%; */
 	}
