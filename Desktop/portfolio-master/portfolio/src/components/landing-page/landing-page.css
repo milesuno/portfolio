@@ -44,7 +44,7 @@ position: absolute;
 	align-self: center;
 	animation: pulse 2s infinite;
 	position: fixed;
-	top: 550px;
+	top: 515px;
 
 	width: 100px;
 	height: 50px;
@@ -79,7 +79,7 @@ position: absolute;
 	}
 }
 
-@media (max-width: 425px) {
+/* @media (max-width: 425px) {
 	.profile-card {
 		left: 20%;
 	}
@@ -90,7 +90,6 @@ position: absolute;
 	}
 
 	.landing-page-a {
-		/* top: 50%; */
 		left: 38%;
 	}
-}
+} */

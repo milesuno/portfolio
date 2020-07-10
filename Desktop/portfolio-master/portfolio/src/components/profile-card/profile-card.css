@@ -28,3 +28,9 @@
 .profile-card a {
 	text-decoration: none;
 }
+
+@media (max-width: 696px) {
+	.landing-page-a {
+		/* top: 70%; */
+	}
+}
