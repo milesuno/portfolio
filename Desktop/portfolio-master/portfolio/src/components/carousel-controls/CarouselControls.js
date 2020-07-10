@@ -5,7 +5,6 @@ import stopBtn from "../../data/carousel-btns/stop.png";
 import rightBtn from "../../data/carousel-btns/sort-right.png";
 import fastForwardBtn from "../../data/carousel-btns/fast-forward.png";
 
-
 import "./CarouselControls.css";
 
 class CarouselControls extends Component {
@@ -20,6 +19,10 @@ class CarouselControls extends Component {
 		};
 	}
 
+	componentWillUnmount() {
+		clearInterval(this.state.autoPlay);
+	};
+	
 	handleIncrementCarousel = () => {
 		let imgIndex = this.state.imgIndex;
 		imgIndex++;
@@ -72,23 +75,23 @@ class CarouselControls extends Component {
 
 	render() {
 		return (
-				<div className={"button-container"}>
-					<button onClick={this.handleAutoBackward}>
-						<img src={rewindBtn} />
-					</button>
-					<button onClick={this.handleDecrementCarousel}>
-						<img src={leftBtn} />
-					</button>
-					<button onClick={this.handleStopImageChange}>
-						<img src={stopBtn} />
-					</button>
-					<button onClick={this.handleIncrementCarousel}>
-						<img src={rightBtn} />
-					</button>
-					<button onClick={this.handleAutoForward}>
-						<img src={fastForwardBtn} />
-					</button>
-				</div>
+			<div className={"button-container"}>
+				<button onClick={this.handleAutoBackward}>
+					<img src={rewindBtn} />
+				</button>
+				<button onClick={this.handleDecrementCarousel}>
+					<img src={leftBtn} />
+				</button>
+				<button onClick={this.handleStopImageChange}>
+					<img src={stopBtn} />
+				</button>
+				<button onClick={this.handleIncrementCarousel}>
+					<img src={rightBtn} />
+				</button>
+				<button onClick={this.handleAutoForward}>
+					<img src={fastForwardBtn} />
+				</button>
+			</div>
 		);
 	}
 }

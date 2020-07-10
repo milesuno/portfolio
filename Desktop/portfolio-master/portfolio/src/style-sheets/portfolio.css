@@ -7,6 +7,30 @@
 		background-position: -200% 0%;
 	}
 }
+
+@keyframes zoom-in {
+	0% {
+		opacity: 0;
+		transform: scale(0.7);
+	}
+
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+@keyframes zoom-out {
+	0% {
+		opacity: 1;
+		transform: scale(1);
+	}
+
+	100% {
+		opacity: 0;
+		transform: scale(0.7);
+	}
+}
 /*Desktop*/
 
 .page-wrapper {
@@ -95,7 +119,7 @@ h1:empty {
 	background-position: 0 0;
 	background-size: 200% 200%;
 	background-repeat: no-repeat;
-	animation: loadingGradient 1s linear infinite;
+	animation: loadingGradient 0.3s linear infinite;
 }
 
 .loader-size-wrapper {
@@ -197,6 +221,7 @@ footer {
 	/* padding: 20px; */
 	/* border: 1px solid #888; */
 	height: fit-content;
+	animation: zoom-in 0.3s 1;
 }
 
 /* The Close Button */
@@ -214,6 +239,42 @@ footer {
 	cursor: pointer;
 }
 
+.mfp-zoom-in {
+	/* start state */
+	.mfp-with-anim {
+		opacity: 0;
+		-webkit-transition: all 0.2s ease-in-out;
+		transition: all 0.2s ease-in-out;
+		transform: scale(0.8);
+	}
+
+	&.mfp-bg {
+		opacity: 0;
+		transition: all 0.3s ease-out;
+	}
+
+	/* animate in */
+	&.mfp-ready {
+		.mfp-with-anim {
+			opacity: 1;
+			transform: scale(1);
+		}
+		&.mfp-bg {
+			opacity: 0.8;
+		}
+	}
+
+	/* animate out */
+	&.mfp-removing {
+		.mfp-with-anim {
+			transform: scale(0.8);
+			opacity: 0;
+		}
+		&.mfp-bg {
+			opacity: 0;
+		}
+	}
+}
 /*Tablet*/
 
 @media (max-width: 1024px) {
@@ -238,7 +299,7 @@ footer {
 
 @media (max-width: 421px) {
 	.main-wrapper {
-		margin-top: 80px;
+		/* margin-top: 80px; */
 		width: 100%;
 	}
 

@@ -6,7 +6,6 @@ import CarouselControls from "../carousel-controls/CarouselControls";
 import SinglePageItem from "../single-page-item/SinglePageItem";
 import closeBtn from "../../data/page-btns/icons8-close-window-48.png";
 
-
 //LG THUMBNAIL to become pop up modal with the following details:
 //Image carosel, controls, desc, my role.
 //Stand alone page component will display all the available information on a item.
@@ -28,6 +27,31 @@ class LgThumbNail extends Component {
 	componentDidMount() {
 		const body = document.querySelector("body");
 		body.style.setProperty("overflow", "hidden");
+
+		const modal = document.querySelector(".modal");
+		const modalContent = document.querySelector(".modal-content");
+
+		const setModalAnimationAndCloseModal = () => {
+			this.setModalCloseAnimation();
+
+			//timeout allows animation to happen before re-render
+			setTimeout(() => {
+				this.props.closeLgThumbnail(0);
+			}, 100);
+		};
+
+		modal.addEventListener("click", setModalAnimationAndCloseModal);
+
+		modalContent.addEventListener("mouseleave", () => {
+			console.log("leave");
+
+			return modal.addEventListener("click", setModalAnimationAndCloseModal);
+		});
+
+		modalContent.addEventListener("mouseenter", () => {
+			console.log("enter");
+			return modal.removeEventListener("click", setModalAnimationAndCloseModal);
+		});
 	}
 
 	componentWillUnmount() {
@@ -63,6 +87,11 @@ class LgThumbNail extends Component {
 		console.log("Selected", this.state.selected);
 	};
 
+	setModalCloseAnimation = () => {
+		const modal = document.querySelector(".modal-content");
+		modal.style.setProperty("animation", "zoom-out 0.15s 1");
+	};
+
 	render() {
 		const { imgIndex, selected } = this.state;
 		const {
@@ -83,13 +112,19 @@ class LgThumbNail extends Component {
 			<>
 				{!selected ? (
 					<template id="myModal" className="modal">
+						>
 						<div className="modal-content">
 							<div className={"lg-thumbnail-page-wrapper"}>
 								<button
 									className={"lg-thumbnail-button"}
-									onClick={() =>
-										this.props.closeLgThumbnail(0)
-									}
+									onClick={() => {
+										this.setModalCloseAnimation();
+
+										//timeout allows animation to happen before re-render
+										setTimeout(() => {
+											this.props.closeLgThumbnail(0);
+										}, 100);
+									}}
 								>
 									<img src={closeBtn} />
 								</button>
@@ -99,9 +134,7 @@ class LgThumbNail extends Component {
 									</h1>
 									<img
 										src={img[imgIndex]}
-										className={
-											"lg-thumbnail-img"
-										}
+										className={"lg-thumbnail-img"}
 									/>
 									{img.length > 1 ? (
 										<CarouselControls
@@ -112,9 +145,7 @@ class LgThumbNail extends Component {
 									<br />
 									{desc ? (
 										<p>
-											<strong>
-												Description:
-														</strong>
+											<strong>Description:</strong>
 											{desc}
 										</p>
 									) : null}
@@ -126,41 +157,29 @@ class LgThumbNail extends Component {
 									) : null}
 									{tech ? (
 										<p>
-											<strong>
-												Technologies:
-														</strong>
+											<strong>Technologies:</strong>
 											{tech}
 										</p>
 									) : null}
 									{challenge ? (
 										<p>
-											<strong>
-												Challenge:
-														</strong>
+											<strong>Challenge:</strong>
 											{challenge}
 										</p>
 									) : null}
 									{solution ? (
 										<p>
-											<strong>
-												Solution:
-														</strong>
+											<strong>Solution:</strong>
 											{solution}
 										</p>
 									) : null}
 									{source ? (
 										<>
-											<strong>
-												Sources:
-														</strong>
+											<strong>Sources:</strong>
 											{source.url ? (
 												<p>
 													URL:
-													<a
-														href={
-															source.url
-														}
-													>
+													<a href={source.url}>
 														{source.url}
 													</a>
 												</p>
@@ -168,37 +187,25 @@ class LgThumbNail extends Component {
 											{source.github ? (
 												<p>
 													Github:
-													<a
-														href={
-															source.github
-														}
-													>
-														{
-															source.github
-														}
+													<a href={source.github}>
+														{source.github}
 													</a>
 												</p>
 											) : null}
 											{source.trello ? (
 												<p>
 													Trello:
-													<a
-														href={
-															source.github
-														}
-													>
-														{
-															source.trello
-														}
+													<a href={source.github}>
+														{source.trello}
 													</a>
 												</p>
 											) : null}
 										</>
 									) : null}
 								</div>
-								</div>
-								</div>
-								</template>
+							</div>
+						</div>
+					</template>
 				) : (
 					<>
 						//This is replaces the pop up which means the other

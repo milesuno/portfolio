@@ -22,7 +22,7 @@ class Projects extends Component {
 			projects: data,
 		};
 	}
-	
+
 	// componentWillMount(){
 	// 	console.log("img Lag:", this.state.projects[0].img)
 	// }
@@ -40,7 +40,7 @@ class Projects extends Component {
 		console.log("from lg-thumbnail", update);
 		this.setState({ selected: update });
 	};
-	
+
 	render() {
 		const { projects, selected, dataFromThumbnail } = this.state;
 
@@ -61,7 +61,7 @@ class Projects extends Component {
 										<NavBar />
 									</header>
 									<main className={"main-wrapper"}>
-										<h1 className="h1">Projects</h1>
+										<h1>Projects</h1>
 										<h3>2019</h3>
 										<LgThumbNail
 											dataFromThumbnail={
