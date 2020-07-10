@@ -177,8 +177,8 @@ footer {
 	position: fixed; /* Stay in place */
 	z-index: 1001; /* Sit on top */
 	/* padding-top: 100px; Location of the box */
-	align-items: center;
-
+	/* align-items: center; */
+	justify-content: center;
 	left: 0;
 	top: 0;
 	width: 100%; /* Full width */

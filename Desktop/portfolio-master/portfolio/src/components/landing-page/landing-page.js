@@ -5,6 +5,7 @@ import vid from "../../landing-video/Pexels Videos 2699.mp4";
 import "./landing-page.css";
 import ProfileCard from "../profile-card/profile-card";
 import "../profile-card/profile-card.css";
+import NavBar from "../navbar/nav-bar";
 
 // ADD: track page width and if the width changes recalculate the middle
 class LandingPage extends Component {
@@ -21,19 +22,36 @@ class LandingPage extends Component {
 		const enterBtn = document.querySelector(".landing-page-a");
 		const profileCard = document.querySelector(".profile-card");
 
-		console.log(profileCard);
+		const logoContainer = document.querySelector(".logo-container");
+		logoContainer.style.setProperty("visibility", "hidden");
+
+		const navContent = document.querySelector(".nav-content");
+		navContent.style.setProperty("display", "none");
+
+		const collaspedMenuBtn = document.querySelector(".collasped-menu-btn");
+		collaspedMenuBtn.style.setProperty("display", "flex");
+		collaspedMenuBtn.style.setProperty("animation", "pulse 2s infinite");
+
+		console.log({ logoContainer, navContent, collaspedMenuBtn });
+
+		enterBtn.style.setProperty(
+			"left",
+			`${this.state.windowWidth / 2 - 50}px`
+		);
 		
 		window.onresize = () => {
-			if (this.state.windowWidth <= 696) {
-				profileCard.style.setProperty(
-					"left",
-					`${this.state.windowWidth / 2 - 125}px`
-				);
-			} else {
-				profileCard.style.setProperty("left", "");
-				profileCard.style.setProperty("right", `30px`);
-			}
+			// if (this.state.windowWidth <= 696) {
+			// 	profileCard.style.setProperty(
+			// 		"left",
+			// 		`${this.state.windowWidth / 2 - 125}px`
+			// 	);
+			// } else {
+			// 	profileCard.style.setProperty("left", "");
+			// 	profileCard.style.setProperty("right", `30px`);
+			// };
+
 			this.setState({ windowWidth: window.innerWidth });
+
 			console.log({ enterBtn });
 			enterBtn.style.setProperty(
 				"left",
@@ -73,6 +91,7 @@ class LandingPage extends Component {
 				</Helmet>
 				<div className="landing-page-wrapper">
 					{/* Quotes can change every few seconds */}
+					<NavBar isLandingPage={true}/>
 					<main className="landing-main-wrapper">
 						<video
 							className="landing-page-img"
@@ -88,7 +107,7 @@ class LandingPage extends Component {
 							</button>
 						</Link> */}
 						{/* <p className="landing-page-h1">Genchi Genbutsu</p> */}
-						<Link to="/projects">
+						<Link to="/aboutme">
 							<button className="landing-page-a">Enter</button>
 						</Link>
 					</main>

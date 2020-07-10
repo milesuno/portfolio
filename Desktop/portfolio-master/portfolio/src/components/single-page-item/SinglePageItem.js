@@ -110,13 +110,13 @@ class SinglePageItem extends Component {
 													<p>
 														<strong>
 															Description:
-														</strong>{" "}
+														</strong>
 														{desc}
 													</p>
 												) : null}
 												{role ? (
 													<p>
-														<strong>Role:</strong>{" "}
+														<strong>Role:</strong>
 														{role}
 													</p>
 												) : null}
@@ -124,7 +124,7 @@ class SinglePageItem extends Component {
 													<p>
 														<strong>
 															Technologies:
-														</strong>{" "}
+														</strong>
 														{tech}
 													</p>
 												) : null}
@@ -132,7 +132,7 @@ class SinglePageItem extends Component {
 													<p>
 														<strong>
 															Challenge:
-														</strong>{" "}
+														</strong>
 														{challenge}
 													</p>
 												) : null}
@@ -140,7 +140,7 @@ class SinglePageItem extends Component {
 													<p>
 														<strong>
 															Solution:
-														</strong>{" "}
+														</strong>
 														{solution}
 													</p>
 												) : null}
@@ -151,7 +151,7 @@ class SinglePageItem extends Component {
 														</strong>
 														{source.url ? (
 															<p>
-																URL:{" "}
+																URL:
 																<a
 																	href={
 																		source.url
@@ -163,7 +163,7 @@ class SinglePageItem extends Component {
 														) : null}
 														{source.github ? (
 															<p>
-																Github:{" "}
+																Github:
 																<a
 																	href={
 																		source.github
@@ -177,7 +177,7 @@ class SinglePageItem extends Component {
 														) : null}
 														{source.trello ? (
 															<p>
-																Trello:{" "}
+																Trello:
 																<a
 																	href={
 																		source.github

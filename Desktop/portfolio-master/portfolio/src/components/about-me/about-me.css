@@ -16,7 +16,7 @@
 	width: 300px;
 	margin: 10px;
 }
-	
+
 /* main button {
 	width: 100%;
 	background: white;
@@ -40,6 +40,14 @@
 .download {
 	display: flex;
 	margin: 10px;
+}
+
+.download button {
+	background: black;
+	border: none;
+	color: white;
+	width: 250px;
+	height: 40px;
 }
 
 @media (max-width: 450px) {

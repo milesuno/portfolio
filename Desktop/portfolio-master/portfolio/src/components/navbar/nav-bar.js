@@ -18,12 +18,20 @@ class NavBar extends Component {
 			ux: uxData,
 			socialMedia: socialMediaData,
 			menuToggle: true,
+			isLandingPage: this.props.isLandingPage || false,
 		};
 	}
-//ADD: Create eventlistener on nav for mouseleave, this should create a mouseclick event that will close the navbtns
+	//ADD: Create eventlistener on nav for mouseleave, this should create a mouseclick event that will close the navbtns
 
 	//FIX: display menu above 736px -> display: flex; flex-direction: row;
 	componentDidMount() {
+		if (this.props.isLandingPage) {
+			
+			this.setState({ isLandingPage: true });
+			console.log("isLandingPage", this.state.isLandingPage);
+		}
+		console.log("isLandingPage", this.props);
+
 		const navBtns = document.querySelectorAll("li.nav-item");
 		const scrollTopBtn = document.querySelector("div.scroll-top-btn");
 		const collaspedMenuBtn = document.querySelector(".collasped-menu-btn");
@@ -159,6 +167,7 @@ class NavBar extends Component {
 		const collaspedMenuBtn = document.querySelector(".collasped-menu-btn");
 		const linkBtns = document.querySelectorAll(".link.lg-display");
 		linkBtns.forEach((btn) => (btn.href = ""));
+		const shortNav = document.querySelector(".short-nav");
 
 		console.log({
 			collaspedMenuBtn,
@@ -169,16 +178,31 @@ class NavBar extends Component {
 		});
 
 		if (this.state.menuToggle) {
-			collaspedMenuBtn.style.setProperty("display", "flex");
-			navContent.style.setProperty("display", "flex");
-			navContent.style.setProperty("flex-direction", "column");
-			navContent.style.setProperty("position", "absolute");
-			navContent.style.setProperty("transform", "translate(0, 0%)");
-			navContent.style.setProperty("width", "100%");
-			navContent.style.setProperty("top", "60px");
-			navContent.style.setProperty("opacity", 1);
-			navContent.style.setProperty("transition", "all 0.6s ease-in-out");
-			// navContent.style.setProperty("top", `${shortMenuCoords.bottom}px`);
+			if (this.state.isLandingPage) {
+				shortNav.style.setProperty("justify-content", "flex-end")
+				navContent.style.setProperty("display", "flex");
+				// navContent.style.setProperty("", "flex");
+				navContent.style.setProperty("flex-direction", "column");
+				navContent.style.setProperty("position", "absolute");
+				navContent.style.setProperty("transform", "translate(0, 0%)");
+				navContent.style.setProperty("width", "200px");
+				navContent.style.setProperty("top", "60px");
+
+				navContent.style.setProperty("opacity", 1);
+
+			} else {
+
+				collaspedMenuBtn.style.setProperty("display", "flex");
+				navContent.style.setProperty("display", "flex");
+				navContent.style.setProperty("flex-direction", "column");
+				navContent.style.setProperty("position", "absolute");
+				navContent.style.setProperty("transform", "translate(0, 0%)");
+				navContent.style.setProperty("width", "100%");
+				navContent.style.setProperty("top", "60px");
+				navContent.style.setProperty("opacity", 1);
+				navContent.style.setProperty("transition", "all 0.6s ease-in-out");
+				// navContent.style.setProperty("top", `${shortMenuCoords.bottom}px`);
+			}
 
 			dropdownLists.forEach((dropdownList) => {
 				dropdownList.style.setProperty("background", "white");

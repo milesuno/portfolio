@@ -13,7 +13,7 @@
 
 .landing-page-img {
 	object-fit: cover;
-	object-position: 0px -300px;
+    object-position: -80px -250px;
 }
 
 /* .landing-page-h1 {
@@ -41,9 +41,10 @@ position: absolute;
 }
 
 .landing-page-a {
+	align-self: center;
 	animation: pulse 2s infinite;
 	position: fixed;
-	top: 500px;
+	top: 550px;
 
 	width: 100px;
 	height: 50px;

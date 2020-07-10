@@ -99,40 +99,106 @@ class LgThumbNail extends Component {
 									</h1>
 									<img
 										src={img[imgIndex]}
-										className={"lg-thumbnail-img"}
+										className={
+											"lg-thumbnail-img"
+										}
 									/>
 									{img.length > 1 ? (
 										<CarouselControls
 											getData={this.getData}
-											img={
-												this.props.dataFromThumbnail.img
-											}
+											img={img}
 										/>
 									) : null}
-									<div className="lg-thumbnail-info">
-										{desc ? (
-											<p>
-												<strong>Description:</strong>
-												{desc}
-											</p>
-										) : null}
-										{role ? (
-											<p>
-												<strong>Role:</strong> {role}
-											</p>
-										) : null}
-										<b>
-											<i onClick={this.thumbNailSwitch}>
-												<Link to={`/${type}/${id}`}>
-													More ...
-												</Link>
-											</i>
-										</b>
-									</div>
+									<br />
+									{desc ? (
+										<p>
+											<strong>
+												Description:
+														</strong>
+											{desc}
+										</p>
+									) : null}
+									{role ? (
+										<p>
+											<strong>Role:</strong>
+											{role}
+										</p>
+									) : null}
+									{tech ? (
+										<p>
+											<strong>
+												Technologies:
+														</strong>
+											{tech}
+										</p>
+									) : null}
+									{challenge ? (
+										<p>
+											<strong>
+												Challenge:
+														</strong>
+											{challenge}
+										</p>
+									) : null}
+									{solution ? (
+										<p>
+											<strong>
+												Solution:
+														</strong>
+											{solution}
+										</p>
+									) : null}
+									{source ? (
+										<>
+											<strong>
+												Sources:
+														</strong>
+											{source.url ? (
+												<p>
+													URL:
+													<a
+														href={
+															source.url
+														}
+													>
+														{source.url}
+													</a>
+												</p>
+											) : null}
+											{source.github ? (
+												<p>
+													Github:
+													<a
+														href={
+															source.github
+														}
+													>
+														{
+															source.github
+														}
+													</a>
+												</p>
+											) : null}
+											{source.trello ? (
+												<p>
+													Trello:
+													<a
+														href={
+															source.github
+														}
+													>
+														{
+															source.trello
+														}
+													</a>
+												</p>
+											) : null}
+										</>
+									) : null}
 								</div>
-							</div>
-						</div>
-					</template>
+								</div>
+								</div>
+								</template>
 				) : (
 					<>
 						//This is replaces the pop up which means the other
