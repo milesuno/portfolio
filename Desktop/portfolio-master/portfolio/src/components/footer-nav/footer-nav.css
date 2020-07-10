@@ -37,6 +37,10 @@ footer {
 	color: white;
 }
 
+.footer-signature img {
+	opacity: 0.6;
+}
+
 @media (max-width: 768px) {
 	footer {
 		flex-direction: column;

@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap");
+
 header {
 	display: flex;
 	justify-content: center;
@@ -16,10 +18,15 @@ div.logo-container {
 	z-index: 1001;
 }
 
-div.logo-container a p {
+.logo-signature {
+	font-family: "Rock Salt", Arial, Helvetica, sans-serif;
 	color: black;
 }
 
+.logo-signature-footer {
+	font-family: "Rock Salt", Arial, Helvetica, sans-serif;
+	color: white;
+}
 .nav {
 	position: fixed;
 
@@ -62,11 +69,11 @@ div.collasped-menu-btn {
 
 div.scroll-top-btn {
 	background: white;
-    border-radius: 100%;
-    height: 80px;
-    width: 80px;
-    display: flex;
-    justify-content: center;
+	border-radius: 100%;
+	height: 80px;
+	width: 80px;
+	display: flex;
+	justify-content: center;
 	align-items: center;
 	position: absolute;
 	opacity: 0;
@@ -302,7 +309,6 @@ a.button:empty {
 	a.button {
 		width: 100%;
 	}
-	
 }
 
 @media (max-width: 425px) {

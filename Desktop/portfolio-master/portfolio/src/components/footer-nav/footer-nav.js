@@ -4,7 +4,10 @@ import projectData from "../../data/project-data";
 import uxData from "../../data/ux-data";
 import CourseData from "../../data/course-data.json";
 // import aboutMeData from "../../data/about-me-data.json";
+import developeIcon from "./../../data/page-btns/icons8-developer-50.png";
+
 import "./footer-nav.css";
+import "./../navbar/nav-bar.css";
 
 import SocialMediaNav from "../social-media-nav/social-media-nav";
 
@@ -20,11 +23,11 @@ class FooterNav extends Component {
 				<div className="footer-wrapper">
 					<div className="footer-contact-info">
 						<p>Milesoluku@gmail.com</p>
-						<p>07783180169</p>
 						<SocialMediaNav isFooter={this.props.isFooter} />
+						<p>07783180169</p>
 					</div>
 					<div className="footer-signature">
-						<img src="#" />
+						<img src={developeIcon} />{" "}
 					</div>
 					<div className="footer-nav-menu">
 						<ul className="footer-ul">

@@ -26,7 +26,6 @@ class NavBar extends Component {
 	//FIX: display menu above 736px -> display: flex; flex-direction: row;
 	componentDidMount() {
 		if (this.props.isLandingPage) {
-			
 			this.setState({ isLandingPage: true });
 			console.log("isLandingPage", this.state.isLandingPage);
 		}
@@ -179,7 +178,7 @@ class NavBar extends Component {
 
 		if (this.state.menuToggle) {
 			if (this.state.isLandingPage) {
-				shortNav.style.setProperty("justify-content", "flex-end")
+				shortNav.style.setProperty("justify-content", "flex-end");
 				navContent.style.setProperty("display", "flex");
 				// navContent.style.setProperty("", "flex");
 				navContent.style.setProperty("flex-direction", "column");
@@ -189,9 +188,7 @@ class NavBar extends Component {
 				navContent.style.setProperty("top", "60px");
 
 				navContent.style.setProperty("opacity", 1);
-
 			} else {
-
 				collaspedMenuBtn.style.setProperty("display", "flex");
 				navContent.style.setProperty("display", "flex");
 				navContent.style.setProperty("flex-direction", "column");
@@ -200,7 +197,10 @@ class NavBar extends Component {
 				navContent.style.setProperty("width", "100%");
 				navContent.style.setProperty("top", "60px");
 				navContent.style.setProperty("opacity", 1);
-				navContent.style.setProperty("transition", "all 0.6s ease-in-out");
+				navContent.style.setProperty(
+					"transition",
+					"all 0.6s ease-in-out"
+				);
 				// navContent.style.setProperty("top", `${shortMenuCoords.bottom}px`);
 			}
 
@@ -284,9 +284,8 @@ class NavBar extends Component {
 				<div className="short-nav">
 					<div className="logo-container">
 						<Link to="/">
-							<img src="#" />
+							<p className="logo-signature">Gideon Miles Oluku</p>
 						</Link>
-						<p>Gideon Miles Oluku</p>
 					</div>
 					<div
 						className="collasped-menu-btn"
