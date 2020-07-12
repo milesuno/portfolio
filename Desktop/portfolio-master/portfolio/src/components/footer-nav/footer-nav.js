@@ -56,6 +56,7 @@ class FooterNav extends Component {
 						</ul>
 					</div>
 				</div>
+				<small>&copy; Copyright {new Date().getFullYear()}, Gideon Miles Oluku. All Rights Reserved.</small>
 			</footer>
 		);
 	}

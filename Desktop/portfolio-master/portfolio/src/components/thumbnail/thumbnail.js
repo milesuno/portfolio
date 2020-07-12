@@ -1,10 +1,8 @@
-import React, { Component, Suspense, lazy } from "react";
+import React, { Component } from "react";
 import "./thumbnail.css";
 import LgThumbNail from "../lg-thumbnail/lg-thumbnail";
-// import CarouselControls from "../carousel-controls/CarouselControls";
-const CarouselControls = lazy(() =>
-	import("../carousel-controls/CarouselControls")
-);
+import CarouselControls from "../carousel-controls/CarouselControls";
+
 /*
 React will apply props object with data passed to from the parent passing it props. 
 In this instance ThumbNail as data passed to it from 2 different parents, 
@@ -167,14 +165,12 @@ class ThumbNail extends Component {
 						{/* ) : <div>"NOPE"</div>} */}
 						<h2 className="thumbnail-title">{name}</h2>
 					</div>
-					{/* <Suspense fallback={<div>POOP...</div>}> */}
 					{/* {img.length > 1 ? (
 							<CarouselControls
 								getData={this.getData}
 								img={this.props.img}
 							/>
 						) : null} */}
-					{/* </Suspense> */}
 				</div>
 			</>
 		);

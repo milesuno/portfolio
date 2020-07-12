@@ -1,16 +1,15 @@
-import React, { Component, lazy, Suspense } from "react";
+import React, { Component } from "react";
 import ThumbNail from "../thumbnail/thumbnail";
 
 import LgThumbNail from "../lg-thumbnail/lg-thumbnail";
-// import NavBar from "../navbar/nav-bar";
+import NavBar from "../navbar/nav-bar";
 import "../../style-sheets/portfolio.css";
 import Helmet from "react-helmet";
 
 import FooterNav from "../footer-nav/footer-nav";
 import data from "../../data/project-data";
 
-// const ThumbNail = lazy(() => import("../thumbnail/thumbnail"));
-const NavBar = lazy(() => import("../navbar/nav-bar"));
+
 
 class Projects extends Component {
 	constructor(props) {
@@ -77,12 +76,6 @@ class Projects extends Component {
 										<section className={"elements-wrapper"}>
 											{projects.map((project) => (
 												//data is exported before reaching ThumbNail as ThumbNail will accept data from multiple sources - therefore must be generic.
-												// <Suspense
-												// 	fallback={
-												// 		<div className="thumbnail-page-wrapper">
-												// 		</div>
-												// 	}
-												// >
 												<ThumbNail
 													key={project.key}
 													id={project.id}
@@ -100,7 +93,6 @@ class Projects extends Component {
 													getData={this.getData}
 													getData={this.getData}
 												/>
-												// </Suspense>
 											))}
 										</section>
 									</main>
@@ -119,12 +111,6 @@ class Projects extends Component {
 										<section className={"elements-wrapper"}>
 											{projects.map((project) => (
 												//data is exported before reaching ThumbNail as ThumbNail will accept data from multiple sources - therefore must be generic.
-												// <Suspense
-												// 	fallback={
-												// 		<div className="thumbnail-page-wrapper">
-												// 		</div>
-												// 	}
-												// >
 												<ThumbNail
 													key={project.key}
 													id={project.id}
@@ -142,7 +128,6 @@ class Projects extends Component {
 													getData={this.getData}
 													getData={this.getData}
 												/>
-												// </Suspense>
 											))}
 										</section>
 									</main>

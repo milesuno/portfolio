@@ -6,6 +6,8 @@ import "./landing-page.css";
 import ProfileCard from "../profile-card/profile-card";
 import "../profile-card/profile-card.css";
 import NavBar from "../navbar/nav-bar";
+import landingPageBG from "./../../landing-video/landing-bg.png";
+
 
 // ADD: track page width and if the width changes recalculate the middle
 class LandingPage extends Component {
@@ -38,7 +40,7 @@ class LandingPage extends Component {
 			"left",
 			`${this.state.windowWidth / 2 - 50}px`
 		);
-		
+
 		window.onresize = () => {
 			// if (this.state.windowWidth <= 696) {
 			// 	profileCard.style.setProperty(
@@ -91,23 +93,24 @@ class LandingPage extends Component {
 				</Helmet>
 				<div className="landing-page-wrapper">
 					{/* Quotes can change every few seconds */}
-					<NavBar isLandingPage={true}/>
+					<NavBar isLandingPage={true} />
 					<main className="landing-main-wrapper">
-						<video
-							className="landing-page-img"
-							src={vid}
-							muted
-							autoPlay
-							loop
-						/>
+						{vid ? (
+							<video
+								className="landing-page-img"
+								src={vid}
+								muted
+								autoPlay
+								loop
+							/>
+						) : (
+							<img
+								className="loader-landing-page-img"
+								src={landingPageBG}
+							/>
+						)}
 						<ProfileCard />
-						{/* <Link to="/aboutme">
-							<button className="landing-page-about-me">
-								About Me
-							</button>
-						</Link> */}
-						{/* <p className="landing-page-h1">Genchi Genbutsu</p> */}
-						<Link to="/aboutme">
+						<Link to="/projects">
 							<button className="landing-page-a">Enter</button>
 						</Link>
 					</main>
