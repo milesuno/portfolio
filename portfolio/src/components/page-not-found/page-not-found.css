@@ -1,0 +1,48 @@
+@keyframes blink {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes slideCoveringBlock {
+	0% {
+		transform: translate(20%, 0);
+	}
+
+	100% {
+		transform: translate(68%, 0);
+	}
+}
+
+.pnf-wrapper {
+	background-color: black;
+	position: relative;
+}
+
+.pnf-covering-block {
+	display: flex;
+	align-items: center;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	background-color: black;
+	transform: translate(68%, 0);
+	animation: slideCoveringBlock 4s 1;
+}
+
+.pnf-message {
+	color: white;
+	font-size: xxx-large;
+}
+
+.cursor {
+	position: absolute;
+	background-color: yellow;
+	animation: blink 0.5s infinite;
+	height: 50%;
+	width: 35px;
+}
