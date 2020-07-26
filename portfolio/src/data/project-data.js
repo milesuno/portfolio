@@ -187,7 +187,148 @@ const projects = [
 			github:
 				"https://github.com/milesuno/keyboard-drumkit",
 			trello: "",
-		},
+		}
+		
+	},
+	{
+		key: 8,
+		id: "p8",
+		type: "projects",
+		name: "City Searcher",
+		img: ["#"],
+		desc:
+			"TV Show Info is a page that allows users to: Filter shows (Fetchs from Maze API), Jump to Episode in list.",
+		role: "UX Designer, FrontEnd Developer.",
+		tech: "HTML, CSS, JavaScript, React",
+		challenge: "",
+		solution: "",
+		source: {
+			url: "https://city-searcher.netlify.app",
+			github:
+				"https://github.com/milesuno/type-ahead-city-seacher",
+			trello: "",
+		}
+
+	},
+	{
+		key: 9,
+		id: "p9",
+		type: "projects",
+		name: "Paint App",
+		img: ["#"],
+		desc:
+			"TV Show Info is a page that allows users to: Filter shows (Fetchs from Maze API), Jump to Episode in list.",
+		role: "UX Designer, FrontEnd Developer.",
+		tech: "HTML, CSS, JavaScript, React",
+		challenge: "",
+		solution: "",
+		source: {
+			url: "paint-react.netlify.app",
+			github:
+				"https://github.com/milesuno/paint-react",
+			trello: "",
+		}
+
+	},
+	{
+		key: 10,
+		id: "p10",
+		type: "projects",
+		name: "To Do Bot",
+		img: ["#"],
+		desc:
+			"TV Show Info is a page that allows users to: Filter shows (Fetchs from Maze API), Jump to Episode in list.",
+		role: "UX Designer, FrontEnd Developer.",
+		tech: "HTML, CSS, JavaScript, React",
+		challenge: "",
+		solution: "",
+		source: {
+			url: "https://todobot.netlify.app",
+			github:
+				"https://github.com/milesuno/to-do-app-react",
+			trello: "",
+		}
+
+	},
+	{
+		key: 11,
+		id: "p11",
+		type: "projects",
+		name: "Webcam App",
+		img: ["#"],
+		desc:
+			"TV Show Info is a page that allows users to: Filter shows (Fetchs from Maze API), Jump to Episode in list.",
+		role: "UX Designer, FrontEnd Developer.",
+		tech: "HTML, CSS, JavaScript, React",
+		challenge: "",
+		solution: "",
+		source: {
+			url: "https://webcam-fun.netlify.app",
+			github:
+				"https://github.com/milesuno/webcam-fun-react",
+			trello: "",
+		}
+
+	},
+	{
+		key: 12,
+		id: "p12",
+		type: "projects",
+		name: "Speech Detection",
+		img: ["#"],
+		desc:
+			"TV Show Info is a page that allows users to: Filter shows (Fetchs from Maze API), Jump to Episode in list.",
+		role: "UX Designer, FrontEnd Developer.",
+		tech: "HTML, CSS, JavaScript, React",
+		challenge: "",
+		solution: "",
+		source: {
+			url: "https://speech-to-text-react.netlify.app/",
+			github:
+				"https://github.com/milesuno/speech-to-text-react",
+			trello: "",
+		}
+
+	},
+	{
+		key: 13,
+		id: "p13",
+		type: "projects",
+		name: "Geolocation App",
+		img: ["#"],
+		desc:
+			"TV Show Info is a page that allows users to: Filter shows (Fetchs from Maze API), Jump to Episode in list.",
+		role: "UX Designer, FrontEnd Developer.",
+		tech: "HTML, CSS, JavaScript, React",
+		challenge: "",
+		solution: "",
+		source: {
+			url: "https://geolocation-react.netlify.app",
+			github:
+				"https://github.com/milesuno/geolocation-react",
+			trello: "",
+		}
+
+	},
+	{
+		key: 14,
+		id: "p14",
+		type: "projects",
+		name: "Text to Speech Synthesis",
+		img: ["#"],
+		desc:
+			"TV Show Info is a page that allows users to: Filter shows (Fetchs from Maze API), Jump to Episode in list.",
+		role: "UX Designer, FrontEnd Developer.",
+		tech: "HTML, CSS, JavaScript, React",
+		challenge: "",
+		solution: "",
+		source: {
+			url: "https://text-to-speech-react.netlify.app/",
+			github:
+				"https://github.com/milesuno/text-to-speech-synth-react",
+			trello: "",
+		}
+
 	},
 ];
 
