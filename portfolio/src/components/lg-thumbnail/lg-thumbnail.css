@@ -81,13 +81,17 @@
 @media (max-width: 600px) {
 	.modal-content {
 		width: 100%;
-
 	}
-
 }
 
 @media (max-width: 400px) {
 	.lg-thumbnail-title {
 		font-size: 25px;
+	}
+}
+
+@media (min-height: 1000px) {
+	.modal {
+		align-items: center;
 	}
 }

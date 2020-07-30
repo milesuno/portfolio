@@ -30,6 +30,20 @@ import tvshowImg00 from "./projects/tv-show-info.jpg";
 
 import weatherappImg00 from "./projects/weather-app.jpg";
 
+import drumkitImg00 from "./projects/keyboard-drumkit.png";
+
+import citysearcherimg00 from "./projects/city-seacher.png";
+
+import paintImg00 from "./projects/paint-app.png";
+
+import todobotImg00 from "./projects/todo-bot.png";
+
+import speechtotextImg00 from "./projects/speech-detection.png";
+
+import geolocationImg00 from "./projects/geolocation-app.png";
+
+import texttospeechImg00 from "./projects/text-to-speech.png";
+
 const projects = [
 	{
 		key: 1,
@@ -175,9 +189,9 @@ const projects = [
 		id: "p7",
 		type: "projects",
 		name: "Drum Kit",
-		img: ["#"],
+		img: [drumkitImg00],
 		desc:
-			"TV Show Info is a page that allows users to: Filter shows (Fetchs from Maze API), Jump to Episode in list.",
+			"Drumkit allows users to play various drumkit sounds on there keyboard, mouse or touch. Users can record there creations and play them back on demand.",
 		role: "UX Designer, FrontEnd Developer.",
 		tech: "HTML, CSS, JavaScript, React",
 		challenge: "",
@@ -195,9 +209,9 @@ const projects = [
 		id: "p8",
 		type: "projects",
 		name: "City Searcher",
-		img: ["#"],
+		img: [citysearcherimg00],
 		desc:
-			"TV Show Info is a page that allows users to: Filter shows (Fetchs from Maze API), Jump to Episode in list.",
+			"City Search allow users to search for Cities and States in america.",
 		role: "UX Designer, FrontEnd Developer.",
 		tech: "HTML, CSS, JavaScript, React",
 		challenge: "",
@@ -215,15 +229,15 @@ const projects = [
 		id: "p9",
 		type: "projects",
 		name: "Paint App",
-		img: ["#"],
+		img: [paintImg00],
 		desc:
-			"TV Show Info is a page that allows users to: Filter shows (Fetchs from Maze API), Jump to Episode in list.",
+			"Paint App allows users to paint on a HTML canvas. Users can pick the stroke style, size and colour.",
 		role: "UX Designer, FrontEnd Developer.",
 		tech: "HTML, CSS, JavaScript, React",
 		challenge: "",
 		solution: "",
 		source: {
-			url: "paint-react.netlify.app",
+			url: "https://paint-react.netlify.app",
 			github:
 				"https://github.com/milesuno/paint-react",
 			trello: "",
@@ -235,9 +249,9 @@ const projects = [
 		id: "p10",
 		type: "projects",
 		name: "To Do Bot",
-		img: ["#"],
+		img: [todobotImg00],
 		desc:
-			"TV Show Info is a page that allows users to: Filter shows (Fetchs from Maze API), Jump to Episode in list.",
+			"To do bot is an app that allows users to add and delete items to a list.",
 		role: "UX Designer, FrontEnd Developer.",
 		tech: "HTML, CSS, JavaScript, React",
 		challenge: "",
@@ -254,30 +268,10 @@ const projects = [
 		key: 11,
 		id: "p11",
 		type: "projects",
-		name: "Webcam App",
-		img: ["#"],
-		desc:
-			"TV Show Info is a page that allows users to: Filter shows (Fetchs from Maze API), Jump to Episode in list.",
-		role: "UX Designer, FrontEnd Developer.",
-		tech: "HTML, CSS, JavaScript, React",
-		challenge: "",
-		solution: "",
-		source: {
-			url: "https://webcam-fun.netlify.app",
-			github:
-				"https://github.com/milesuno/webcam-fun-react",
-			trello: "",
-		}
-
-	},
-	{
-		key: 12,
-		id: "p12",
-		type: "projects",
 		name: "Speech Detection",
-		img: ["#"],
+		img: [speechtotextImg00],
 		desc:
-			"TV Show Info is a page that allows users to: Filter shows (Fetchs from Maze API), Jump to Episode in list.",
+			"Speech Detection uses the users microphone to capture their speech and display it on the page.",
 		role: "UX Designer, FrontEnd Developer.",
 		tech: "HTML, CSS, JavaScript, React",
 		challenge: "",
@@ -291,13 +285,13 @@ const projects = [
 
 	},
 	{
-		key: 13,
-		id: "p13",
+		key: 12,
+		id: "p12",
 		type: "projects",
 		name: "Geolocation App",
-		img: ["#"],
+		img: [geolocationImg00],
 		desc:
-			"TV Show Info is a page that allows users to: Filter shows (Fetchs from Maze API), Jump to Episode in list.",
+			"Geolocation allows users to get realtime coordinates on their orientation and travel speed.",
 		role: "UX Designer, FrontEnd Developer.",
 		tech: "HTML, CSS, JavaScript, React",
 		challenge: "",
@@ -311,13 +305,13 @@ const projects = [
 
 	},
 	{
-		key: 14,
-		id: "p14",
+		key: 13,
+		id: "p13",
 		type: "projects",
 		name: "Text to Speech Synthesis",
-		img: ["#"],
+		img: [texttospeechImg00],
 		desc:
-			"TV Show Info is a page that allows users to: Filter shows (Fetchs from Maze API), Jump to Episode in list.",
+			"Text to Speech allows users to select a variety of voices to speak the text they have submitted.",
 		role: "UX Designer, FrontEnd Developer.",
 		tech: "HTML, CSS, JavaScript, React",
 		challenge: "",
