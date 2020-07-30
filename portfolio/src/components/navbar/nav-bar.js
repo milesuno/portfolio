@@ -305,7 +305,7 @@ class NavBar extends Component {
 								</a>
 								<ul className="dropdown-list project">
 									{!this.state.menuToggle ? (
-										<li className="short-nav-all-items">
+										<li className="short-nav-all-items dropdown-item">
 											<Link to={`/projects`}>
 												All Projects
 											</Link>
@@ -337,7 +337,7 @@ class NavBar extends Component {
 								</a>
 								<ul className="dropdown-list ux">
 									{!this.state.menuToggle ? (
-										<li className="short-nav-all-items">
+										<li className="short-nav-all-items dropdown-item">
 											<Link to={`/uxdesigns`}>
 												All UX designs
 											</Link>
@@ -368,7 +368,7 @@ class NavBar extends Component {
 								</a>
 								<ul className="dropdown-list courses">
 									{!this.state.menuToggle ? (
-										<li className="dropdown-item">
+										<li className="short-nav-all-items dropdown-item">
 											<Link to={`/courses`}>
 												All Courses
 											</Link>

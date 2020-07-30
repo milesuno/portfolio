@@ -12,7 +12,7 @@ class PageNotFound extends Component {
 		return (
 			<>
 				<div className="landing-page-wrapper">
-                    <main className="landing-main-wrapper">
+                    <main className="pnf-main-wrapper">
 
 					<div className="pnf-wrapper">
 						<div className="pnf-covering-block">
@@ -20,7 +20,7 @@ class PageNotFound extends Component {
 						</div>
 						<p className="pnf-message">Page Not Found</p>
 					</div>
-					<Link to="/">Return Home</Link>
+					<Link to="/"><button className="pnf-home-btn">Return Home</button></Link>
                     </main>
 				</div>
 			</>

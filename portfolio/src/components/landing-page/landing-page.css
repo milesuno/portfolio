@@ -13,7 +13,8 @@
 
 .landing-page-img {
 	object-fit: cover;
-    object-position: -80px -250px;
+	/* object-position: -80px -250px; */
+	object-position: -80px -150px;
 }
 
 .loader-landing-page-img {
