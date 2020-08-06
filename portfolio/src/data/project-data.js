@@ -242,9 +242,9 @@ const projects = [
 		name: "Example Homes",
 		img: [examplehomesImg00, examplehomesImg01, examplehomesImg02],
 		desc:
-			"Text to Speech allows users to select a variety of voices to speak the text they have submitted.",
+			"Example Homes is an dynamic frontend prototype for a fictional furniture company.",
 		role: "UX Designer, FrontEnd Developer.",
-		tech: "HTML, CSS, JavaScript, React",
+		tech: "HTML, CSS, JavaScript",
 		challenge: "",
 		solution: "",
 		source: {
