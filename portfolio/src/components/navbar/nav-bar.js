@@ -27,9 +27,9 @@ class NavBar extends Component {
 	componentDidMount() {
 		if (this.props.isLandingPage) {
 			this.setState({ isLandingPage: true });
-			console.log("isLandingPage", this.state.isLandingPage);
+			// console.log("isLandingPage", this.state.isLandingPage);
 		}
-		console.log("isLandingPage", this.props);
+		// console.log("isLandingPage", this.props);
 
 		const navBtns = document.querySelectorAll("li.nav-item");
 		const scrollTopBtn = document.querySelector("div.scroll-top-btn");
@@ -47,75 +47,75 @@ class NavBar extends Component {
 		window.onscroll = "";
 	}
 
-	handleMouseEnter = (e) => {
-		console.log("Enter", e.target);
-		if (!e.target.children[0].name) return;
-		const nav = document.querySelector(".nav");
-		const navBtns = document.querySelectorAll("li.nav-item");
-		const allDropdownList = document.querySelectorAll(`.dropdown-list`);
-		const dropdownList = document.querySelector(
-			`.dropdown-list.${e.target.children[0].name}`
-		);
-		const dropdownBackground = document.querySelector(
-			".dropdownBackground"
-		);
+	// handleMouseEnter = (e) => {
+	// 	console.log("Enter", e.target);
+	// 	if (!e.target.children[0].name) return;
+	// 	const nav = document.querySelector(".nav");
+	// 	const navBtns = document.querySelectorAll("li.nav-item");
+	// 	const allDropdownList = document.querySelectorAll(`.dropdown-list`);
+	// 	const dropdownList = document.querySelector(
+	// 		`.dropdown-list.${e.target.children[0].name}`
+	// 	);
+	// 	const dropdownBackground = document.querySelector(
+	// 		".dropdownBackground"
+	// 	);
 
-		//Make dropdown visible on enter
-		dropdownList.style.setProperty("display", "flex");
-		dropdownList.style.setProperty("position", "relative");
-		dropdownList.style.setProperty("flex-direction", "column");
+	// 	//Make dropdown visible on enter
+	// 	dropdownList.style.setProperty("display", "flex");
+	// 	dropdownList.style.setProperty("position", "relative");
+	// 	dropdownList.style.setProperty("flex-direction", "column");
 
-		//coords can't be access till it is displayed
-		let dropdownCoords = dropdownList.getBoundingClientRect();
-		let navCoords = nav.getBoundingClientRect();
+	// 	//coords can't be access till it is displayed
+	// 	let dropdownCoords = dropdownList.getBoundingClientRect();
+	// 	let navCoords = nav.getBoundingClientRect();
 
-		//Adjust dropdown BG to match dropdown list measurements
-		dropdownBackground.style.setProperty(
-			"height",
-			`${dropdownCoords.height}px`
-		);
-		dropdownBackground.style.setProperty(
-			"width",
-			`${dropdownCoords.width}px`
-		);
-		dropdownBackground.style.setProperty(
-			"top",
-			`${dropdownCoords.y - navCoords.y}px`
-		);
-		dropdownBackground.style.setProperty(
-			"left",
-			`${dropdownCoords.x - navCoords.x}px`
-		);
-		dropdownBackground.style.setProperty("opacity", 1);
+	// 	//Adjust dropdown BG to match dropdown list measurements
+	// 	dropdownBackground.style.setProperty(
+	// 		"height",
+	// 		`${dropdownCoords.height}px`
+	// 	);
+	// 	dropdownBackground.style.setProperty(
+	// 		"width",
+	// 		`${dropdownCoords.width}px`
+	// 	);
+	// 	dropdownBackground.style.setProperty(
+	// 		"top",
+	// 		`${dropdownCoords.y - navCoords.y}px`
+	// 	);
+	// 	dropdownBackground.style.setProperty(
+	// 		"left",
+	// 		`${dropdownCoords.x - navCoords.x}px`
+	// 	);
+	// 	dropdownBackground.style.setProperty("opacity", 1);
 
-		// Move dropdown BG to match dropdown list
+	// 	// Move dropdown BG to match dropdown list
 
-		console.log({
-			dropdownList,
-			allDropdownList,
-			dropdownCoords,
-			dropdownBackground,
-		});
-	};
+	// 	console.log({
+	// 		dropdownList,
+	// 		allDropdownList,
+	// 		dropdownCoords,
+	// 		dropdownBackground,
+	// 	});
+	// };
 
-	handleMouseLeave = (e) => {
-		if (!e.target.children[0].name) return;
-		console.log("Leave", e.target);
-		const navBtns = document.querySelectorAll("li.nav-item");
+	// handleMouseLeave = (e) => {
+	// 	if (!e.target.children[0].name) return;
+	// 	console.log("Leave", e.target);
+	// 	const navBtns = document.querySelectorAll("li.nav-item");
 
-		const dropdownList = document.querySelector(
-			`.dropdown-list.${e.target.children[0].name}`
-		);
-		const dropdownBackground = document.querySelector(
-			".dropdownBackground"
-		);
+	// 	const dropdownList = document.querySelector(
+	// 		`.dropdown-list.${e.target.children[0].name}`
+	// 	);
+	// 	const dropdownBackground = document.querySelector(
+	// 		".dropdownBackground"
+	// 	);
 
-		dropdownList.style.setProperty("display", "none");
-		dropdownBackground.style.setProperty("opacity", 0);
+	// 	dropdownList.style.setProperty("display", "none");
+	// 	dropdownBackground.style.setProperty("opacity", 0);
 
-		console.log({ dropdownList });
-		// dropdownList.style.flexDirection = "column";
-	};
+	// 	console.log({ dropdownList });
+	// 	// dropdownList.style.flexDirection = "column";
+	// };
 
 	handleMouseClick = (e) => {
 		//Set dataset on element and only display the element with the active property
@@ -330,7 +330,7 @@ class NavBar extends Component {
 								</ul>
 							</li>
 						</Link>
-						<Link className="link lg-display" to="/uxdesigns">
+						{/* <Link className="link lg-display" to="/uxdesigns">
 							<li className="nav-item ux">
 								<a className="button" name="ux">
 									UX/UI DESIGNS
@@ -344,9 +344,7 @@ class NavBar extends Component {
 										</li>
 									) : null}
 									{
-										/*Loop through all projects and render a list of these items as <li>*/
 										uxData.map((ux) => {
-											// console.log(ux);
 											return (
 												<li className="dropdown-item">
 													<Link
@@ -360,7 +358,7 @@ class NavBar extends Component {
 									}
 								</ul>
 							</li>
-						</Link>
+						</Link> */}
 						<Link className="link lg-display" to="/courses">
 							<li className="nav-item courses">
 								<a className="button" name="courses">

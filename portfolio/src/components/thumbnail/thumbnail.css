@@ -37,7 +37,7 @@
 }
 
 .thumbnail-img {
-	object-fit: contain;
+	object-fit: cover;
 	height: 250px;
 	width: 100%;
 	margin: 0;

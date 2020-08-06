@@ -44,6 +44,10 @@ import geolocationImg00 from "./projects/geolocation-app.png";
 
 import texttospeechImg00 from "./projects/text-to-speech.png";
 
+import examplehomesImg00 from "./projects/example-homes/example-homes.png";
+import examplehomesImg01 from "./projects/example-homes/example-homes-2.png";
+import examplehomesImg02 from "./projects/example-homes/example-homes-3.png";
+
 const projects = [
 	{
 		key: 1,
@@ -51,7 +55,6 @@ const projects = [
 		type: "projects",
 		name: "BarterAnything",
 		img: [
-			barteranythingImg00,
 			barteranythingImg01,
 			barteranythingImg02,
 			barteranythingImg03,
@@ -62,6 +65,7 @@ const projects = [
 			barteranythingImg08,
 			barteranythingImg09,
 			barteranythingImg10,
+			barteranythingImg00,
 		],
 		desc:
 			"BarterAnything is a Cashless Ecommerce Platform. User's create profiles and negotiate terms for a value trade of any skill, service or Item they are offering.",
@@ -82,7 +86,6 @@ const projects = [
 		type: "projects",
 		name: "CYF Glossary",
 		img: [
-			cyfglossaryImg00,
 			cyfglossaryImg01,
 			cyfglossaryImg02,
 			cyfglossaryImg03,
@@ -90,6 +93,7 @@ const projects = [
 			cyfglossaryImg05,
 			cyfglossaryImg06,
 			cyfglossaryImg07,
+			cyfglossaryImg00,
 		],
 		desc:
 			"My team and I, we responsible for delivering a glossary for technology-based technical terms.We were a team of 4 with a deadline of 24 days. I was the Project Manager and Front-End developer for the project. We successfully completed a working product on time and demonstrated its functionality to stakeholders.",
@@ -103,6 +107,150 @@ const projects = [
 			url: "https://cyf-glossary-app.netlify.com/",
 			github: "https://github.com/ahmedahashim/CYF-Glossary",
 			trello: "https://trello.com/b/9OxYYRjg",
+		},
+	},
+	{
+		key: 7,
+		id: "p7",
+		type: "projects",
+		name: "Drum Kit",
+		img: [drumkitImg00],
+		desc:
+			"Drumkit allows users to play various drumkit sounds on there keyboard, mouse or touch. Users can record there creations and play them back on demand.",
+		role: "UX Designer, FrontEnd Developer.",
+		tech: "HTML, CSS, JavaScript, React",
+		challenge: "",
+		solution: "",
+		source: {
+			url: "https://keyboard-drumkit.netlify.com/",
+			github: "https://github.com/milesuno/keyboard-drumkit",
+			trello: "",
+		},
+	},
+	{
+		key: 8,
+		id: "p8",
+		type: "projects",
+		name: "City Searcher",
+		img: [citysearcherimg00],
+		desc:
+			"City Search allow users to search for Cities and States in america.",
+		role: "UX Designer, FrontEnd Developer.",
+		tech: "HTML, CSS, JavaScript, React",
+		challenge: "",
+		solution: "",
+		source: {
+			url: "https://city-searcher.netlify.app",
+			github: "https://github.com/milesuno/type-ahead-city-seacher",
+			trello: "",
+		},
+	},
+	{
+		key: 9,
+		id: "p9",
+		type: "projects",
+		name: "Paint App",
+		img: [paintImg00],
+		desc:
+			"Paint App allows users to paint on a HTML canvas. Users can pick the stroke style, size and colour.",
+		role: "UX Designer, FrontEnd Developer.",
+		tech: "HTML, CSS, JavaScript, React",
+		challenge: "",
+		solution: "",
+		source: {
+			url: "https://paint-react.netlify.app",
+			github: "https://github.com/milesuno/paint-react",
+			trello: "",
+		},
+	},
+	{
+		key: 10,
+		id: "p10",
+		type: "projects",
+		name: "To Do Bot",
+		img: [todobotImg00],
+		desc:
+			"To do bot is an app that allows users to add and delete items to a list.",
+		role: "UX Designer, FrontEnd Developer.",
+		tech: "HTML, CSS, JavaScript, React",
+		challenge: "",
+		solution: "",
+		source: {
+			url: "https://todobot.netlify.app",
+			github: "https://github.com/milesuno/to-do-app-react",
+			trello: "",
+		},
+	},
+	{
+		key: 11,
+		id: "p11",
+		type: "projects",
+		name: "Speech Detection",
+		img: [speechtotextImg00],
+		desc:
+			"Speech Detection uses the users microphone to capture their speech and display it on the page.",
+		role: "UX Designer, FrontEnd Developer.",
+		tech: "HTML, CSS, JavaScript, React",
+		challenge: "",
+		solution: "",
+		source: {
+			url: "https://speech-to-text-react.netlify.app/",
+			github: "https://github.com/milesuno/speech-to-text-react",
+			trello: "",
+		},
+	},
+	{
+		key: 12,
+		id: "p12",
+		type: "projects",
+		name: "Geolocation App",
+		img: [geolocationImg00],
+		desc:
+			"Geolocation allows users to get realtime coordinates on their orientation and travel speed.",
+		role: "UX Designer, FrontEnd Developer.",
+		tech: "HTML, CSS, JavaScript, React",
+		challenge: "",
+		solution: "",
+		source: {
+			url: "https://geolocation-react.netlify.app",
+			github: "https://github.com/milesuno/geolocation-react",
+			trello: "",
+		},
+	},
+	{
+		key: 13,
+		id: "p13",
+		type: "projects",
+		name: "Text to Speech Synthesis",
+		img: [texttospeechImg00],
+		desc:
+			"Text to Speech allows users to select a variety of voices to speak the text they have submitted.",
+		role: "UX Designer, FrontEnd Developer.",
+		tech: "HTML, CSS, JavaScript, React",
+		challenge: "",
+		solution: "",
+		source: {
+			url: "https://text-to-speech-react.netlify.app/",
+			github: "https://github.com/milesuno/text-to-speech-synth-react",
+			trello: "",
+		},
+	},
+	{
+		key: 14,
+		id: "p13",
+		type: "projects",
+		name: "Example Homes",
+		img: [examplehomesImg00, examplehomesImg01, examplehomesImg02],
+		desc:
+			"Text to Speech allows users to select a variety of voices to speak the text they have submitted.",
+		role: "UX Designer, FrontEnd Developer.",
+		tech: "HTML, CSS, JavaScript, React",
+		challenge: "",
+		solution: "",
+		source: {
+			url: "https://example-homes.netlify.app/",
+			github: "https://github.com/milesuno/comfy-house-js",
+			trello: "",
 		},
 	},
 	{
@@ -183,146 +331,6 @@ const projects = [
 				"https://github.com/milesuno/cyf-react-challenges/tree/master/challenge-tv-show-info",
 			trello: "",
 		},
-	},
-	{
-		key: 7,
-		id: "p7",
-		type: "projects",
-		name: "Drum Kit",
-		img: [drumkitImg00],
-		desc:
-			"Drumkit allows users to play various drumkit sounds on there keyboard, mouse or touch. Users can record there creations and play them back on demand.",
-		role: "UX Designer, FrontEnd Developer.",
-		tech: "HTML, CSS, JavaScript, React",
-		challenge: "",
-		solution: "",
-		source: {
-			url: "https://keyboard-drumkit.netlify.com/",
-			github:
-				"https://github.com/milesuno/keyboard-drumkit",
-			trello: "",
-		}
-		
-	},
-	{
-		key: 8,
-		id: "p8",
-		type: "projects",
-		name: "City Searcher",
-		img: [citysearcherimg00],
-		desc:
-			"City Search allow users to search for Cities and States in america.",
-		role: "UX Designer, FrontEnd Developer.",
-		tech: "HTML, CSS, JavaScript, React",
-		challenge: "",
-		solution: "",
-		source: {
-			url: "https://city-searcher.netlify.app",
-			github:
-				"https://github.com/milesuno/type-ahead-city-seacher",
-			trello: "",
-		}
-
-	},
-	{
-		key: 9,
-		id: "p9",
-		type: "projects",
-		name: "Paint App",
-		img: [paintImg00],
-		desc:
-			"Paint App allows users to paint on a HTML canvas. Users can pick the stroke style, size and colour.",
-		role: "UX Designer, FrontEnd Developer.",
-		tech: "HTML, CSS, JavaScript, React",
-		challenge: "",
-		solution: "",
-		source: {
-			url: "https://paint-react.netlify.app",
-			github:
-				"https://github.com/milesuno/paint-react",
-			trello: "",
-		}
-
-	},
-	{
-		key: 10,
-		id: "p10",
-		type: "projects",
-		name: "To Do Bot",
-		img: [todobotImg00],
-		desc:
-			"To do bot is an app that allows users to add and delete items to a list.",
-		role: "UX Designer, FrontEnd Developer.",
-		tech: "HTML, CSS, JavaScript, React",
-		challenge: "",
-		solution: "",
-		source: {
-			url: "https://todobot.netlify.app",
-			github:
-				"https://github.com/milesuno/to-do-app-react",
-			trello: "",
-		}
-
-	},
-	{
-		key: 11,
-		id: "p11",
-		type: "projects",
-		name: "Speech Detection",
-		img: [speechtotextImg00],
-		desc:
-			"Speech Detection uses the users microphone to capture their speech and display it on the page.",
-		role: "UX Designer, FrontEnd Developer.",
-		tech: "HTML, CSS, JavaScript, React",
-		challenge: "",
-		solution: "",
-		source: {
-			url: "https://speech-to-text-react.netlify.app/",
-			github:
-				"https://github.com/milesuno/speech-to-text-react",
-			trello: "",
-		}
-
-	},
-	{
-		key: 12,
-		id: "p12",
-		type: "projects",
-		name: "Geolocation App",
-		img: [geolocationImg00],
-		desc:
-			"Geolocation allows users to get realtime coordinates on their orientation and travel speed.",
-		role: "UX Designer, FrontEnd Developer.",
-		tech: "HTML, CSS, JavaScript, React",
-		challenge: "",
-		solution: "",
-		source: {
-			url: "https://geolocation-react.netlify.app",
-			github:
-				"https://github.com/milesuno/geolocation-react",
-			trello: "",
-		}
-
-	},
-	{
-		key: 13,
-		id: "p13",
-		type: "projects",
-		name: "Text to Speech Synthesis",
-		img: [texttospeechImg00],
-		desc:
-			"Text to Speech allows users to select a variety of voices to speak the text they have submitted.",
-		role: "UX Designer, FrontEnd Developer.",
-		tech: "HTML, CSS, JavaScript, React",
-		challenge: "",
-		solution: "",
-		source: {
-			url: "https://text-to-speech-react.netlify.app/",
-			github:
-				"https://github.com/milesuno/text-to-speech-synth-react",
-			trello: "",
-		}
-
 	},
 ];
 
