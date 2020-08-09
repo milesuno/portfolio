@@ -8,7 +8,6 @@ import "../profile-card/profile-card.css";
 import NavBar from "../navbar/nav-bar";
 import landingPageBG from "./../../landing-video/landing-bg.png";
 
-
 // ADD: track page width and if the width changes recalculate the middle
 class LandingPage extends Component {
 	constructor(props) {
@@ -109,7 +108,9 @@ class LandingPage extends Component {
 								src={landingPageBG}
 							/>
 						)}
-						<ProfileCard />
+						<div className="landing-page-profile-card">
+							<ProfileCard />
+						</div>
 						<Link to="/projects">
 							<button className="landing-page-a">Enter</button>
 						</Link>

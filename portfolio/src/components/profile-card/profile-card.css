@@ -1,8 +1,8 @@
 .profile-card {
-	align-self: center;
-	position: fixed;
+	/* align-self: center; */
+	/* position: fixed; */
 	background: rgba(255, 255, 255, 0.7);
-	top: 95px;
+	/* top: 95px; */
 	/* right: 30px; */
 	border: 3px solid white;
 	border-radius: 5px;
