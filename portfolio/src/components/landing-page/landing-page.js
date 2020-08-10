@@ -61,7 +61,7 @@ class LandingPage extends Component {
 			console.log(this.state.windowWidth);
 		};
 		video.loop = true;
-		video.play();
+		if (this.state.windowWidth > 450) video.play();
 		hideScroll.style.setProperty("overflow", "hidden");
 	}
 

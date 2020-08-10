@@ -307,7 +307,7 @@ class NavBar extends Component {
 									{!this.state.menuToggle ? (
 										<li className="short-nav-all-items dropdown-item">
 											<Link to={`/projects`}>
-												All Projects
+												- All Projects -
 											</Link>
 										</li>
 									) : null}
@@ -368,7 +368,7 @@ class NavBar extends Component {
 									{!this.state.menuToggle ? (
 										<li className="short-nav-all-items dropdown-item">
 											<Link to={`/courses`}>
-												All Courses
+												- All Courses -
 											</Link>
 										</li>
 									) : null}

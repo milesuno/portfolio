@@ -45,12 +45,18 @@ class LgThumbNail extends Component {
 		modalContent.addEventListener("mouseleave", () => {
 			console.log("leave");
 
-			return modal.addEventListener("click", setModalAnimationAndCloseModal);
+			return modal.addEventListener(
+				"click",
+				setModalAnimationAndCloseModal
+			);
 		});
 
 		modalContent.addEventListener("mouseenter", () => {
 			console.log("enter");
-			return modal.removeEventListener("click", setModalAnimationAndCloseModal);
+			return modal.removeEventListener(
+				"click",
+				setModalAnimationAndCloseModal
+			);
 		});
 	}
 
@@ -146,30 +152,51 @@ class LgThumbNail extends Component {
 									{desc ? (
 										<p>
 											<strong>Description:</strong>
+											<br />
 											{desc}
 										</p>
 									) : null}
 									{role ? (
 										<p>
 											<strong>Role:</strong>
+											<br />
+
 											{role}
 										</p>
 									) : null}
 									{tech ? (
-										<p>
+										<span className="tech-stack">
 											<strong>Technologies:</strong>
-											{tech}
-										</p>
+											<br />
+
+											{console.log(
+												"TECH SPLIT",
+												tech.split(",")
+											)}
+											<ul className="tech-list">
+												{tech.split(",").map((str) => {
+													return (
+														<li className="tech">
+															{str}
+														</li>
+													);
+												})}
+											</ul>
+										</span>
 									) : null}
 									{challenge ? (
 										<p>
 											<strong>Challenge:</strong>
+											<br />
+
 											{challenge}
 										</p>
 									) : null}
 									{solution ? (
 										<p>
 											<strong>Solution:</strong>
+											<br />
+
 											{solution}
 										</p>
 									) : null}
@@ -179,7 +206,11 @@ class LgThumbNail extends Component {
 											{source.url ? (
 												<p>
 													URL:
-													<a href={source.url}>
+													<br />
+													<a
+														href={source.url}
+														target="_blank"
+													>
 														{source.url}
 													</a>
 												</p>
@@ -187,7 +218,11 @@ class LgThumbNail extends Component {
 											{source.github ? (
 												<p>
 													Github:
-													<a href={source.github}>
+													<br />
+													<a
+														href={source.github}
+														target="_blank"
+													>
 														{source.github}
 													</a>
 												</p>
@@ -195,6 +230,7 @@ class LgThumbNail extends Component {
 											{source.trello ? (
 												<p>
 													Trello:
+													<br />
 													<a href={source.github}>
 														{source.trello}
 													</a>
