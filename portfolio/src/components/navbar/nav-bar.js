@@ -299,13 +299,13 @@ class NavBar extends Component {
 					</div>
 					<ul className="nav-content">
 						<Link className="link lg-display" to="/projects">
-							<li className="nav-item project">
+							<li className="nav-item project nav-li">
 								<a className="button" name="project">
 									PROJECTS
 								</a>
-								<ul className="dropdown-list project">
+								<ul className="dropdown-list project nav-li">
 									{!this.state.menuToggle ? (
-										<li className="short-nav-all-items dropdown-item">
+										<li className="short-nav-all-items dropdown-item nav-li">
 											<Link to={`/projects`}>
 												- All Projects -
 											</Link>
@@ -317,7 +317,7 @@ class NavBar extends Component {
 										projectData.map((project) => {
 											// console.log(project);
 											return (
-												<li className="dropdown-item">
+												<li className="dropdown-item nav-li">
 													<Link
 														to={`/projects/${project.id}`}
 													>
@@ -360,7 +360,7 @@ class NavBar extends Component {
 							</li>
 						</Link> */}
 						<Link className="link lg-display" to="/courses">
-							<li className="nav-item courses">
+							<li className="nav-item courses nav-li">
 								<a className="button" name="courses">
 									COURSES
 								</a>
@@ -391,7 +391,7 @@ class NavBar extends Component {
 							</li>
 						</Link>
 						<Link className="link lg-display" to="/aboutme">
-							<li className="nav-item about-me">
+							<li className="nav-item about-me nav-li">
 								<a className="button" name="about-me">
 									ABOUT ME
 								</a>

@@ -19,10 +19,28 @@
 
 .about-me-profile-card-wrapper {
 	display: flex;
-    flex-direction: column;
+	flex-direction: column;
 }
-.fixed{
-	
+
+.skill-list {
+	display: flex;
+	padding: 0;
+	margin: 0z;
+}
+
+.skills {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 10px;
+}
+.skills-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.fixed {
 }
 .skills-list {
 }
@@ -60,6 +78,7 @@
 
 .download {
 	display: flex;
+	justify-content: center;
 	margin: 10px;
 }
 
@@ -69,7 +88,13 @@
 	color: white;
 	width: 250px;
 	height: 40px;
-	margin: 15px;
+}
+
+.about-me-goals {
+text-decoration-style: wavy;}
+
+.goal {
+	list-style: disc;
 }
 
 @media (max-width: 600px) {
