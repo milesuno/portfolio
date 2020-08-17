@@ -15,7 +15,8 @@ import "./App.css";
 import SinglePageItem from "./components/single-page-item/SinglePageItem";
 import projects from "../src/data/project-data";
 import landingPageBG from "./landing-video/landing-bg.png";
-
+import DevProcess from "./components/dev-process/DevProcess"
+import ContactMe from "./components/contact-me/contact-me";
 class App extends Component {
 	constructor(props) {
 		super(props);
@@ -32,7 +33,8 @@ class App extends Component {
 					<Route path="/projects" exact component={Projects} />
 					<Route path="/uxdesigns" exact component={UXDesigns} />
 					<Route path="/courses" exact component={Courses} />
-
+					<Route path="/development" exact component={DevProcess} />
+					<Route path="/contact" exact component={ContactMe} />
 					<Route path="/aboutme" exact component={AboutMe} />
 
 					<Route

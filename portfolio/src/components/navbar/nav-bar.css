@@ -58,6 +58,10 @@ div.logo-container {
 	width: 100%;
 }
 
+.landing-page {
+
+}
+
 div.collasped-menu-btn {
 	display: none;
 	justify-content: center;
@@ -114,7 +118,7 @@ ul.nav-content.short-menu {
 	opacity: 1;
 }
 
-ul.nav-content short-menu :active {
+ul.nav-content.short-menu :active {
 	display: flex;
 	flex-direction: column;
 	position: absolute;
@@ -217,6 +221,10 @@ li.dropdown-item a {
 	font-style: italic;
 } */
 
+.button {
+	display: flex;
+}
+
 a {
 	text-decoration: none;
 }
@@ -238,6 +246,17 @@ a.button:empty {
 	background: #ccc;
 	margin: 0;
 	padding: 0;
+}
+
+.landing-page-nav {
+	/* justify-content: "flex-end"; */
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	transform: translate(0, 0%);
+	width: 200px;
+	top: 60px;
+	opacity: 1;
 }
 
 @media (max-width: 1024px) {

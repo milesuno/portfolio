@@ -246,6 +246,12 @@ class AboutMe extends Component {
 												</li>
 												<li className="tech">
 													<label>
+														Github
+														<img src="#" />
+													</label>
+												</li>
+												<li className="tech">
+													<label>
 														Trello
 														<img src="#" />
 													</label>
