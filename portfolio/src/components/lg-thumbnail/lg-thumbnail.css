@@ -71,12 +71,6 @@
 	flex-wrap: wrap;
 }
 
-.tech {
-	color: gray;
-	border: solid 2px gray;
-	width: fit-content;
-	padding: 5px;
-}
 
 @media (max-width: 650px) {
 	.modal-content {

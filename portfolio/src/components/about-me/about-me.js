@@ -6,8 +6,18 @@ import img from "../../data/git-profile-img.png";
 import "../../style-sheets/portfolio.css";
 import "./about-me.css";
 import FooterNav from "../footer-nav/footer-nav";
+import skillImages from "../../data/skill-images";
 
 class AboutMe extends Component {
+	createDOMSkillFromMap = (value, key) => {
+		console.log(value, key);
+		return `<li className="tech">
+				<label>
+					{key}
+					<img src={value} />
+				</label>
+			</li>`;
+	};
 	render() {
 		return (
 			<>
@@ -100,23 +110,31 @@ class AboutMe extends Component {
 										<div className="skills">
 											<h2>Front End</h2>
 											<ul className="skill-list">
+												{console.log(skillImages.html)}
 												<li className="tech">
-													<label>
+													<label for="html">
 														HTML
-														<img src="#" />
 													</label>
+													<img
+														src={skillImages.html}
+														id="html"
+													/>
 												</li>
 												<li className="tech">
-													<label>
-														CSS
-														<img src="#" />
-													</label>
+													<label for="css">CSS</label>
+													<img
+														src={skillImages.css}
+														id="css"
+													/>
 												</li>
 												<li className="tech">
-													<label>
+													<label for="js">
 														JavaScript
-														<img src="#" />
 													</label>
+													<img
+														src={skillImages.js}
+														id="js"
+													/>
 												</li>
 											</ul>
 										</div>
@@ -124,16 +142,24 @@ class AboutMe extends Component {
 											<h2>Back End</h2>
 											<ul className="skill-list">
 												<li className="tech">
-													<label>
+													<label for="nodejs">
 														NodeJS
-														<img src="#" />
 													</label>
+													<img
+														src={skillImages.nodeJs}
+														id="nodejs"
+													/>
 												</li>
 												<li className="tech">
-													<label>
+													<label for="mongodb">
 														MongoDB
-														<img src="#" />
 													</label>
+													<img
+														src={
+															skillImages.mongoDB
+														}
+														id="mongodb"
+													/>
 												</li>
 											</ul>
 										</div>
@@ -141,10 +167,13 @@ class AboutMe extends Component {
 											<h2>Libraries</h2>
 											<ul className="skill-list">
 												<li className="tech">
-													<label>
+													<label for="react">
 														React
-														<img src="#" />
 													</label>
+													<img
+														src={skillImages.react}
+														id="react"
+													/>
 												</li>
 											</ul>
 										</div>
@@ -152,22 +181,35 @@ class AboutMe extends Component {
 											<h2>Framework</h2>
 											<ul className="skill-list">
 												<li className="tech">
-													<label>
+													<label for="express">
 														ExpressJS
-														<img src="#" />
 													</label>
+													<img
+														src={
+															skillImages.express
+														}
+														id="express"
+													/>
 												</li>
 												<li className="tech">
-													<label>
+													<label for="reactn">
 														React Native
-														<img src="#" />
 													</label>
+													<img
+														src={
+															skillImages.reactNative
+														}
+														id="reactn"
+													/>
 												</li>
 												<li className="tech">
-													<label>
+													<label for="jest">
 														Jest
-														<img src="#" />
 													</label>
+													<img
+														src={skillImages.jest}
+														id="jest"
+													/>
 												</li>
 											</ul>
 										</div>
@@ -175,28 +217,46 @@ class AboutMe extends Component {
 											<h2>Design</h2>
 											<ul className="skill-list">
 												<li className="tech">
-													<label>
+													<label for="photoshop">
 														Photoshop
-														<img src="#" />
 													</label>
+													<img
+														src={
+															skillImages.photoshop
+														}
+														id="photoshop"
+													/>
 												</li>
 												<li className="tech">
-													<label>
+													<label for="adobe">
 														Adobe Illustrator
-														<img src="#" />
 													</label>
+													<img
+														src={
+															skillImages.adobeIllistrator
+														}
+														id="adobe"
+													/>
 												</li>
 												<li className="tech">
-													<label>
+													<label for="figma">
 														Figma
-														<img src="#" />
 													</label>
+													<img
+														src={skillImages.figma}
+														id="figma"
+													/>
 												</li>
 												<li className="tech">
-													<label>
+													<label for="balsamiq">
 														Balsamiq
-														<img src="#" />
 													</label>
+													<img
+														src={
+															skillImages.balsamiq
+														}
+														id="balsamiq"
+													/>
 												</li>
 											</ul>
 										</div>
@@ -204,22 +264,31 @@ class AboutMe extends Component {
 											<h2>Methodology</h2>
 											<ul className="skill-list">
 												<li className="tech">
-													<label>
+													<label for="agile">
 														Agile
-														<img src="#" />
 													</label>
+													<img
+														src={skillImages.agile}
+														id="agile"
+													/>
 												</li>
 												<li className="tech">
-													<label>
+													<label for="lean">
 														Lean Management
-														<img src="#" />
 													</label>
+													<img
+														src={skillImages.lean}
+														id="lean"
+													/>
 												</li>
 												<li className="tech">
-													<label>
+													<label for="tdd">
 														Test Driven Development
-														<img src="#" />
-													</label>{" "}
+													</label>
+													<img
+														src={skillImages.tdd}
+														id="tdd"
+													/>
 												</li>
 											</ul>
 										</div>
@@ -227,40 +296,67 @@ class AboutMe extends Component {
 											<h2>Tools</h2>
 											<ul className="skill-list">
 												<li className="tech">
-													<label>
+													<label for="npm">NPM</label>
+													<img
+														src={skillImages.npm}
+														id="npm"
+													/>
+												</li>
+												<li className="tech">
+													<label for="postman">
 														Postman
-														<img src="#" />
 													</label>
+													<img
+														src={
+															skillImages.postman
+														}
+														id="postman"
+													/>
 												</li>
 												<li className="tech">
-													<label>
+													<label for="dev-tools">
 														Dev Tools
-														<img src="#" />
 													</label>
-												</li>{" "}
-												<li className="tech">
-													<label>
-														Git
-														<img src="#" />
-													</label>
+													<img
+														src={
+															skillImages.devTools
+														}
+														id="dev-tools"
+													/>
 												</li>
 												<li className="tech">
-													<label>
+													<label for="git">Git</label>
+													<img
+														src={skillImages.git}
+														id="git"
+													/>
+												</li>
+												<li className="tech">
+													<label for="github">
 														Github
-														<img src="#" />
 													</label>
+													<img
+														src={skillImages.github}
+														id="github"
+													/>
 												</li>
 												<li className="tech">
-													<label>
+													<label for="trello">
 														Trello
-														<img src="#" />
 													</label>
+													<img
+														src={skillImages.trello}
+														id="trello"
+													/>
 												</li>
 												<li className="tech">
-													<label>
+													<label for="slack">
 														Slack
-														<img src="#" />
 													</label>
+													<img
+														src={skillImages.slack}
+														id="slack"
+													/>
 												</li>
 											</ul>
 										</div>

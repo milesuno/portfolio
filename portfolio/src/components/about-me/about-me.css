@@ -22,38 +22,42 @@
 	flex-direction: column;
 }
 
-.skill-list {
-	display: flex;
-	padding: 0;
-	margin: 0z;
-}
-
 .skills {
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
 	align-items: center;
-	margin: 10px;
+	margin: 15px 0;
+	border: solid 3px #eee;
+	width: 100%;
 }
 .skills-wrapper {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
 }
-.fixed {
-}
-.skills-list {
+
+
+.skill-list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	width: 100%;
+	padding: 0;
+	margin: 0;
 }
 
 .skill {
 	color: black;
 }
 
-.tech-list {
-}
 
 .tech {
 	color: black;
+	display: flex;
+	flex-direction: column-reverse;
+	justify-content: center;
+	align-items: center;
+	margin: 15px;
 }
 /* main button {
 	width: 100%;
@@ -91,10 +95,17 @@
 }
 
 .about-me-goals {
-text-decoration-style: wavy;}
+	text-decoration-style: wavy;
+}
 
 .goal {
 	list-style: disc;
+}
+
+.tech img {
+	width: 125px;
+	height: 125px;
+	object-fit: contain;
 }
 
 @media (max-width: 600px) {
