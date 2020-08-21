@@ -43,7 +43,7 @@ class AboutMe extends Component {
 										href={CV}
 										target="#"
 									>
-										<button>View CV</button>
+										<button className="button">View CV</button>
 									</a>
 									{/* <div className="social-nav-btns about-me">
 										<SocialMediaNav />
@@ -200,6 +200,20 @@ class AboutMe extends Component {
 															skillImages.reactNative
 														}
 														id="reactn"
+													/>
+												</li>
+											</ul>
+										</div>
+										<div className="skills">
+											<h2>Testing</h2>
+											<ul className="skill-list">
+												<li className="tech">
+													<label for="jest">
+														Enzyme
+													</label>
+													<img
+														src={skillImages.jest}
+														id="jest"
 													/>
 												</li>
 												<li className="tech">

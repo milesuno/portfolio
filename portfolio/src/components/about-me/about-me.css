@@ -30,12 +30,15 @@
 	border: solid 3px #eee;
 	width: 100%;
 }
+
+.skills h2 {
+}
+
 .skills-wrapper {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
 }
-
 
 .skill-list {
 	display: flex;
@@ -49,7 +52,6 @@
 .skill {
 	color: black;
 }
-
 
 .tech {
 	color: black;
@@ -86,12 +88,15 @@
 	margin: 10px;
 }
 
-.download button {
+.button {
 	background: black;
 	border: none;
 	color: white;
 	width: 250px;
 	height: 40px;
+	justify-content: center;
+	align-items: center;
+	align-self: center;
 }
 
 .about-me-goals {
@@ -119,7 +124,7 @@
 		width: 100%;
 	}
 
-	main div {
+	.about-me-wrapper {
 		width: 100%;
 	}
 }

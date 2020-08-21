@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Helmet from "react-helmet";
 import NavBar from "../navbar/nav-bar";
 import FooterNav from "../footer-nav/footer-nav";
+import "./dev-process.css";
 
 class DevProcess extends Component {
 	state = {};
@@ -48,13 +49,15 @@ class DevProcess extends Component {
 							</section>
 							<section className="development">
 								<h2>Development</h2>
-                                <p>Sprints</p>
-                                <p>Unit testing</p>
+								<p>Sprints</p>
+								<p>Unit testing</p>
 							</section>
 							<section className="review">
 								<h2>Acceptance Review</h2>
 							</section>
-							<h2>Deployment</h2>
+							<section className="deployment">
+								<h2>Deployment</h2>
+							</section>
 						</main>
 						<footer>
 							<FooterNav />

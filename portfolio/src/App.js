@@ -15,7 +15,7 @@ import "./App.css";
 import SinglePageItem from "./components/single-page-item/SinglePageItem";
 import projects from "../src/data/project-data";
 import landingPageBG from "./landing-video/landing-bg.png";
-import DevProcess from "./components/dev-process/DevProcess"
+import DevProcess from "./components/dev-process/dev-process"
 import ContactMe from "./components/contact-me/contact-me";
 class App extends Component {
 	constructor(props) {
