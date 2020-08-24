@@ -49,6 +49,7 @@ class NavBar extends Component {
 		const linkBtns = document.querySelectorAll(".link.lg-display");
 		linkBtns.forEach((btn) => (btn.href = ""));
 		const shortNav = document.querySelector(".short-nav");
+		const navOverlay = document.querySelector(".nav-overlay");
 
 		console.log({
 			collaspedMenuBtn,
@@ -144,11 +145,12 @@ class NavBar extends Component {
 		return (
 			<nav className="nav">
 				{console.log({ menuToggle })}
+				<div className="nav-overlay"></div>
 
 				{/* {console.log("NAV Props", courseData, projectData, uxData)} */}
-				<div className="dropdownBackground">
+				{/* <div className="dropdownBackground">
 					<div className="arrow"></div>
-				</div>
+				</div> */}
 				<div className="short-nav">
 					<div className="logo-container">
 						<Link to="/">
@@ -180,14 +182,14 @@ class NavBar extends Component {
 								</a>
 							</li>
 						</Link>
-						<Link className="link lg-display" to="/development">
+						{/* <Link className="link lg-display" to="/development">
 							<li className="nav-item development nav-li">
 								<a className="button" name="development">
 									DEVELOPMENT
 								</a>
 								<ul className="dropdown-list about-me"></ul>
 							</li>
-						</Link>
+						</Link> */}
 						<Link className="link lg-display" to="/aboutme">
 							<li className="nav-item about-me nav-li">
 								<a className="button" name="about-me">

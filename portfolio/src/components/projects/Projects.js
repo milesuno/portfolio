@@ -9,8 +9,6 @@ import Helmet from "react-helmet";
 import FooterNav from "../footer-nav/footer-nav";
 import data from "../../data/project-data";
 
-
-
 class Projects extends Component {
 	constructor(props) {
 		super(props);
@@ -61,7 +59,6 @@ class Projects extends Component {
 									</header>
 									<main className={"main-wrapper"}>
 										<h1>Projects</h1>
-										<h3>2019</h3>
 										<LgThumbNail
 											dataFromThumbnail={
 												dataFromThumbnail
@@ -107,7 +104,6 @@ class Projects extends Component {
 									</header>
 									<main className={"main-wrapper"}>
 										<h1>Projects</h1>
-										<h3>2019</h3>
 										<section className={"elements-wrapper"}>
 											{projects.map((project) => (
 												//data is exported before reaching ThumbNail as ThumbNail will accept data from multiple sources - therefore must be generic.

@@ -33,6 +33,10 @@
 
 .skills h2 {
 }
+.about-me-bio {
+	width: 95%;
+	align-self: center;
+}
 
 .skills-wrapper {
 	display: flex;

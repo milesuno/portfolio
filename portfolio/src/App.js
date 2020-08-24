@@ -31,9 +31,9 @@ class App extends Component {
 				<Switch>
 					<Route path="/" exact component={LandingPage} />
 					<Route path="/projects" exact component={Projects} />
-					<Route path="/uxdesigns" exact component={UXDesigns} />
+					{/* <Route path="/uxdesigns" exact component={UXDesigns} /> */}
 					<Route path="/courses" exact component={Courses} />
-					<Route path="/development" exact component={DevProcess} />
+					{/* <Route path="/development" exact component={DevProcess} /> */}
 					<Route path="/contact" exact component={ContactMe} />
 					<Route path="/aboutme" exact component={AboutMe} />
 
