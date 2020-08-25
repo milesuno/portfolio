@@ -27,7 +27,7 @@ class LandingPage extends Component {
 		logoContainer.style.setProperty("visibility", "hidden");
 
 		const navContent = document.querySelector(".nav-content");
-		navContent.style.setProperty("display", "none");
+		// navContent.style.setProperty("display", "none");
 
 		const collaspedMenuBtn = document.querySelector(".collasped-menu-btn");
 		collaspedMenuBtn.style.setProperty("display", "flex");
