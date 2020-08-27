@@ -1,7 +1,7 @@
 const express = require("express");
+const bodyParser = require("body-parser");
 const path = require("path");
 const nodemailer = require("nodemailer");
-const path = require("path");
 require("dotenv").config();
 
 const app = express();
@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "public")));
 
 app.get("/", (req, res) => {
-	res.send(console.log("WOrk Pleeease"));
+	res.send("WOrk Pleeease");
 });
 
 app.post("/contact/mail", (req, res) => {
@@ -40,9 +40,8 @@ app.post("/contact/mail", (req, res) => {
 		// 	console.log(info.messageId);
 		// 	console.error(err);
 		// }
-        );
+	);
 
-        
 	res.json(req.body);
 });
 
