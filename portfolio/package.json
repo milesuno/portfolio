@@ -16,6 +16,7 @@
 		"eject": "react-scripts eject"
 	},
 <<<<<<< HEAD
+<<<<<<< HEAD
 	"dependencies": {
 		"body-parser": "^1.18.3",
 		"dotenv": "^8.2.0",
@@ -29,6 +30,11 @@
 	"eslintConfig": {
 		"extends": "react-app"
 	},
+=======
+	"eslintConfig": {
+		"extends": "react-app"
+	},
+>>>>>>> parent of 4f9c2aef... Project restructured, Server created, Nodemailer Test
 	"browserslist": {
 		"production": [
 			">0.2%",
@@ -40,6 +46,9 @@
 			"last 1 firefox version",
 			"last 1 safari version"
 		]
+<<<<<<< HEAD
+>>>>>>> parent of 4f9c2aef... Project restructured, Server created, Nodemailer Test
+=======
 >>>>>>> parent of 4f9c2aef... Project restructured, Server created, Nodemailer Test
 	}
 }

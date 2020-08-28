@@ -7,61 +7,7 @@ import CV from "../../data/Gideon Miles Oluku - cv6.pdf";
 import "./contact-me.css";
 
 class ContactMe extends Component {
-<<<<<<< HEAD:portfolio/client/src/components/contact-me/contact-me.js
-	state = {
-		firstName: "",
-		lastName: "",
-		email: "",
-		subject: "",
-		text: "",
-	};
-
-	setFormData = (e) => {
-		e.preventDefault();
-		const form = document.querySelector(".enquiries-form");
-		const firstName = document.querySelector(".first");
-		const lastName = document.querySelector(".last");
-		const email = document.querySelector(".email");
-		const subject = document.querySelector(".subject");
-		const text = document.querySelector(".text");
-
-		console.log({ firstName, lastName, email, subject, text });
-
-		const data = {
-			firstName: firstName.value,
-			lastName: lastName.value,
-			email: email.value,
-			subject: subject.value,
-			text: text.value,
-		};
-
-		form.reset();
-		this.submitForm(data);
-	};
-
-	submitForm = (data) => {
-		const data2 = JSON.stringify(data);
-		fetch("https://portfolio-api.glitch.me/contact/mail", {
-			method: "POST",
-
-			headers: {
-				"Content-Type": "application/json",
-			},
-			body: JSON.stringify(data),
-		})
-			.then((response) => response.json())
-			.then((data) => {
-				console.log("Success:", data);
-			})
-			.catch((error) => {
-				console.error("Error:", error);
-			});
-		// console.log( {data2} );
-	};
-
-=======
 	state = {};
->>>>>>> parent of 4f9c2aef... Project restructured, Server created, Nodemailer Test:portfolio/src/components/contact-me/contact-me.js
 	render() {
 		return (
 			<>
