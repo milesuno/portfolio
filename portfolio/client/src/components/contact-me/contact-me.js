@@ -40,7 +40,7 @@ class ContactMe extends Component {
 
 	submitForm = (data) => {
 		const data2 = JSON.stringify(data);
-		fetch("/contact/mail", {
+		fetch("https://portfolio-api.glitch.me/contact/mail", {
 			method: "POST",
 
 			headers: {

@@ -19,9 +19,7 @@ app.get("/", (req, res) => {
 
 app.post("/contact/mail", (req, res) => {
 	const transporter = nodemailer.createTransport({
-		host: "smtp.gmail.com",
-		port: 465,
-		secure: true,
+		service: "gmail",
 		auth: {
 			user: "milesoluku@gmail.com",
 			pass: process.env.KEY,
@@ -34,12 +32,11 @@ app.post("/contact/mail", (req, res) => {
 			to: "milesoluku@gmail.com",
 			subject: req.body.subject,
 			text: req.body.text,
+		},
+		(err, info) => {
+			if (err) console.error(err);
+			if (info) console.log(info.envelope);
 		}
-		// (err, info) => {
-		// 	console.log(info.envelope);
-		// 	console.log(info.messageId);
-		// 	console.error(err);
-		// }
 	);
 
 	res.json(req.body);
