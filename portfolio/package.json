@@ -1,11 +1,21 @@
 {
-	"name": "portfolio-master",
-	"version": "1.0.0",
-	"scripts": {
-		"client": "cd client && npm start",
-		"server": "nodemon server.js",
-		"dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\""
+	"name": "portfolio",
+	"version": "0.1.0",
+	"private": true,
+	"dependencies": {
+		"react": "^16.8.6",
+		"react-dom": "^16.8.6",
+		"react-helmet": "^5.2.1",
+		"react-router-dom": "^5.0.1",
+		"react-scripts": "^3.4.0"
 	},
+	"scripts": {
+		"start": "react-scripts start",
+		"build": "react-scripts build",
+		"test": "react-scripts test",
+		"eject": "react-scripts eject"
+	},
+<<<<<<< HEAD
 	"dependencies": {
 		"body-parser": "^1.18.3",
 		"dotenv": "^8.2.0",
@@ -15,5 +25,21 @@
 	},
 	"devDependencies": {
 		"concurrently": "^5.3.0"
+=======
+	"eslintConfig": {
+		"extends": "react-app"
+	},
+	"browserslist": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
+>>>>>>> parent of 4f9c2aef... Project restructured, Server created, Nodemailer Test
 	}
 }

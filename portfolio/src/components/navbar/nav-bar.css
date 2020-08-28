@@ -59,7 +59,24 @@ div.logo-container {
 }
 
 .landing-page {
+<<<<<<< HEAD
 
+=======
+}
+
+.nav-overlay {
+	position: absolute;
+	background: black;
+	opacity: 0.6;
+	height: 100vh;
+	width: 100vw;
+	visibility: hidden;
+	/* transition: all 0.3s ease-in-out; */
+}
+
+.visible {
+	visibility: visible;
+>>>>>>> parent of 4f9c2aef... Project restructured, Server created, Nodemailer Test
 }
 
 div.collasped-menu-btn {
@@ -81,9 +98,21 @@ div.scroll-top-btn {
 	align-items: center;
 	position: absolute;
 	opacity: 0;
+<<<<<<< HEAD
 	transition: all 0.3s ease-in-out;
 }
 
+=======
+	right: 20px;
+	/* visibility: hidden; */
+	transition: all 0.3s ease-in-out;
+}
+
+div.scroll-top-btn.active {
+	opacity: 0.6;
+}
+
+>>>>>>> parent of 4f9c2aef... Project restructured, Server created, Nodemailer Test
 div.scroll-top-btn img {
 	height: 80px;
 	width: 80px;
@@ -100,7 +129,11 @@ ul.nav-content {
 	justify-content: space-around;
 
 	/* FIX: width to be adjusted with various display sizes with media queiries or implement a new location implementation*/
+<<<<<<< HEAD
 	/* width: 60%; */
+=======
+	width: 100%;
+>>>>>>> parent of 4f9c2aef... Project restructured, Server created, Nodemailer Test
 
 	padding: 0;
 	margin: 0;
@@ -112,6 +145,7 @@ ul.nav-content.short-menu {
 	display: flex;
 	flex-direction: column;
 	position: absolute;
+<<<<<<< HEAD
 	transform: translate(0, 0%);
 	width: 100%;
 	top: 60px;
@@ -119,11 +153,21 @@ ul.nav-content.short-menu {
 }
 
 ul.nav-content.short-menu :active {
+=======
+	transform: translate(0, -300%);
+	width: 100%;
+	top: 60px;
+	/* opacity: 1; */
+}
+
+/* ul.nav-content.short-menu :active {
+>>>>>>> parent of 4f9c2aef... Project restructured, Server created, Nodemailer Test
 	display: flex;
 	flex-direction: column;
 	position: absolute;
 	transform: translate(0, 0%);
 	opacity: 1;
+<<<<<<< HEAD
 }
 
 ul.nav-content.full-menu {
@@ -136,12 +180,38 @@ ul.nav-content.full-menu {
 	top: 0;
 }
 
+=======
+} */
+
+ul.nav-content.full-menu {
+	flex-direction: row;
+	position: relative;
+	transform: translate(0, 0%);
+
+	top: 0;
+}
+
+ul.nav-content.landing-nav {
+	width: 200px;
+	right: 0;
+	/* top: 60px;
+	flex-direction: column; */
+}
+
+.link {
+	width: 100%;
+}
+>>>>>>> parent of 4f9c2aef... Project restructured, Server created, Nodemailer Test
 li.nav-item {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	margin: 0;
+<<<<<<< HEAD
+=======
+	width: auto;
+>>>>>>> parent of 4f9c2aef... Project restructured, Server created, Nodemailer Test
 }
 
 a.button:hover,
@@ -163,9 +233,15 @@ a.button {
 	align-items: center;
 }
 
+<<<<<<< HEAD
 .short-menu {
 	width: 100%;
 }
+=======
+/* .short-menu {
+	width: 100%;
+} */
+>>>>>>> parent of 4f9c2aef... Project restructured, Server created, Nodemailer Test
 
 .arrow {
 	position: absolute;
@@ -259,6 +335,21 @@ a.button:empty {
 	opacity: 1;
 }
 
+<<<<<<< HEAD
+=======
+.nav-content.short-menu.hide {
+	opacity: 0;
+	transform: translate(0, -300%);
+	transition: all 0.6s ease-in-out;
+}
+
+.nav-content.short-menu.show {
+	opacity: 1;
+	transform: translate(0, 0%);
+	transition: all 0.6s ease-in-out;
+}
+
+>>>>>>> parent of 4f9c2aef... Project restructured, Server created, Nodemailer Test
 @media (max-width: 1024px) {
 	.nav {
 		width: 97%;
@@ -269,6 +360,7 @@ a.button:empty {
 	}
 
 	ul.nav-content {
+<<<<<<< HEAD
 		display: flex;
 		flex-direction: row;
 		position: relative;
@@ -282,6 +374,21 @@ a.button:empty {
 		margin: 0;
 
 		opacity: 1;
+=======
+		/* display: flex;
+		flex-direction: row;
+		position: relative;
+		justify-content: space-around;
+		transform: translate(0px, 0%); */
+
+		/* FIX: width to be adjusted with various display sizes with media queiries or implement a new location implementation*/
+		/* width: 60%; */
+		/* 
+		padding: 0;
+		margin: 0;
+
+		opacity: 1; */
+>>>>>>> parent of 4f9c2aef... Project restructured, Server created, Nodemailer Test
 	}
 
 	.h1 {
@@ -292,7 +399,11 @@ a.button:empty {
 
 @media (max-width: 768px) {
 	div.collasped-menu-btn {
+<<<<<<< HEAD
 		display: flex;
+=======
+		/* display: flex; */
+>>>>>>> parent of 4f9c2aef... Project restructured, Server created, Nodemailer Test
 	}
 
 	/* div.scroll-top-btn {
@@ -306,11 +417,19 @@ a.button:empty {
 
 	ul.nav-content {
 		/* display: none; */
+<<<<<<< HEAD
 		opacity: 0;
 		transform: translate(0, -300%);
 		position: absolute;
 
 		transition: all 0.6s ease-in-out;
+=======
+		/* opacity: 0;
+		transform: translate(0, -300%);
+		position: absolute;
+
+		transition: all 0.6s ease-in-out; */
+>>>>>>> parent of 4f9c2aef... Project restructured, Server created, Nodemailer Test
 		/* display: flex; */
 		/* flex-direction: column;
 			position: absolute;

@@ -27,7 +27,11 @@ class LandingPage extends Component {
 		logoContainer.style.setProperty("visibility", "hidden");
 
 		const navContent = document.querySelector(".nav-content");
+<<<<<<< HEAD
 		navContent.style.setProperty("display", "none");
+=======
+		// navContent.style.setProperty("display", "none");
+>>>>>>> parent of 4f9c2aef... Project restructured, Server created, Nodemailer Test
 
 		const collaspedMenuBtn = document.querySelector(".collasped-menu-btn");
 		collaspedMenuBtn.style.setProperty("display", "flex");
