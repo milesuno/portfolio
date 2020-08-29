@@ -4,7 +4,8 @@
 	/* position: relative;
 	z-index: 0; */
 	flex-direction: column;
-	justify-content: center;
+	/* justify-content: center; */
+	padding-top: 10px;
 	align-items: center;
 
 	background: white;
