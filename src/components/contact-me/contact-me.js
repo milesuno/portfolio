@@ -59,19 +59,28 @@ class ContactMe extends Component {
 													className="last"
 												/>
 											</span>
+											<span className="email-wrapper">
+												<input
+													type="text"
+													placeholder="Email"
+													className="email"
+												/>
+											</span>
 											<span className="subject-wrapper">
 												<select className="subject">
-													<option disabled>
+													<option selected disabled>
 														Select a subject
 													</option>
 													<option>Design</option>
 													<option>
-														Developement
+														Development
 													</option>
 													<option>
-														Prooject Management
+														Project Management
 													</option>
-													<option>Service Enquiry</option>
+													<option>
+														Service Enquiry
+													</option>
 													<option>Other</option>
 												</select>
 											</span>
@@ -85,7 +94,7 @@ class ContactMe extends Component {
 												/>
 											</span>
 										</div>
-										<button className="button">
+										<button className="button margin-5">
 											Submit
 										</button>
 									</form>
