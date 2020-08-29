@@ -10,11 +10,11 @@
 
 @keyframes slideCoveringBlock {
 	0% {
-		transform: translate(20%, 0);
+		transform: translate(0%, 0);
 	}
 
 	100% {
-		transform: translate(68%, 0);
+		transform: translate(100%, 0);
 	}
 }
 .pnf-main-wrapper {
@@ -31,6 +31,8 @@
 .pnf-wrapper {
 	background-color: black;
 	position: relative;
+	max-width: 500px;
+	align-self: center;
 }
 
 .pnf-covering-block {
@@ -40,7 +42,7 @@
 	width: 100%;
 	position: absolute;
 	background-color: black;
-    transform: translate(69%, 0);
+    transform: translate(100%, 0);
     animation: slideCoveringBlock 4s 1 ease-in-out;
 }
 
