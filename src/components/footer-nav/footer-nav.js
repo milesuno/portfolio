@@ -24,36 +24,10 @@ class FooterNav extends Component {
 					<div className="footer-contact-info">
 						<p>Milesoluku@gmail.com</p>
 						<SocialMediaNav isFooter={this.props.isFooter} />
-						<p>07783180169</p>
+						{/* <p>07783180169</p> */}
 					</div>
 					<div className="footer-signature">
 						<img src={developeIcon} />{" "}
-					</div>
-					<div className="footer-nav-menu">
-						<ul className="footer-ul">
-							<Link to="/projects">Projects:</Link>
-							{projectData.map((data) => (
-								<Link to={`/projects/${data.id}`}>
-									<li>{data.name}</li>
-								</Link>
-							))}
-						</ul>
-						{/* <ul className="footer-ul">
-							<Link to="/uxdesigns">UX Designs:</Link>
-							{uxData.map((data) => (
-								<Link to={`/uxdesigns/${data.id}`}>
-									<li>{data.name}</li>
-								</Link>
-							))}
-						</ul> */}
-						<ul className="footer-ul">
-							<Link to="/courses">Courses:</Link>
-							{CourseData.map((data) => (
-								<Link to={`/courses/${data.id}`}>
-									<li>{data.name}</li>
-								</Link>
-							))}
-						</ul>
 					</div>
 				</div>
 				<small>&copy; Copyright {new Date().getFullYear()}, Gideon Miles Oluku. All Rights Reserved.</small>
