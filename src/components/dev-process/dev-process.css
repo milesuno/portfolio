@@ -1,0 +1,7 @@
+.planning, .prototyping, .development, .deployment {
+    background: #eee;
+}
+
+.discovery-content, .planning-content, .prototyping-content, .development-content, .deployment-content {
+    display: flex;
+}
