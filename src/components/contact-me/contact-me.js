@@ -7,7 +7,39 @@ import CV from "../../data/Gideon Miles Oluku - cv6.pdf";
 import "./contact-me.css";
 
 class ContactMe extends Component {
-	state = {};
+	postMessage = (e) => {
+		e.preventDefault();
+		const form = document.querySelector(".enquiries-form");
+		const firstName = document.querySelector(".first");
+		const lastName = document.querySelector(".last");
+		const email = document.querySelector(".email");
+		const subject = document.querySelector(".subject");
+		const message = document.querySelector(".message");
+
+		console.log({ firstName, lastName, email, subject, message });
+
+		const mail = {
+			firstName: firstName.value,
+			lastName: lastName.value,
+			email: email.value,
+			subject: subject.value,
+			message: message.value,
+		};
+
+		fetch("https://portfolio-api.glitch.me/contact/mail", {
+			method: "POST",
+			headers: {
+				"Content-Type": "application/json",
+			},
+			body: JSON.stringify(mail),
+		})
+			.then((res) => res.json())
+			.then((json) => console.log(json))
+			.catch((err) => console.error(err));
+		
+			form.reset();
+	};
+
 	render() {
 		return (
 			<>
@@ -44,7 +76,10 @@ class ContactMe extends Component {
 									</a>
 								</div>
 								<div className="enquiries-wrapper">
-									<form className="enquiries-form">
+									<form
+										className="enquiries-form"
+										onSubmit={this.postMessage}
+									>
 										<div className="enquiries-content">
 											<h2>Enquiries:</h2>
 											<span className="name-wrapper">
@@ -68,13 +103,11 @@ class ContactMe extends Component {
 											</span>
 											<span className="subject-wrapper">
 												<select className="subject">
-													<option selected disabled>
+													<option selected hidden>
 														Select a subject
 													</option>
 													<option>Design</option>
-													<option>
-														Development
-													</option>
+													<option>Development</option>
 													<option>
 														Project Management
 													</option>
