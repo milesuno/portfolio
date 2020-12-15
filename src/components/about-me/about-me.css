@@ -5,18 +5,6 @@
 	margin: 10px;
 }
 
-.about-me-img:empty {
-	/* background: grey; */
-	align-self: center;
-	border-radius: 100%;
-	background-image: linear-gradient(grey, grey);
-	background-size: 100% 100%;
-	background-position: 0 0;
-	background-repeat: no-repeat;
-	width: 300px;
-	margin: 10px;
-}
-
 .about-me-profile-card-wrapper {
 	display: flex;
 	flex-direction: column;
@@ -33,6 +21,7 @@
 
 .skills h2 {
 }
+
 .about-me-bio {
 	width: 95%;
 	align-self: center;
@@ -65,17 +54,6 @@
 	align-items: center;
 	margin: 15px;
 }
-/* main button {
-	width: 100%;
-	background: white;
-	font-size: x-large;
-
-	border-style: solid;
-	border-color: rgb(240, 236, 236);
-	border-radius: 15%;
-	margin: 1px;
-	box-shadow: 3px 3px 3px #949494;
-} */
 
 .about-me-wrapper {
 	display: flex;

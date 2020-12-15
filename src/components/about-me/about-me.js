@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Helmet from "react-helmet";
 import NavBar from "../navbar/nav-bar";
-import CV from "../../data/Gideon Miles Oluku - cv6.pdf";
+import CV from "../../data/Gideon Miles Oluku - cv7.pdf";
 import img from "../../data/git-profile-img.png";
 import "../../style-sheets/portfolio.css";
 import "./about-me.css";
@@ -47,10 +47,6 @@ class AboutMe extends Component {
 											View CV
 										</button>
 									</a>
-									{/* <div className="social-nav-btns about-me">
-										<SocialMediaNav />
-									</div> */}
-									{/* <ProfileCard /> */}
 									<div className="about-me-bio">
 										<p>
 											I am a Web Developer with a
@@ -95,19 +91,6 @@ class AboutMe extends Component {
 											understanding of topic.
 										</p>
 									</div>
-									{/* <div className="about-me-goals">
-										<h2>Goals:</h2>
-										<ul >
-											<li className="goal">
-												Join Productive Development Team
-											</li>
-											<li className="goal">Work as Tech Lead</li>
-											<li className="goal">
-												Combine my Business, Design and
-												Technical Knowledge in products
-											</li>
-										</ul>
-									</div> */}
 									<div className="skills-wrapper">
 										<div className="skills">
 											<h2>Front End</h2>

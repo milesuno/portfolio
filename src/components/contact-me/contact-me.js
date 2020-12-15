@@ -3,7 +3,7 @@ import Helmet from "react-helmet";
 import NavBar from "../navbar/nav-bar";
 import FooterNav from "../footer-nav/footer-nav";
 import SocialMediaNav from "../social-media-nav/social-media-nav";
-import CV from "../../data/Gideon Miles Oluku - cv6.pdf";
+import CV from "../../data/Gideon Miles Oluku - cv7.pdf";
 import "./contact-me.css";
 import ContactForm from "../contact-form/contact-form";
 
