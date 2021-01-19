@@ -14,13 +14,13 @@
 		0 15px 35px rgba(50, 50, 93, 0.3), 0 5px 15px rgba(0, 0, 0, 0.1);
 	margin: 15px;
 	width: 245px;
-	height: 330px;
+	height: 320px;
 
 	/* transition: all .1s ease-in-out; */
 }
 
 .thumbnail-page-wrapper:empty {
-	height: 330px;
+	height: 320px;
 	width: 245px;
 	background-image: radial-gradient(circle at right top, white -100%, black),
 		linear-gradient(grey, grey), linear-gradient(white, white);
@@ -42,7 +42,7 @@
 	height: 250px;
 	width: 100%;
 	margin: 0;
-	border: 1px solid grey;
+	/* border: 1px solid grey; */
 }
 
 .thumbnail-title {

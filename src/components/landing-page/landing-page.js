@@ -25,7 +25,8 @@ class LandingPage extends Component {
 
 		const logoContainer = document.querySelector(".logo-container");
 		logoContainer.style.setProperty("visibility", "hidden");
-
+		const nav = document.querySelector("nav");
+		nav.style.setProperty("box-shadow", "none");
 		const navContent = document.querySelector(".nav-content");
 		// navContent.style.setProperty("display", "none");
 

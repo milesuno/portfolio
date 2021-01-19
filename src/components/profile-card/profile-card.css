@@ -1,16 +1,19 @@
 .profile-card {
 	/* align-self: center; */
 	/* position: fixed; */
-	background: rgba(255, 255, 255, 0.7);
+	background: rgba(255, 255, 255, 0.5);
 	/* top: 95px; */
 	/* right: 30px; */
-	border: 3px solid white;
+	/* border: 3px solid white; */
+	box-shadow: 0 0 50px 15px black;
 	border-radius: 5px;
 	width: 250px;
 }
 
 .profile-card-img {
-	width: 225px;
+    width: 225px;
+    height: 225px;
+	object-fit: cover;	
 	border-radius: 50%;
 	margin-top: 10px;
 }

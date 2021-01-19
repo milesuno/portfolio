@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 // import data from "../../data/social-media-data.js";
-import gmail from "../../data/icons/gmail.png";
+import fiverr from "../../data/icons/Fiverr-Logo.png";
 import linkedIn from "../../data/icons/icons8-linkedin-50.png";
 import youtube from "../../data/icons/icons8-play-button-50.png";
 import github from "../../data/icons/icons8-github-50.png";
@@ -25,8 +25,8 @@ class SocialMediaNav extends Component {
 			<>
 				{!this.state.isFooter ? (
 					<nav className="social-nav-btns">
-						<a href="mailto:milesoluku@gmail.com?subject=Portfolio Enquires">
-							<img src={gmail} />
+						<a href="https://www.fiverr.com/milesoluku">
+							<img src={fiverr} />
 						</a>
 						<a href="">
 							<img src={linkedIn} />

@@ -33,6 +33,8 @@ div.logo-container {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
+	box-shadow: 0 0 15px 5px grey;
+
 	/* background-color: black; */
 	z-index: 1000;
 

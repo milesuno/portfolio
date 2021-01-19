@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import SocialMediaNav from "../social-media-nav/social-media-nav";
-import img from "../../data/git-profile-img.png";
+import img from "../../data/git-profile-img.jpg";
 import { Link } from "react-router-dom";
 
 import "./profile-card.css";
