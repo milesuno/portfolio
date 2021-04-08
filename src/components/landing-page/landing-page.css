@@ -13,6 +13,7 @@
 
 .landing-page-img {
 	object-fit: cover;
+	height: 100vh;
 }
 
 .loader-landing-page-img {
