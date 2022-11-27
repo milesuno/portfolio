@@ -1,0 +1,259 @@
+.about-me__section {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #939393;
+}
+
+/* TODO: this should be exported to be global page width*/
+
+.about-me__page-wrapper {
+  width: 100%;
+}
+.about-me__page-width {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* border: 3px solid black; */
+}
+
+.about-me__img {
+  align-self: center;
+  border-radius: 100%;
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-top: 10px;
+
+  margin: 10px;
+}
+
+.about-me-profile-card-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-me__contact-card {
+  margin: 25px 50px 25px 15px;
+}
+
+.about-me__bio {
+  /* margin: 0 50px 0 0; */
+  padding-right: 25px;
+}
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 15px 0;
+  border: solid 3px #eee;
+  width: 100%;
+}
+
+.skills h2 {
+}
+
+.about-me-bio {
+  width: 95%;
+  align-self: center;
+  margin: 0 50px 0 0;
+}
+
+.skills-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.skill {
+  color: black;
+}
+
+.tech {
+  color: black;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  margin: 15px;
+}
+
+.tech-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tech-tile__name {
+  color: #3e3e3e;
+}
+
+.education__section__experience-section {
+  margin: 10px;
+}
+
+.about-me-wrapper {
+  display: flex;
+  /* flex-direction: column; */
+  width: 80%;
+  /* align-items: center; */
+  align-self: center;
+  margin-top: 5px;
+}
+
+.download {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+
+.button {
+  background: black;
+  border: none;
+  color: white;
+  width: 250px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+}
+
+.about-me-goals {
+  text-decoration-style: wavy;
+}
+
+.goal {
+  list-style: disc;
+}
+
+.tech img {
+  width: 125px;
+  height: 125px;
+  object-fit: contain;
+}
+.section_title {
+  margin: 0 0 25px 25px;
+}
+
+.projects-section,
+.education__section,
+.about-me__section {
+  max-width: 1024px;
+  width: 100%;
+  background: white;
+  padding: 50px;
+}
+
+.projects-section,
+.education__section {
+  display: flex;
+  /* overflow: hidden; */
+  flex-direction: column;
+}
+
+/* .projects-section {
+  margin: 50px 0;
+} */
+
+/* .education__section {
+  max-height: 450px;
+} */
+
+.experience-section__cards {
+  max-height: 450px;
+  overflow: scroll;
+  height: 100%;
+}
+
+.tech-stack__section {
+  margin: 50px;
+}
+
+.project-section__thumbnail-carosel,
+.education__section__thumbnail-carosel {
+  display: flex;
+  overflow: scroll;
+  /* max-width: 925px; */
+}
+
+.education__section__experience-experience-section {
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.education__section__experience-experience-section--expanded {
+  flex-direction: column;
+  overflow: hidden;
+}
+@media (max-width: 1250px) {
+  .projects-section2 .education__section,
+  .about-me__section {
+    padding: 50px;
+  }
+}
+
+@media (max-width: 1150px) {
+  .projects-section,
+  .education__section,
+  .about-me__section {
+    padding: 50px 15px;
+  }
+}
+
+@media (max-width: 1025px) {
+  .projects-section,
+  .education__section,
+  .about-me__section {
+    padding: 50px 0;
+  }
+}
+
+@media (max-width: 750px) {
+  .about-me__section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about-me__contact-card {
+    margin: 0;
+  }
+
+  .about-me__bio {
+    padding: 50px;
+  }
+
+  .experience-card {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .experience-card__img {
+    max-width: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-me-wrapper {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 450px) {
+  .about-me-img {
+    width: 100%;
+  }
+
+  .about-me-wrapper {
+    width: 100%;
+  }
+}

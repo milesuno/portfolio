@@ -1,0 +1,85 @@
+.contact-me-wrapper {
+  background: white;
+  padding: 25px;
+  width: 95%;
+  align-self: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.enquiries-wrapper {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #939393;
+  border-radius: 5%;
+  padding: 15px;
+  max-width: fit-content;
+  width: 100%;
+}
+
+.additional-contact-wrapper {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.enquiries-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.enquiries-content {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin-bottom: 20px;
+  padding: 10px;
+  align-self: center;
+}
+
+.message {
+  width: -webkit-fill-available;
+  resize: vertical;
+}
+
+.name-wrapper {
+  display: flex;
+}
+
+.first,
+.last,
+.subject {
+  width: 100%;
+}
+
+.email-wrapper,
+.email-wrapper > .email {
+  width: 100%;
+}
+
+.email {
+  width: -webkit-fill-available;
+}
+
+.margin-5 {
+  margin: 5px;
+}
+
+@media (max-width: 750px) {
+  .contact-me-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  .additional-contact-wrapper {
+    margin-bottom: 50px;
+  }
+}
+
+@media (max-width: 500px) {
+  .additional-contact-wrapper {
+    margin: 0 0 20px 0;
+  }
+}

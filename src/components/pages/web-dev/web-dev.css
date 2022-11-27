@@ -1,0 +1,11 @@
+.web-dev__wrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.web-dev__article-section {
+  display: flex;
+  flex-wrap: wrap;
+}

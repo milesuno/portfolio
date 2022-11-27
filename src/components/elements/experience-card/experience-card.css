@@ -1,0 +1,20 @@
+.experience-card {
+  display: flex;
+  margin: 15px;
+}
+
+.experience-card__img {
+  max-width: 175px;
+  min-width: 175px;
+  overflow: hidden;
+  object-fit: cover;
+}
+
+.experience-card__contents {
+  align-self: start;
+  margin-left: 25px;
+}
+
+.experience-card__contents > p {
+  max-width: 750px;
+}

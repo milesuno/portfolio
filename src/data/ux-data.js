@@ -3,21 +3,21 @@ import portfolioImg01 from "../data/ux/portfolio-ux/ux-portfolio-projects.jpg";
 import portfolioImg02 from "../data/ux/portfolio-ux/ux-portfolio-uxdesigns.jpg";
 import portfolioImg03 from "../data/ux/portfolio-ux/ux-portfolio-aboutme.jpg";
 
-import cyfImg00 from "../data/ux/cyf-glossary-ux/desktop/cyf-glossary-landing-page.jpg";
-import cyfImg01 from "../data/ux/cyf-glossary-ux/desktop/cyf-glossary-login.jpg";
-import cyfImg02 from "../data/ux/cyf-glossary-ux/desktop/cyf-glossary-user-signup.jpg";
-import cyfImg03 from "../data/ux/cyf-glossary-ux/desktop/cyf-glossary-search.jpg";
-import cyfImg04 from "../data/ux/cyf-glossary-ux/desktop/cyf-glossary-search-term.jpg";
-import cyfImg05 from "../data/ux/cyf-glossary-ux/desktop/cyf-glossary-add-term.jpg";
-import cyfImg06 from "../data/ux/cyf-glossary-ux/desktop/cyf-glossary-update-term.jpg";
-import cyfImg07 from "../data/ux/cyf-glossary-ux/desktop/cyf-glossary-flag-term.jpg";
-import cyfImg08 from "../data/ux/cyf-glossary-ux/desktop/cyf-glossary-user-profile-edit.jpg";
-import cyfImg09 from "../data/ux/cyf-glossary-ux/desktop/cyf-glossary-mail.jpg";
-import cyfImg10 from "../data/ux/cyf-glossary-ux/desktop/cyf-glossary-mail-convo.jpg";
-import cyfImg11 from "../data/ux/cyf-glossary-ux/desktop/cyf-glossary-mentor-profile-edit.jpg";
-import cyfImg12 from "../data/ux/cyf-glossary-ux/desktop/cyf-glossary-mentor-user-profile-review.jpg";
-import cyfImg13 from "../data/ux/cyf-glossary-ux/desktop/cyf-glossary-mentor-user-term-edit-review.jpg";
-import cyfImg14 from "../data/ux/cyf-glossary-ux/desktop/cyf-glossary-mentor-user-flag-review.jpg";
+// // import cyfImg00 from "../data/ux/cyf-glossary-ux/desktop/cyf-glossary-landing-page.jpg";
+// import cyfImg01 from "../data/ux/cyf-glossary-ux/desktop/cyf-glossary-login.jpg";
+// import cyfImg02 from "../data/ux/cyf-glossary-ux/desktop/cyf-glossary-user-signup.jpg";
+// import cyfImg03 from "../data/ux/cyf-glossary-ux/desktop/cyf-glossary-search.jpg";
+// import cyfImg04 from "../data/ux/cyf-glossary-ux/desktop/cyf-glossary-search-term.jpg";
+// // import cyfImg05 from "../data/ux/cyf-glossary-ux/desktop/cyf-glossary-add-term.jpg";
+// import cyfImg06 from "../data/ux/cyf-glossary-ux/desktop/cyf-glossary-update-term.jpg";
+// // import cyfImg07 from "../data/ux/cyf-glossary-ux/desktop/cyf-glossary-flag-term.jpg";
+// import cyfImg08 from "../data/ux/cyf-glossary-ux/desktop/cyf-glossary-user-profile-edit.jpg";
+// import cyfImg09 from "../data/ux/cyf-glossary-ux/desktop/cyf-glossary-mail.jpg";
+// import cyfImg10 from "../data/ux/cyf-glossary-ux/desktop/cyf-glossary-mail-convo.jpg";
+// import cyfImg11 from "../data/ux/cyf-glossary-ux/desktop/cyf-glossary-mentor-profile-edit.jpg";
+// import cyfImg12 from "../data/ux/cyf-glossary-ux/desktop/cyf-glossary-mentor-user-profile-review.jpg";
+// import cyfImg13 from "../data/ux/cyf-glossary-ux/desktop/cyf-glossary-mentor-user-term-edit-review.jpg";
+// import cyfImg14 from "../data/ux/cyf-glossary-ux/desktop/cyf-glossary-mentor-user-flag-review.jpg";
 
 import cyfMobileImg00 from "../data/ux/cyf-glossary-ux/mobile/cyf-glossary-landing-page.jpg";
 import cyfMobileImg01 from "../data/ux/cyf-glossary-ux/mobile/cyf-glossary-login.jpg";
@@ -52,21 +52,21 @@ const uxdesigns = [
 		type: "uxdesigns",
 		name: "Glossary: Desktop",
 		img: [
-			cyfImg00,
-			cyfImg01,
-			cyfImg02,
-			cyfImg03,
-			cyfImg04,
-			cyfImg05,
-			cyfImg06,
-			cyfImg07,
-			cyfImg08,
-			cyfImg09,
-			cyfImg10,
-			cyfImg11,
-			cyfImg12,
-			cyfImg13,
-			cyfImg14,
+			// cyfImg00,
+			// cyfImg01,
+			// cyfImg02,
+			// cyfImg03,
+			// cyfImg04,
+			// cyfImg05,
+			// cyfImg06,
+			// cyfImg07,
+			// cyfImg08,
+			// cyfImg09,
+			// cyfImg10,
+			// cyfImg11,
+			// cyfImg12,
+			// cyfImg13,
+			// cyfImg14,
 		],
 		desc:
 			"CYF Glossary was inspired by platforms like Google and Wikipedia to display search result in a clear and concise manner.",

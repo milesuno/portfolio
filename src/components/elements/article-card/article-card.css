@@ -1,0 +1,10 @@
+.article-card {
+  width: 250px;
+  height: 300px;
+  border: 1px solid black;
+}
+
+.article-card__content__author-bar {
+  display: flex;
+  justify-content: space-around;
+}

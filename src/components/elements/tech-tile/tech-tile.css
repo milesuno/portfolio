@@ -1,0 +1,12 @@
+.tech-tile {
+  margin: 0 12.5px;
+}
+
+.tech-tile__img {
+  height: 200px;
+  width: 200px;
+  object-fit: contain;
+}
+
+.tech-tile__name {
+}
