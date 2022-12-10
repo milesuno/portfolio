@@ -1,14 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <script>(function (w, d, s, l, i) {
-        w[l] = w[l] || []; w[l].push({
-          'gtm.start':
-            new Date().getTime(), event: 'gtm.js'
-        }); var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-            'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-      })(window, document, 'script', 'dataLayer', 'GTM-5W7F64S');</script>
     <meta charset="utf-8" />
     <link rel="shortcut icon" href="%PUBLIC_URL%/gmo-favico.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -27,16 +19,60 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
+    <!-- <title>GMO - Portfolio</title> -->
     <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+          "gtm.start": new Date().getTime(),
+          event: "gtm.js",
+        });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-5W7F64S");
+    </script>
     <!-- End Google Tag Manager -->
-    <title>GMO - Portfolio</title>
   </head>
   <body>
     <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5W7F64S" height="0" width="0"
-        style="display:none;visibility:hidden"></iframe></noscript>
+    <noscript>
+      <iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-5W7F64S"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe>
+    </noscript>
     <!-- End Google Tag Manager (noscript) -->
     <noscript>You need to enable JavaScript to run this app.</noscript>
+    <script>
+      // TODO: Configure data_hub with document
+      // TODO: Pages update entire data_hub
+      // TODO: Events update data_hub and dataLayer?
+      window.data_hub = {
+        page_type: "",
+        page_name: "",
+        site_section: "",
+        nav_selection: "",
+        social_nav_selection: "",
+        language: "",
+        thumbnail_viewed: "",
+        tool_clicked: "",
+        education_selected: "",
+        cv_view: false,
+        form_first_name: "",
+        form_last_name: "",
+        form_email: "",
+        form_subject: "",
+        form_message: "",
+        events: [],
+      };
+    </script>
     <div id="root"></div>
     <!--
       This HTML file is a template.

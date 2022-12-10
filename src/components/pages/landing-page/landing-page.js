@@ -1,4 +1,4 @@
-import { React, useState } from "react";
+import { React, useState, useEffect } from "react";
 import Helmet from "react-helmet";
 import vid from "../../../landing-video/Pexels Videos 2699.mp4";
 import "./landing-page.css";
@@ -10,6 +10,28 @@ import ContactMe from "../contact-me/contact-me";
 
 export default function LandingPage() {
   const [navSelection, setNavSelection] = useState("");
+
+  useEffect(() => {
+    window.data_hub = {
+      page_type: "home",
+      page_name: "Gideon Miles Oluku - Portfolio",
+      site_section: "home",
+      nav_selection: "",
+      social_nav_selection: "",
+      language: window.navigator.language,
+      thumbnail_viewed: "",
+      tool_clicked: "",
+      education_selected: "",
+      cv_view: false,
+      form_first_name: "",
+      form_last_name: "",
+      form_email: "",
+      form_subject: "",
+      form_message: "",
+      events: window.data_hub.events || [],
+    };
+  }, []);
+
   return (
     <>
       <Helmet>

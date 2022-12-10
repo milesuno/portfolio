@@ -25,13 +25,15 @@ class LgThumbNail extends Component {
   }
 
   datalayerPush = (eventType, eventName) => {
-    let dataLayer = window.dataLayer || [];
+    // let dataLayer = window.dataLayer || [];
 
-    dataLayer.push({ event: eventType, page_name: eventName });
+    window.dataLayer = [];
+    window.dataLayer.push({ event: eventType, page_name: eventName });
+    window.data_hub.events.push({ event: eventType, page_name: eventName });
   };
 
   componentDidMount() {
-    this.datalayerPush("page_view", this.props.dataFromThumbnail.name);
+    this.datalayerPush("thumbnail_click", this.props.dataFromThumbnail.name);
     const body = document.querySelector("body");
     body.style.setProperty("overflow", "hidden");
 

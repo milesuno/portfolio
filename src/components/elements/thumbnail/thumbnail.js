@@ -129,14 +129,19 @@ class ThumbNail extends Component {
   };
 
   datalayerPush = (eventType, eventName) => {
-    let dataLayer = window.dataLayer || [];
+    // let dataLayer = window.dataLayer || [];
 
-    dataLayer.push({ event: eventType, thumbnail_name: eventName });
+    window.dataLayer = [];
+    console.log({ DATALAYER_PUSH1: window.data_hub.events });
+    window.data_hub.events.push({ event: eventType, page_name: eventName });
+    console.log({ DATALAYER_PUSH2: window.data_hub.events });
+
+    window.dataLayer.push({ event: eventType, thumbnail_name: eventName });
   };
 
-  thumbNailSwitch = () => {
+  thumbnailSwitch = () => {
     console.log("onClick", this.props);
-    this.datalayerPush("thumbnail_click", this.props.name);
+    // this.datalayerPush("thumbnail_click", this.props.name);
     let selected = this.state.selected;
 
     if (selected === 0) {
@@ -161,7 +166,7 @@ class ThumbNail extends Component {
     return (
       <>
         <div className="thumbnail-page-wrapper fade">
-          <div className="thumbnail-wrapper" onClick={this.thumbNailSwitch}>
+          <div className="thumbnail-wrapper" onClick={this.thumbnailSwitch}>
             {/* {this.props.img ? ( */}
             <img src={img[imgIndex]} className={"thumbnail-img"} />
             {/* ) : <div>"NOPE"</div>} */}

@@ -10,6 +10,28 @@ import CV from "./../../../data/Gideon Miles Oluku - cv7.pdf";
 import "./contact-me.css";
 
 class ContactMe extends Component {
+  componentDidMount() {
+    // let data_hub = data_hub || {};
+    window.data_hub = {
+      page_type: "contact",
+      page_name: "Portfolio - Contact",
+      site_section: "contact",
+      nav_selection: "contact",
+      social_nav_selection: "",
+      language: window.navigator.language,
+      thumbnail_viewed: "",
+      tool_clicked: "",
+      education_selected: "",
+      cv_view: false,
+      form_first_name: "",
+      form_last_name: "",
+      form_email: "",
+      form_subject: "",
+      form_message: "",
+      events: window.data_hub.events || [],
+    };
+  }
+
   render() {
     return (
       <>

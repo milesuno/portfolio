@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { useEffect, useState } from "react";
 import ThumbNail from "../../elements/thumbnail/thumbnail";
 
 import LgThumbNail from "../../elements/lg-thumbnail/lg-thumbnail";
@@ -11,66 +11,68 @@ import data from "../../../data/project-data";
 import ThumbnailMatrix from "../../elements/thumbnail-matrix/thumbnail-matrix";
 import { Container, Row, Col } from "react-bootstrap";
 
-class Projects extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      //State holds all UX the data for the <ThumbNail /> component. This is passed as a Prop.
-      selected: 0,
-      dataFromThumbnail: 0,
-      projects: [...data],
-    };
+export default function Projects() {
+  const [selected, setSelected] = useState(false);
+  const [thumbnailData, setThumbnailData] = useState(null);
+  const [projects, setProjects] = useState([...data]);
+
+  function getData(data) {
+    //Gets data on specified Thumbnail and sends data to be rendered as Lg-Thumbnail
+    setSelected(true);
+    setThumbnailData(data);
   }
 
-  // componentWillMount(){
-  // 	console.log("img Lag:", this.state.projects[0].img)
-  // }
-
-  // componentDidMount() {
-  // 	console.log("img Lag:", this.state.projects[0].img)
-
-  // }
-  getData = (data) => {
-    //Gets data on specified Thumbnail and sends data to be rendered as Lg-Thumbnail
-    this.setState({ selected: 1, dataFromThumbnail: data });
-  };
-
-  handleCloseLgThumbnail = (update) => {
+  function handleCloseLgThumbnail(update) {
     console.log("from lg-thumbnail", update);
-    this.setState({ selected: update });
-  };
+    setSelected(update);
+  }
 
-  render() {
-    const { projects, selected, dataFromThumbnail } = this.state;
+  useEffect(() => {
+    window.data_hub = {
+      page_type: "about",
+      page_name: "Portfolio - Projects",
+      site_section: "project",
+      nav_selection: "project",
+      social_nav_selection: "",
+      language: window.navigator.language,
+      thumbnail_viewed: "",
+      tool_clicked: "",
+      education_selected: "",
+      cv_view: false,
+      form_first_name: "",
+      form_last_name: "",
+      form_email: "",
+      form_subject: "",
+      form_message: "",
+      events: window.data_hub.events || [],
+    };
+  }, []);
 
-    return (
+  return (
+    <>
+      <Helmet>
+        <title>Portfolio - Projects</title>
+        <meta name="description" content="Portfolio Projects" />
+        <link rel="icon" href="#" />
+      </Helmet>
       <>
-        <Helmet>
-          <title>Portfolio - Projects</title>
-          <meta name="description" content="Portfolio Projects" />
-          <link rel="icon" href="#" />
-        </Helmet>
-        <>
-          <div className={"page-wrapper"}>
-            <div className="page-width">
-              {selected ? (
-                <>
-                  {/* This is used to render single page items on Pop up or nav dropdown selections*/}
-                  <header>
-                    <NavBar />
-                    <h1>Projects</h1>
-                  </header>
-                  <main className={"main-wrapper"}>
-                    <LgThumbNail
-                      dataFromThumbnail={dataFromThumbnail}
-                      closeLgThumbnail={this.handleCloseLgThumbnail}
-                    />
-                    <section className={"elements-wrapper"}>
-                          <ThumbnailMatrix
-                            thumbnails={projects}
-                            getData={this.getData}
-                          />
-                          {/* {projects.map((project) => {
+        <div className={"page-wrapper"}>
+          <div className="page-width">
+            {selected ? (
+              <>
+                {/* This is used to render single page items on Pop up or nav dropdown selections*/}
+                <header>
+                  <NavBar />
+                  <h1>Projects</h1>
+                </header>
+                <main className={"main-wrapper"}>
+                  <LgThumbNail
+                    dataFromThumbnail={thumbnailData}
+                    closeLgThumbnail={handleCloseLgThumbnail}
+                  />
+                  <section className={"elements-wrapper"}>
+                    <ThumbnailMatrix thumbnails={projects} getData={getData} />
+                    {/* {projects.map((project) => {
                             //data is exported before reaching ThumbNail as ThumbNail will accept data from multiple sources - therefore must be generic.
                             return (
                               <ThumbNail
@@ -90,26 +92,23 @@ class Projects extends Component {
                               />
                             );
                           })} */}
-                    </section>
-                  </main>
-                  <FooterNav />
-                </>
-              ) : (
-                <>
-                  {/* This is used to render large pop modal items on click*/}
+                  </section>
+                </main>
+                <FooterNav />
+              </>
+            ) : (
+              <>
+                {/* This is used to render large pop modal items on click*/}
 
-                  <header>
-                    <NavBar />
-                    <h1>Projects</h1>
-                  </header>
-                  <main className={"main-wrapper"}>
-                    <section className={"elements-wrapper"}>
-                      <ThumbnailMatrix
-                        thumbnails={projects}
-                        getData={this.getData}
-                      />
+                <header>
+                  <NavBar />
+                  <h1>Projects</h1>
+                </header>
+                <main className={"main-wrapper"}>
+                  <section className={"elements-wrapper"}>
+                    <ThumbnailMatrix thumbnails={projects} getData={getData} />
 
-                      {/* {projects.map((project) => (
+                    {/* {projects.map((project) => (
                         //data is exported before reaching ThumbNail as ThumbNail will accept data from multiple sources - therefore must be generic.
                         <ThumbNail
                           key={project.key}
@@ -126,17 +125,14 @@ class Projects extends Component {
                           getData={this.getData}
                         />
                       ))} */}
-                    </section>
-                  </main>
-                  <FooterNav isFooter={true} />
-                </>
-              )}
-            </div>
+                  </section>
+                </main>
+                <FooterNav isFooter={true} />
+              </>
+            )}
           </div>
-        </>
+        </div>
       </>
-    );
-  }
+    </>
+  );
 }
-
-export default Projects;
