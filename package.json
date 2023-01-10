@@ -4,7 +4,7 @@
 	"private": true,
 	"dependencies": {
 		"netlify": "^6.1.29",
-		"netlify-cli": "^12.2.7",
+		"netlify-cli": "^12.7.0",
 		"react": "^16.8.6",
 		"react-bootstrap": "^2.6.0",
 		"react-dom": "^16.8.6",
