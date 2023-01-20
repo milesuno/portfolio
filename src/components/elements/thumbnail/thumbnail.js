@@ -1,190 +1,91 @@
-import React, { Component } from "react";
+import React, { Component, useEffect, useState } from "react";
+import { useHistory } from "react-router-dom";
 import "./thumbnail.css";
-// import LgThumbNail from "../../lg-thumbnail/lg-thumbnail";
+// import LgThumbnail from "../../lg-thumbnail/lg-thumbnail";
 import CarouselControls from "../carousel-controls/CarouselControls";
-import { Container, Row, Col } from "react-bootstrap";
 
-/*
-React will apply props object with data passed to from the parent passing it props. 
-In this instance ThumbNail as data passed to it from 2 different parents, 
-but I do not need to specify or use [square] syntax to access the data passed  
-*/
-class ThumbNail extends Component {
-  constructor(props) {
-    super(props);
-    //state is used to populate data in lg-thumbnail on thumbnail click
-    this.state = {
-      imgIndex: 0,
-      selected: 0,
-      autoPlay: "",
-      id: this.props.id,
-      type: this.props.type,
-      name: this.props.name,
-      img: this.props.img,
-      desc: this.props.desc,
-      short_desc: this.props.short_desc,
-      role: this.props.role,
-      tech: this.props.tech,
-      challenge: this.props.challenge,
-      solution: this.props.solution,
-      source: this.props.source,
-      checkScroll: "",
-      isLoaded: false,
+export default function Thumbnail(props) {
+  const [imgIndex, setImgIndex] = useState(0);
+  const [selected, setSelected] = useState(false);
+  const [autoPlay, setAutoPlay] = useState(false);
+  const [id, setId] = useState(props.id);
+  const [type, setType] = useState(props.type);
+  const [name, setName] = useState(props.name);
+  const [img, setImg] = useState(props.img);
+  const [desc, setDesc] = useState(props.desc);
+  const [short_desc, setShortDesc] = useState(props.short_desc);
+  const [role, setRole] = useState(props.role);
+  const [tech, setTech] = useState(props.tech);
+  const [challenge, setChallenge] = useState(props.challenge);
+  const [solution, setSolution] = useState(props.solution);
+  const [source, setSource] = useState(props.source);
+  const [checkScroll, setCheckScroll] = useState(props.checkScroll);
+  const [isLoaded, setIsLoaded] = useState(props.isLoaded);
+  const history = useHistory();
+
+  // TODO: merge into useEffect
+
+  useEffect(() => {
+    // history.push(`/${name}`);
+    console.log("thumbnail data:", props);
+    return () => {
+      // history.push("/");
     };
-  }
+  }, []);
 
-  componentDidMount() {
-    // fetch("https://avatars2.githubusercontent.com/u/45498063?s=460&u=ccf1d781a20680c9787cdae4bdaba9a1f540b02f&v=4").then(res => res.blob()).then(img => console.log(img))
-    console.log("THUMBNAIL short_desc:", this.props);
-    let checkScroll;
-    const thumbnails = document.querySelectorAll("div.thumbnail-page-wrapper");
-    this.setState({ isLoaded: true });
-    // checkScroll = (e) => {
-    //   this.debounce(
-    //     thumbnails.forEach((thumbnail) => {
-    //       const thumbnailCoords = thumbnail.getBoundingClientRect();
-    //       const nav = document.querySelector(".nav");
-    //       const navCoords = nav.getBoundingClientRect();
-
-    //       //the value of the whole viewport + half of the thumbnail hieght
-    //       //This is used to calculate if this number is more of less than the top off the viewport
-    //       let slideIn =
-    //         window.scrollY +
-    //         window.innerHeight /*Page Bottom*/ -
-    //         thumbnailCoords.height / 2; /*Half of image height*/
-
-    //       // px where image top starts + image height = px for image bottom
-    //       let thumbnailBottom = thumbnail.offsetTop + thumbnailCoords.height;
-    //       let thumbnailHalfway =
-    //         thumbnail.offsetTop + thumbnailCoords.height / 2;
-
-    //       //***Flag Var - return true or false. This will be used to trigger other functions
-
-    //       // If slideIn px is greater than image top then return true
-    //       const isHalfway = slideIn > thumbnail.offsetTop;
-
-    //       const isPassedThumbnailHalfway =
-    //         window.scrollY + navCoords.bottom > thumbnailHalfway;
-
-    //       //if top of browser is less than image bottom return true
-    //       const isNotscrolledPassed = window.scrollY < thumbnailBottom;
-
-    //       // console.log({
-    //       // 	slideIn,
-    //       // 	thumbnailBottom,
-    //       // 	isHalfway,
-    //       // 	isNotscrolledPassed,
-    //       // 	thumbnailHalfway,
-    //       // });
-
-    //       if (!isHalfway) thumbnail.style.setProperty("opacity", 0);
-
-    //       if (isHalfway && isNotscrolledPassed)
-    //         thumbnail.style.setProperty("opacity", 1);
-
-    //       if (isPassedThumbnailHalfway)
-    //         thumbnail.style.setProperty("opacity", 0);
-    //     })
-    //   );
-    // };
-
-    this.setState({ checkScroll });
-    document.addEventListener("scroll", checkScroll);
-  }
-
-  componentWillUnmount() {
-    document.removeEventListener("scroll", this.state.checkScroll);
-  }
-
-  debounce = (func, wait = 20, immediate = true) => {
-    var timeout;
-    return function () {
-      var context = this,
-        args = arguments;
-      var later = function () {
-        timeout = null;
-        if (!immediate) func.apply(context, args);
-      };
-      var callNow = immediate && !timeout;
-      clearTimeout(timeout);
-      timeout = setTimeout(later, wait);
-      if (callNow) func.apply(context, args);
-    };
-  };
-
-  getData = (data) => {
-    //Gets data on specified Thumbnail and sends data to be rendered as Lg-Thumbnail
-    console.log("Data from Carousel", data);
-    const { imgIndex } = data;
-    this.setState({ imgIndex });
-  };
-
-  handleCloseLgThumbnail = (update) => {
-    console.log("from lg-thumbnail", update);
-    const body = document.querySelector("body");
-
-    body.style.setProperty("overflow", "");
-
-    this.setState({ selected: update });
-  };
-
-  datalayerPush = (eventType, eventName) => {
-    // let dataLayer = window.dataLayer || [];
-
-    window.dataLayer = [];
-    console.log({ DATALAYER_PUSH1: window.data_hub.events });
-    window.data_hub.events.push({ event: eventType, page_name: eventName });
-    console.log({ DATALAYER_PUSH2: window.data_hub.events });
-
-    window.dataLayer.push({ event: eventType, thumbnail_name: eventName });
-  };
-
-  thumbnailSwitch = () => {
-    console.log("onClick", this.props);
-    // this.datalayerPush("thumbnail_click", this.props.name);
-    let selected = this.state.selected;
-
-    if (selected === 0) {
-      selected++;
-      this.setState({ selected });
-      this.props.getData(this.state);
-    } else if (selected === 1) {
-      selected--;
-      this.setState({ selected });
-      this.props.getData(this.state);
+  function datalayerPush(eventType, title) {
+    if (eventType === "thumbnail_click") {
+      window.dataLayer.push({
+        event: eventType,
+        page_title: title,
+        thumbnail_name: title,
+        page_URL: window.location.href,
+      });
     }
+  }
 
-    console.log("Selected", this.state.selected);
-  };
+  function thumbnailSwitch() {
+    // datalayerPush("thumbnail_click", name);
+    setSelected(!selected);
+    props.getData({
+      imgIndex,
+      selected,
+      autoPlay,
+      id,
+      type,
+      name,
+      img,
+      desc,
+      short_desc,
+      role,
+      tech,
+      challenge,
+      solution,
+      source,
+      checkScroll,
+      isLoaded,
+    });
+  }
 
-  render() {
-    const { name, img } = this.props;
-    const { imgIndex, tech, short_desc } = this.state;
-    console.log("props in thumbnail", this.props);
-    console.log("state selected in thumbnail", this.state);
+  return (
+    <>
+      <div className="thumbnail-page-wrapper fade">
+        <div className="thumbnail-wrapper" onClick={thumbnailSwitch}>
+          {/* {this.props.img ? ( */}
+          <img src={img[imgIndex]} className={"thumbnail-img"} />
+          {/* ) : <div>"NOPE"</div>} */}
+          <h2 className="thumbnail-title">{name}</h2>
+          <span className="thumbnail__short-desc">{short_desc}</span>
 
-    return (
-      <>
-        <div className="thumbnail-page-wrapper fade">
-          <div className="thumbnail-wrapper" onClick={this.thumbnailSwitch}>
-            {/* {this.props.img ? ( */}
-            <img src={img[imgIndex]} className={"thumbnail-img"} />
-            {/* ) : <div>"NOPE"</div>} */}
-            <h2 className="thumbnail-title">{name}</h2>
-            <span className="thumbnail__short-desc">{short_desc}</span>
-
-            {/* <span className="thumbnail__tech-stack">Technologies: {tech}</span> */}
-          </div>
-          {/* {img.length > 1 ? (
+          {/* <span className="thumbnail__tech-stack">Technologies: {tech}</span> */}
+        </div>
+        {/* {img.length > 1 ? (
 							<CarouselControls
 								getData={this.getData}
 								img={this.props.img}
 							/>
 						) : null} */}
-        </div>
-      </>
-    );
-  }
+      </div>
+    </>
+  );
 }
-
-export default ThumbNail;

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import CarouselControls from "../carousel-controls/CarouselControls";
-import ThumbNail from "../thumbnail/thumbnail";
-import LgThumbNail from "../lg-thumbnail/lg-thumbnail";
+import Thumbnail from "../thumbnail/thumbnail";
+import LgThumbnail from "../lg-thumbnail/lg-thumbnail";
 import NavBar from "../navbar/nav-bar";
 import "../../../style-sheets/portfolio.css";
 import Helmet from "react-helmet";

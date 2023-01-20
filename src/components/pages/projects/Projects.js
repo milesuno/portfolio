@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
-import ThumbNail from "../../elements/thumbnail/thumbnail";
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
+import Thumbnail from "../../elements/thumbnail/thumbnail";
 
-import LgThumbNail from "../../elements/lg-thumbnail/lg-thumbnail";
+import LgThumbnail from "../../elements/lg-thumbnail/lg-thumbnail";
 import NavBar from "../../../components/elements/navbar/nav-bar";
 import "./project.css";
 import Helmet from "react-helmet";
@@ -15,6 +16,7 @@ export default function Projects() {
   const [selected, setSelected] = useState(false);
   const [thumbnailData, setThumbnailData] = useState(null);
   const [projects, setProjects] = useState([...data]);
+  const history = useHistory();
 
   function getData(data) {
     //Gets data on specified Thumbnail and sends data to be rendered as Lg-Thumbnail
@@ -27,7 +29,17 @@ export default function Projects() {
     setSelected(update);
   }
 
+  function datalayerPush(eventType, title) {
+    window.dataLayer.push({
+      event: eventType,
+      pageTitle: title,
+      pageURL: window.location.href,
+    });
+  }
+
   useEffect(() => {
+    history.push(`/about/projects`);
+
     window.data_hub = {
       page_type: "about",
       page_name: "Portfolio - Projects",
@@ -46,6 +58,8 @@ export default function Projects() {
       form_message: "",
       events: window.data_hub.events || [],
     };
+
+    datalayerPush("virtual_page_view", window.data_hub.site_section);
   }, []);
 
   return (
@@ -66,16 +80,16 @@ export default function Projects() {
                   <h1>Projects</h1>
                 </header>
                 <main className={"main-wrapper"}>
-                  <LgThumbNail
+                  <LgThumbnail
                     dataFromThumbnail={thumbnailData}
                     closeLgThumbnail={handleCloseLgThumbnail}
                   />
                   <section className={"elements-wrapper"}>
                     <ThumbnailMatrix thumbnails={projects} getData={getData} />
                     {/* {projects.map((project) => {
-                            //data is exported before reaching ThumbNail as ThumbNail will accept data from multiple sources - therefore must be generic.
+                            //data is exported before reaching Thumbnail as Thumbnail will accept data from multiple sources - therefore must be generic.
                             return (
-                              <ThumbNail
+                              <Thumbnail
                                 key={project.key}
                                 id={project.id}
                                 type={project.type}
@@ -109,8 +123,8 @@ export default function Projects() {
                     <ThumbnailMatrix thumbnails={projects} getData={getData} />
 
                     {/* {projects.map((project) => (
-                        //data is exported before reaching ThumbNail as ThumbNail will accept data from multiple sources - therefore must be generic.
-                        <ThumbNail
+                        //data is exported before reaching Thumbnail as Thumbnail will accept data from multiple sources - therefore must be generic.
+                        <Thumbnail
                           key={project.key}
                           id={project.id}
                           type={project.type}

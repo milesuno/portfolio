@@ -1,6 +1,7 @@
 .tech-banner {
   display: flex;
   width: 100vw;
+  margin: 30px 0;
   /* max-width: 1024px; */
-  overflow: scroll;
+  /* overflow: scroll; */
 }

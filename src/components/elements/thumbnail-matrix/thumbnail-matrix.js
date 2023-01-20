@@ -1,5 +1,5 @@
 import { React, useState, useEffect } from "react";
-import ThumbNail from "../thumbnail/thumbnail";
+import Thumbnail from "../thumbnail/thumbnail";
 import { Container, Row, Col } from "react-bootstrap";
 
 // const thumbnail-matrix = () => {
@@ -32,7 +32,7 @@ export default function ThumbnailMatrix({ thumbnails, getData }) {
     <>
       {thumbnails.map((thumbnail) => {
         return (
-          <ThumbNail
+          <Thumbnail
             key={thumbnail.key}
             id={thumbnail.id}
             type={thumbnail.type}

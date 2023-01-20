@@ -29,6 +29,11 @@
 .enquiries-form {
   display: flex;
   flex-direction: column;
+  width: 100%;
+}
+
+.enquiries-form > button {
+  width: 100%;
 }
 
 .enquiries-content {
@@ -41,7 +46,7 @@
 }
 
 .message {
-  width: -webkit-fill-available;
+  width: 100%;
   resize: vertical;
 }
 
@@ -56,6 +61,7 @@
 }
 
 .email-wrapper,
+.message-wrapper,
 .email-wrapper > .email {
   width: 100%;
 }

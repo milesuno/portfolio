@@ -1,4 +1,5 @@
 import { React, useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import Helmet from "react-helmet";
 import vid from "../../../landing-video/Pexels Videos 2699.mp4";
 import "./landing-page.css";
@@ -11,11 +12,19 @@ import ContactMe from "../contact-me/contact-me";
 export default function LandingPage() {
   const [navSelection, setNavSelection] = useState("");
 
+  function datalayerPush(eventType, title) {
+    window.dataLayer.push({
+      event: eventType,
+      pageTitle: title,
+      pageURL: window.location.href,
+    });
+  }
+
   useEffect(() => {
     window.data_hub = {
       page_type: "home",
       page_name: "Gideon Miles Oluku - Portfolio",
-      site_section: "home",
+      site_section: "landing",
       nav_selection: "",
       social_nav_selection: "",
       language: window.navigator.language,
@@ -30,6 +39,8 @@ export default function LandingPage() {
       form_message: "",
       events: window.data_hub.events || [],
     };
+
+    datalayerPush("virtual_page_view", window.data_hub.site_section);
   }, []);
 
   return (
@@ -43,15 +54,19 @@ export default function LandingPage() {
         <NavBar />
         <main className="landing-page__main-wrapper">
           {vid ? (
-            <video
-              className="landing-page__page-video"
-              src={vid}
-              muted
-              autoPlay
-              loop
-            />
+            <Link to="/about">
+              <video
+                className="landing-page__page-video"
+                src={vid}
+                muted
+                autoPlay
+                loop
+              />
+            </Link>
           ) : (
-            <img className="landing-page__loader-img" src={landingPageBG} />
+            <Link to="/about">
+              <img className="landing-page__loader-img" src={landingPageBG} />
+            </Link>
           )}
         </main>
       </div>

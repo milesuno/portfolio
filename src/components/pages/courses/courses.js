@@ -1,9 +1,10 @@
 import React, { Component, useState, useEffect } from "react";
 import Helmet from "react-helmet";
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
 import NavBar from "../../elements/navbar/nav-bar";
-import ThumbNail from "../../elements/thumbnail/thumbnail";
-import LgThumbNail from "../../elements/lg-thumbnail/lg-thumbnail";
+import Thumbnail from "../../elements/thumbnail/thumbnail";
+import LgThumbnail from "../../elements/lg-thumbnail/lg-thumbnail";
 import FooterNav from "../../elements/footer-nav/footer-nav";
 
 import "../../../style-sheets/portfolio.css";
@@ -14,8 +15,19 @@ export default function Courses() {
   const [thumbnailData, setThumbnailData] = useState(null);
   const [courses, setCourses] = useState([...data]);
   const [imgIndex, setImgIndex] = useState(null);
+  const history = useHistory();
+  
+  function datalayerPush(eventType, title) {
+    window.dataLayer.push({
+      event: eventType,
+      pageTitle: title,
+      pageURL: window.location.href,
+    });
+  }
 
   useEffect(() => {
+    history.push(`/about/education`);
+
     window.data_hub = {
       page_type: "about",
       page_name: "Portfolio - Courses",
@@ -34,6 +46,8 @@ export default function Courses() {
       form_message: "",
       events: window.data_hub.events || [],
     };
+
+    datalayerPush("virtual_page_view", window.data_hub.site_section);
   }, []);
 
   function getData(data) {
@@ -65,14 +79,14 @@ export default function Courses() {
                 <h1>Courses</h1>
               </header>
               <main className={"main-wrapper"}>
-                <LgThumbNail
+                <LgThumbnail
                   dataFromThumbnail={thumbnailData}
                   closeLgThumbnail={handleCloseLgThumbnail}
                 />
                 <section className={"elements-wrapper"}>
                   {courses.map((course) => (
-                    //data is exported before reaching ThumbNail as ThumbNail will accept data from multiple sources - therefore must be generic.
-                    <ThumbNail
+                    //data is exported before reaching Thumbnail as Thumbnail will accept data from multiple sources - therefore must be generic.
+                    <Thumbnail
                       key={course.key}
                       id={course.id}
                       type={course.type}
@@ -102,8 +116,8 @@ export default function Courses() {
               <main className={"main-wrapper"}>
                 <section className={"elements-wrapper"}>
                   {courses.map((course) => (
-                    //data is exported before reaching ThumbNail as ThumbNail will accept data from multiple sources - therefore must be generic.
-                    <ThumbNail
+                    //data is exported before reaching Thumbnail as Thumbnail will accept data from multiple sources - therefore must be generic.
+                    <Thumbnail
                       key={course.key}
                       id={course.id}
                       type={course.type}

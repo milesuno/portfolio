@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Helmet from "react-helmet";
-import ThumbNail from "../../elements/thumbnail/thumbnail";
-import LgThumbNail from "../../elements/lg-thumbnail/lg-thumbnail";
+import Thumbnail from "../../elements/thumbnail/thumbnail";
+import LgThumbnail from "../../elements/lg-thumbnail/lg-thumbnail";
 import NavBar from "../../elements/navbar/nav-bar";
 
 import "../../../style-sheets/portfolio.css";
@@ -13,7 +13,7 @@ class UXDesigns extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      //State holds all UX the data for the <ThumbNail /> component. This is passed as a Prop.
+      //State holds all UX the data for the <Thumbnail /> component. This is passed as a Prop.
       selected: 0,
       dataFromThumbnail: "",
       ux: data,
@@ -52,15 +52,15 @@ class UXDesigns extends Component {
                 <main className={"main-wrapper"}>
                   <h1>UX Designs</h1>
                   <h3>2019</h3>
-                  <LgThumbNail
+                  <LgThumbnail
                     dataFromThumbnail={dataFromThumbnail}
                     closeLgThumbnail={this.handleCloseLgThumbnail}
                   />
                   <section className={"elements-wrapper"}></section>
                   <section className={"elements-wrapper"}>
                     {ux.map((ux) => (
-                      //data is exported before reaching ThumbNail as ThumbNail will accept data from multiple sources - therefore must be generic.
-                      <ThumbNail
+                      //data is exported before reaching Thumbnail as Thumbnail will accept data from multiple sources - therefore must be generic.
+                      <Thumbnail
                         key={ux.key}
                         id={ux.id}
                         type={ux.type}
@@ -91,8 +91,8 @@ class UXDesigns extends Component {
                   <h3>2019</h3>
                   <section className={"elements-wrapper"}>
                     {ux.map((ux) => (
-                      //data is exported before reaching ThumbNail as ThumbNail will accept data from multiple sources - therefore must be generic.
-                      <ThumbNail
+                      //data is exported before reaching Thumbnail as Thumbnail will accept data from multiple sources - therefore must be generic.
+                      <Thumbnail
                         key={ux.key}
                         id={ux.id}
                         type={ux.type}

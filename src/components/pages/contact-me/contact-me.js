@@ -9,9 +9,18 @@ import ContactForm from "../../elements/contact-form/contact-form";
 import CV from "./../../../data/Gideon Miles Oluku - cv7.pdf";
 import "./contact-me.css";
 
+function datalayerPush(eventType, title) {
+  window.dataLayer.push({
+    event: eventType,
+    pageTitle: title,
+    pageURL: window.location.href,
+  });
+}
+
 class ContactMe extends Component {
   componentDidMount() {
     // let data_hub = data_hub || {};
+    
     window.data_hub = {
       page_type: "contact",
       page_name: "Portfolio - Contact",
@@ -30,6 +39,8 @@ class ContactMe extends Component {
       form_message: "",
       events: window.data_hub.events || [],
     };
+
+    datalayerPush("virtual_page_view", window.data_hub.site_section);
   }
 
   render() {

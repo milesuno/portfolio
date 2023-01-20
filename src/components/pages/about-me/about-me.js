@@ -1,9 +1,9 @@
 import React, { Component, useState, useEffect } from "react";
 import Helmet from "react-helmet";
 import NavBar from "../../elements/navbar/nav-bar";
-import ThumbNail from "../../elements/thumbnail/thumbnail";
+import Thumbnail from "../../elements/thumbnail/thumbnail";
 import ThumbnailMatrix from "../../elements/thumbnail-matrix/thumbnail-matrix";
-// import LgThumbNail from "../../lg-thumbnail/lg-thumbnail";
+// import LgThumbnail from "../../lg-thumbnail/lg-thumbnail";
 import SocialMediaNav from "../../elements/social-media-nav/social-media-nav";
 
 import img from "../../../data/git-profile-img.jpg";
@@ -11,21 +11,50 @@ import "../../../style-sheets/portfolio.css";
 import "./about-me.css";
 // import "../../"
 import FooterNav from "../../elements/footer-nav/footer-nav";
-import techStack from "../../../data/skill-images";
+import techStackData from "../../../data/skill-images";
 
 import projectData from "../../../data/project-data";
 import courseData from "../../../data/course-data.json";
 import projects from "../../../data/project-data";
 import ExperienceCard from "../../elements/experience-card/experience-card";
 import TechBanner from "../../elements/tech-banner/tech-banner";
-import LgThumbNail from "../../elements/lg-thumbnail/lg-thumbnail";
+import LgThumbnail from "../../elements/lg-thumbnail/lg-thumbnail";
+import { useHistory } from "react-router-dom";
+
+function datalayerPush(eventName, scroll) {
+  if (eventName === "virtual_page_view") {
+    window.dataLayer.push({
+      event: eventName,
+      pageTitle: window.data_hub.site_section,
+      section: window.data_hub.site_section,
+      pageURL: window.location.href,
+    });
+  }
+
+  if (eventName === "virtual_content_scroll") {
+    window.dataLayer.push({
+      event: eventName,
+      content_name: "education",
+      scroll_percentage: scroll,
+      pageURL: window.location.href,
+    });
+  }
+}
+datalayerPush("virtual_page_view");
 
 export default function AboutMe() {
   const [projects, setProjects] = useState([...projectData]);
+  const [projectsScroll, setProjectsScroll] = useState(0);
+
   const [education, setEducation] = useState([...courseData]);
-  const [techStack, setTechStack] = useState([]);
+  const [educationScroll, setEducationScroll] = useState(0);
+
+  const [techStack, setTechStack] = useState([...techStackData]);
+  const [techStackScroll, setTechStackScroll] = useState(0);
+
   const [thumbnailSelected, setThumbnailSelected] = useState(false);
   const [thumbnailData, setThumbnailData] = useState(null);
+  const history = useHistory();
 
   function getData(data) {
     //Gets data on specified Thumbnail and sends data to be rendered as Lg-Thumbnail
@@ -42,8 +71,29 @@ export default function AboutMe() {
     setThumbnailSelected(update);
   }
 
+  function verticalScrollHandler(e) {
+    let scroll_25 = e.target.scrollTopMax / 4,
+      scroll_50 = e.target.scrollTopMax / 2,
+      scroll_75 = (e.target.scrollTopMax / 4) * 3,
+      scroll_100 = e.target.scrollTopMax;
+
+    console.log({ scroll_25, scroll_50, scroll_75, scroll_100 });
+
+    if (e.target.scrollTop >= scroll_25 && e.target.scrollTop <= scroll_50)
+      setEducationScroll(25);
+
+    if (e.target.scrollTop >= scroll_50 && e.target.scrollTop <= scroll_75)
+      setEducationScroll(50);
+
+    if (e.target.scrollTop >= scroll_75 && e.target.scrollTop <= scroll_100)
+      setEducationScroll(75);
+
+    if (e.target.scrollTop === scroll_100) setEducationScroll(100);
+  }
+
   useEffect(() => {
-    console.log({ title: document.title });
+    if (!thumbnailSelected) history.push(`/about`);
+
     window.data_hub = {
       page_type: "about",
       page_name: "Portfolio - About Me",
@@ -62,7 +112,19 @@ export default function AboutMe() {
       form_message: "",
       events: window.data_hub.events || [],
     };
-  }, []);
+
+    if (educationScroll === 25)
+      datalayerPush("virtual_content_scroll", educationScroll);
+
+    if (educationScroll === 50)
+      datalayerPush("virtual_content_scroll", educationScroll);
+
+    if (educationScroll === 75)
+      datalayerPush("virtual_content_scroll", educationScroll);
+
+    if (educationScroll === 100)
+      datalayerPush("virtual_content_scroll", educationScroll);
+  }, [thumbnailSelected, educationScroll]);
 
   return (
     <>
@@ -141,14 +203,14 @@ export default function AboutMe() {
 				
 				<ContentArea/>
 				Loop: <ContentRow />
-					Loop: <ThumbNail />
+					Loop: <Thumbnail />
 
 				*/}
                   <section className="project-section__thumbnail-carosel">
                     {/* <ThumbnailMatrix thumbnails={projects} /> */}
                     {projects.map((project) => (
-                      //data is exported before reaching ThumbNail as ThumbNail will accept data from multiple sources - therefore must be generic.
-                      <ThumbNail
+                      //data is exported before reaching Thumbnail as Thumbnail will accept data from multiple sources - therefore must be generic.
+                      <Thumbnail
                         key={project.key}
                         id={project.id}
                         type={project.type}
@@ -308,13 +370,17 @@ export default function AboutMe() {
                   </div>
                 </div> */}
                 </div>
-                <div className="education__section">
+                <div
+                  className="education__section"
+                  name="Education"
+                  onScroll={verticalScrollHandler}
+                >
                   <h2 className="section_title">Education</h2>
                   <section className="education__section__experience-section">
                     {/* <ThumbnailMatrix thumbnails={projects} /> */}
                     <div className="experience-section__cards">
                       {education.map((exp) => (
-                        //data is exported before reaching ThumbNail as ThumbNail will accept data from multiple sources - therefore must be generic.
+                        //data is exported before reaching Thumbnail as Thumbnail will accept data from multiple sources - therefore must be generic.
                         <ExperienceCard
                           key={exp.key}
                           id={exp.id}
@@ -347,7 +413,7 @@ export default function AboutMe() {
                 <h1>About Me</h1> {/*Extract to background image banner*/}
               </header>
               <main className="main-wrapper">
-                <LgThumbNail
+                <LgThumbnail
                   dataFromThumbnail={thumbnailData}
                   closeLgThumbnail={handleCloseLgThumbnail}
                 />
@@ -410,14 +476,14 @@ export default function AboutMe() {
 				
 				<ContentArea/>
 				Loop: <ContentRow />
-					Loop: <ThumbNail />
+					Loop: <Thumbnail />
 
 				*/}
                   <section className="project-section__thumbnail-carosel">
                     {/* <ThumbnailMatrix thumbnails={projects} /> */}
                     {projects.map((project) => (
-                      //data is exported before reaching ThumbNail as ThumbNail will accept data from multiple sources - therefore must be generic.
-                      <ThumbNail
+                      //data is exported before reaching Thumbnail as Thumbnail will accept data from multiple sources - therefore must be generic.
+                      <Thumbnail
                         key={project.key}
                         id={project.id}
                         type={project.type}
@@ -583,7 +649,7 @@ export default function AboutMe() {
                     {/* <ThumbnailMatrix thumbnails={projects} /> */}
                     <div className="experience-section__cards">
                       {education.map((exp) => (
-                        //data is exported before reaching ThumbNail as ThumbNail will accept data from multiple sources - therefore must be generic.
+                        //data is exported before reaching Thumbnail as Thumbnail will accept data from multiple sources - therefore must be generic.
                         <ExperienceCard
                           key={exp.key}
                           id={exp.id}

@@ -80,12 +80,15 @@
 }
 
 .tech {
-  color: black;
+  color: #404040;
   display: flex;
   flex-direction: column-reverse;
   justify-content: center;
   align-items: center;
-  margin: 15px;
+  margin: 5px;
+  border: 1px solid #404040;
+  padding: 10px;
+  border-radius: 10px;
 }
 
 .tech-tile {
@@ -177,6 +180,21 @@
 
 .tech-stack__section {
   margin: 50px;
+}
+
+.tech-stack__section-wrapper {
+  position: relative;
+  overflow: scroll;
+  box-shadow: inset 0px 0px 10px rgba(100, 100, 100, 0.5);
+}
+
+.tech-stack__overlay {
+  background-color: #3e3e3e;
+  position: absolute;
+  width: 1950px;
+  height: 100%;
+  opacity: 0.3;
+  top: 0;
 }
 
 .project-section__thumbnail-carosel,

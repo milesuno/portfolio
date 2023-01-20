@@ -44,7 +44,8 @@ class App extends Component {
           {/* <Route path="/uxdesigns" exact component={UXDesigns} /> */}
           {/* <Route path="/development" exact component={DevProcess} /> */}
           <Route path="/contact" exact component={ContactMe} />
-
+          
+          <Route path="/about/:id" exact component={AboutMe} />
           <Route path="/projects/:id" exact component={SinglePageItem} />
           <Route path="/uxdesigns/:id" exact component={SinglePageItem} />
           <Route path="/courses/:id" exact component={SinglePageItem} />

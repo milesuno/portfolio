@@ -58,7 +58,9 @@ class NavBar extends Component {
   }
 
   setNavLayout = () => {
-    const navContent = document.querySelector(".nav-content");
+    const navContent =
+      document.querySelector(".nav-content") ||
+      document.querySelector(".nav-content-landing");
     const collaspedMenuBtn = document.querySelector(".collasped-menu-btn");
     if (window.innerWidth <= 450) {
       collaspedMenuBtn.style.setProperty("display", "flex");
@@ -74,7 +76,9 @@ class NavBar extends Component {
   //FIX: Short menu toggle display bug when resized
 
   showMenuButtons = () => {
-    const navContent = document.querySelector(".nav-content");
+    const navContent =
+      document.querySelector(".nav-content") ||
+      document.querySelector(".nav-content-landing");
     const navOverlay = document.querySelector(".nav-overlay");
     if (this.state.menuToggle) {
       navContent.classList.remove("hide");
@@ -108,90 +112,186 @@ class NavBar extends Component {
     // TODO: Set Sub Nav state in useEffect (onload)?
 
     return (
-      <nav className="nav">
-        {console.log({ selectedPage })}
-        <div className="nav__wrapper">
-          {console.log({ menuToggle })}
-          <div className="nav-overlay" onClick={this.showMenuButtons} />
-          <div className="short-nav">
-            <div className="logo-container">
-              <Link to="/">
-                <p className="logo-signature">Gideon Miles Oluku</p>
-              </Link>
-            </div>
-            <div className="collasped-menu-btn" onClick={this.showMenuButtons}>
-              {this.state.menuToggle ? (
-                <img src={menu} />
-              ) : (
-                <img src={closeMenu} />
-              )}
-            </div>
-            <ul className="nav-content">
-              <li className="nav-item nav-li">
-                <Link
-                  className="link lg-display button"
-                  to="/about"
-                  name="about"
+      // TODO: If Landing Page render landing-nav css classname
+      <>
+        {selectedPage === "/" ? (
+          <nav className="nav">
+            {console.log({ selectedPage })}
+            <div className="nav__wrapper">
+              {console.log({ menuToggle })}
+              <div className="nav-overlay" onClick={this.showMenuButtons} />
+              <div className="short-nav">
+                <div className="logo-container">
+                  <Link to="/">
+                    <p className="logo-signature">Gideon Miles Oluku</p>
+                  </Link>
+                </div>
+                <div
+                  className="collasped-menu-btn"
+                  onClick={this.showMenuButtons}
                 >
-                  ABOUT
-                </Link>
-              </li>
-              {/* <li className="nav-item nav-li">
+                  {this.state.menuToggle ? (
+                    <img src={menu} />
+                  ) : (
+                    <img src={closeMenu} />
+                  )}
+                </div>
+                <ul className="nav-content-landing">
+                  <li className="nav-item nav-li">
+                    <Link
+                      className="link lg-display button"
+                      to="/about"
+                      name="about"
+                    >
+                      ABOUT
+                    </Link>
+                  </li>
+                  {/* <li className="nav-item nav-li">
                 <Link className="link lg-display button" to="/blog" name="blog">
                   BLOG
                 </Link>
               </li> */}
-              <li className="nav-item nav-li">
-                <Link
-                  className="link lg-display button"
-                  to="/contact"
-                  name="about-me"
+                  <li className="nav-item nav-li">
+                    <Link
+                      className="link lg-display button"
+                      to="/contact"
+                      name="about-me"
+                    >
+                      CONTACT
+                    </Link>
+                  </li>
+                </ul>
+                <div
+                  className="scroll-top-btn"
+                  onClick={() =>
+                    window.scrollTo({
+                      top: 0,
+                      left: 0,
+                      behavior: "smooth",
+                    })
+                  }
                 >
-                  CONTACT
-                </Link>
-              </li>
-            </ul>
-            <div
-              className="scroll-top-btn"
-              onClick={() =>
-                window.scrollTo({
-                  top: 0,
-                  left: 0,
-                  behavior: "smooth",
-                })
-              }
-            >
-              <img src={scrollTopBtnIcon} />
+                  <img src={scrollTopBtnIcon} />
+                </div>
+              </div>
+              {/* TODO: Sub Nav should animate transition onto page */}
+              {selectedPage === "/about" ||
+              selectedPage === "/about/projects" ||
+              selectedPage === "/about/education" ? (
+                <ul className="nav__sub-nav fade">
+                  <li className="nav-item">
+                    <Link to="/about/projects">Projects</Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link to="/about/education">Education</Link>
+                  </li>
+                </ul>
+              ) : selectedPage === "/blog" ||
+                selectedPage === "/blog/web-analytics" ||
+                selectedPage === "/blog/web-dev" ? (
+                <ul className="nav__sub-nav fade">
+                  <li className="nav-item">
+                    <Link to="/blog/web-analytics">Web Analytics</Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link to="/blog/web-dev">Web Dev</Link>
+                  </li>
+                </ul>
+              ) : (
+                <></>
+              )}
             </div>
-          </div>
-          {/* TODO: Sub Nav should animate transition onto page */}
-          {selectedPage === "/about" ||
-          selectedPage === "/about/projects" ||
-          selectedPage === "/about/education" ? (
-            <ul className="nav__sub-nav fade">
-              <li className="nav-item">
-                <Link to="/about/projects">Projects</Link>
-              </li>
-              <li className="nav-item">
-                <Link to="/about/education">Education</Link>
-              </li>
-            </ul>
-          ) : selectedPage === "/blog" ||
-            selectedPage === "/blog/web-analytics" ||
-            selectedPage === "/blog/web-dev" ? (
-            <ul className="nav__sub-nav fade">
-              <li className="nav-item">
-                <Link to="/blog/web-analytics">Web Analytics</Link>
-              </li>
-              <li className="nav-item">
-                <Link to="/blog/web-dev">Web Dev</Link>
-              </li>
-            </ul>
-          ) : (
-            <></>
-          )}
-        </div>
-      </nav>
+          </nav>
+        ) : (
+          <nav className="nav">
+            {console.log({ selectedPage })}
+            <div className="nav__wrapper">
+              {console.log({ menuToggle })}
+              <div className="nav-overlay" onClick={this.showMenuButtons} />
+              <div className="short-nav">
+                <div className="logo-container">
+                  <Link to="/">
+                    <p className="logo-signature">Gideon Miles Oluku</p>
+                  </Link>
+                </div>
+                <div
+                  className="collasped-menu-btn"
+                  onClick={this.showMenuButtons}
+                >
+                  {this.state.menuToggle ? (
+                    <img src={menu} />
+                  ) : (
+                    <img src={closeMenu} />
+                  )}
+                </div>
+                <ul className="nav-content">
+                  <li className="nav-item nav-li">
+                    <Link
+                      className="link lg-display button"
+                      to="/about"
+                      name="about"
+                    >
+                      ABOUT
+                    </Link>
+                  </li>
+                  {/* <li className="nav-item nav-li">
+                <Link className="link lg-display button" to="/blog" name="blog">
+                  BLOG
+                </Link>
+              </li> */}
+                  <li className="nav-item nav-li">
+                    <Link
+                      className="link lg-display button"
+                      to="/contact"
+                      name="about-me"
+                    >
+                      CONTACT
+                    </Link>
+                  </li>
+                </ul>
+                <div
+                  className="scroll-top-btn"
+                  onClick={() =>
+                    window.scrollTo({
+                      top: 0,
+                      left: 0,
+                      behavior: "smooth",
+                    })
+                  }
+                >
+                  <img src={scrollTopBtnIcon} />
+                </div>
+              </div>
+              {/* TODO: Sub Nav should animate transition onto page */}
+              {selectedPage === "/about" ||
+              selectedPage === "/about/projects" ||
+              selectedPage === "/about/education" ? (
+                <ul className="nav__sub-nav fade">
+                  <li className="nav-item">
+                    <Link to="/about/projects">Projects</Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link to="/about/education">Education</Link>
+                  </li>
+                </ul>
+              ) : selectedPage === "/blog" ||
+                selectedPage === "/blog/web-analytics" ||
+                selectedPage === "/blog/web-dev" ? (
+                <ul className="nav__sub-nav fade">
+                  <li className="nav-item">
+                    <Link to="/blog/web-analytics">Web Analytics</Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link to="/blog/web-dev">Web Dev</Link>
+                  </li>
+                </ul>
+              ) : (
+                <></>
+              )}
+            </div>
+          </nav>
+        )}
+      </>
     );
   }
 }
