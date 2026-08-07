@@ -21,7 +21,7 @@ import TechBanner from "../../elements/tech-banner/tech-banner";
 import LgThumbnail from "../../elements/lg-thumbnail/lg-thumbnail";
 import { useHistory } from "react-router-dom";
 
-import CV from "../../../data/Gideon Miles Oluku - CV 2026.pdf";
+import CV from "../../../data/GMO-CV2026.pdf";
 
 function datalayerPush(eventName, scroll) {
   if (eventName === "virtual_page_view") {

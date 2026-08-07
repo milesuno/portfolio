@@ -5,7 +5,7 @@ import uxData from "../../../data/ux-data";
 import CourseData from "../../../data/course-data";
 // import aboutMeData from "../../data/about-me-data.json";
 import developeIcon from "./../../../data/page-btns/icons8-developer-50.png";
-import CV from "../../../data/Gideon Miles Oluku - CV 2026.pdf";
+import CV from "../../../data/GMO-CV2026.pdf";
 
 import "./footer-nav.css";
 import "./../navbar/nav-bar.css";
