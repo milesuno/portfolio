@@ -68,7 +68,7 @@ class ContactMe extends Component {
                     <h2>Email:</h2>
                     <p>Milesoluku@gmail.com</p>
                   </div>
-                  <a className="download" href={CV} target="#">
+                  <a className="download" href={"../../data/GMO-CV2026.pdf"} target="#">
                     <button className="button">View CV</button>
                   </a>
                 </div>

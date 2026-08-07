@@ -151,7 +151,7 @@ export default function AboutMe() {
                     <img className="about-me__img" src={img} />
                     <div className="about-me__social-media-nav">
                       {/* <SocialMediaNav /> */}
-                      <a className="download" href={CV} target="#">
+                      <a className="download" href={"../../data/GMO-CV2026.pdf"} target="#">
                         <button className="button">View CV</button>
                       </a>
                     </div>
@@ -422,7 +422,7 @@ export default function AboutMe() {
                     <img className="about-me__img" src={img} />
                     <div className="about-me__social-media-nav">
                       <SocialMediaNav />
-                      <a className="download" href={CV} target="#">
+                      <a className="download" href={"../../data/GMO-CV2026.pdf"} target="#">
                         <button className="button">View CV</button>
                       </a>
                     </div>
