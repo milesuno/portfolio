@@ -34,7 +34,7 @@ class FooterNav extends Component {
                 {/* <p>07783180169</p> */}
               </div>
 
-              <a className="download" href={"../../data/GMO-CV2026.pdf"} target="#">
+              <a className="download" href={CV} target="#">
                 <button className="button">View CV</button>
               </a>
             </div>

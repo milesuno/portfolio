@@ -6,7 +6,7 @@ import FooterNav from "../../elements/footer-nav/footer-nav";
 import SocialMediaNav from "../../elements/social-media-nav/social-media-nav";
 import ContactForm from "../../elements/contact-form/contact-form";
 
-import CV from "./../../../data/GMO-CV2026.pdf";
+import CV from "./../../../data/Gideon Miles Oluku - cv7.pdf";
 import "./contact-me.css";
 
 function datalayerPush(eventType, title) {
@@ -68,7 +68,7 @@ class ContactMe extends Component {
                     <h2>Email:</h2>
                     <p>Milesoluku@gmail.com</p>
                   </div>
-                  <a className="download" href={"../../data/GMO-CV2026.pdf"} target="#">
+                  <a className="download" href={CV} target="#">
                     <button className="button">View CV</button>
                   </a>
                 </div>
