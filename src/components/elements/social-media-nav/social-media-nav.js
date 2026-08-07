@@ -24,18 +24,27 @@ class SocialMediaNav extends Component {
       <>
         {!this.state.isFooter ? (
           <nav className="social-nav">
-            <a
+            {/* <a
               className="social-nav__btn"
               href="https://www.fiverr.com/milesoluku"
             >
               <img src={fiverr} />
+            </a> */}
+            <a
+              className="social-nav__btn"
+              href="mailto:milesoluku@gmail.com?subject=Portfolio Enquires"
+            >
+              <img
+                alt="svgImg"
+                src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4Igp3aWR0aD0iMzAiIGhlaWdodD0iMzAiCnZpZXdCb3g9IjAgMCAyMjYgMjI2IgpzdHlsZT0iIGZpbGw6IzAwMDAwMDsiPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0ibm9uemVybyIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIHN0cm9rZS1saW5lY2FwPSJidXR0IiBzdHJva2UtbGluZWpvaW49Im1pdGVyIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHN0cm9rZS1kYXNoYXJyYXk9IiIgc3Ryb2tlLWRhc2hvZmZzZXQ9IjAiIGZvbnQtZmFtaWx5PSJub25lIiBmb250LXdlaWdodD0ibm9uZSIgZm9udC1zaXplPSJub25lIiB0ZXh0LWFuY2hvcj0ibm9uZSIgc3R5bGU9Im1peC1ibGVuZC1tb2RlOiBub3JtYWwiPjxwYXRoIGQ9Ik0wLDIyNnYtMjI2aDIyNnYyMjZ6IiBmaWxsPSJub25lIj48L3BhdGg+PGcgZmlsbD0iIzY2NjY2NiI+PHBhdGggZD0iTTExMywyMi42Yy00OS45MjM0LDAgLTkwLjQsNDAuNDc2NiAtOTAuNCw5MC40YzAsNDkuOTIzNCA0MC40NzY2LDkwLjQgOTAuNCw5MC40YzQ5LjkyMzQsMCA5MC40LC00MC40NzY2IDkwLjQsLTkwLjRjMCwtNDkuOTIzNCAtNDAuNDc2NiwtOTAuNCAtOTAuNCwtOTAuNHpNOTAuNCwxNTguMmMtMjQuOTY1NDcsMCAtNDUuMiwtMjAuMjM0NTMgLTQ1LjIsLTQ1LjJjMCwtMjQuOTY1NDcgMjAuMjM0NTMsLTQ1LjIgNDUuMiwtNDUuMmMxMS43NTIsMCAyMi40NTY4Nyw0LjQ4OTg3IDMwLjQ4NzQsMTEuODQ5OTNsLTEwLjgwMjgsMTAuNTc2OGMtNS4yODA4NywtNC41ODAyNyAtMTIuMTUxMjcsLTcuMzYwMDcgLTE5LjY4NDYsLTcuMzYwMDdjLTE2LjY0MTEzLDAgLTMwLjEzMzMzLDEzLjQ5MjIgLTMwLjEzMzMzLDMwLjEzMzMzYzAsMTYuNjQxMTMgMTMuNDkyMiwzMC4xMzMzMyAzMC4xMzMzMywzMC4xMzMzM2MxNC45MjM1MywwIDI3LjI4NTczLC0xMC44NjMwNyAyOS42ODEzMywtMjUuMTA4NmgtMjkuNjgxMzN2LTE1LjA2NjY3aDQ0LjAxNzI3bDAuMjQ4NiwxLjAwMTkzYzAuNjAyNjcsMi45MjI5MyAwLjkzNDEzLDUuOTQzOCAwLjkzNDEzLDkuMDRjMCwyNC45NjU0NyAtMjAuMjM0NTMsNDUuMiAtNDUuMiw0NS4yek0xNzMuMjY2NjcsMTIwLjUzMzMzdjE1LjA2NjY3aC0xNS4wNjY2N3YtMTUuMDY2NjdoLTE1LjA2NjY3di0xNS4wNjY2N2gxNS4wNjY2N3YtMTUuMDY2NjdoMTUuMDY2Njd2MTUuMDY2NjdoMTUuMDY2Njd2MTUuMDY2Njd6Ij48L3BhdGg+PC9nPjwvZz48L3N2Zz4="
+              />
             </a>
-            <a className="social-nav__btn" href="">
+            {/* <a className="social-nav__btn" href="">
               <img src={linkedIn} />
-            </a>
-            <a className="social-nav__btn" href="">
+            </a> */}
+            {/* <a className="social-nav__btn" href="">
               <img src={youtube} />
-            </a>
+            </a> */}
             <a className="social-nav__btn" href="https://github.com/milesuno">
               <img src={github} />
             </a>
@@ -51,18 +60,18 @@ class SocialMediaNav extends Component {
                 src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4Igp3aWR0aD0iMzAiIGhlaWdodD0iMzAiCnZpZXdCb3g9IjAgMCAyMjYgMjI2IgpzdHlsZT0iIGZpbGw6IzAwMDAwMDsiPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0ibm9uemVybyIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIHN0cm9rZS1saW5lY2FwPSJidXR0IiBzdHJva2UtbGluZWpvaW49Im1pdGVyIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHN0cm9rZS1kYXNoYXJyYXk9IiIgc3Ryb2tlLWRhc2hvZmZzZXQ9IjAiIGZvbnQtZmFtaWx5PSJub25lIiBmb250LXdlaWdodD0ibm9uZSIgZm9udC1zaXplPSJub25lIiB0ZXh0LWFuY2hvcj0ibm9uZSIgc3R5bGU9Im1peC1ibGVuZC1tb2RlOiBub3JtYWwiPjxwYXRoIGQ9Ik0wLDIyNnYtMjI2aDIyNnYyMjZ6IiBmaWxsPSJub25lIj48L3BhdGg+PGcgZmlsbD0iIzY2NjY2NiI+PHBhdGggZD0iTTExMywyMi42Yy00OS45MjM0LDAgLTkwLjQsNDAuNDc2NiAtOTAuNCw5MC40YzAsNDkuOTIzNCA0MC40NzY2LDkwLjQgOTAuNCw5MC40YzQ5LjkyMzQsMCA5MC40LC00MC40NzY2IDkwLjQsLTkwLjRjMCwtNDkuOTIzNCAtNDAuNDc2NiwtOTAuNCAtOTAuNCwtOTAuNHpNOTAuNCwxNTguMmMtMjQuOTY1NDcsMCAtNDUuMiwtMjAuMjM0NTMgLTQ1LjIsLTQ1LjJjMCwtMjQuOTY1NDcgMjAuMjM0NTMsLTQ1LjIgNDUuMiwtNDUuMmMxMS43NTIsMCAyMi40NTY4Nyw0LjQ4OTg3IDMwLjQ4NzQsMTEuODQ5OTNsLTEwLjgwMjgsMTAuNTc2OGMtNS4yODA4NywtNC41ODAyNyAtMTIuMTUxMjcsLTcuMzYwMDcgLTE5LjY4NDYsLTcuMzYwMDdjLTE2LjY0MTEzLDAgLTMwLjEzMzMzLDEzLjQ5MjIgLTMwLjEzMzMzLDMwLjEzMzMzYzAsMTYuNjQxMTMgMTMuNDkyMiwzMC4xMzMzMyAzMC4xMzMzMywzMC4xMzMzM2MxNC45MjM1MywwIDI3LjI4NTczLC0xMC44NjMwNyAyOS42ODEzMywtMjUuMTA4NmgtMjkuNjgxMzN2LTE1LjA2NjY3aDQ0LjAxNzI3bDAuMjQ4NiwxLjAwMTkzYzAuNjAyNjcsMi45MjI5MyAwLjkzNDEzLDUuOTQzOCAwLjkzNDEzLDkuMDRjMCwyNC45NjU0NyAtMjAuMjM0NTMsNDUuMiAtNDUuMiw0NS4yek0xNzMuMjY2NjcsMTIwLjUzMzMzdjE1LjA2NjY3aC0xNS4wNjY2N3YtMTUuMDY2NjdoLTE1LjA2NjY3di0xNS4wNjY2N2gxNS4wNjY2N3YtMTUuMDY2NjdoMTUuMDY2Njd2MTUuMDY2NjdoMTUuMDY2Njd2MTUuMDY2Njd6Ij48L3BhdGg+PC9nPjwvZz48L3N2Zz4="
               />
             </a>
-            <a className="social-nav__btn" href="">
+            {/* <a className="social-nav__btn" href="">
               <img
                 alt="svgImg"
                 src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4Igp3aWR0aD0iMzAiIGhlaWdodD0iMzAiCnZpZXdCb3g9IjAgMCAyMjYgMjI2IgpzdHlsZT0iIGZpbGw6IzAwMDAwMDsiPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0ibm9uemVybyIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIHN0cm9rZS1saW5lY2FwPSJidXR0IiBzdHJva2UtbGluZWpvaW49Im1pdGVyIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHN0cm9rZS1kYXNoYXJyYXk9IiIgc3Ryb2tlLWRhc2hvZmZzZXQ9IjAiIGZvbnQtZmFtaWx5PSJub25lIiBmb250LXdlaWdodD0ibm9uZSIgZm9udC1zaXplPSJub25lIiB0ZXh0LWFuY2hvcj0ibm9uZSIgc3R5bGU9Im1peC1ibGVuZC1tb2RlOiBub3JtYWwiPjxwYXRoIGQ9Ik0wLDIyNnYtMjI2aDIyNnYyMjZ6IiBmaWxsPSJub25lIj48L3BhdGg+PGcgZmlsbD0iIzY2NjY2NiI+PHBhdGggZD0iTTE4MC44LDMwLjEzMzMzaC0xMzUuNmMtOC4zMjQzMywwIC0xNS4wNjY2Nyw2Ljc0MjMzIC0xNS4wNjY2NywxNS4wNjY2N3YxMzUuNmMwLDguMzI0MzMgNi43NDIzMywxNS4wNjY2NyAxNS4wNjY2NywxNS4wNjY2N2gxMzUuNmM4LjMyNDMzLDAgMTUuMDY2NjcsLTYuNzQyMzMgMTUuMDY2NjcsLTE1LjA2NjY3di0xMzUuNmMwLC04LjMyNDMzIC02Ljc0MjMzLC0xNS4wNjY2NyAtMTUuMDY2NjcsLTE1LjA2NjY3ek04Mi41MjAxMywxNjUuNzMzMzNoLTIyLjIyMzMzdi03MS41MDY0aDIyLjIyMzMzek03MS4xODI0Nyw4NC4wMDQyYy03LjE2NDIsMCAtMTIuOTU3MzMsLTUuODA4MiAtMTIuOTU3MzMsLTEyLjk1NzMzYzAsLTcuMTQ5MTMgNS44MDA2NywtMTIuOTQ5OCAxMi45NTczMywtMTIuOTQ5OGM3LjE0MTYsMCAxMi45NDk4LDUuODA4MiAxMi45NDk4LDEyLjk0OThjMCw3LjE0OTEzIC01LjgwODIsMTIuOTU3MzMgLTEyLjk0OTgsMTIuOTU3MzN6TTE2NS43NjM0NywxNjUuNzMzMzNoLTIyLjIwODI3di0zNC43NzM4N2MwLC04LjI5NDIgLTAuMTUwNjcsLTE4Ljk2MTQgLTExLjU0ODYsLTE4Ljk2MTRjLTExLjU2MzY3LDAgLTEzLjM0MTUzLDkuMDMyNDcgLTEzLjM0MTUzLDE4LjM1ODczdjM1LjM3NjUzaC0yMi4yMDgyN3YtNzEuNTA2NGgyMS4zMTkzM3Y5Ljc3MDczaDAuMzAxMzNjMi45NjgxMywtNS42MTk4NyAxMC4yMTUyLC0xMS41NDg2IDIxLjAyNTUzLC0xMS41NDg2YzIyLjUwMjA3LDAgMjYuNjYwNDcsMTQuODEwNTMgMjYuNjYwNDcsMzQuMDY1NzN6Ij48L3BhdGg+PC9nPjwvZz48L3N2Zz4="
               />
-            </a>
-            <a className="social-nav__btn" href="">
+            </a> */}
+            {/* <a className="social-nav__btn" href="">
               <img
                 alt="svgImg"
                 src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4Igp3aWR0aD0iMzAiIGhlaWdodD0iMzAiCnZpZXdCb3g9IjAgMCAyMjYgMjI2IgpzdHlsZT0iIGZpbGw6IzAwMDAwMDsiPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0ibm9uemVybyIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIHN0cm9rZS1saW5lY2FwPSJidXR0IiBzdHJva2UtbGluZWpvaW49Im1pdGVyIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHN0cm9rZS1kYXNoYXJyYXk9IiIgc3Ryb2tlLWRhc2hvZmZzZXQ9IjAiIGZvbnQtZmFtaWx5PSJub25lIiBmb250LXdlaWdodD0ibm9uZSIgZm9udC1zaXplPSJub25lIiB0ZXh0LWFuY2hvcj0ibm9uZSIgc3R5bGU9Im1peC1ibGVuZC1tb2RlOiBub3JtYWwiPjxwYXRoIGQ9Ik0wLDIyNnYtMjI2aDIyNnYyMjZ6IiBmaWxsPSJub25lIj48L3BhdGg+PGcgZmlsbD0iIzY2NjY2NiI+PHBhdGggZD0iTTExMywzMC4xMzMzM2MtMzEuNTM0NTMsMCAtNzIuNDY0MTksNy45MDExNyAtNzIuNDY0MTksNy45MDExN2wtMC4xMDI5OSwwLjExNzcxYy0xNC4zNjI0OCwyLjI5NyAtMjUuMzY2MTUsMTQuNjM4NTYgLTI1LjM2NjE1LDI5LjY0Nzc5djQ1LjJ2MC4wMTQ3MXY0NS4xODUyOXYwLjAxNDcxYzAuMDI4OTUsMTQuODA3ODIgMTAuODEyNTksMjcuNDAwMTcgMjUuNDM5NzEsMjkuNzA2NjRsMC4wMjk0MywwLjA0NDE1YzAsMCA0MC45Mjk2Niw3LjkxNTg4IDcyLjQ2NDE5LDcuOTE1ODhjMzEuNTM0NTMsMCA3Mi40NjQyLC03LjkxNTg4IDcyLjQ2NDIsLTcuOTE1ODhsMC4wMTQ3MSwtMC4wMTQ3MWMxNC42NDM5NSwtMi4zMDE3MyAyNS40Mzg3OCwtMTQuOTEyMzQgMjUuNDU0NDMsLTI5LjczNjA3di0wLjAxNDcxdi00NS4xODUyOXYtMC4wMTQ3MXYtNDUuMmMtMC4wMjE3MywtMTQuODEzNCAtMTAuODA3MSwtMjcuNDE0MDEgLTI1LjQzOTcxLC0yOS43MjEzNWwtMC4wMjk0MywtMC4wNDQxNGMwLDAgLTQwLjkyOTY2LC03LjkwMTE3IC03Mi40NjQyLC03LjkwMTE3ek05MC40LDc4LjMzNDlsNjAuMjY2NjcsMzQuNjY1MWwtNjAuMjY2NjcsMzQuNjY1MXoiPjwvcGF0aD48L2c+PC9nPjwvc3ZnPg=="
               />
-            </a>
+            </a> */}
             <a className="social-nav__btn" href="https://github.com/milesuno">
               <img
                 alt="svgImg"

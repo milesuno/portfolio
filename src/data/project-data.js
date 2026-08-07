@@ -10,6 +10,23 @@ import barteranythingImg08 from "./projects/barteranything/barteranything-dashbo
 import barteranythingImg09 from "./projects/barteranything/barteranything-dashboard-overview.jpg";
 import barteranythingImg10 from "./projects/barteranything/barteranything-dashboard-reviews.jpg";
 
+import baImg01 from "./projects/ba/ba-1.png";
+import baImg02 from "./projects/ba/ba-2.png";
+import baImg03 from "./projects/ba/ba-3.png";
+
+import vfImg01 from "./projects/vf/vf-1.png";
+import vfImg02 from "./projects/vf/vf-2.png";
+import vfImg03 from "./projects/vf/vf-3.png";
+
+import hmuImg01 from "./projects/hmu/hmu-1.png";
+import hmuImg02 from "./projects/hmu/hmu-2.png";
+import hmuImg03 from "./projects/hmu/hmu-3.png";
+import hmuImg04 from "./projects/hmu/hmu-4.png";
+
+import bhmImg01 from "./projects/bhm/bhm-1.png";
+import bhmImg02 from "./projects/bhm/bhm-2.png";
+import bhmImg03 from "./projects/bhm/bhm-3.png";
+
 import cyfglossaryImg00 from "./projects/cyf-glossary/cyf-glossary-logo.jpg";
 import cyfglossaryImg01 from "./projects/cyf-glossary/cyf-glossary-landingpage.jpg";
 import cyfglossaryImg02 from "./projects/cyf-glossary/cyf-glossary-signup.jpg";
@@ -52,21 +69,65 @@ const projects = [
   {
     key: 1,
     id: "p1",
-    type: "projects",
+    type: "app",
+    name: "HitMeUp (HMU)",
+    img: [hmuImg01, hmuImg02, hmuImg03, hmuImg04],
+    desc: "HitMeUp (HMU) is a Social/Dating Platform. User's create profiles and negotiate terms for a value trade of any skill, service or Item they are offering.",
+    short_desc: "Social/Dating Platform",
+    role: "Creative Director, UX Designer, Project Management.",
+    tech: "NextJS, Tailwind, MongoDB, OAuth, Stripe",
+    challenge: "Cross Platform compatiability",
+    solution:
+      "Added requried IOS events for effective cross platform capabilities",
+    source: {
+      url: "https://hitmeup.live",
+      github: "",
+      trello: "",
+    },
+  },
+  {
+    key: 2,
+    id: "p2",
+    type: "app",
+    name: "Business Health Metrics",
+    img: [bhmImg01, bhmImg02, bhmImg03],
+    desc: "Business Health Metrics is a Web Analytics Development Platform. User's can utilise available tools to help develop their Web Analytics. They can also book for Analytics services.",
+    short_desc: "Web Analytics Development Platform",
+    role: "Creative Director, UX Designer, Project Management.",
+    tech: "React, CSS, JavaScript, MongoDB, AI Agent.",
+    challenge: "Integrating AI Systems into the platform",
+    solution: "Finding practical use case for Agentic Systems: Articles",
+    source: {
+      url: "https://businesshealthmetrics.com",
+      github: "",
+      trello: "",
+    },
+  },
+  {
+    key: 3,
+    id: "p3",
+    type: "app",
+    name: "Ventures Foundry",
+    img: [vfImg01, vfImg02, vfImg03],
+    desc: "Ventures Foundry is a Web Development and Branding Platform.  User's can utilise available tools to help develop their Web Apps. They can also book for Web Development services.",
+    short_desc: "Web Development and Branding Platform",
+    role: "Creative Director, UX Designer, Project Management.",
+    tech: "HTML, CSS, JavaScript, PHP, SQL.",
+    challenge: "Syncing up schedules with remote team mates.",
+    solution:
+      "Practiced agile principles to maximise the effectiveness of collabrative work.",
+    source: {
+      url: "https://venturesfoundry.com",
+      github: "",
+      trello: "",
+    },
+  },
+  {
+    key: 4,
+    id: "p4",
+    type: "app",
     name: "BarterAnything",
-    img: [
-      barteranythingImg01,
-      barteranythingImg02,
-      barteranythingImg03,
-      barteranythingImg04,
-      barteranythingImg05,
-      barteranythingImg06,
-      barteranythingImg07,
-      barteranythingImg08,
-      barteranythingImg09,
-      barteranythingImg10,
-      barteranythingImg00,
-    ],
+    img: [baImg01, baImg02, baImg03],
     desc: "BarterAnything is a Cashless Ecommerce Platform. User's create profiles and negotiate terms for a value trade of any skill, service or Item they are offering.",
     short_desc: "Ecommerce Trading Platform",
     role: "Creative Director, UX Designer, Project Management.",
@@ -81,9 +142,81 @@ const projects = [
     },
   },
   {
-    key: 2,
-    id: "p2",
-    type: "projects",
+    key: 5,
+    id: "p5",
+    type: "analytics",
+    name: "HitMeUp (HMU)",
+    img: [hmuImg01, hmuImg02, hmuImg03, hmuImg04],
+    desc: "HitMeUp (HMU) was set up with a complete Analytics suite - allowing: Click Traffic, Product Analytics, User Journey Analysis",
+    short_desc: "Social/Dating Platform",
+    role: "Head Analytics Architect",
+    tech: "GTM, GA4, PostHog, HotJar",
+    challenge: "",
+    solution: "",
+    source: {
+      url: "https://hitmeup.live/",
+      github: "",
+      trello: "",
+    },
+  },
+  {
+    key: 6,
+    id: "p6",
+    type: "analytics",
+    name: "Business Health Metrics",
+    img: [bhmImg01, bhmImg02, bhmImg03],
+    desc: "Business Health Metrics was set up with a complete Analytics suite - allowing: Click Traffic, Product Analytics, User Journey Analysis",
+    short_desc: "Ecommerce Trading Platform",
+    role: "Head Analytics Architect",
+    tech: "GTM, GA4, PostHog, HotJar",
+    challenge: "",
+    solution: "",
+    source: {
+      url: "https://barteranything.com/",
+      github: "",
+      trello: "",
+    },
+  },
+  {
+    key: 7,
+    id: "p7",
+    type: "analytics",
+    name: "Ventures Foundry",
+    img: [vfImg01, vfImg02, vfImg03],
+    desc: "Venture Foundry was set up with a complete Analytics suite - allowing: Click Traffic, Product Analytics, User Journey Analysis",
+    short_desc: "Web Development and Branding Platform",
+    role: "Head Analytics Architect",
+    tech: "GTM, GA4, PostHog, HotJar",
+    challenge: "",
+    solution: "",
+    source: {
+      url: "https://barteranything.com/",
+      github: "",
+      trello: "",
+    },
+  },
+  {
+    key: 8,
+    id: "p8",
+    type: "analytics",
+    name: "BarterAnything",
+    img: [baImg01, baImg02, baImg03],
+    desc: "BarterAnything is a Cashless Ecommerce Platform. User's create profiles and negotiate terms for a value trade of any skill, service or Item they are offering.",
+    short_desc: "Ecommerce Trading Platform",
+    role: "Head Analytics Architect",
+    tech: "GTM, GA4, PostHog, HotJar",
+    challenge: "",
+    solution: "",
+    source: {
+      url: "https://barteranything.com/",
+      github: "",
+      trello: "",
+    },
+  },
+  {
+    key: 10,
+    id: "p10",
+    type: "demo",
     name: "CYF Glossary",
     img: [
       cyfglossaryImg01,
@@ -111,7 +244,7 @@ const projects = [
   {
     key: 14,
     id: "p14",
-    type: "projects",
+    type: "demo",
     name: "Example Homes",
     img: [examplehomesImg00, examplehomesImg01, examplehomesImg02],
     desc: "Example Homes is an dynamic frontend prototype for a fictional furniture company.",
@@ -129,7 +262,7 @@ const projects = [
   {
     key: 13,
     id: "p13",
-    type: "projects",
+    type: "demo",
     name: "Text to Speech Synthesis",
     img: [texttospeechImg00],
     desc: "Text to Speech allows users to select a variety of voices to speak the text they have submitted.",
@@ -147,7 +280,7 @@ const projects = [
   {
     key: 7,
     id: "p7",
-    type: "projects",
+    type: "demo",
     name: "Drum Kit",
     img: [drumkitImg00],
     desc: "Drumkit allows users to play various drumkit sounds on there keyboard, mouse or touch. Users can record there creations and play them back on demand.",
@@ -165,7 +298,7 @@ const projects = [
   {
     key: 9,
     id: "p9",
-    type: "projects",
+    type: "demo",
     name: "Paint App",
     img: [paintImg00],
     desc: "Paint App allows users to paint on a HTML canvas. Users can pick the stroke style, size and colour.",
@@ -183,7 +316,7 @@ const projects = [
   {
     key: 10,
     id: "p10",
-    type: "projects",
+    type: "demo",
     name: "To Do Bot",
     img: [todobotImg00],
     desc: "To do bot is an app that allows users to add and delete items to a list.",
@@ -201,7 +334,7 @@ const projects = [
   {
     key: 11,
     id: "p11",
-    type: "projects",
+    type: "demo",
     name: "Speech Detection",
     img: [speechtotextImg00],
     desc: "Speech Detection uses the users microphone to capture their speech and display it on the page.",
@@ -219,7 +352,7 @@ const projects = [
   {
     key: 12,
     id: "p12",
-    type: "projects",
+    type: "demo",
     name: "Geolocation App",
     img: [geolocationImg00],
     desc: "Geolocation allows users to get realtime coordinates on their orientation and travel speed.",
@@ -237,7 +370,7 @@ const projects = [
   {
     key: 3,
     id: "p3",
-    type: "projects",
+    type: "demo",
     name: "See Your Future",
     img: [
       seeyourfutureImg00,
@@ -261,7 +394,7 @@ const projects = [
   {
     key: 8,
     id: "p8",
-    type: "projects",
+    type: "demo",
     name: "City Searcher",
     img: [citysearcherimg00],
     desc: "City Search allow users to search for Cities and States in america.",
@@ -279,7 +412,7 @@ const projects = [
   {
     key: 4,
     id: "p4",
-    type: "projects",
+    type: "demo",
     name: "Weather App",
     img: [weatherappImg00],
     desc: "The Weather App fetchs live data from the Openweathermap api. It displays the current weather as well as the weather over a 24 hour window.",
@@ -297,7 +430,7 @@ const projects = [
   {
     key: 5,
     id: "p5",
-    type: "projects",
+    type: "demo",
     name: "Hotel React",
     img: [hotelreactImg00],
     desc: "Hotel React is a product landing page that allows users to: Link off to tourist locations, search for bookings based on name or room ID, Add orders a basket and submit their order.",
@@ -315,7 +448,7 @@ const projects = [
   {
     key: 6,
     id: "p6",
-    type: "projects",
+    type: "demo",
     name: "TV Show Info",
     img: [tvshowImg00],
     desc: "TV Show Info is a page that allows users to: Filter shows (Fetchs from Maze API), Jump to Episode in list.",

@@ -8,7 +8,7 @@ import LgThumbnail from "../../elements/lg-thumbnail/lg-thumbnail";
 import FooterNav from "../../elements/footer-nav/footer-nav";
 
 import "../../../style-sheets/portfolio.css";
-import data from "../../../data/course-data.json";
+import data from "../../../data/course-data";
 
 export default function Courses() {
   const [selected, setSelected] = useState(false);
@@ -16,7 +16,7 @@ export default function Courses() {
   const [courses, setCourses] = useState([...data]);
   const [imgIndex, setImgIndex] = useState(null);
   const history = useHistory();
-  
+
   function datalayerPush(eventType, title) {
     window.dataLayer.push({
       event: eventType,
@@ -84,23 +84,26 @@ export default function Courses() {
                   closeLgThumbnail={handleCloseLgThumbnail}
                 />
                 <section className={"elements-wrapper"}>
-                  {courses.map((course) => (
-                    //data is exported before reaching Thumbnail as Thumbnail will accept data from multiple sources - therefore must be generic.
-                    <Thumbnail
-                      key={course.key}
-                      id={course.id}
-                      type={course.type}
-                      img={course.img}
-                      name={course.name}
-                      desc={course.desc}
-                      role={course.role}
-                      tech={course.tech}
-                      challenge={course.challenge}
-                      solution={course.solution}
-                      source={course.source}
-                      getData={getData}
-                    />
-                  ))}
+                  <div className="thumb-nail__wrapper">
+                    {courses.map((course) => (
+                      //data is exported before reaching Thumbnail as Thumbnail will accept data from multiple sources - therefore must be generic.
+                      <Thumbnail
+                        key={course.key}
+                        id={course.id}
+                        type={course.type}
+                        img={course.img}
+                        name={course.name}
+                        short_desc={course.short_desc}
+                        desc={course.desc}
+                        role={course.role}
+                        tech={course.tech}
+                        challenge={course.challenge}
+                        solution={course.solution}
+                        source={course.source}
+                        getData={getData}
+                      />
+                    ))}
+                  </div>
                 </section>
               </main>
               <FooterNav isFooter={true} />
@@ -115,23 +118,26 @@ export default function Courses() {
               </header>
               <main className={"main-wrapper"}>
                 <section className={"elements-wrapper"}>
-                  {courses.map((course) => (
-                    //data is exported before reaching Thumbnail as Thumbnail will accept data from multiple sources - therefore must be generic.
-                    <Thumbnail
-                      key={course.key}
-                      id={course.id}
-                      type={course.type}
-                      img={course.img}
-                      name={course.name}
-                      desc={course.desc}
-                      role={course.role}
-                      tech={course.tech}
-                      challenge={course.challenge}
-                      solution={course.solution}
-                      source={course.source}
-                      getData={getData}
-                    />
-                  ))}
+                  <div className="thumb-nail__wrapper">
+                    {courses.map((course) => (
+                      //data is exported before reaching Thumbnail as Thumbnail will accept data from multiple sources - therefore must be generic.
+                      <Thumbnail
+                        key={course.key}
+                        id={course.id}
+                        type={course.type}
+                        img={course.img}
+                        name={course.name}
+                        desc={course.desc}
+                        short_desc={course.short_desc}
+                        role={course.role}
+                        tech={course.tech}
+                        challenge={course.challenge}
+                        solution={course.solution}
+                        source={course.source}
+                        getData={getData}
+                      />
+                    ))}
+                  </div>
                 </section>
               </main>
               <FooterNav isFooter={true} />

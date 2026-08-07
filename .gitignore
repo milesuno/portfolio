@@ -39,6 +39,10 @@ yarn-error.log*
 # production
 /build
 
+# dev
+.kilo/
+
+
 # misc
 .DS_Store
 .env.local

@@ -12,7 +12,7 @@
   min-width: 245px;
   min-height: 245px;
   border: 1px solid #939393;
-  border-radius: 5%;
+  border-radius: 5px;
 
   transition: all 0.1s ease-in-out;
 }
@@ -20,10 +20,17 @@
 .thumbnail-page-wrapper:empty {
   height: 320px;
   width: 245px;
-  background-image: radial-gradient(circle at right top, white -100%, black),
+  background-image:
+    radial-gradient(circle at right top, white -100%, black),
     linear-gradient(grey, grey), linear-gradient(white, white);
-  background-size: 225px 250px, 225px 30px, 100% 100%;
-  background-position: 10px 20px, 10px 280px, 0 0;
+  background-size:
+    225px 250px,
+    225px 30px,
+    100% 100%;
+  background-position:
+    10px 20px,
+    10px 280px,
+    0 0;
   background-repeat: no-repeat;
 }
 
@@ -36,11 +43,16 @@
 }
 
 .thumbnail-img {
-  object-fit: cover;
+  object-fit: contain;
   height: 200px;
   width: 100%;
   margin: 0;
-  border-radius: 5%;
+  border-radius: 5px;
+}
+
+.thumbnail-matrix .thumbnail-img,
+.project-section__thumbnail-carosel .thumbnail-img {
+  object-fit: cover;
 }
 
 .thumbnail-title {

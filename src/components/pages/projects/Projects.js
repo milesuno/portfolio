@@ -86,26 +86,28 @@ export default function Projects() {
                   />
                   <section className={"elements-wrapper"}>
                     <ThumbnailMatrix thumbnails={projects} getData={getData} />
-                    {/* {projects.map((project) => {
-                            //data is exported before reaching Thumbnail as Thumbnail will accept data from multiple sources - therefore must be generic.
-                            return (
-                              <Thumbnail
-                                key={project.key}
-                                id={project.id}
-                                type={project.type}
-                                img={project.img}
-                                name={project.name}
-                                desc={project.desc}
-                                short_desc={project.short_desc}
-                                role={project.role}
-                                tech={project.tech}
-                                challenge={project.challenge}
-                                solution={project.solution}
-                                source={project.source}
-                                getData={this.getData}
-                              />
-                            );
-                          })} */}
+                    {/* {projects
+                      .filter((p) => p.type === "app")
+                      .map((project) => {
+                        //data is exported before reaching Thumbnail as Thumbnail will accept data from multiple sources - therefore must be generic.
+                        return (
+                          <Thumbnail
+                            key={project.key}
+                            id={project.id}
+                            type={project.type}
+                            img={project.img}
+                            name={project.name}
+                            desc={project.desc}
+                            short_desc={project.short_desc}
+                            role={project.role}
+                            tech={project.tech}
+                            challenge={project.challenge}
+                            solution={project.solution}
+                            source={project.source}
+                            // getData={this.getData}
+                          />
+                        );
+                      })} */}
                   </section>
                 </main>
                 <FooterNav />
@@ -121,8 +123,9 @@ export default function Projects() {
                 <main className={"main-wrapper"}>
                   <section className={"elements-wrapper"}>
                     <ThumbnailMatrix thumbnails={projects} getData={getData} />
-
-                    {/* {projects.map((project) => (
+                    {/* {projects
+                      .filter((p) => p.type === "app")
+                      .map((project) => (
                         //data is exported before reaching Thumbnail as Thumbnail will accept data from multiple sources - therefore must be generic.
                         <Thumbnail
                           key={project.key}
@@ -136,7 +139,7 @@ export default function Projects() {
                           challenge={project.challenge}
                           solution={project.solution}
                           source={project.source}
-                          getData={this.getData}
+                          // getData={this.getData}
                         />
                       ))} */}
                   </section>

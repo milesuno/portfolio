@@ -2,6 +2,20 @@
   display: flex;
   align-items: center;
   border-bottom: 1px solid #939393;
+  border-radius: 5px 5px 0 0;
+  border: 1px solid black;
+}
+
+.projects-section {
+  border-radius: 0 0 5px 5px;
+  border-bottom: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+
+.education__section {
+  border: 1px solid black;
+  border-radius: 5px;
 }
 
 /* TODO: this should be exported to be global page width*/
@@ -123,6 +137,7 @@
 .button {
   background: black;
   border: none;
+  border-radius: 5px;
   color: white;
   width: 250px;
   height: 40px;
@@ -174,18 +189,20 @@
 
 .experience-section__cards {
   max-height: 450px;
-  overflow: scroll;
+  overflow-y: scroll;
   height: 100%;
 }
 
 .tech-stack__section {
-  margin: 50px;
+  margin: 50px 0;
+  width: 100%;
 }
 
 .tech-stack__section-wrapper {
   position: relative;
-  overflow: scroll;
+  overflow-x: scroll;
   box-shadow: inset 0px 0px 10px rgba(100, 100, 100, 0.5);
+  padding: 25px 0;
 }
 
 .tech-stack__overlay {
@@ -200,7 +217,7 @@
 .project-section__thumbnail-carosel,
 .education__section__thumbnail-carosel {
   display: flex;
-  overflow: scroll;
+  overflow-x: scroll;
   /* max-width: 925px; */
 }
 
@@ -212,6 +229,16 @@
 .education__section__experience-experience-section--expanded {
   flex-direction: column;
   overflow: hidden;
+}
+
+/* .thumb-nail__wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+} */
+
+.thumbnail-matrix {
+  display: flex;
+  flex-direction: column;
 }
 @media (max-width: 1250px) {
   .projects-section2 .education__section,

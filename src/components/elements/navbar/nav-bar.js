@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "./nav-bar.css";
-import courseData from "../../../data/course-data.json";
+import courseData from "../../../data/course-data.js";
 import projectData from "../../../data/project-data";
 import uxData from "../../../data/ux-data";
 import socialMediaData from "../../../data/social-media-data.js";
@@ -151,7 +151,7 @@ class NavBar extends Component {
                   BLOG
                 </Link>
               </li> */}
-                  <li className="nav-item nav-li">
+                  {/* <li className="nav-item nav-li">
                     <Link
                       className="link lg-display button"
                       to="/contact"
@@ -159,7 +159,7 @@ class NavBar extends Component {
                     >
                       CONTACT
                     </Link>
-                  </li>
+                  </li> */}
                 </ul>
                 <div
                   className="scroll-top-btn"
@@ -239,7 +239,7 @@ class NavBar extends Component {
                   BLOG
                 </Link>
               </li> */}
-                  <li className="nav-item nav-li">
+                  {/* <li className="nav-item nav-li">
                     <Link
                       className="link lg-display button"
                       to="/contact"
@@ -247,7 +247,7 @@ class NavBar extends Component {
                     >
                       CONTACT
                     </Link>
-                  </li>
+                  </li> */}
                 </ul>
                 <div
                   className="scroll-top-btn"

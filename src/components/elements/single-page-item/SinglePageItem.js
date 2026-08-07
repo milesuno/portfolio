@@ -5,7 +5,7 @@ import LgThumbnail from "../lg-thumbnail/lg-thumbnail";
 import NavBar from "../navbar/nav-bar";
 import "../../../style-sheets/portfolio.css";
 import Helmet from "react-helmet";
-import courseData from "../../../data/course-data.json";
+import courseData from "../../../data/course-data";
 import projectData from "../../../data/project-data";
 import uxData from "../../../data/ux-data";
 // import socialMediaData from "../../data/social-media-data.js";

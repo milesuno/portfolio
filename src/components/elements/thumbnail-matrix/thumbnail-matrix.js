@@ -18,7 +18,7 @@ export default function ThumbnailMatrix({ thumbnails, getData }) {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
   const [rowCount, setRowCount] = useState(4);
   const [columnCount, setColumnCount] = useState(
-    (thumbnails.length + 1) / rowCount
+    (thumbnails.length + 1) / rowCount,
   );
 
   useEffect(() => {
@@ -29,27 +29,135 @@ export default function ThumbnailMatrix({ thumbnails, getData }) {
   }, [row, matrix]);
   // console.log("ThumbnailMatrix: Run");
   return (
-    <>
-      {thumbnails.map((thumbnail) => {
-        return (
-          <Thumbnail
-            key={thumbnail.key}
-            id={thumbnail.id}
-            type={thumbnail.type}
-            img={thumbnail.img}
-            name={thumbnail.name}
-            desc={thumbnail.desc}
-            short_desc={thumbnail.short_desc}
-            role={thumbnail.role}
-            tech={thumbnail.tech}
-            challenge={thumbnail.challenge}
-            solution={thumbnail.solution}
-            source={thumbnail.source}
-            getData={getData}
-          />
-        );
-      })}
-    </>
+    <div className="thumbnail-matrix">
+      <section>
+        <div>
+          <h2>Full-Stack Apps:</h2>
+          <span>Web apps built: concept, design and deployment</span>
+        </div>
+        <div className="thumb-nail__wrapper">
+          {thumbnails
+            .filter((p) => p.type === "app")
+            .map((thumbnail) => {
+              return (
+                <>
+                  <Thumbnail
+                    key={thumbnail.key}
+                    id={thumbnail.id}
+                    type={thumbnail.type}
+                    img={thumbnail.img}
+                    name={thumbnail.name}
+                    desc={thumbnail.desc}
+                    short_desc={thumbnail.short_desc}
+                    role={thumbnail.role}
+                    tech={thumbnail.tech}
+                    challenge={thumbnail.challenge}
+                    solution={thumbnail.solution}
+                    source={thumbnail.source}
+                    getData={getData}
+                  />
+                </>
+              );
+            })}
+        </div>
+      </section>
+      <section>
+        <div>
+          <h2>Web Analytics Implementation:</h2>
+          <span>
+            Integrated Web Analytics suites: design and implementation
+          </span>
+        </div>
+        <div className="thumb-nail__wrapper">
+          {thumbnails
+            .filter((p) => p.type === "analytics")
+            .map((thumbnail) => {
+              return (
+                <>
+                  <Thumbnail
+                    key={thumbnail.key}
+                    id={thumbnail.id}
+                    type={thumbnail.type}
+                    img={thumbnail.img}
+                    name={thumbnail.name}
+                    desc={thumbnail.desc}
+                    short_desc={thumbnail.short_desc}
+                    role={thumbnail.role}
+                    tech={thumbnail.tech}
+                    challenge={thumbnail.challenge}
+                    solution={thumbnail.solution}
+                    source={thumbnail.source}
+                    getData={getData}
+                  />
+                </>
+              );
+            })}
+        </div>
+      </section>
+      <section>
+        <div>
+          <h2>AI Projects:</h2>
+          <span>AI systems intergations: concept, design and deployment</span>
+        </div>
+        <div className="thumb-nail__wrapper">
+          {thumbnails
+            .filter((p) => p.type === "app")
+            .map((thumbnail) => {
+              return (
+                <>
+                  <Thumbnail
+                    key={thumbnail.key}
+                    id={thumbnail.id}
+                    type={thumbnail.type}
+                    img={thumbnail.img}
+                    name={thumbnail.name}
+                    desc={thumbnail.desc}
+                    short_desc={thumbnail.short_desc}
+                    role={thumbnail.role}
+                    tech={thumbnail.tech}
+                    challenge={thumbnail.challenge}
+                    solution={thumbnail.solution}
+                    source={thumbnail.source}
+                    getData={getData}
+                  />
+                </>
+              );
+            })}
+        </div>
+      </section>
+
+      <section>
+        <div>
+          <h2>Demos:</h2>
+          <span>Demos built to learn new concepts</span>
+        </div>
+        <div className="thumb-nail__wrapper">
+          {thumbnails
+            .filter((p) => p.type === "demo")
+            .map((thumbnail) => {
+              return (
+                <>
+                  <Thumbnail
+                    key={thumbnail.key}
+                    id={thumbnail.id}
+                    type={thumbnail.type}
+                    img={thumbnail.img}
+                    name={thumbnail.name}
+                    desc={thumbnail.desc}
+                    short_desc={thumbnail.short_desc}
+                    role={thumbnail.role}
+                    tech={thumbnail.tech}
+                    challenge={thumbnail.challenge}
+                    solution={thumbnail.solution}
+                    source={thumbnail.source}
+                    getData={getData}
+                  />
+                </>
+              );
+            })}
+        </div>
+      </section>
+    </div>
     // <div className="thumbnail-matrix">
     //   Full Rows
     //   {console.log({ thumbnails })}

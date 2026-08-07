@@ -14,12 +14,14 @@ import FooterNav from "../../elements/footer-nav/footer-nav";
 import techStackData from "../../../data/skill-images";
 
 import projectData from "../../../data/project-data";
-import courseData from "../../../data/course-data.json";
+import courseData from "../../../data/course-data";
 import projects from "../../../data/project-data";
 import ExperienceCard from "../../elements/experience-card/experience-card";
 import TechBanner from "../../elements/tech-banner/tech-banner";
 import LgThumbnail from "../../elements/lg-thumbnail/lg-thumbnail";
 import { useHistory } from "react-router-dom";
+
+import CV from "../../../data/Gideon Miles Oluku - CV 2026.pdf";
 
 function datalayerPush(eventName, scroll) {
   if (eventName === "virtual_page_view") {
@@ -148,34 +150,30 @@ export default function AboutMe() {
                   <div className="about-me__contact-card">
                     <img className="about-me__img" src={img} />
                     <div className="about-me__social-media-nav">
-                      <SocialMediaNav />
-                      <a
-                        className="download"
-                        href="../../data/Gideon Miles Oluku - cv7.pdf"
-                        target="#"
-                      >
+                      {/* <SocialMediaNav /> */}
+                      <a className="download" href={CV} target="#">
                         <button className="button">View CV</button>
                       </a>
                     </div>
                   </div>
                   <div className="about-me__bio">
                     <h2>Gideon Miles Oluku</h2>
-                    <h5>Web Specialist - Web Analytics, Web Development.</h5>
+                    <h5>
+                      Web Specialist - Full-Stack Web Development, Web Analytics
+                      Engineer, AI Agent Engineer.
+                    </h5>
                     <div className="about-me__bio__content">
                       <p>
-                        I am a Web Developer with a background in Business
+                        I am a Web Specialist with a background in Business
                         Studies, Agile development and Full Stack Development.
                       </p>
                       <p>
                         I have a passion for the creative process - planning,
                         designing and prototyping. I am also fasinated with the
-                        underlaying Computer Science mechanics that drive the
-                        development of digital products. This led to developing
-                        my own projects{" "}
-                        <a href="https://www.barteranything.com" target="#">
-                          (BarterAnything)
-                        </a>
-                        , and recruiting 2 additional developers.
+                        underlaying technologies that drive the development of
+                        digital products. This led to developing my own
+                        catalogue of projects across several technical
+                        disciplines: Web Development, Web Analytics, AI Systems
                       </p>
                       <p>
                         My passion for software development has led me to
@@ -208,24 +206,26 @@ export default function AboutMe() {
 				*/}
                   <section className="project-section__thumbnail-carosel">
                     {/* <ThumbnailMatrix thumbnails={projects} /> */}
-                    {projects.map((project) => (
-                      //data is exported before reaching Thumbnail as Thumbnail will accept data from multiple sources - therefore must be generic.
-                      <Thumbnail
-                        key={project.key}
-                        id={project.id}
-                        type={project.type}
-                        img={project.img}
-                        name={project.name}
-                        desc={project.desc}
-                        short_desc={project.short_desc}
-                        role={project.role}
-                        tech={project.tech}
-                        challenge={project.challenge}
-                        solution={project.solution}
-                        source={project.source}
-                        getData={getData}
-                      />
-                    ))}
+                    {projects
+                      .filter((p) => p.type === "app")
+                      .map((project) => (
+                        //data is exported before reaching Thumbnail as Thumbnail will accept data from multiple sources - therefore must be generic.
+                        <Thumbnail
+                          key={project.key}
+                          id={project.id}
+                          type={project.type}
+                          img={project.img}
+                          name={project.name}
+                          desc={project.desc}
+                          short_desc={project.short_desc}
+                          role={project.role}
+                          tech={project.tech}
+                          challenge={project.challenge}
+                          solution={project.solution}
+                          source={project.source}
+                          getData={getData}
+                        />
+                      ))}
                   </section>
                 </div>
                 <div className="tech-stack__section">
@@ -422,11 +422,7 @@ export default function AboutMe() {
                     <img className="about-me__img" src={img} />
                     <div className="about-me__social-media-nav">
                       <SocialMediaNav />
-                      <a
-                        className="download"
-                        href="../../data/Gideon Miles Oluku - cv7.pdf"
-                        target="#"
-                      >
+                      <a className="download" href={CV} target="#">
                         <button className="button">View CV</button>
                       </a>
                     </div>
